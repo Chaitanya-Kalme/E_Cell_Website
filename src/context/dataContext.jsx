@@ -1,18 +1,22 @@
 "use client";
 import { createContext, useState, useEffect } from "react";
-import { members } from "./demoData";
+import { coreTeamMembers, headMembers, coordinatorMembers } from "./demoData";
 
 
 export const dataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   
-  const [teamMembers, setteamMembers] = useState(members)
+  const [coreTeam, setcoreTeams] = useState(coreTeamMembers);
+  const [heads, setheads] = useState(headMembers);
+  const [coordinators, setcoordinators] = useState(coordinatorMembers);
   
   // Values to be provided to all child components
   const value = {
-    teamMembers,
-    setteamMembers
+    coreTeam,
+    heads,
+    coordinators,
+    teamMembers: [...heads, ...coordinators],
   };
   return (
     <dataContext.Provider value={value}>{children}</dataContext.Provider>
