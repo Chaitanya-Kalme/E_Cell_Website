@@ -12,13 +12,16 @@ export async function POST(req: NextRequest){
         // Extracting information from the request
         // Expecting Date in format: DD/MM/YYYY
         // Expecting Time in format: HH:MM:SS
-        const eventInfo = await req.json()
-        const eventName = eventInfo.eventName as string
-        const eventDate= eventInfo.eventDate as string
-        const eventTime = eventInfo.eventTime as string
-        const eventFees = parseFloat(eventInfo.eventFees)
-        const minSizeOfTeam = parseInt(eventInfo.minSize)
-        const maxSizeOfTeam = parseInt(eventInfo.maxSize)
+        const eventInfo = await req.formData()
+        const eventName = eventInfo.get("eventName") as string
+        const eventDate= eventInfo.get("eventDate") as string
+        const eventTime = eventInfo.get("eventTime") as string
+        const fees = eventInfo.get("eventFees") as string
+        const minSize = eventInfo.get("minSize") as string
+        const maxSize = eventInfo.get("maxSize") as string
+        const eventFees = parseFloat(fees)
+        const minSizeOfTeam = parseInt(minSize)
+        const maxSizeOfTeam = parseInt(maxSize)
         
         if(!eventName || !eventDate || !eventTime || !eventFees || !minSizeOfTeam || !maxSizeOfTeam){
             return NextResponse.json({
@@ -42,6 +45,7 @@ export async function POST(req: NextRequest){
         }
 
         const dateAndTime = parseDateAndTime(eventDate, eventTime) as Date
+
 
         if(dateAndTime<=new Date(Date.now())){
             return NextResponse.json({

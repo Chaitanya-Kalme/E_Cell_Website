@@ -27,19 +27,20 @@ model User {
   resetPasswordCodeExpiry DateTime?
   createdAt               DateTime      @default(now())
   updatedAt               DateTime      @updatedAt
-  participation           Participant[] 
+  participation           Participant[]
 }
 
 model Event {
-  id               String        @id @default(uuid()) @db.Uuid
-  eventName        String
-  eventDateAndTime DateTime
-  eventFees        Float
-  minSize          Int           @default(1)
-  maxSize          Int           @default(1)
-  participants     Participant[]
-  createdAt        DateTime      @default(now())
-  updatedAt        DateTime      @updatedAt
+  id                 String        @id @default(uuid()) @db.Uuid
+  eventName          String
+  eventDateAndTime   DateTime
+  eventFees          Float
+  minSize            Int           @default(1)
+  maxSize            Int           @default(1)
+  participants       Participant[]
+  isRegistrationOpen Boolean       @default(false)
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
 }
 
 model Participant {
