@@ -1,3 +1,6 @@
+
+
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -5,6 +8,7 @@ import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { DataProvider } from "@/context/dataContext";
+import { SimpleNavbar } from "@/components/ui/navbar-menu"; // Add this import
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,19 +32,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <DataProvider>{children}</DataProvider>
-            <Toaster expand={true} richColors closeButton={true}/>
-          </ThemeProvider>
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SimpleNavbar /> {/* Navbar at the top */}
+          <DataProvider>{children}</DataProvider>
+          <Toaster expand={true} richColors closeButton={true} />
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
+
+
+
+
+
