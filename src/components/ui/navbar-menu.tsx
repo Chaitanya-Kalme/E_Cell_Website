@@ -242,14 +242,13 @@ export const HoveredLink = ({ children, ...rest }: any) => {
 
 // --- Add this simple navbar export for demonstration ---
 export const SimpleNavbar = () => (
-  <nav className="flex gap-8 items-center justify-center py-4 bg-blue-200">
-    <Link href="/" className="text-lg font-semibold">HOME</Link>
-    <Link href="/about" className="text-lg font-semibold">ABOUT US</Link>
-    <Link href="/initivatives" className="text-lg font-semibold">INITIATIVES</Link>
-    <Link href="/gallery" className="text-lg font-semibold">GALLERY</Link>
-    <Link href="/contact" className="text-lg font-semibold">CONTACT</Link>
-    {/* <Link href="/blogs" className="text-lg font-semibold">BLOGS</Link>
-    <Link href="/join" className="text-lg font-semibold">JOIN US</Link> */}
+  <nav className="flex flex-wrap gap-x-8 gap-y-2 items-center justify-center py-4 bg-blue-200 text-lg font-semibold">
+    <Link href="/" className="block px-2 py-1">HOME</Link>
+    <Link href="/about" className="block px-2 py-1">ABOUT US</Link>
+    <Link href="/initivatives" className="block px-2 py-1">INITIATIVES</Link>
+    <Link href="/gallery" className="block px-2 py-1">GALLERY</Link>
+    <Link href="/contact" className="block px-2 py-1">CONTACT</Link>
+    {/* <Link href="/blogs" className="block px-2 py-1">BLOGS</Link>
+    <Link href="/join" className="block px-2 py-1">JOIN US</Link> */}
   </nav>
 );
-

@@ -47,33 +47,21 @@ const initiatives = [
 ];
 
 const Initivatives = () => (
-  <div style={{ padding: "40px 0", textAlign: "center" }}>
-    <h1 style={{ color: "#6f76bfff", fontWeight: 700, fontSize: "3rem", marginBottom: 0 }}>
+  <div className="py-10 text-center">
+    <h1 className="text-4xl md:text-5xl font-bold mb-0" style={{ color: "#6f76bfff" }}>
       OUR INITIATIVES
     </h1>
-    <p style={{ fontSize: "1.3rem", maxWidth: 800, margin: "20px auto 40px", color: "#222" }}>
-      We at E-Cell, IIT  believe that entrepreneurship is the key to India’s development. To fulfill this vision, we have conceptualized & successfully implemented various initiatives to help students, young entrepreneurs & professionals in their entrepreneurial journey.
+    <p className="text-lg md:text-xl max-w-2xl mx-auto my-6" style={{ color: "#222" }}>
+      We at E-Cell, IIT believe that entrepreneurship is the key to India’s development. To fulfill this vision, we have conceptualized & successfully implemented various initiatives to help students, young entrepreneurs & professionals in their entrepreneurial journey.
     </p>
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "32px",
-        justifyItems: "center",
-        maxWidth: 1200,
-        margin: "0 auto",
-      }}
-    >
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
       {initiatives.map((item, idx) => (
         <div
           key={idx}
+          className="bg-[#232b2b] text-white rounded-3xl border-2"
           style={{
-            background: "#232b2b",
-            color: "#fff",
-            borderRadius: "24px",
-            border: "2px solid #6f76bfff",
+            borderColor: "#6f76bfff",
             padding: "32px 24px",
-            maxWidth: 340,
             minHeight: 340,
             boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
             display: "flex",
@@ -81,28 +69,14 @@ const Initivatives = () => (
             alignItems: "center",
           }}
         >
-          {/* Example logo placeholder */}
           <div style={{ fontSize: 64, marginBottom: 16 }}>🎯</div>
-          <h2 style={{ color: "#6f76bfff", fontWeight: 700, fontSize: "1.5rem", margin: "0 0 12px" }}>
+          <h2 className="font-bold text-xl md:text-2xl mb-3" style={{ color: "#6f76bfff" }}>
             {item.title}
           </h2>
-          <p style={{ fontSize: "1rem", marginBottom: "auto" }}>{item.description}</p>
+          <p className="text-base mb-auto">{item.description}</p>
           <button
-            style={{
-              marginTop: 24,
-              background: "#6f76bfff",
-              color: "#fff",
-              border: "none",
-              borderRadius: 24,
-              padding: "10px 28px",
-              fontWeight: 700,
-              fontSize: "1rem",
-              cursor: "pointer",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
-              display: "flex",
-              alignItems: "center",
-              gap: 8,
-            }}
+            className="mt-6 bg-[#6f76bfff] text-white rounded-full px-7 py-2 font-bold text-base flex items-center gap-2 shadow"
+            style={{ border: "none" }}
           >
             {item.button} <span style={{ fontSize: 18 }}>→</span>
           </button>
