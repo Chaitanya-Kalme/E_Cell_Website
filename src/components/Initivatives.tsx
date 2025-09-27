@@ -1,48 +1,47 @@
-
-
-
-
-
-
-
 import React from "react";
 
 const initiatives = [
   {
-    title: "Eureka! Junior",
+    title: "Coding Club",
     description:
       "Eureka! Junior provides the perfect platform for young inquisitive minds to solve normal problems in the most innovative and creative way possible. It is a Business Plan Competition that...",
     button: "Know More",
+    url: "https://thecodingclub.vercel.app/",
   },
   {
-    title: "Eureka!",
+    title: "Softcom",
     description:
       "Eureka! is an international Business model competition for young inquisitive minds to solve real world problems.",
     button: "Know More",
+    url: "https://www.iitrpr.ac.in/bost/softcom",
   },
   {
     title: "Campus Ambassador",
     description:
       "E-Cell IIT Campus Ambassador programme aims to ignite the entrepreneurial potential in students like you all around India.",
     button: "Know More",
+    url: "https://thecodingclub.vercel.app/",
   },
   {
     title: "Illuminate",
     description:
       "Illuminate is a series of pre-Eureka! workshops on entrepreneurship and business model drafting.",
     button: "Know More",
+    url: "https://thecodingclub.vercel.app/",
   },
   {
     title: "EnB Club",
     description:
       "The Entrepreneurship and Business Club fosters the development of innovative ideas and supports individuals in transforming ideas into actions.",
     button: "Know More",
+    url: "https://thecodingclub.vercel.app/",
   },
   {
     title: "NEC",
     description:
       "Created with the vision to promote entrepreneurship amidst all the campuses in India.",
     button: "Know More",
+    url: "https://thecodingclub.vercel.app/",
   },
 ];
 
@@ -74,12 +73,15 @@ const Initivatives = () => (
             {item.title}
           </h2>
           <p className="text-base mb-auto">{item.description}</p>
-          <button
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 bg-[#6f76bfff] text-white rounded-full px-7 py-2 font-bold text-base flex items-center gap-2 shadow"
-            style={{ border: "none" }}
+            style={{ border: "none", textDecoration: "none" }}
           >
             {item.button} <span style={{ fontSize: 18 }}>→</span>
-          </button>
+          </a>
         </div>
       ))}
     </div>
