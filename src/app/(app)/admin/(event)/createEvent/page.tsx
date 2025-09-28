@@ -30,16 +30,20 @@ export default function EventCreation() {
   const [isIndividualParticipation, setIsIndividualParticipation] = useState(false)
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false)
   const [eventLogo, setEventLogo] = useState<File>();
+  const [submitButtonDisable,setSubmitButtonDisable] = useState(false)
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-
+    
     const form = e.target as HTMLFormElement
     const eventName = (form.elements.namedItem("eventName") as HTMLInputElement)?.value
     const eventEmail = (form.elements.namedItem("email") as HTMLInputElement)?.value
     const eventFees = (form.elements.namedItem("eventFees") as HTMLFormElement)?.value
     let teamMinSize = (form.elements.namedItem("teamMinSize") as HTMLFormElement)?.value
     let teamMaxSize = (form.elements.namedItem("teamMinSize") as HTMLFormElement)?.value
+    const description = (form.elements.namedItem("description") as HTMLFormElement)?.value
+    const webPageLink = (form.elements.namedItem("webPageLink") as HTMLFormElement)?.value
+
     if (isIndividualParticipation) {
       teamMinSize = 1, teamMaxSize = 1;
     }
@@ -51,7 +55,7 @@ export default function EventCreation() {
       toast.error("Individual Participation or Team Maximum size or Minimum size is required")
       return;
     }
-    if (!eventName || !eventEmail || !eventFees || !eventLogo || !date || !timeString) {
+    if (!eventName || !eventEmail || !eventFees || !eventLogo || !date || !timeString || !description || !webPageLink) {
       toast.error("All Fields are required")
       return;
     }
@@ -68,23 +72,26 @@ export default function EventCreation() {
     eventFormData.append("eventFees", eventFees)
     eventFormData.append("minSize", teamMinSize)
     eventFormData.append("maxSize", teamMaxSize)
-    eventFormData.append("eventLogo", eventLogo)
+    eventFormData.append("eventImage", eventLogo)
+    eventFormData.append("description",description)
+    eventFormData.append("isRegistrationOpen",isRegistrationOpen.toString())
+    eventFormData.append("webPageLink",webPageLink)
 
-
-    axios.post("/api/events/createEvent", eventFormData)
+    setSubmitButtonDisable(true)
+    await axios.post("/api/events/createEvent", eventFormData)
       .then((response) => {
-        console.log(response)
         toast.success(response.data.message)
       })
       .catch((error) => {
         toast.error(error.response.data.message)
         return;
       })
+      setSubmitButtonDisable(false)
   };
 
 
   return (
-    <div className="light:bg-gray-300">
+    <div>
       <AdminNavbar />
       <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-green-300 md:rounded-2xl md:p-8 dark:bg-blue-400 mt-32">
         <h2 className="text-2xl font-bold text-black dark:text-neutral-200 text-center italic ">
@@ -101,6 +108,10 @@ export default function EventCreation() {
           <LabelInputContainer className="mb-4">
             <Label htmlFor="email">Email Address</Label>
             <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          </LabelInputContainer>
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="webPageLink">Web Page Link</Label>
+            <Input id="webPageLink" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="eventFees">Event Fees</Label>
@@ -156,7 +167,7 @@ export default function EventCreation() {
                   type="time"
                   id="time-picker"
                   step="1"
-                  defaultValue="10:30:00"
+                  defaultValue="--:--:--"
                   className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none mt-1"
                   onChange={(e) => setTimeString(e.target.value)}
                 />
@@ -198,11 +209,18 @@ export default function EventCreation() {
               } />
             </div>
           </LabelInputContainer>
+          <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+            <LabelInputContainer>
+              <Label htmlFor="description">Description</Label>
+              <Input id="description" placeholder="description" type="text" className="min-h-10"/>
+            </LabelInputContainer>
+          </div>
 
           <button
             className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] mt-2"
             type="submit"
             onSubmit={handleSubmit}
+            disabled={submitButtonDisable}
           >
             Create Event
           </button>

@@ -41,6 +41,9 @@ model Event {
   isRegistrationOpen Boolean       @default(false)
   createdAt          DateTime      @default(now())
   updatedAt          DateTime      @updatedAt
+  eventImage         String
+  description        String
+  webPageLink        String
 }
 
 model Participant {
