@@ -3,21 +3,21 @@ export const coreTeamMembers = [
   {
     name: "Aarav Sharma",
     position: "President",
-    image: "https://example.com/images/aarav.jpg",
+    image: "/images/aarav.jpg",
     linkedin: "https://linkedin.com/in/aarav-sharma",
     email: "aarav.sharma@example.com",
   },
   {
     name: "Priya Verma",
     position: "Vice President",
-    image: "https://example.com/images/priya.jpg",
+    image: "/images/priya.jpg",
     linkedin: "https://linkedin.com/in/priya-verma",
     email: "priya.verma@example.com",
   },
   {
     name: "Rohan Mehta",
     position: "Secretary",
-    image: "https://example.com/images/rohan.jpg",
+    image: "/images/rohan.jpg",
     linkedin: "https://linkedin.com/in/rohan-mehta",
     email: "rohan.mehta@example.com",
   },
@@ -28,14 +28,14 @@ export const headMembers = [
   {
     name: "Simran Kaur",
     position: "Web Development Head",
-    image: "https://example.com/images/simran.jpg",
+    image: "/images/simran.jpg",
     linkedin: "https://linkedin.com/in/simran-kaur",
     email: "simran.kaur@example.com",
   },
   {
     name: "Aditya Joshi",
     position: "Media & Publicity Head",
-    image: "https://example.com/images/aditya.jpg",
+    image: "/images/aditya.jpg",
     linkedin: "https://linkedin.com/in/aditya-joshi",
     email: "aditya.joshi@example.com",
   },
@@ -170,3 +170,32 @@ export const coordinatorMembers = [
     email: "saurabh.kulkarni@example.com",
   },
 ];
+
+export const demoBlogs = [
+  {
+    image: "https://example.com/images/saurabh.jpg",
+    title: "The Future of AI in Everyday Life",
+    link: "https://example.com/blog/future-of-ai"
+  },
+  {
+    image: "https://example.com/images/saurabh.jpg",
+    title: "How to Build a Successful Startup in 2025",
+    link: "https://example.com/blog/successful-startup"
+  },
+  {
+    image: "https://example.com/images/saurabh.jpg",
+    title: "10 JavaScript Tricks Every Developer Should Know",
+    link: "https://example.com/blog/js-tricks"
+  },
+  {
+    image: "https://example.com/images/saurabh.jpg",
+    title: "Balancing Work and Life as an Entrepreneur",
+    link: "https://example.com/blog/work-life-balance"
+  },
+  {
+    image: "https://example.com/images/saurabh.jpg",
+    title: "Why Innovation is the Key to Growth",
+    link: "https://example.com/blog/innovation-growth"
+  }
+];
+
