@@ -3,7 +3,7 @@
 import React from "react";
 import { useContext } from "react";
 import { dataContext } from "@/context/dataContext";
-import BlogCards from "../../components/BlogCards";
+import BlogCards from "../../../components/BlogCards";
 
 const Blogs = () => {
   const { blogs } = useContext(dataContext);
