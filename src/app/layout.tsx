@@ -8,7 +8,6 @@ import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { DataProvider } from "@/context/dataContext";
-import NavbarMenu from "@/components/ui/navbar-menu"; // Add this import
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +40,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavbarMenu /> {/* Navbar at the top */}
           <DataProvider>{children}</DataProvider>
           <Toaster expand={true} richColors closeButton={true} />
         </ThemeProvider>
