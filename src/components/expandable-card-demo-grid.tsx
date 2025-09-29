@@ -38,7 +38,6 @@ export function ExpandableCardDemo() {
       async function getEventList(){
         await axios.get("/api/events/getAllEventList")
         .then((response) =>{
-          console.log(response.data.data)
           setEventList(response.data.data)
         })
         .catch((error) =>{
@@ -89,6 +88,13 @@ export function ExpandableCardDemo() {
     return(
       <div className="text-center justify-center">
         <LoaderOne/>
+      </div>
+    )
+  }
+  else if(eventList.length===0){
+    return(
+      <div className="text-center mt-2 italic text-xl">
+        No Event Present 
       </div>
     )
   }

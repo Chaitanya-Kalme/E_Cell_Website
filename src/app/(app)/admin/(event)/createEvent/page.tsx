@@ -40,19 +40,19 @@ export default function EventCreation() {
     const eventEmail = (form.elements.namedItem("email") as HTMLInputElement)?.value
     const eventFees = (form.elements.namedItem("eventFees") as HTMLFormElement)?.value
     let teamMinSize = (form.elements.namedItem("teamMinSize") as HTMLFormElement)?.value
-    let teamMaxSize = (form.elements.namedItem("teamMinSize") as HTMLFormElement)?.value
+    let teamMaxSize = (form.elements.namedItem("teamMaxSize") as HTMLFormElement)?.value
     const description = (form.elements.namedItem("description") as HTMLFormElement)?.value
     const webPageLink = (form.elements.namedItem("webPageLink") as HTMLFormElement)?.value
 
     if (isIndividualParticipation) {
-      teamMinSize = 1, teamMaxSize = 1;
+      teamMinSize = 1, teamMaxSize=1
     }
     else if (!teamMinSize || !teamMaxSize) {
       toast.error("Team Maximum Size and Minimum Size is required.")
       return;
     }
-    else {
-      toast.error("Individual Participation or Team Maximum size or Minimum size is required")
+    if(teamMinSize>teamMaxSize){
+      toast.error("Minimum size of team should be less than Maximum size of team")
       return;
     }
     if (!eventName || !eventEmail || !eventFees || !eventLogo || !date || !timeString || !description || !webPageLink) {

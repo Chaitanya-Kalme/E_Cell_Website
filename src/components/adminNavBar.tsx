@@ -61,8 +61,8 @@ export default function AdminNavbar() {
           </button>
           <button className="p-[2px] relative">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-md" />
-            <div className="px-6 py-1 bg-black rounded-md relative group text-white hover:bg-transparent">
-              About Us
+            <div className="px-6 py-1 bg-black rounded-md relative group text-white hover:bg-transparent hover:cursor-pointer" onClick={() => router.replace('/admin/participants')}>
+              Participant
             </div>
           </button>
           <button className="p-[2px] relative">

@@ -55,14 +55,23 @@ export async function POST(req: NextRequest){
             const user  = await prisma.user.findFirst({
                 where:{
                     id: userIds[i]
+                },
+                include:{
+                    participation: true
                 }
             })
 
             if(!user || !user.isVerified){
                 return NextResponse.json({
                     success: false,
-                    message: "User does not exist."
+                    message: `User ${user?.userName} does not exist or is not verified.`
                 },{status: 400})
+            }
+            if(user.participation.some((participant) =>participant.eventId===eventId)){
+                return NextResponse.json({
+                    success: false,
+                    message: `User ${user.userName} already registered for this event.`
+                },{status:400})
             }
         }
 
