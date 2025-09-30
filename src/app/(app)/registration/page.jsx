@@ -1,64 +1,63 @@
 'use client';
-
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import Image from "next/image";
-import { Mail, Lock, User, Check } from "lucide-react";
+import { Mail, Lock, User, Phone, Eye, EyeOff } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const RegistrationPage = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
-  const [showOtpInput, setShowOtpInput] = useState(false);
-  const [emailVerified, setEmailVerified] = useState(false);
-  const [otp, setOtp] = useState(['', '', '', '']);
-
-  const email = watch('email');
-
-  const handleOtpChange = (index, value) => {
-    if (value.length > 1) return; // Prevent multiple digits
-    const newOtp = [...otp];
-    newOtp[index] = value;
-    setOtp(newOtp);
-
-    // Auto-focus next input
-    if (value && index < 3) {
-      const nextInput = document.getElementById(`otp-${index + 1}`);
-      if (nextInput) nextInput.focus();
-    }
-  };
-
-  const handleKeyDown = (index, e) => {
-    if (e.key === 'Backspace' && !otp[index] && index > 0) {
-      const prevInput = document.getElementById(`otp-${index - 1}`);
-      if (prevInput) prevInput.focus();
-    }
-  };
-
-  const sendOtp = async () => {
-    // Add your OTP sending logic here
-    console.log('Sending OTP to:', email);
-    setShowOtpInput(true);
-  };
-
-  const verifyOtp = async () => {
-    // Add your OTP verification logic here
-    console.log('Verifying OTP:', otp.join(''));
-    setEmailVerified(true);
-    setShowOtpInput(false);
-  };
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = async (data) => {
-    if (!emailVerified) {
-      alert('Please verify your email first');
-      return;
+    // router.push(`/verifyotp/65475656`); // Temporary redirect for testing
+    try {
+      setIsLoading(true);
+      setError("");
+      
+      const response = await fetch("/api/user/registerUser", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userName: data.name,
+          email: data.email,
+          mobileNo: data.mobile,
+          password: data.password,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        toast.error("Registration failed");
+        throw new Error(result.message || "Registration failed");
+      }
+
+      if (result.success && result.data?.id) {
+        toast.success("Registration successful! Please verify your email.");
+        router.push(`/verifyotp/${result.data.id}`);
+      } else {
+        toast.error("Registration failed");
+        throw new Error(result.message || "Registration failed");
+      }
+    } catch (error) {
+      toast.error("An error occurred during registration");
+      setError(error.message || "An error occurred during registration");
+      console.error(error);
+    } finally {
+      setIsLoading(false);
     }
-    console.log(data);
-    // Add your registration logic here
   };
 
   return (
@@ -79,6 +78,7 @@ const RegistrationPage = () => {
 
         {/* Registration Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+
           <div>
             <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
               <User className="w-4 h-4 text-[#C670FF]" />
@@ -105,104 +105,91 @@ const RegistrationPage = () => {
             <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
               <Mail className="w-4 h-4 text-[#C670FF]" />
               Email Address
-              {emailVerified && (
-                <span className="text-green-500 flex items-center gap-1 text-xs">
-                  <Check className="w-3 h-3" /> Verified
-                </span>
-              )}
             </label>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message: "Please enter a valid email address",
-                  },
-                })}
-                disabled={emailVerified}
-              />
-              {email && !emailVerified && (
-                <button
-                  type="button"
-                  onClick={sendOtp}
-                  className="px-4 py-2 bg-[#C670FF] text-white font-semibold rounded-lg hover:bg-[#3D0066] focus:ring-4 focus:ring-[#C670FF]/50 transition-colors duration-200"
-                >
-                  Send OTP
-                </button>
-              )}
-            </div>
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black "
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: "Please enter a valid email address",
+                },
+              })}
+            />
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
             )}
           </div>
 
-          {/* OTP Input */}
-          {showOtpInput && (
-            <div className="space-y-3">
-              <label className="block text-sm font-semibold text-gray-700">
-                Enter OTP
-              </label>
-              <div className="flex justify-between gap-2">
-                {otp.map((digit, index) => (
-                  <input
-                    key={index}
-                    id={`otp-${index}`}
-                    type="text"
-                    maxLength={1}
-                    value={digit}
-                    onChange={(e) => handleOtpChange(index, e.target.value)}
-                    onKeyDown={(e) => handleKeyDown(index, e)}
-                    className="w-12 h-12 text-center text-lg font-semibold border border-gray-800 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
-                  />
-                ))}
-              </div>
-              <button
-                type="button"
-                onClick={verifyOtp}
-                className="w-full py-2 bg-[#C670FF] text-white font-semibold rounded-lg hover:bg-[#3D0066] focus:ring-4 focus:ring-[#C670FF]/50 transition-colors duration-200"
-              >
-                Verify OTP
-              </button>
-            </div>
-          )}
+          <div>
+            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+              <Phone className="w-4 h-4 text-[#C670FF]" />
+              Mobile Number
+            </label>
+            <input
+              type="tel"
+              placeholder="Enter your mobile number"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+              {...register("mobile", {
+                required: "Mobile number is required",
+                pattern: {
+                  value: /^[0-9]{10}$/,
+                  message: "Please enter a valid 10-digit mobile number",
+                },
+              })}
+            />
+            {errors.mobile && (
+              <p className="text-red-500 text-sm mt-1">{errors.mobile.message}</p>
+            )}
+          </div>
 
           <div>
             <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
               <Lock className="w-4 h-4 text-[#C670FF]" />
               Password
             </label>
-            <input
-              type="password"
-              placeholder="Create a password"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
-              {...register("password", {
-                required: "Password is required",
-                minLength: {
-                  value: 8,
-                  message: "Password must be at least 8 characters",
-                },
-                pattern: {
-                  value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/,
-                  message: "Password must contain at least one letter and one number",
-                },
-              })}
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Create a password"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                {...register("password", {
+                  required: "Password is required",
+                  minLength: {
+                    value: 8,
+                    message: "Password must be at least 8 characters",
+                  },
+                  pattern: {
+                    value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/,
+                    message: "Password must contain at least one letter and one number",
+                  },
+                })}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#C670FF]"
+              >
+                {showPassword ? (
+                  <EyeOff className="w-5 h-5" />
+                ) : (
+                  <Eye className="w-5 h-5" />
+                )}
+              </button>
+            </div>
             {errors.password && (
               <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
             )}
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
+            disabled={isLoading}
             className="w-full py-3 px-4 bg-[#C670FF] text-white font-semibold rounded-lg hover:bg-[#3D0066] focus:ring-4 focus:ring-[#C670FF]/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={!emailVerified}
           >
-            Create Account
+            {isLoading ? "Creating Account..." : "Create Account"}
           </button>
         </form>
       </div>
