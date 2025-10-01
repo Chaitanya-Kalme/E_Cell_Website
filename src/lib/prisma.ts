@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../generated/prisma"; // if using path aliases like `@`
+import { PrismaClient } from "@prisma/client";
 
 
 
