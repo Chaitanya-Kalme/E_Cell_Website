@@ -43,7 +43,7 @@ const VerifyOtp = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          otp: otp.join(''),
+          verificationCode: otp.join(''),
         }),
       });
 

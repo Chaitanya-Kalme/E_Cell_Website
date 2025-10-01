@@ -8,6 +8,8 @@ import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { DataProvider } from "@/context/dataContext";
+import { SessionProvider } from "next-auth/react";
+import AuthProvider from "@/context/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,15 +36,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <DataProvider>{children}</DataProvider>
-          <Toaster expand={true} richColors closeButton={true} />
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <DataProvider>
+              {children}
+            </DataProvider>
+            <Toaster expand={true} richColors closeButton={true} />
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );
