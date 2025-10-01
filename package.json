@@ -39,11 +39,8 @@
     "react-dom": "19.1.0",
     "react-dropzone": "^14.3.8",
     "react-hook-form": "^7.63.0",
-<<<<<<< HEAD
     "react-icons": "^5.5.0",
-=======
     "react-hot-toast": "^2.6.0",
->>>>>>> 13749749ddc58138f2b5977c7107695cd56fc646
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1"
   },
