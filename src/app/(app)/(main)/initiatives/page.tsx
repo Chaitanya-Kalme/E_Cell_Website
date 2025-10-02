@@ -1,17 +1,20 @@
 'use client';
 
 import { useState } from 'react';
-import axios from 'axios';
 
 import Initiatives from '@/components/Initiatives';
 import EventRegistrationModal from '@/components/EventRegistrationModal';
 
 type Initiative = {
-  _id: string;
-  title: string;
-  description: string;
-  button: string;
-  url: string;
+  _id?: string;
+  id?: string;
+  title?: string;
+  eventName?: string;
+  description?: string;
+  button?: string;
+  url?: string;
+  minSize?: number;
+  maxSize?: number;
 };
 
 export default function InitiativesPage() {
@@ -25,23 +28,29 @@ export default function InitiativesPage() {
     setSelectedEvent(null);
   };
 
-  const handleFormSubmit = async (formData: { name: string; email: string }) => {
+  const handleFormSubmit = async (formData: any) => {
     if (!selectedEvent) return;
 
     try {
-      const payload = {
-        ...formData,
-        eventId: selectedEvent._id,
-        eventName: selectedEvent.title,
-      };
+      const response = await fetch('/api/participant/createParticipant', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      await axios.post('/api/user/registerUser', payload);
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Registration failed');
+      }
 
       alert(`Successfully registered for ${selectedEvent.title}!`);
       handleCloseModal();
 
     } catch (error: any) {
-      alert(error.response?.data?.message || 'Registration failed. Please try again.');
+      alert(error.message || 'Registration failed. Please try again.');
     }
   };
 
@@ -57,4 +66,3 @@ export default function InitiativesPage() {
     </>
   );
 }
-
