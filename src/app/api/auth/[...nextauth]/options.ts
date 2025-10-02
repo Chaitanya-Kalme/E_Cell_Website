@@ -28,34 +28,28 @@ export const authOptions: NextAuthOptions = {
                     })
 
                     if (!isUserExist) {
-                        return NextResponse.json({
-                            success: false,
-                            message: "User is not registered with this email."
-                        }, { status: 400 })
+                        throw new Error("User is not registered with this email.")
+
                     }
 
                     // Checking if password is correct.
                     const isPasswordCorrect = await bcrypt.compare(password, isUserExist.password);
-
+                    
                     if (!isPasswordCorrect) {
-                        return NextResponse.json({
-                            success: false,
-                            message: "Password is incorrect"
-                        }, { status: 400 })
+                        throw new Error("Password is incorrect")
                     }
 
                     if (!isUserExist.isVerified) {
-                        return NextResponse.json({
-                            success: false,
-                            message: "User is not Verified."
-                        }, { status: 400 })
+                        throw new Error("User is not verified.")
                     }
 
                     return isUserExist
 
 
                 } catch (error: any) {
-                    throw new Error(error)
+                    console.error("Auth error:", error)
+                    throw new Error(error.message || "Internal Server Error")
+
                 }
             },
         }),
