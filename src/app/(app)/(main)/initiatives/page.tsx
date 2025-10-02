@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import Initiatives from '@/components/Initiatives';
 import EventRegistrationModal from '@/components/EventRegistrationModal';
+import axios from 'axios';
+import { toast } from 'sonner';
 
 type Initiative = {
   _id?: string;
@@ -28,25 +30,17 @@ export default function InitiativesPage() {
     setSelectedEvent(null);
   };
 
-  const handleFormSubmit = async (formData: any) => {
+  const handleFormSubmit = async (formData: FormData) => {
     if (!selectedEvent) return;
 
     try {
-      const response = await fetch('/api/participant/createParticipant', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Registration failed');
-      }
-
-      alert(`Successfully registered for ${selectedEvent.title}!`);
+      await axios.post('/api/participant/createParticipant',formData)
+      .then((response) =>{
+        toast.success("Participation Created Successfully")
+      })
+      .catch((error) =>{
+        toast.error(error.response.data.message)
+      })
       handleCloseModal();
 
     } catch (error: any) {

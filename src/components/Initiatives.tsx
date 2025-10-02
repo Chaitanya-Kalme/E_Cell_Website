@@ -132,7 +132,7 @@ const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
             {/* --- THIS IS THE KEY CHANGE --- */}
             {/* This is now a button that triggers the onRegisterClick function */}
             <button
-              onClick={() => onRegisterClick(item)}
+              onClick={() => item.isRegistrationOpen?onRegisterClick(item):toast.error("Registration Closed")}
               className="mt-6 bg-[#6fa8bfff] text-white rounded-full px-7 py-2 font-bold text-base flex items-center gap-2 shadow cursor-pointer transition-transform duration-200 hover:scale-105"
               style={{ border: "none" }}
             >

@@ -54,20 +54,20 @@ export function ExpandableCardDemo() {
   }, [])
 
 
-    const changeRegistrationStatus = async (eventId: string) =>{
-      setIsToogleButtonDisable(true)
-      await axios.post(`/api/events/changeRegistrationOpenStatus/${eventId}`)
-      .then((response) =>{
+  const changeRegistrationStatus = async (eventId: string) => {
+    setIsToogleButtonDisable(true)
+    await axios.post(`/api/events/changeRegistrationOpenStatus/${eventId}`)
+      .then((response) => {
         toast.success("Event Registration Status changed successfully")
       })
-      .catch((error) =>{
+      .catch((error) => {
         toast.error(error.response.data.message)
       })
-      .finally(() =>{
-        setIsToogleButtonDisable(false) 
+      .finally(() => {
+        setIsToogleButtonDisable(false)
       })
 
-    }
+  }
 
 
   useEffect(() => {
@@ -192,16 +192,28 @@ export function ExpandableCardDemo() {
                     Visit Page
                   </motion.a>
 
+                  <p>Registration Open:</p>
                   <button
-                    onClick={() => {setEnabled(!enabled);changeRegistrationStatus(active.id)}}
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${enabled ? "bg-blue-600" : "bg-gray-300"
+                    disabled={isToogleButtonDisable}
+                    onClick={async () => {
+                      setIsToogleButtonDisable(true);
+                      await changeRegistrationStatus(active.id);
+                      setActive((prev: any) => ({
+                        ...prev,
+                        isRegistrationOpen: !prev.isRegistrationOpen,
+                      }));
+                      setIsToogleButtonDisable(false);
+                    }}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${active?.isRegistrationOpen ? "bg-blue-600" : "bg-gray-300"
                       }`}
                   >
                     <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 ${enabled ? "translate-x-6" : "translate-x-1"
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 ${active?.isRegistrationOpen ? "translate-x-6" : "translate-x-1"
                         }`}
                     />
                   </button>
+
+
                   <motion.a
                     layout
                     initial={{ opacity: 0 }}

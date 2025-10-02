@@ -10,10 +10,10 @@ type TeamMember = {
 };
 
 type ModalProps = {
-  event: { 
+  event: {
     _id?: string;
     id?: string;
-    title: string;
+    title?: string;
     eventName?: string;
     minSize?: number;
     maxSize?: number;
@@ -49,11 +49,11 @@ export default function EventRegistrationModal({ event, onClose, onSubmit }: Mod
 
   const addMember = () => {
     if (teamMembers.length < maxSize) {
-      setTeamMembers([...teamMembers, { 
-        id: Date.now().toString(), 
-        name: '', 
-        email: '', 
-        mobileNo: '' 
+      setTeamMembers([...teamMembers, {
+        id: Date.now().toString(),
+        name: '',
+        email: '',
+        mobileNo: ''
       }]);
     }
   };
@@ -65,14 +65,14 @@ export default function EventRegistrationModal({ event, onClose, onSubmit }: Mod
   };
 
   const updateMember = (id: string, field: string, value: string) => {
-    setTeamMembers(teamMembers.map(m => 
+    setTeamMembers(teamMembers.map(m =>
       m.id === id ? { ...m, [field]: value } : m
     ));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!teamName.trim()) {
       alert('Please enter team name');
       return;
@@ -85,15 +85,24 @@ export default function EventRegistrationModal({ event, onClose, onSubmit }: Mod
       }
     }
 
-    onSubmit({
-      teamName,
-      eventId,
-      teamMembers
-    });
+    const formData = new FormData()
+    formData.append("teamName", teamName)
+    formData.append("eventId", eventId)
+    teamMembers.forEach((member: TeamMember) => {
+      const userData = {
+        userName: member.name,
+        email: member.email,
+        mobileNo: member.mobileNo
+      }
+
+      formData.append("userData", JSON.stringify(userData))
+    })
+
+    onSubmit(formData);
   };
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 p-4"
       onClick={onClose}
     >
@@ -113,7 +122,7 @@ export default function EventRegistrationModal({ event, onClose, onSubmit }: Mod
         <h3 className="text-3xl font-bold text-center mb-6" style={{ color: "#6f72bfff" }}>
           {eventTitle}
         </h3>
-        
+
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label htmlFor="teamName" className="block text-sm font-medium text-gray-700 mb-1">
