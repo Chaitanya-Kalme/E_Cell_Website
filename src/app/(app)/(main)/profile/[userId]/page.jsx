@@ -15,6 +15,7 @@ import {
   TableCaption,
 } from "@/components/ui/table";
 import { Edit2, Key, CheckCircle, XCircle } from "lucide-react";
+import axios from "axios";
 
 const ProfilePage = () => {
   const params = useParams();
@@ -24,76 +25,30 @@ const ProfilePage = () => {
   const [participations, setParticipations] = useState([]);
 
   // Uncomment when API is ready
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const response = await fetch(`/api/user/profile/${params.userId}`);
-  //       const data = await response.json();
-  //       if (data.success) {
-  //         setUserData(data.data);
-  //         setParticipations(data.data.participations || []);
-  //       } else {
-  //         toast.error(data.message || "Failed to fetch user data");
-  //       }
-  //     } catch (error) {
-  //       toast.error("Error fetching user data");
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchUserData();
-  // }, [params.userId]);
-
-  // Demo data for ProfilePage
-
-  const demoUserData = {
-    userName: "Riya Sharma",
-    email: "riya.sharma@example.com",
-    mobileNo: "+91 9876543210",
-    isVerified: false,
-    participations: [
-      {
-        id: 1,
-        EventParticipated: {
-          eventName: "Hackathon 2025",
-        },
-        TeamName: "Code Warriors",
-        participants: [
-          { userName: "Riya Sharma" },
-          { userName: "Aman Verma" },
-          { userName: "Neha Singh" },
-        ],
-      },
-      {
-        id: 2,
-        EventParticipated: {
-          eventName: "Startup Pitch Fest",
-        },
-        TeamName: "Visionaries",
-        participants: [
-          { userName: "Riya Sharma" },
-          { userName: "Kunal Mehta" },
-        ],
-      },
-      {
-        id: 3,
-        EventParticipated: {
-          eventName: "AI & Robotics Workshop",
-        },
-        TeamName: null, // Individual
-        participants: [{ userName: "Riya Sharma" }],
-      },
-    ],
-  };
-
   useEffect(() => {
-    setTimeout(() => {
-      setUserData(demoUserData);
-      setParticipations(demoUserData.participations || []);
-      setLoading(false);
-    }, 1000);
-  }, []);
+    const fetchUserData = async () => {
+      try {
+        await axios.get(`/api/user/profile/${params.userId}`)
+          .then((response) => {
+            console.log(response)
+            setUserData(response.data.data);
+            setParticipations(response.data.data.participation || []);
+          })
+          .catch(() => {
+            toast.error(data.message || "Failed to fetch user data");
+          })
+          .finally(() => {
+            setLoading(false);
+          })
+      }
+      catch {
+          toast.error("Error while fetching user")
+        }
+    }
+
+    fetchUserData();
+  }, [params.userId]);
+
 
   const handleVerify = () => {
     router.push(`/verifyotp/${params.userId}`);
@@ -116,7 +71,7 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#3D0066]/5 to-[#C670FF]/5">
+    <div className="min-h-screen bg-gradient-to-br from-[#3D0066]/5 to-[#C670FF]/5 mt-22">
       {/* Header Section */}
       <div className="bg-gradient-to-r from-[#3D0066] to-[#C670FF] text-white py-10 px-6">
         <div className="max-w-[1400px] mx-auto">

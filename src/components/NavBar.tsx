@@ -78,7 +78,7 @@ export default function NavBar() {
           {session ? (
             <div className="space-x-2 md:flex text-white">
               {/* Profile Section */}
-              <Link href="/profile" className="rounded-md p-1 px-2 bg-gray-800 hover:bg-blue-300">
+              <Link href={`/profile/${session.user.id}`} className="rounded-md p-1 px-2 bg-gray-800 hover:bg-blue-300">
                 Profile
               </Link>
 
