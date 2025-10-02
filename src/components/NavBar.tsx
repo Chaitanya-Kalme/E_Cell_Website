@@ -70,7 +70,7 @@ export default function NavBar() {
         {/* Right side: Navigation Buttons */}
         <NavigationMenuList className="gap-x-6 hidden md:flex">
           <NavigationMenuItem><Link href="/" className="hover:text-gray-300">Home</Link></NavigationMenuItem>
-          <NavigationMenuItem><Link href="/initiatives" className="hover:text-gray-300">Initiaties</Link></NavigationMenuItem>
+          <NavigationMenuItem><Link href="/initiatives" className="hover:text-gray-300">Initiatives</Link></NavigationMenuItem>
           <NavigationMenuItem><Link href="/about" className="hover:text-gray-300">About Us</Link></NavigationMenuItem>
           <NavigationMenuItem><Link href="/contact" className="hover:text-gray-300">Contact Us</Link></NavigationMenuItem>
           <NavigationMenuItem><Link href="/blogs" className="hover:text-gray-300">Blogs</Link></NavigationMenuItem>

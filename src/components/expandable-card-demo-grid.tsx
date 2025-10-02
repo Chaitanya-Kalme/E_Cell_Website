@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { LoaderOne } from "./ui/loader";
 
 
-type event={
+type event = {
   id: string,
   eventName: string,
   eventFees: number,
@@ -27,28 +27,48 @@ export function ExpandableCardDemo() {
   const [active, setActive] = useState<event | boolean | null>(
     null
   );
-  const [eventList,setEventList]= useState<event[]>([])
+  const [eventList, setEventList] = useState<event[]>([])
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
-  const router=  useRouter()
-  const [loading,setLoading] = useState(true)
+  const router = useRouter()
+  const [loading, setLoading] = useState(true)
+  const [enabled, setEnabled] = useState(false);
+  const [isToogleButtonDisable, setIsToogleButtonDisable] = useState(false)
 
-  useEffect(() =>{
-      setLoading(true)
-      async function getEventList(){
-        await axios.get("/api/events/getAllEventList")
-        .then((response) =>{
+
+  useEffect(() => {
+    setLoading(true)
+    async function getEventList() {
+      await axios.get("/api/events/getAllEventList")
+        .then((response) => {
           setEventList(response.data.data)
         })
-        .catch((error) =>{
+        .catch((error) => {
           toast.error(error.response.data.message)
         })
-        .finally(() =>{
+        .finally(() => {
           setLoading(false)
         })
-      }
-      getEventList()
-  },[])
+    }
+    getEventList()
+  }, [])
+
+
+    const changeRegistrationStatus = async (eventId: string) =>{
+      setIsToogleButtonDisable(true)
+      await axios.post(`/api/events/changeRegistrationOpenStatus/${eventId}`)
+      .then((response) =>{
+        toast.success("Event Registration Status changed successfully")
+      })
+      .catch((error) =>{
+        toast.error(error.response.data.message)
+      })
+      .finally(() =>{
+        setIsToogleButtonDisable(false) 
+      })
+
+    }
+
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -69,32 +89,32 @@ export function ExpandableCardDemo() {
 
   useOutsideClick(ref, () => setActive(null));
 
-  const deleteEventPage = (eventId:string) =>{
-    if(!eventId){
+  const deleteEventPage = (eventId: string) => {
+    if (!eventId) {
       return;
     }
     axios.delete(`/api/events/deleteEvent/${eventId}`)
-    .then((response) =>{
-      toast.success("Event Delete Successfully")
-      setTimeout(() => router.refresh(),1000)
-      
-    })
-    .catch((error) =>{
-      toast.error(error.response.data.message || "Error while deleting event")
-    })
+      .then((response) => {
+        toast.success("Event Delete Successfully")
+        setTimeout(() => router.refresh(), 1000)
+
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message || "Error while deleting event")
+      })
   }
 
-  if(loading){
-    return(
+  if (loading) {
+    return (
       <div className="text-center justify-center">
-        <LoaderOne/>
+        <LoaderOne />
       </div>
     )
   }
-  else if(eventList.length===0){
-    return(
+  else if (eventList.length === 0) {
+    return (
       <div className="text-center mt-2 italic text-xl">
-        No Event Present 
+        No Event Present
       </div>
     )
   }
@@ -172,6 +192,16 @@ export function ExpandableCardDemo() {
                     Visit Page
                   </motion.a>
 
+                  <button
+                    onClick={() => {setEnabled(!enabled);changeRegistrationStatus(active.id)}}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${enabled ? "bg-blue-600" : "bg-gray-300"
+                      }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 ${enabled ? "translate-x-6" : "translate-x-1"
+                        }`}
+                    />
+                  </button>
                   <motion.a
                     layout
                     initial={{ opacity: 0 }}
