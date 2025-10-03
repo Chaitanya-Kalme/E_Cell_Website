@@ -48,6 +48,13 @@ export async function POST(req: NextRequest){
 
         const emailResponse = await sendEmail({email: createUser.email, emailType: "VERIFY",userId: createUser.id})
 
+        if(emailResponse.status!==200){
+            return NextResponse.json({
+                success: false,
+                message: "Error while sending the email"
+            },{status: 500})
+        }
+
 
         if(!emailResponse || emailResponse.status!==200){
             return NextResponse.json({
