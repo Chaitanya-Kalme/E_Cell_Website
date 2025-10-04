@@ -1,10 +1,11 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import Image from "next/image";
 import { Mail, Lock, User, Phone, Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 const RegistrationPage = () => {
   const router = useRouter();
@@ -19,42 +20,30 @@ const RegistrationPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = async (data) => {
-    // router.push(`/verifyotp/65475656`); // Temporary redirect for testing
     try {
       setIsLoading(true);
       setError("");
-      
-      const response = await fetch("/api/user/registerUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userName: data.name,
-          email: data.email,
-          mobileNo: data.mobile,
-          password: data.password,
-        }),
+  
+      const response = await axios.post("/api/user/registerUser", {
+        userName: data.name,
+        email: data.email,
+        mobileNo: data.mobile,
+        password: data.password,
       });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        toast.error("Registration failed");
-        throw new Error(result.message || "Registration failed");
-      }
-
-      if (result.success && result.data?.id) {
+  
+      if (response.data.success && response.data.data?.id) {
         toast.success("Registration successful! Please verify your email.");
-        router.push(`/verifyotp/${result.data.id}`);
+        router.push(`/verifyotp/${response.data.data.id}`);
       } else {
-        toast.error("Registration failed");
-        throw new Error(result.message || "Registration failed");
+        const errorMsg = response.data.message || "Registration failed";
+        toast.error(errorMsg);
+        setError(errorMsg);
       }
     } catch (error) {
-      toast.error("An error occurred during registration");
-      setError(error.message || "An error occurred during registration");
-      console.error(error);
+      console.error("Error during registration:", error);
+      const errorMessage = error.response?.data?.message || "An error occurred during registration";
+      toast.error(errorMessage);
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -78,7 +67,6 @@ const RegistrationPage = () => {
 
         {/* Registration Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-
           <div>
             <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
               <User className="w-4 h-4 text-[#C670FF]" />
@@ -119,7 +107,9 @@ const RegistrationPage = () => {
               })}
             />
             {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.email.message}
+              </p>
             )}
           </div>
 
@@ -141,7 +131,9 @@ const RegistrationPage = () => {
               })}
             />
             {errors.mobile && (
-              <p className="text-red-500 text-sm mt-1">{errors.mobile.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.mobile.message}
+              </p>
             )}
           </div>
 
@@ -163,7 +155,8 @@ const RegistrationPage = () => {
                   },
                   pattern: {
                     value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/,
-                    message: "Password must contain at least one letter and one number",
+                    message:
+                      "Password must contain at least one letter and one number",
                   },
                 })}
               />
@@ -180,7 +173,9 @@ const RegistrationPage = () => {
               </button>
             </div>
             {errors.password && (
-              <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.password.message}
+              </p>
             )}
           </div>
 

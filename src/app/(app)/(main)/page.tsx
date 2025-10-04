@@ -5,7 +5,6 @@ import FeaturesSection from "@/components/ui/FeaturesSection";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      
       <HeroSection />
       <FeaturesSection />
     </div>

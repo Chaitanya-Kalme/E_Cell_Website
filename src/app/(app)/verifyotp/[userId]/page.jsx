@@ -1,16 +1,17 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import React, { useState } from "react";
+import { useParams, useRouter } from "next/navigation";
 import { toast } from "sonner";
-import Image from 'next/image';
+import Image from "next/image";
+import axios from "axios";
 
 const VerifyOtp = () => {
   const router = useRouter();
   const params = useParams();
-  const [otp, setOtp] = useState(['', '', '', '', '', '']);
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleOtpChange = (index, value) => {
     if (value.length > 1) return; // Prevent multiple digits
@@ -26,40 +27,39 @@ const VerifyOtp = () => {
   };
 
   const handleKeyDown = (index, e) => {
-    if (e.key === 'Backspace' && !otp[index] && index > 0) {
+    if (e.key === "Backspace" && !otp[index] && index > 0) {
       const prevInput = document.getElementById(`otp-${index - 1}`);
       if (prevInput) prevInput.focus();
     }
   };
 
   const verifyOtp = async () => {
-    // router.push('/login'); // Temporary redirect for testing
     try {
       setIsLoading(true);
-      setError('');
-      const response = await fetch(`/api/user/verifyUser/${params.userId}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          verificationCode: otp.join(''),
-        }),
-      });
+      setError("");
 
-      const data = await response.json();
+      const response = await axios.post(
+        `/api/user/verifyUser/${params.userId}`,
+        {
+          verificationCode: otp.join(""),
+        }
+      );
 
-      if (data.success) {
+      if (response.data.success) {
         toast.success("Email verified successfully! Please login.");
-        router.push('/login'); // Redirect to login after successful verification
+        router.push("/login");
       } else {
-        toast.error('Invalid OTP');
-        setError(data.message || 'Invalid OTP');
+        const errorMsg = response.data.message || "Invalid OTP";
+        toast.error(errorMsg);
+        setError(errorMsg);
       }
     } catch (error) {
-      toast.error('An error occurred during verification');
-      setError('An error occurred during verification');
-      console.error(error);
+      console.error("Error verifying OTP:", error);
+      const errorMessage =
+        error.response?.data?.message ||
+        "An error occurred during verification";
+      toast.error(errorMessage);
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -78,7 +78,9 @@ const VerifyOtp = () => {
             className="rounded-full mb-4"
           />
           <h2 className="text-3xl font-bold text-[#3D0066]">Verify Email</h2>
-          <p className="text-gray-600 mt-2">Enter the 6-digit code sent to your email</p>
+          <p className="text-gray-600 mt-2">
+            Enter the 6-digit code sent to your email
+          </p>
         </div>
 
         {/* OTP Input */}
@@ -98,16 +100,14 @@ const VerifyOtp = () => {
             ))}
           </div>
 
-          {error && (
-            <p className="text-red-500 text-sm text-center">{error}</p>
-          )}
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
           <button
             onClick={verifyOtp}
-            disabled={isLoading || otp.some(digit => !digit)}
+            disabled={isLoading || otp.some((digit) => !digit)}
             className="w-full py-3 px-4 bg-[#C670FF] text-white font-semibold rounded-lg hover:bg-[#3D0066] focus:ring-4 focus:ring-[#C670FF]/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isLoading ? 'Verifying...' : 'Verify Email'}
+            {isLoading ? "Verifying..." : "Verify Email"}
           </button>
         </div>
       </div>
