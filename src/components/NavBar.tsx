@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { LogOut, Menu } from "lucide-react"
+import { LogOut, Menu, Moon, Sun } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -27,6 +27,7 @@ import { signOut, useSession } from "next-auth/react"
 import { User } from "next-auth"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
+import { useTheme } from "next-themes"
 
 
 
@@ -35,7 +36,9 @@ export default function NavBar() {
 
   const router = useRouter()
   const { data: session } = useSession()
+  const { theme, setTheme, resolvedTheme } = useTheme()
   const user = session?.user as User
+  const isDark = resolvedTheme === 'dark'
 
   const Logout = async () => {
 
@@ -75,6 +78,23 @@ export default function NavBar() {
           <NavigationMenuItem><Link href="/contact" className="hover:text-gray-300">Contact Us</Link></NavigationMenuItem>
           <NavigationMenuItem><Link href="/blogs" className="hover:text-gray-300">Blogs</Link></NavigationMenuItem>
           <NavigationMenuItem><Link href="/gallery" className="hover:text-gray-300">Gallery</Link></NavigationMenuItem>
+          <NavigationMenuItem>
+            <div className="flex justify-center items-center h-full m-0 size-8 mx-4 my-2">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setTheme(isDark ? 'light' : 'dark')}
+                className="font-bold"
+              >
+                <Moon
+                  className={`h-4 w-4 transition-all ${isDark ? 'scale-0 rotate-90' : 'scale-100 rotate-0 text-black'}`}
+                />
+                <Sun
+                  className={`absolute h-4 w-4 transition-all ${isDark ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'}`}
+                />
+              </Button>
+            </div>
+          </NavigationMenuItem>
           {session ? (
             <div className="space-x-2 md:flex text-white">
               {/* Profile Section */}
@@ -90,7 +110,7 @@ export default function NavBar() {
             </div>
           ) : (
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-black cursor-pointer">Join Us</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="dark:bg-white text-black hover:text-black cursor-pointer">Join Us</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-full">
                   <li>
@@ -131,6 +151,21 @@ export default function NavBar() {
             <DropdownMenuItem><Link href="/blogs" className="hover:text-gray-300">Blogs</Link></DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem><Link href="/gallery" className="hover:text-gray-300">Gallery</Link></DropdownMenuItem>
+            <DropdownMenuSeparator />
+            {/* Theme Toggle Button */}
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setTheme(isDark ? 'light' : 'dark')}
+                  className="font-bold"
+                >
+                  <Moon
+                    className={`h-4 w-4 transition-all ${isDark ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`}
+                  />
+                  <Sun
+                    className={`absolute h-4 w-4 transition-all ${isDark ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'}`}
+                  />
+                </Button>
             <DropdownMenuSeparator />
             {session ? (
               <div className=" text-black dark:text-white">

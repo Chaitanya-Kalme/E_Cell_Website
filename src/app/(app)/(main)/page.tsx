@@ -6,7 +6,7 @@ import HomePageDetailsSection from "@/components/HomePageDetailsSection";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="text-black dark:text-white">
       <HomePageHeroSection/>
       <HomePageDetailsSection/>
     </div>

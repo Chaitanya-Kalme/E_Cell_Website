@@ -24,9 +24,9 @@ function HomePageDetailsSection() {
     
     const { ref, inView } = useInView({ triggerOnce: true });
     return (
-        <div className='w-full'>
-            <h1 className='text-center font-bold text-gray-800 text-3xl pt-3'>About E-Cell</h1>
-            <p className='text-center max-w-3xl mx-auto text-xl pt-3'>"E-Cell helps the hustling startups and young professionals via dynamic workshops, thought-provoking speaker sessions, high-stakes business plan competitions, and numerous other game-changing initiatives throughout the year to create a crucible for innovation. We stand as pillars of support for budding entrepreneurs, providing them with personalized guidance from experienced mentors, crucial funding opportunities, and a robust network that can change the course of their journey forever!"</p>
+        <div className='w-full py-7'>
+            <h1 className='text-center font-bold text-3xl pt-3 text-gray-800 dark:text-white'>About E-Cell</h1>
+            <p className='text-center max-w-3xl mx-auto text-xl py-7'>"E-Cell helps the hustling startups and young professionals via dynamic workshops, thought-provoking speaker sessions, high-stakes business plan competitions, and numerous other game-changing initiatives throughout the year to create a crucible for innovation. We stand as pillars of support for budding entrepreneurs, providing them with personalized guidance from experienced mentors, crucial funding opportunities, and a robust network that can change the course of their journey forever!"</p>
             <div ref={ref} className="text-center my-5 bg-gray-800 text-white">
                 <h2 className="text-3xl font-bold mb-3 text-white pt-4">Our Achievements</h2>
                 <div className="flex justify-center space-x-20 text-xl pb-5">
@@ -48,7 +48,7 @@ function HomePageDetailsSection() {
                     </div>
                 </div>
             </div>
-            <h1 className='text-center font-bold text-gray-800 text-3xl pt-3'>Inspirational Speakers</h1>
+            <h1 className='text-center font-bold text-gray-800 text-3xl pt-3 dark:text-white'>Inspirational Speakers</h1>
             <p className='text-center max-w-4xl mx-auto text-xl pt-3'>Discover the influential speakers who have shared their wisdom and insights at E-Cell events, enriching the entrepreneurial spirit.</p>
             <div>
                 <Carousel2 className="relative w-full max-w-4xl mx-auto" opts={{ loop: true }}>
@@ -64,8 +64,8 @@ function HomePageDetailsSection() {
                     </CarouselContent>
                 </Carousel2>
             </div>
-            <h1 className='text-center font-bold text-gray-800 text-3xl pt-3'>Testimonial</h1>
-            <div className='text-center justify-center flex mb-3 mt-4'>
+            <h1 className='text-center font-bold text-gray-800 text-3xl pt-3 dark:text-white'>Testimonial</h1>
+            <div className='text-center justify-center flex pb-4 mt-4'>
                 <div className="relative overflow-hidden w-3/4 max-h-screen">
                     <Carousel slides={testimonialData} />
                 </div>
