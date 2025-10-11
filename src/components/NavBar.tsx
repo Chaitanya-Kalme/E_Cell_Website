@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon, LogOut, Menu } from "lucide-react"
+import { LogOut, Menu } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -68,7 +68,7 @@ export default function NavBar() {
         </NavigationMenuItem>
 
         {/* Right side: Navigation Buttons */}
-        <NavigationMenuList className="gap-x-6 hidden md:flex">
+        <NavigationMenuList className="gap-x-6 hidden md:flex dark:text-white">
           <NavigationMenuItem><Link href="/" className="hover:text-gray-300">Home</Link></NavigationMenuItem>
           <NavigationMenuItem><Link href="/initiatives" className="hover:text-gray-300">Initiatives</Link></NavigationMenuItem>
           <NavigationMenuItem><Link href="/about" className="hover:text-gray-300">About Us</Link></NavigationMenuItem>
@@ -82,7 +82,7 @@ export default function NavBar() {
                 Profile
               </Link>
 
-              <Button onClick={() => Logout()} className="rounded-md bg-gray-800 hover:bg-blue-300">Logout
+              <Button onClick={() => Logout()} className="rounded-md bg-gray-800 hover:bg-blue-300 dark:text-white">Logout
                 <div>
                   <LogOut />
                 </div>
@@ -133,7 +133,7 @@ export default function NavBar() {
             <DropdownMenuItem><Link href="/gallery" className="hover:text-gray-300">Gallery</Link></DropdownMenuItem>
             <DropdownMenuSeparator />
             {session ? (
-              <div className=" text-black bg-white">
+              <div className=" text-black dark:text-white">
                 <DropdownMenuItem className="hover:cursor-pointer hover:text-gray-300">
                   Profile
                 </DropdownMenuItem>
