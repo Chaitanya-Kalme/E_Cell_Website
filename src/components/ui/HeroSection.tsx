@@ -7,12 +7,12 @@ export default function HeroSection() {
         {/* Left Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-5xl font-extrabold mb-6 text-purple-700 tracking-tight">
-            <span className="text-yellow-400">E-Cell</span> IIT ROPAR
+            E-Cell IIT ROPAR
           </h1>
           <p className="text-xl mb-8 text-black max-w-xl">
             The all-in-one platform for fostering <span className="text-purple-700 font-semibold">innovation</span>, <span className="text-yellow-400 font-semibold">entrepreneurship</span>, and growth among students. Join us to turn ideas into reality and connect with like-minded visionaries.
           </p>
-          <button className="px-8 py-3 bg-gradient-to-r from-purple-700 to-yellow-400 text-white font-bold rounded-full shadow-lg hover:from-purple-800 hover:to-yellow-500 transition-colors">
+          <button className="px-8 py-3 bg-purple-600 text-white font-bold rounded-full shadow-lg hover:from-purple-800 hover:to-yellow-500 transition-colors">
             Contact Us
           </button>
         </div>
