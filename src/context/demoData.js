@@ -1,16 +1,16 @@
 // Core Team (3 members)
 export const coreTeamMembers = [
   {
-    name: "Aarav Sharma",
+    name: "Dikshant Parashar",
     position: "President",
-    image: "/images/aarav.jpg",
+    image: "https://res.cloudinary.com/dykbuvd20/image/upload/v1760449718/dikshant_d9r9yt.jpg",
     linkedin: "https://linkedin.com/in/aarav-sharma",
     email: "aarav.sharma@example.com",
   },
   {
-    name: "Priya Verma",
+    name: "Animesh Anand",
     position: "Vice President",
-    image: "/images/priya.jpg",
+    image: "https://res.cloudinary.com/dykbuvd20/image/upload/v1760449719/Animesh_whko2z.jpg",
     linkedin: "https://linkedin.com/in/priya-verma",
     email: "priya.verma@example.com",
   },
@@ -26,11 +26,11 @@ export const coreTeamMembers = [
 // Department Heads (6 members)
 export const headMembers = [
   {
-    name: "Simran Kaur",
+    name: "Chaitanya Kalme",
     position: "Web Development Head",
-    image: "/images/simran.jpg",
-    linkedin: "https://linkedin.com/in/simran-kaur",
-    email: "simran.kaur@example.com",
+    image: "https://res.cloudinary.com/dykbuvd20/image/upload/v1760450043/Chaitanya_mbikos.jpg",
+    linkedin: "www.linkedin.com/in/chaitanya-kalme-1a610a346",
+    email: "2023csb1112@iitrpr.ac.in",
   },
   {
     name: "Aditya Joshi",
@@ -173,9 +173,9 @@ export const coordinatorMembers = [
 
 export const demoBlogs = [
   {
-    image: "https://example.com/images/saurabh.jpg",
-    title: "The Future of AI in Everyday Life",
-    link: "https://example.com/blog/future-of-ai"
+    image: "https://res.cloudinary.com/dykbuvd20/image/upload/v1760450396/tedx_image_lk04ao.jpg",
+    title: "First Ever TEDx Talk In IIT Ropar",
+    link: "https://www.linkedin.com/posts/e-cell-iit-ropar_tedx-iitropar-ideasworthspreading-activity-7382626002948247552-4EKv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFaDcI4B99l0pipTSaOrhJbfQ3RV1R03AlY"
   },
   {
     image: "https://example.com/images/saurabh.jpg",

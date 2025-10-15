@@ -94,8 +94,8 @@ const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
         OUR INITIATIVES
       </h1>
       <p
-        className="text-lg md:text-xl max-w-2xl mx-auto my-6"
-        style={{ color: "#222222ff" }}
+        className="text-lg md:text-xl max-w-2xl mx-auto my-6 dark:text-white"
+        // style={{ color: "#222222ff" }}
       >
         We at E-Cell, IIT believe that entrepreneurship is the key to India’s
         development. To fulfill this vision, we have conceptualized &
