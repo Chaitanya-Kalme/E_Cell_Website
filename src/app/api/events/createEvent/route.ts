@@ -1,5 +1,5 @@
 import { parseDateAndTime } from "@/helper/parseDateAndTime";
-import { UploadEventImage } from "@/helper/uploadImageOnCloudinary";
+import { UploadEventImage, UploadEventRuleBook } from "@/helper/uploadImageOnCloudinary";
 import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -24,6 +24,7 @@ export async function POST(req: NextRequest) {
         const minSizeOfTeam = parseInt(minSize)
         const maxSizeOfTeam = parseInt(maxSize)
         const eventImage= eventInfo.get("eventImage") as File
+        const eventRuleBook= eventInfo.get("eventRuleBook") as File
         const description = eventInfo.get("description") as string
         const isRegistrationOpen = eventInfo.get("isRegistrationOpen") as string
         const webPageLink = eventInfo.get("webPageLink") as string
@@ -61,6 +62,7 @@ export async function POST(req: NextRequest) {
 
         // URL Cloudinary 
         let imageName=""
+        let ruleBook=""
         await UploadEventImage(eventImage)
             .then((response) => {
                 imageName = response.toString()
@@ -72,6 +74,19 @@ export async function POST(req: NextRequest) {
                 }, { status: 400 })
             })
 
+        if(eventRuleBook){
+            await UploadEventRuleBook(eventRuleBook)
+            .then((response) => {
+                ruleBook = response.toString()
+            })
+            .catch((error) => {
+                return NextResponse.json({
+                    success: false,
+                    message: "Error while uploading image"
+                }, { status: 400 })
+            })
+        }
+
         const createdEvent = await prisma.event.create({
             data: {
                 eventName,
@@ -82,7 +97,8 @@ export async function POST(req: NextRequest) {
                 eventImage: imageName ,
                 description: description,
                 isRegistrationOpen: isRegistrationOpen? true: false,
-                webPageLink: webPageLink
+                webPageLink: webPageLink,
+                eventRuleBook: ruleBook
             }
         })
 

@@ -47,3 +47,36 @@ export async function UploadEventImage(avatarFile: File) {
     }
 
 }
+
+
+
+export async function UploadEventRuleBook(ruleBook: File) {
+    try {
+        if (!ruleBook) {
+            return NextResponse.json({
+                success: false,
+                message: "Avatar File not found"
+            }, { status: 404 })
+        }
+
+        const bytes = await ruleBook.arrayBuffer()
+        const buffer = Buffer.from(bytes)
+
+        const result = await new Promise<CloudinaryUploadResult>(
+            (resolve, reject) => {
+                const uploadStream = cloudinary.uploader.upload_stream(
+                    { folder: "Event_RuleBook" },
+                    (error:any, result:any) => {
+                        if (error) reject(error);
+                        else resolve(result as CloudinaryUploadResult)
+                    }
+                )
+                uploadStream.end(buffer)
+            }
+        )
+        return result.secure_url
+    } catch (error:any) {
+        throw new Error(error)
+    }
+
+}

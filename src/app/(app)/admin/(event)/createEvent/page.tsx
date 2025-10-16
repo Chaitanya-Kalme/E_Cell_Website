@@ -30,6 +30,7 @@ export default function EventCreation() {
   const [isIndividualParticipation, setIsIndividualParticipation] = useState(false)
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false)
   const [eventLogo, setEventLogo] = useState<File>();
+  const [eventRuleBook, setEventRuleBook] = useState<File>();
   const [submitButtonDisable,setSubmitButtonDisable] = useState(false)
 
   const handleSubmit = async (e: any) => {
@@ -73,6 +74,9 @@ export default function EventCreation() {
     eventFormData.append("minSize", teamMinSize)
     eventFormData.append("maxSize", teamMaxSize)
     eventFormData.append("eventImage", eventLogo)
+    if(eventRuleBook){
+      eventFormData.append("eventRuleBook", eventRuleBook)
+    }
     eventFormData.append("description",description)
     eventFormData.append("isRegistrationOpen",isRegistrationOpen.toString())
     eventFormData.append("webPageLink",webPageLink)
@@ -102,20 +106,20 @@ export default function EventCreation() {
           <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
             <LabelInputContainer>
               <Label htmlFor="eventName">Event Name</Label>
-              <Input id="eventName" placeholder="Name" type="text" />
+              <Input id="eventName" placeholder="Name" type="text" required={true}/>
             </LabelInputContainer>
           </div>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="email">Email Address</Label>
-            <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+            <Input id="email" placeholder="projectmayhem@fc.com" type="email" required={true} />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="webPageLink">Web Page Link</Label>
-            <Input id="webPageLink" type="text" />
+            <Input id="webPageLink" type="text" required={true}/>
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="eventFees">Event Fees</Label>
-            <Input id="eventFees" placeholder="50" type="number" />
+            <Input id="eventFees" placeholder="50" type="number" required={true}/>
           </LabelInputContainer>
 
           <LabelInputContainer className="mb-4 justify-center mt-2">
@@ -170,6 +174,7 @@ export default function EventCreation() {
                   defaultValue="--:--:--"
                   className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none mt-1"
                   onChange={(e) => setTimeString(e.target.value)}
+                  required={true}
                 />
               </div>
             </div>
@@ -201,7 +206,7 @@ export default function EventCreation() {
           <LabelInputContainer>
             <div className="flex items-center justify-center gap-3 mt-2">
               <Label className="text-black">Event Logo Image</Label>
-              <Input id="picture" type="file" onChange={(e) => {
+              <Input id="picture" type="file" required={true} onChange={(e) => {
                 const files = e.target.files
                 if (!files) return;
                 setEventLogo(files[0])
@@ -209,10 +214,21 @@ export default function EventCreation() {
               } />
             </div>
           </LabelInputContainer>
+          <LabelInputContainer>
+            <div className="flex items-center justify-center gap-3 mt-2">
+              <Label className="text-black">Event Rule Book</Label>
+              <Input id="ruleBook" type="file" onChange={(e) => {
+                const files = e.target.files
+                if (!files) return;
+                setEventRuleBook(files[0])
+              }
+              } />
+            </div>
+          </LabelInputContainer>
           <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
             <LabelInputContainer>
               <Label htmlFor="description">Description</Label>
-              <Input id="description" placeholder="description" type="text" className="min-h-10"/>
+              <Input id="description" placeholder="description" required={true} type="text" className="min-h-10"/>
             </LabelInputContainer>
           </div>
 

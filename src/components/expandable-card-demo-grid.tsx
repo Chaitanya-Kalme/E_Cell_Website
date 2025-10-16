@@ -97,6 +97,7 @@ export function ExpandableCardDemo() {
       .then((response) => {
         toast.success("Event Delete Successfully")
         setTimeout(() => router.refresh(), 1000)
+        router.refresh()  
 
       })
       .catch((error) => {
@@ -228,18 +229,21 @@ export function ExpandableCardDemo() {
                   <div>Event Fees: {active.eventFees}</div>
 
                 </div>
-                  <div>Event Date: {new Date(active.eventDateAndTime).toDateString()}</div>
-                  <div>Event Time: {new Date(active.eventDateAndTime).toLocaleTimeString()}</div>
+                <div>Event Date: {new Date(active.eventDateAndTime).toDateString()}</div>
+                <div>Event Time: {new Date(active.eventDateAndTime).toLocaleTimeString()}</div>
                 <div className="pt-4 relative px-4">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base 
+             max-h-40 overflow-y-auto pb-4 pr-2 flex flex-col 
+             items-start gap-4 dark:text-neutral-400"
                   >
                     {active.description}
                   </motion.div>
+
                 </div>
               </div>
             </motion.div>
@@ -273,7 +277,7 @@ export function ExpandableCardDemo() {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base overflow-hidden h-5"
                 >
                   {card.description}
                 </motion.p>
