@@ -65,18 +65,18 @@ const ProfilePage = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#C670FF]"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-700 dark:border-orange-200"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#3D0066]/5 to-[#C670FF]/5 mt-22">
+    <div className="min-h-screen bg-gradient-to-br from-blue-700/5 to-blue-500/5 dark:from-orange-200/5 dark:to-orange-100/5 mt-22">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-[#3D0066] to-[#C670FF] text-white py-10 px-6">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200 text-white dark:text-gray-900 py-10 px-6">
         <div className="max-w-[1400px] mx-auto">
           <h1 className="text-5xl font-bold mb-3">My Profile</h1>
-          <p className="text-white/80">
+          <p className="text-white/80 dark:text-gray-800">
             Manage your account and view your participations
           </p>
         </div>
@@ -87,32 +87,32 @@ const ProfilePage = () => {
         <div className="grid gap-8 lg:grid-cols-12">
           {/* Profile Card */}
           <div className="lg:col-span-4">
-            <div className="bg-white rounded-xl shadow-lg p-8 sticky top-8">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 sticky top-8">
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-sm font-semibold text-gray-500">
+                  <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
                     Full Name
                   </h2>
-                  <p className="text-lg font-medium text-gray-900">
+                  <p className="text-lg font-medium text-gray-900 dark:text-white">
                     {userData?.userName}
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-sm font-semibold text-gray-500">Email</h2>
-                  <p className="text-lg font-medium text-gray-900">
+                  <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Email</h2>
+                  <p className="text-lg font-medium text-gray-900 dark:text-white">
                     {userData?.email}
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-sm font-semibold text-gray-500">
+                  <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
                     Mobile Number
                   </h2>
-                  <p className="text-lg font-medium text-gray-900">
+                  <p className="text-lg font-medium text-gray-900 dark:text-white">
                     {userData?.mobileNo}
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-sm font-semibold text-gray-500">
+                  <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
                     Verification Status
                   </h2>
                   <div className="mt-1">
@@ -129,7 +129,7 @@ const ProfilePage = () => {
                         </div>
                         <Button
                           onClick={handleVerify}
-                          className="w-full bg-[#C670FF] hover:bg-[#3D0066] text-lg h-14"
+                          className="w-full bg-blue-700 hover:bg-blue-800 dark:bg-orange-200 dark:hover:bg-orange-300 text-white dark:text-gray-900 text-lg h-14"
                         >
                           Verify Now
                         </Button>
@@ -140,14 +140,14 @@ const ProfilePage = () => {
                 <div className="pt-4 space-y-3">
                   <Button
                     onClick={handleEditProfile}
-                    className="w-full flex items-center justify-center gap-3 bg-[#C670FF] hover:bg-[#3D0066] text-lg h-14"
+                    className="w-full flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-800 dark:bg-orange-200 dark:hover:bg-orange-300 text-white dark:text-gray-900 text-lg h-14"
                   >
                     <Edit2 className="w-4 h-4" />
                     Edit Profile
                   </Button>
                   <Button
                     onClick={handleResetPassword}
-                    className="w-full flex items-center justify-center gap-3 bg-[#3D0066] hover:bg-[#C670FF] text-lg h-14"
+                    className="w-full flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 dark:bg-orange-300 dark:hover:bg-orange-400 text-white dark:text-gray-900 text-lg h-14"
                   >
                     <Key className="w-4 h-4" />
                     Reset Password
@@ -159,8 +159,8 @@ const ProfilePage = () => {
 
           {/* Event Participations Section */}
           <div className="lg:col-span-8">
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <h2 className="text-2xl font-bold text-[#3D0066] mb-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h2 className="text-2xl font-bold text-blue-700 dark:text-orange-200 mb-6">
                 Event Participations
               </h2>
               <div className="overflow-hidden">
@@ -187,7 +187,7 @@ const ProfilePage = () => {
                             </p>
                             <Button
                               onClick={() => router.push("/initiatives")}
-                              className="bg-[#C670FF] hover:bg-[#3D0066]"
+                              className="bg-blue-700 hover:bg-blue-800 dark:bg-orange-200 dark:hover:bg-orange-300 text-white dark:text-gray-900"
                             >
                               Browse Events
                             </Button>

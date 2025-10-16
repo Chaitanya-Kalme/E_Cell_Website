@@ -66,8 +66,8 @@ const VerifyOtp = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3D0066] to-[#C670FF]">
-      <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200">
+      <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-2xl">
         {/* Logo and Header */}
         <div className="flex flex-col items-center mb-8">
           <Image
@@ -77,8 +77,8 @@ const VerifyOtp = () => {
             height={80}
             className="rounded-full mb-4"
           />
-          <h2 className="text-3xl font-bold text-[#3D0066]">Verify Email</h2>
-          <p className="text-gray-600 mt-2">
+          <h2 className="text-3xl font-bold text-blue-700 dark:text-orange-200">Verify Email</h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-2">
             Enter the 6-digit code sent to your email
           </p>
         </div>
@@ -95,7 +95,7 @@ const VerifyOtp = () => {
                 value={digit}
                 onChange={(e) => handleOtpChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
-                className="w-12 h-12 text-center text-lg font-semibold border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black [&:-webkit-autofill]:bg-white [&:-webkit-autofill]:shadow-[0_0_0_30px_white_inset] [&:-webkit-autofill]:text-black"
+                className="w-12 h-12 text-center text-lg font-semibold border border-gray-400 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700 [&:-webkit-autofill]:bg-white [&:-webkit-autofill]:shadow-[0_0_0_30px_white_inset] [&:-webkit-autofill]:text-black"
               />
             ))}
           </div>
@@ -105,7 +105,7 @@ const VerifyOtp = () => {
           <button
             onClick={verifyOtp}
             disabled={isLoading || otp.some((digit) => !digit)}
-            className="w-full py-3 px-4 bg-[#C670FF] text-white font-semibold rounded-lg hover:bg-[#3D0066] focus:ring-4 focus:ring-[#C670FF]/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 px-4 bg-blue-700 dark:bg-orange-200 text-white dark:text-gray-900 font-semibold rounded-lg hover:bg-blue-800 dark:hover:bg-orange-300 focus:ring-4 focus:ring-blue-700/50 dark:focus:ring-orange-200/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? "Verifying..." : "Verify Email"}
           </button>
