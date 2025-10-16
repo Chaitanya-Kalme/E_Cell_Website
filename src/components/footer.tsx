@@ -20,10 +20,16 @@ export default function Footer() {
               priority
             />
             <div className='mt-2 flex gap-x-2'>
-              <FaLinkedin className='size-7 hover:cursor-pointer' href='#' />
-              <FaSquareInstagram className='size-7 hover:cursor-pointer' href='#' />
-              <FaXTwitter className='size-7 hover:cursor-pointer' href='#' />
-              <FaFacebook className='size-7 hover:cursor-pointer' href='#' />
+              <a href="https://www.linkedin.com/company/e-cell-iit-ropar/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className='size-7 hover:cursor-pointer' />
+              </a>
+              <a href="https://www.instagram.com/ecell_iitrpr/?hl=en" target="_blank" rel="noopener noreferrer">
+                <FaSquareInstagram className='size-7 hover:cursor-pointer' />
+              </a>
+
+              
+              
+              
             </div>
           </div>
           {/* Right - Columns */}
@@ -59,7 +65,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/about_us" rel="noopener noreferrer" className="hover:underline">
+                  <a href="/about" rel="noopener noreferrer" className="hover:underline">
                     About Us
                   </a>
                 </li>
@@ -84,18 +90,18 @@ export default function Footer() {
             {/* Address */}
             <div>
               <h3 className="text-lg font-semibold mb-2">Contact</h3>
-              <a className="not-italic flex" href='https://maps.app.goo.gl/KxU7LDWedEfv8xkY6' target='_blank'>
+              <a className="not-italic flex" href='https://maps.app.goo.gl/sxtvLWVFFpE48EmS8' target='_blank'>
                 <span className='mr-2'>
                   <MapPinIcon className='bg-gray-900' />
                 </span>
                 Admin Block, IIT Ropar,<br />
                 India,140001
               </a>
-              <a className="not-italic flex mt-2" href="mailto:example@example.com" target='_blank'>
+              <a className="not-italic flex mt-2" href="mailto:ecell@iitrpr.ac.in" >
                 <span className='mr-2 '>
                   <Mail />
                 </span>
-                Email Id
+                ecell@iitrpr.ac.in
               </a>
               <div>
               </div>

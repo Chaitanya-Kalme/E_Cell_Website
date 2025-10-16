@@ -6,6 +6,7 @@ const BlogCards = ({blog}) => {
   return (
     <Link 
       href={blog.link} 
+      target='_blank'
       className="block w-[320px] bg-white dark:bg-[#3D0066] border-4 border-[#C670FF] rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl"
     >
       <div className="relative w-full pb-[75%]">

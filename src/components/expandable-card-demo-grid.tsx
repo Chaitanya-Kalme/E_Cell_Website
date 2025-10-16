@@ -169,8 +169,8 @@ export function ExpandableCardDemo() {
                 />
               </motion.div>
 
-              <div>
-                <div className="flex justify-between items-start p-4">
+              <div className="px-4">
+                <div className="flex justify-between items-start px-4 py-2">
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.eventName}-${id}`}
@@ -192,6 +192,19 @@ export function ExpandableCardDemo() {
                     Visit Page
                   </motion.a>
 
+                  <motion.a
+                    layout
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={() => deleteEventPage(active.id)}
+                    target="_blank"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-red-500 text-white hover:cursor-pointer"
+                  >
+                    Delete Event
+                  </motion.a>
+                </div>
+                <div className="flex items-start gap-x-4">
                   <p>Registration Open:</p>
                   <button
                     disabled={isToogleButtonDisable}
@@ -212,20 +225,11 @@ export function ExpandableCardDemo() {
                         }`}
                     />
                   </button>
+                  <div>Event Fees: {active.eventFees}</div>
 
-
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    onClick={() => deleteEventPage(active.id)}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-red-500 text-white hover:cursor-pointer"
-                  >
-                    Delete Event
-                  </motion.a>
                 </div>
+                  <div>Event Date: {new Date(active.eventDateAndTime).toDateString()}</div>
+                  <div>Event Time: {new Date(active.eventDateAndTime).toLocaleTimeString()}</div>
                 <div className="pt-4 relative px-4">
                   <motion.div
                     layout

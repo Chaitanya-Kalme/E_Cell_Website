@@ -177,25 +177,5 @@ export const demoBlogs = [
     title: "First Ever TEDx Talk In IIT Ropar",
     link: "https://www.linkedin.com/posts/e-cell-iit-ropar_tedx-iitropar-ideasworthspreading-activity-7382626002948247552-4EKv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFaDcI4B99l0pipTSaOrhJbfQ3RV1R03AlY"
   },
-  {
-    image: "https://example.com/images/saurabh.jpg",
-    title: "How to Build a Successful Startup in 2025",
-    link: "https://example.com/blog/successful-startup"
-  },
-  {
-    image: "https://example.com/images/saurabh.jpg",
-    title: "10 JavaScript Tricks Every Developer Should Know",
-    link: "https://example.com/blog/js-tricks"
-  },
-  {
-    image: "https://example.com/images/saurabh.jpg",
-    title: "Balancing Work and Life as an Entrepreneur",
-    link: "https://example.com/blog/work-life-balance"
-  },
-  {
-    image: "https://example.com/images/saurabh.jpg",
-    title: "Why Innovation is the Key to Growth",
-    link: "https://example.com/blog/innovation-growth"
-  }
 ];
 

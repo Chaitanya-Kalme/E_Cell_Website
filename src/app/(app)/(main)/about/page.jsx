@@ -3,20 +3,20 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white py-16 mt-24">
+    <div className="min-h-screen dark:text-white py-16 mt-24">
       <div className="container mx-auto px-4 space-y-24">
         {/* Section 1: About Us */}
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <h1 className="text-5xl font-extrabold mb-8 text-purple-700">
+            <h1 className="text-5xl font-extrabold mb-8 text-blue-700 dark:text-orange-200">
               About Us
             </h1>
-            <p className="text-xl text-black mb-6">
-              <span className="font-bold text-purple-700">Entrepreneurship Cell (E-cell), IIT Ropar</span> is a student-driven initiative aimed at developing the culture of innovation and entrepreneurship both inside and outside the campus.
+            <p className="text-xl mb-6">
+              <span className="font-bold text-blue-700 dark:text-orange-200">Entrepreneurship Cell (E-cell), IIT Ropar</span> is a student-driven initiative aimed at developing the culture of innovation and entrepreneurship both inside and outside the campus.
             </p>
             
             
-            <p className="text-xl text-black mb-6">
+            <p className="text- mb-6">
               At E Cell IIT Ropar, we are open to dreamers, doers and disruptors. It is time to make things come true.
             </p>
           </div>
@@ -43,10 +43,10 @@ export default function AboutPage() {
             />
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-4xl font-extrabold mb-4 text-purple-700">
+            <h2 className="text-4xl font-extrabold mb-4 text-blue-700 dark:text-orange-200">
               Vision
             </h2>
-            <p className="text-xl text-black mb-6">
+            <p className="text-xl mb-6">
               Our vision is to build a successful ecosystem where ideas can be nurtured, young minds are challenged to think big, take calculated risks and develop their visions into a venture.
             </p>
           </div>
@@ -64,10 +64,10 @@ export default function AboutPage() {
             />
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-4xl font-extrabold mb-4 text-purple-700">
+            <h2 className="text-4xl font-extrabold mb-4 text-blue-700 dark:text-orange-200">
               Our Mission
             </h2>
-            <p className="text-lg text-black mb-4">
+            <p className="text-lg mb-4">
               We are committed to cultivating entrepreneurial minds among the student body by preparing them with the appropriate resources, mentorship and opportunities. Whether by interactive workshops and motivational speaker sessions or by national-level contests and incubation services, E-Cell IIT Ropar serves as a catapult to aspiring entrepreneurs.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
         {/* Section 4: Startup Process */}
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <p className="text-xl text-black mb-6">
+            <p className="text-xl  mb-6">
               We think entrepreneurship is not so much about founding businesses, it is about problem solving, leadership and impact. It is on this belief that we aim to create a robust community of innovators that will be able to shape the future.
             </p>
           </div>

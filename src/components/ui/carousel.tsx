@@ -3,8 +3,6 @@ import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 
 interface SlideData {
-  title: string;
-  button: string;
   src: string;
 }
 
@@ -24,7 +22,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title } = slide;
+  const { src} = slide;
 
   return (
     <li
@@ -50,7 +48,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         <img
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-600 ease-in-out"
           style={{ opacity: current === index ? 1 : 0.5 }}
-          alt={title}
+          alt={`Image${index}`}
           src={src}
           onLoad={imageLoaded}
           loading="eager"
@@ -61,19 +59,6 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         )}
       </div>
 
-      <article
-        className={`relative z-10 p-[4vmin] transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
-      >
-        <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative">
-          {title}
-        </h2>
-        <div className="flex justify-center">
-          <button className="mt-6 px-4 py-2 sm:text-sm text-black bg-white h-12 text-xs flex justify-center items-center rounded-2xl shadow-lg hover:shadow-xl transition">
-            {button}
-          </button>
-        </div>
-      </article>
     </li>
   );
 };
