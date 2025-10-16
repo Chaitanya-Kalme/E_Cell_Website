@@ -106,10 +106,10 @@ const Page = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center bg-gradient-to-br from-[#3D0066] to-[#C670FF] py-12 px-4 sm:px-6 lg:px-8 pt-24">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg my-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200 py-12 px-4 sm:px-6 lg:px-8 pt-24">
+      <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg my-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-blue-700 dark:text-orange-200">
             Reset Password
           </h2>
         </div>
@@ -118,15 +118,15 @@ const Page = () => {
             {!isForgotPassword && (
               /* Current Password Field */
               <div className="mb-2">
-                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                  <Lock className="w-4 h-4 text-[#C670FF]" />
+                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  <Lock className="w-4 h-4 text-blue-700 dark:text-orange-200" />
                   Current Password
                 </label>
                 <div className="relative">
                   <input
                     type={showCurrentPassword ? "text" : "password"}
                     placeholder="Enter your current password"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                    className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
                     {...register("currentPassword", {
                       required: "Current password is required",
                     })}
@@ -134,7 +134,7 @@ const Page = () => {
                   <button
                     type="button"
                     onClick={() => setShowCurrentPassword(!showCurrentPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#C670FF]"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-blue-700 dark:hover:text-orange-200"
                   >
                     {showCurrentPassword ? (
                       <EyeOff className="w-5 h-5" />
@@ -159,7 +159,7 @@ const Page = () => {
                   sendOTP();
                   setIsForgotPassword(true);
                 }}
-                className="text-sm text-[#C670FF] hover:text-[#9F45D9] font-semibold transition-colors duration-200"
+                className="text-sm text-blue-700 dark:text-orange-200 hover:text-blue-800 dark:hover:text-orange-300 font-semibold transition-colors duration-200"
               >
                 Forgot Password?
               </button>
@@ -167,8 +167,8 @@ const Page = () => {
             {/* OTP Field - Only show if OTP has been sent */}
             {otpSent && (
               <div>
-                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                  <Lock className="w-4 h-4 text-[#C670FF]" />
+                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  <Lock className="w-4 h-4 text-blue-700 dark:text-orange-200" />
                   Enter OTP
                 </label>
                 <div className="flex justify-between gap-2">
@@ -181,14 +181,14 @@ const Page = () => {
                       value={digit}
                       onChange={(e) => handleOtpChange(index, e.target.value)}
                       onKeyDown={(e) => handleKeyDown(index, e)}
-                      className="w-12 h-12 text-center text-lg font-semibold border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                      className="w-12 h-12 text-center text-lg font-semibold border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
                     />
                   ))}
                 </div>
                 <button
                   type="button"
                   onClick={sendOTP}
-                  className="mt-2 text-sm text-[#C670FF] hover:text-[#9F45D9] font-semibold transition-colors duration-200"
+                  className="mt-2 text-sm text-blue-700 dark:text-orange-200 hover:text-blue-800 dark:hover:text-orange-300 font-semibold transition-colors duration-200"
                 >
                   Resend OTP
                 </button>
@@ -197,15 +197,15 @@ const Page = () => {
 
             {/* New Password Field */}
             <div>
-              <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                <Lock className="w-4 h-4 text-[#C670FF]" />
+              <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                <Lock className="w-4 h-4 text-blue-700 dark:text-orange-200" />
                 New Password
               </label>
               <div className="relative">
                 <input
                   type={showNewPassword ? "text" : "password"}
                   placeholder="Enter your new password"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                  className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
                   {...register("newPassword", {
                     required: "New password is required",
                     minLength: {
@@ -222,7 +222,7 @@ const Page = () => {
                 <button
                   type="button"
                   onClick={() => setShowNewPassword(!showNewPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#C670FF]"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-blue-700 dark:hover:text-orange-200"
                 >
                   {showNewPassword ? (
                     <EyeOff className="w-5 h-5" />
@@ -278,7 +278,7 @@ const Page = () => {
           <div>
             <Button
               type="submit"
-              className="w-full bg-[#C670FF] hover:bg-[#9F45D9] text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200"
             >
               Reset Password
             </Button>

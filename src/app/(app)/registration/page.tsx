@@ -72,8 +72,8 @@ const RegistrationPage = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3D0066] to-[#C670FF]">
-      <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200">
+      <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-2xl">
         {/* Logo and Header */}
         <div className="flex flex-col items-center mb-8">
           <Image
@@ -83,8 +83,8 @@ const RegistrationPage = () => {
             height={80}
             className="rounded-full mb-4"
           />
-          <h2 className="text-3xl font-bold text-[#3D0066]">Create Account</h2>
-          <p className="text-gray-600 mt-2">Join the E-Cell community</p>
+          <h2 className="text-3xl font-bold text-blue-700 dark:text-orange-200">Create Account</h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-2">Join the E-Cell community</p>
         </div>
         <Form {...form}>
           {/* Registration Form */}
@@ -101,15 +101,15 @@ const RegistrationPage = () => {
               }}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                    <User className="w-4 h-4 text-[#C670FF]" />
+                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    <User className="w-4 h-4 text-blue-700 dark:text-orange-200" />
                     Full Name
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="text"
                       placeholder="Enter your full name"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
                       {...field}
                     />
                   </FormControl>
@@ -130,15 +130,15 @@ const RegistrationPage = () => {
               }}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                    <Mail className="w-4 h-4 text-[#C670FF]" />
+                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    <Mail className="w-4 h-4 text-blue-700 dark:text-orange-200" />
                     Email Address
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="email"
                       placeholder="Enter your email address"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
                       {...field}
                     />
                   </FormControl>
@@ -160,15 +160,15 @@ const RegistrationPage = () => {
               }}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                    <Phone className="w-4 h-4 text-[#C670FF]" />
+                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    <Phone className="w-4 h-4 text-blue-700 dark:text-orange-200" />
                     Mobile Number
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="tel"
                       placeholder="Enter your mobile number"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
                       {...field}
                     />
                   </FormControl>
@@ -194,8 +194,8 @@ const RegistrationPage = () => {
               }}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                    <Lock className="w-4 h-4 text-[#C670FF]" />
+                  <FormLabel className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    <Lock className="w-4 h-4 text-blue-700 dark:text-orange-200" />
                     Password
                   </FormLabel>
                   <FormControl>
@@ -203,13 +203,13 @@ const RegistrationPage = () => {
                       <Input
                         type={showPassword ? "text" : "password"}
                         placeholder="Create a password"
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+                        className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
                         {...field}
                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#C670FF]"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-blue-700 dark:hover:text-orange-200"
                       >
                         {showPassword ? (
                           <EyeOff className="w-5 h-5" />
@@ -228,7 +228,7 @@ const RegistrationPage = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3 px-4 bg-[#C670FF] text-white font-semibold rounded-lg hover:bg-[#3D0066] focus:ring-4 focus:ring-[#C670FF]/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 px-4 bg-blue-700 dark:bg-orange-200 text-white dark:text-gray-900 font-semibold rounded-lg hover:bg-blue-800 dark:hover:bg-orange-300 focus:ring-4 focus:ring-blue-700/50 dark:focus:ring-orange-200/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Creating Account..." : "Create Account"}
             </button>

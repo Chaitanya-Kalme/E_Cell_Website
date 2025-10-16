@@ -70,38 +70,38 @@ const EditProfilePage = () => {
 
   if (isFetching) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3D0066] to-[#C670FF] py-12 px-4 sm:px-6 lg:px-8 pt-24">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 to-blue-600 dark:from-orange-200 dark:to-orange-300 py-12 px-4 sm:px-6 lg:px-8 pt-24">
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-12 h-12 text-white animate-spin" />
-          <p className="text-white text-lg">Loading profile...</p>
+          <Loader2 className="w-12 h-12 text-white dark:text-gray-900 animate-spin" />
+          <p className="text-white dark:text-gray-900 text-lg">Loading profile...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3D0066] to-[#C670FF] py-12 px-4 sm:px-6 lg:px-8 pt-24">
-      <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-2xl my-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200 py-12 px-4 sm:px-6 lg:px-8 pt-24">
+      <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-2xl my-8">
         {/* Header */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-20 h-20 bg-gradient-to-br from-[#3D0066] to-[#C670FF] rounded-full flex items-center justify-center mb-4">
-            <User className="w-10 h-10 text-white" />
+          <div className="w-20 h-20 bg-gradient-to-br from-blue-700 to-blue-600 dark:from-orange-200 dark:to-orange-300 rounded-full flex items-center justify-center mb-4">
+            <User className="w-10 h-10 text-white dark:text-gray-900" />
           </div>
-          <h2 className="text-3xl font-bold text-[#3D0066]">Edit Profile</h2>
-          <p className="text-gray-600 mt-2">Update your account information</p>
+          <h2 className="text-3xl font-bold text-blue-700 dark:text-orange-200">Edit Profile</h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-2">Update your account information</p>
         </div>
 
         {/* Edit Profile Form */}
         <div className="space-y-6">
           <div>
-            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-              <User className="w-4 h-4 text-[#C670FF]" />
+            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              <User className="w-4 h-4 text-blue-700 dark:text-orange-200" />
               Username
             </label>
             <input
               type="text"
               placeholder="Enter your username"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+              className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
               {...register("userName", {
                 required: "Username is required",
                 minLength: {
@@ -122,14 +122,14 @@ const EditProfilePage = () => {
           </div>
 
           <div>
-            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-              <Mail className="w-4 h-4 text-[#C670FF]" />
+            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              <Mail className="w-4 h-4 text-blue-700 dark:text-orange-200" />
               Email Address
             </label>
             <input
               type="email"
               placeholder="Enter your email address"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+              className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
               {...register("email", {
                 required: "Email is required",
                 pattern: {
@@ -146,14 +146,14 @@ const EditProfilePage = () => {
           </div>
 
           <div>
-            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-              <Phone className="w-4 h-4 text-[#C670FF]" />
+            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              <Phone className="w-4 h-4 text-blue-700 dark:text-orange-200" />
               Mobile Number
             </label>
             <input
               type="tel"
               placeholder="Enter your mobile number"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C670FF] focus:border-[#C670FF] transition-colors duration-200 text-black"
+              className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-700 dark:focus:ring-orange-200 focus:border-blue-700 dark:focus:border-orange-200 transition-colors duration-200 text-black dark:text-white dark:bg-gray-700"
               {...register("mobileNo", {
                 required: "Mobile number is required",
                 pattern: {
@@ -173,7 +173,7 @@ const EditProfilePage = () => {
             type="button"
             disabled={isLoading}
             onClick={handleSubmit(onSubmit)}
-            className="w-full py-3 px-4 bg-[#C670FF] text-white font-semibold rounded-lg hover:bg-[#3D0066] focus:ring-4 focus:ring-[#C670FF]/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full py-3 px-4 bg-blue-700 dark:bg-orange-200 text-white dark:text-gray-900 font-semibold rounded-lg hover:bg-blue-800 dark:hover:bg-orange-300 focus:ring-4 focus:ring-blue-700/50 dark:focus:ring-orange-200/50 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {isLoading ? (
               <>
