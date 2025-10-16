@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import axios from "axios";
@@ -28,21 +26,33 @@ type event={
 
 const initiatives = [
     {
-      _id: "tedx_2025_fall", // Example unique ID
-      title: "TEDX",
-      description:
-        "TEDxIITROPAR is a part of a larger TEDx network, meaning we’re an independently organized event licensed by TED. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience.",
-      button: "register",
-      url: "#", // URL is no longer needed for the register button
+       id: "5c3011cc-9737-41de-aa54-cfefaeb502cf",
+    eventName: "TedX",
+    eventDateAndTime: "2025-09-30T04:30:00.000Z",
+    eventFees: 67,
+    minSize: 1,
+    maxSize: 3,
+    isRegistrationOpen: false,
+    createdAt: "2025-09-29T06:58:07.769Z",
+    updatedAt: "2025-10-12T17:24:26.072Z",
+    eventImage: "https://res.cloudinary.com/dykbuvd20/image/upload/v1759122895/Event_Images/exbftnbus4mcvxw2mzbj.png",
+    description: "This is the tedx event of iit ropar",
+    webPageLink: "localhost:3000/contact"
     },
    
     {
-      _id: "startup_bootcamp_2025",
-      title: "Startup Bootcamp",
-      description:
-        "An intensive 3-day workshop for aspiring entrepreneurs to learn the fundamentals of building a successful startup, from idea validation to pitching investors.",
-      button: "register",
-      url: "#",
+       id: "5c3011cc-9737-41de-aa54-cfefaeb502cf",
+    eventName: "Startup bootcomp",
+    eventDateAndTime: "2025-09-30T04:30:00.000Z",
+    eventFees: 67,
+    minSize: 1,
+    maxSize: 3,
+    isRegistrationOpen: false,
+    createdAt: "2025-09-29T06:58:07.769Z",
+    updatedAt: "2025-10-12T17:24:26.072Z",
+    eventImage: "https://res.cloudinary.com/dykbuvd20/image/upload/v1759122895/Event_Images/exbftnbus4mcvxw2mzbj.png",
+    description: "This is the tedx event of iit ropar",
+    webPageLink: "localhost:3000/contact"
     }
   ];
 
@@ -86,18 +96,18 @@ const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
     }
 
   return (
-    <div className="py-10 text-center mt-20">
+    <div className="py-10 text-center mt-20" style={{ backgroundColor: "#F5F5F5" }}>
       <h1
         className="text-4xl md:text-5xl font-bold mb-0"
-        style={{ color: "#6f72bfff" }}
+        style={{ color: "#1f2937" }}
       >
         OUR INITIATIVES
       </h1>
       <p
         className="text-lg md:text-xl max-w-2xl mx-auto my-6 dark:text-white"
-        // style={{ color: "#222222ff" }}
+        style={{ color: "#374151" }}
       >
-        We at E-Cell, IIT believe that entrepreneurship is the key to India’s
+        We at E-Cell, IIT believe that entrepreneurship is the key to India's
         development. To fulfill this vision, we have conceptualized &
         successfully implemented various initiatives to help students, young
         entrepreneurs & professionals in their entrepreneurial journey.
@@ -107,42 +117,75 @@ const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
         {eventList.map((item, idx) => (
           <div
             key={idx}
-            className="bg-[#9b6fbfff] text-white rounded-3xl border-2 max-w-sm"
+            className="text-white rounded-3xl max-w-sm transition-transform hover:scale-105 relative overflow-hidden"
             style={{
-              borderColor: "#bfbc6fff",
-              borderWidth: "10px",
-              borderStyle: "solid",
+              backgroundColor: "#1f2937",
               padding: "32px 24px",
               minHeight: 340,
-              boxShadow: "0 4px 24px rgba(0, 0, 0, 0.08)",
+              boxShadow: "0 4px 24px rgba(0, 0, 0, 0.2)",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
             }}
           >
-            <img src={item.eventImage} alt={item.eventName} width={80} height={80}/>
-            <h2
-              className="font-bold text-xl md:text-2xl mb-3"
-              style={{ color: "#6fa8bfff" }}
-            >
-              {item.eventName}
-            </h2>
-            <p className="text-base mb-auto">{item.description}</p>
-            
-            {/* --- THIS IS THE KEY CHANGE --- */}
-            {/* This is now a button that triggers the onRegisterClick function */}
-            <button
-              onClick={() => item.isRegistrationOpen?onRegisterClick(item):toast.error("Registration Closed")}
-              className="mt-6 bg-[#6fa8bfff] text-white rounded-full px-7 py-2 font-bold text-base flex items-center gap-2 shadow cursor-pointer transition-transform duration-200 hover:scale-105"
-              style={{ border: "none" }}
-            >
-              Register <span style={{ fontSize: 18 }}>→</span>
-            </button>
-            {/* --- END OF CHANGE --- */}
+            {/* Animated border gradient */}
+            <div className="absolute inset-0 rounded-3xl" style={{
+              background: "linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6)",
+              backgroundSize: "300% 300%",
+              padding: "2px",
+              zIndex: 0,
+              animation: "border-spin 3s linear infinite"
+            }}>
+              <div className="w-full h-full rounded-3xl" style={{ backgroundColor: "#1f2937" }}></div>
+            </div>
 
+            {/* Content wrapper with higher z-index */}
+            <div style={{ 
+              zIndex: 1, 
+              position: "relative",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%",
+              height: "100%"
+            }}>
+              <img src={item.eventImage} alt={item.eventName} width={80} height={80}/>
+              <h2
+                className="font-bold text-xl md:text-2xl mb-3"
+                style={{ color: "#ffffff" }}
+              >
+                {item.eventName}
+              </h2>
+              <p className="text-base mb-auto">{item.description}</p>
+              
+              {/* Register button with new colors and animations */}
+              <button
+                onClick={() => item.isRegistrationOpen?onRegisterClick(item):toast.error("Registration Closed")}
+                className={`mt-6 text-white rounded-full px-7 py-2 font-bold text-base flex items-center gap-2 shadow cursor-pointer transition-transform duration-200 ${
+                  item.isRegistrationOpen ? 'hover:scale-105 bg-blue-600 hover:bg-blue-700' : 'opacity-70 cursor-not-allowed bg-gray-600'
+                }`}
+                style={{ border: "none" }}
+              >
+                Register <span style={{ fontSize: 18 }}>→</span>
+              </button>
+              {!item.isRegistrationOpen && (
+                <p className="text-xs mt-2 opacity-80">(Closed)</p>
+              )}
+            </div>
           </div>
         ))}
       </div>
+
+      <style jsx>{`
+        @keyframes border-spin {
+          0% {
+            background-position: 0% center;
+          }
+          100% {
+            background-position: 300% center;
+          }
+        }
+      `}</style>
     </div>
   );
 };
