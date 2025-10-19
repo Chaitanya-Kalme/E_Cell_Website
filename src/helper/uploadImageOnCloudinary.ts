@@ -11,7 +11,7 @@ cloudinary.config({
 interface CloudinaryUploadResult {
     public_id: string,
     secure_url: string
-    
+
     [key: string]: any
 }
 
@@ -33,7 +33,7 @@ export async function UploadEventImage(avatarFile: File) {
             (resolve, reject) => {
                 const uploadStream = cloudinary.uploader.upload_stream(
                     { folder: "Event_Images" },
-                    (error:any, result:any) => {
+                    (error: any, result: any) => {
                         if (error) reject(error);
                         else resolve(result as CloudinaryUploadResult)
                     }
@@ -42,7 +42,7 @@ export async function UploadEventImage(avatarFile: File) {
             }
         )
         return result.secure_url
-    } catch (error:any) {
+    } catch (error: any) {
         throw new Error(error)
     }
 
@@ -55,7 +55,7 @@ export async function UploadEventRuleBook(ruleBook: File) {
         if (!ruleBook) {
             return NextResponse.json({
                 success: false,
-                message: "Avatar File not found"
+                message: "RuleBook File not found"
             }, { status: 404 })
         }
 
@@ -65,8 +65,11 @@ export async function UploadEventRuleBook(ruleBook: File) {
         const result = await new Promise<CloudinaryUploadResult>(
             (resolve, reject) => {
                 const uploadStream = cloudinary.uploader.upload_stream(
-                    { folder: "Event_RuleBook" },
-                    (error:any, result:any) => {
+                    {
+                        folder: "Event_RuleBook",
+                        format: "pdf"
+                    },
+                    (error: any, result: any) => {
                         if (error) reject(error);
                         else resolve(result as CloudinaryUploadResult)
                     }
@@ -75,8 +78,7 @@ export async function UploadEventRuleBook(ruleBook: File) {
             }
         )
         return result.secure_url
-    } catch (error:any) {
+    } catch (error: any) {
         throw new Error(error)
     }
-
 }

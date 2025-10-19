@@ -61,30 +61,11 @@ export async function POST(req: NextRequest) {
         }
 
         // URL Cloudinary 
-        let imageName=""
-        let ruleBook=""
-        await UploadEventImage(eventImage)
-            .then((response) => {
-                imageName = response.toString()
-            })
-            .catch((error) => {
-                return NextResponse.json({
-                    success: false,
-                    message: "Error while uploading image"
-                }, { status: 400 })
-            })
+        let ruleBook
+        const imageName = await UploadEventImage(eventImage) as string
 
         if(eventRuleBook){
-            await UploadEventRuleBook(eventRuleBook)
-            .then((response) => {
-                ruleBook = response.toString()
-            })
-            .catch((error) => {
-                return NextResponse.json({
-                    success: false,
-                    message: "Error while uploading image"
-                }, { status: 400 })
-            })
+            ruleBook = await UploadEventRuleBook(eventRuleBook) as string
         }
 
         const createdEvent = await prisma.event.create({

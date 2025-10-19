@@ -40,7 +40,7 @@ export default function AdminNavbar() {
 
 
   return (
-    <div className="fixed top-2 inset-x-0 max-w-full h-14 mx-auto z-50 text-xl text-center justify-center gap-x-2">
+    <div className="fixed top-0 inset-x-0 max-w-full h-14 mx-auto z-50 text-xl text-center justify-center gap-x-2">
       <Menu setActive={setActive}>
         <div>
           <Image

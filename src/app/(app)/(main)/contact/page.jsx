@@ -33,7 +33,7 @@ const contact = () => {
 
   return (
     <div className="container mx-auto py-8 min-h-screen mt-24">
-      <h1 className="text-5xl font-bold text-center mb-12 text-[#3D0066] dark:text-orange-300">CONTACT US</h1>
+      <h1 className="text-5xl font-bold text-center mb-12 text-blue-700 dark:text-orange-300">CONTACT US</h1>
       
       {/* Feedback Form */}
       <div className="max-w-2xl mx-auto mb-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">

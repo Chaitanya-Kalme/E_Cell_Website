@@ -1,6 +1,6 @@
 "use client";
 import { createContext, useState, useEffect } from "react";
-import { coreTeamMembers, headMembers, coordinatorMembers, demoBlogs } from "./demoData";
+import { coreTeamMembers, headMembers, coordinatorMembers, demoBlogs } from "./TeamData";
 
 export const dataContext = createContext();
 

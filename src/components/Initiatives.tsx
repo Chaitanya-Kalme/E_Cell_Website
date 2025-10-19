@@ -10,7 +10,7 @@ type InitiativesProps = {
   onRegisterClick: (initiative: any) => void;
 };
 
-type event={
+type event = {
   id: string,
   eventName: string,
   eventFees: number,
@@ -19,14 +19,14 @@ type event={
   maxSize: number,
   eventDateAndTime: Date,
   description: string,
-  eventImage: string
-  webPageLink: string
+  eventImage: string,
+  webPageLink: string,
+  eventRuleBook: string
 };
 
-
 const initiatives = [
-    {
-       id: "5c3011cc-9737-41de-aa54-cfefaeb502cf",
+  {
+    id: "5c3011cc-9737-41de-aa54-cfefaeb502cf",
     eventName: "TedX",
     eventDateAndTime: "2025-09-30T04:30:00.000Z",
     eventFees: 67,
@@ -38,10 +38,10 @@ const initiatives = [
     eventImage: "https://res.cloudinary.com/dykbuvd20/image/upload/v1759122895/Event_Images/exbftnbus4mcvxw2mzbj.png",
     description: "This is the tedx event of iit ropar",
     webPageLink: "localhost:3000/contact"
-    },
-   
-    {
-       id: "5c3011cc-9737-41de-aa54-cfefaeb502cf",
+  },
+
+  {
+    id: "5c3011cc-9737-41de-aa54-cfefaeb502cf",
     eventName: "Startup bootcomp",
     eventDateAndTime: "2025-09-30T04:30:00.000Z",
     eventFees: 67,
@@ -53,68 +53,58 @@ const initiatives = [
     eventImage: "https://res.cloudinary.com/dykbuvd20/image/upload/v1759122895/Event_Images/exbftnbus4mcvxw2mzbj.png",
     description: "This is the tedx event of iit ropar",
     webPageLink: "localhost:3000/contact"
-    }
-  ];
+  }
+];
+
+
 
 const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
-  
-  const [loading,setLoading] = useState(true)
-  const [eventList,setEventList]= useState<event[]>([])
-  
+
+  const [loading, setLoading] = useState(true)
+  const [eventList, setEventList] = useState<event[]>([])
 
 
-  useEffect(() =>{
-      setLoading(true)
-      async function getEventList(){
-        await axios.get("/api/events/getAllEventList")
-        .then((response) =>{
+
+  useEffect(() => {
+    setLoading(true)
+    async function getEventList() {
+      await axios.get("/api/events/getAllEventList")
+        .then((response) => {
           setEventList(response.data.data)
         })
-        .catch((error) =>{
+        .catch((error) => {
           toast.error(error.response.data.message)
         })
-        .finally(() =>{
+        .finally(() => {
           setLoading(false)
         })
-      }
-      getEventList()
-  },[])
+    }
+    getEventList()
+  }, [])
 
-  if(loading){
-      return(
-        <div className="text-center justify-center mt-32">
-          <LoaderOne/>
-        </div>
-      )
-    }
-    else if(eventList.length===0){
-      return(
-        <div className="text-center mt-2 italic text-xl">
-          No Event Present 
-        </div>
-      )
-    }
+  if (loading) {
+    return (
+      <div className="text-center justify-center mt-32">
+        <LoaderOne />
+      </div>
+    )
+  }
 
   return (
-    <div className="py-10 text-center mt-20" style={{ backgroundColor: "#F5F5F5" }}>
+    <div className="py-10 text-center mt-20">
       <h1
-        className="text-4xl md:text-5xl font-bold mb-0"
-        style={{ color: "#1f2937" }}
+        className="text-4xl md:text-5xl font-bold mb-0 text-blue-700 dark:text-orange-200"
       >
         OUR INITIATIVES
       </h1>
       <p
         className="text-lg md:text-xl max-w-2xl mx-auto my-6 dark:text-white"
-        style={{ color: "#374151" }}
       >
-        We at E-Cell, IIT believe that entrepreneurship is the key to India's
-        development. To fulfill this vision, we have conceptualized &
-        successfully implemented various initiatives to help students, young
-        entrepreneurs & professionals in their entrepreneurial journey.
+        At E-Cell, IIT, we firmly believe that entrepreneurship holds the transformative power to shape India’s future. Guided by this conviction, we have envisioned and brought to life a series of impactful initiatives designed to inspire, equip, and support students, emerging entrepreneurs, and professionals as they navigate the dynamic landscape of innovation and enterprise.
       </p>
 
       <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
-        {eventList.map((item, idx) => (
+        {eventList.length > 0 ? (eventList.map((item, idx) => (
           <div
             key={idx}
             className="text-white rounded-3xl max-w-sm transition-transform hover:scale-105 relative overflow-hidden"
@@ -140,8 +130,8 @@ const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
             </div>
 
             {/* Content wrapper with higher z-index */}
-            <div style={{ 
-              zIndex: 1, 
+            <div style={{
+              zIndex: 1,
               position: "relative",
               display: "flex",
               flexDirection: "column",
@@ -149,21 +139,42 @@ const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
               width: "100%",
               height: "100%"
             }}>
-              <img src={item.eventImage} alt={item.eventName} width={80} height={80}/>
+              <img src={item.eventImage} alt={item.eventName} width={80} height={80} />
               <h2
                 className="font-bold text-xl md:text-2xl mb-3"
                 style={{ color: "#ffffff" }}
               >
                 {item.eventName}
               </h2>
-              <p className="text-base mb-auto">{item.description}</p>
-              
+              <p className="text-base">Event Date: {new Date(item.eventDateAndTime).toDateString()}</p>
+              <p className="text-base">Event Date: {new Date(item.eventDateAndTime).toLocaleTimeString()}</p>
+              <p className="text-base">Event Fees: {item.eventFees}</p>
+              <p className="text-base">Participation: {item.maxSize === 1 ? "Individual" : "Team"}</p>
+              {item.maxSize > 1 && (
+                <div>
+                  <p className="text-base">Team Minimum Size: {item.minSize}</p>
+                  <p className="text-base">Team Maximum Size: {item.maxSize}</p>
+                </div>
+              )}
+              {item.eventRuleBook && (
+                <p className="text-base">
+                  Event Rulebook:&nbsp;
+                  <a
+                    href={item.eventRuleBook}
+                    rel="noopener noreferrer"
+                    className="text-orange-200 underline"
+                  >
+                    View PDF
+                  </a>
+                </p>
+              )}
+
+
               {/* Register button with new colors and animations */}
               <button
-                onClick={() => item.isRegistrationOpen?onRegisterClick(item):toast.error("Registration Closed")}
-                className={`mt-6 text-white rounded-full px-7 py-2 font-bold text-base flex items-center gap-2 shadow cursor-pointer transition-transform duration-200 ${
-                  item.isRegistrationOpen ? 'hover:scale-105 bg-blue-600 hover:bg-blue-700' : 'opacity-70 cursor-not-allowed bg-gray-600'
-                }`}
+                onClick={() => item.isRegistrationOpen ? onRegisterClick(item) : toast.error("Registration Closed")}
+                className={`mt-6 text-white rounded-full px-7 py-2 font-bold text-base flex items-center gap-2 shadow cursor-pointer transition-transform duration-200 ${item.isRegistrationOpen ? 'hover:scale-105 bg-blue-600 hover:bg-blue-700' : 'opacity-70 cursor-not-allowed bg-gray-600'
+                  }`}
                 style={{ border: "none" }}
               >
                 Register <span style={{ fontSize: 18 }}>→</span>
@@ -173,7 +184,9 @@ const Initiatives = ({ onRegisterClick }: InitiativesProps) => {
               )}
             </div>
           </div>
-        ))}
+        ))) : (
+          <div className="text-center text-3xl italic font-bold">Coming Soon...</div>
+        )}
       </div>
 
       <style jsx>{`

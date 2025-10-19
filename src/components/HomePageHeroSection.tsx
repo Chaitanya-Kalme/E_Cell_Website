@@ -1,16 +1,22 @@
 'use client'
 import React from 'react'
-import { Card, CardContent } from "@/components/ui/card"
 import Carousel from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
-import Carousel_Image1 from "@/../public/Carousel_Image1.jpeg"
+
+
 
 function HomePageHeroSection() {
     const slideData = [
         {
-            title: "Mystic Mountains",
-            button: "Explore Component",
             src: "Carousel_Image1.jpeg",
+        },
+        {
+            src: "The-Startups-Keys-to-Success.png",
+        },
+        {
+            src: "innovation image.webp",
+        },
+        {
+            src: "qualities-of-entrepreneurs-mc-slide1.png",
         }
     ];
 

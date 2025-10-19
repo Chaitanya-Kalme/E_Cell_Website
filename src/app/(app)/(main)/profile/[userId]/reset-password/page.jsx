@@ -48,8 +48,8 @@ const Page = () => {
   const sendOTP = async () => {
     try {
       const response = await axios.post(
-        `/api/user/sendOTPForResetPassword/${params.userId}`,
-        { type: "RESET" }
+        `/api/user/sendOTPForResetPassword`,
+        { type: "RESET" ,userId: params.userId}
       );
 
       if (response.data.success) {
@@ -159,7 +159,7 @@ const Page = () => {
                   sendOTP();
                   setIsForgotPassword(true);
                 }}
-                className="text-sm text-blue-700 dark:text-orange-200 hover:text-blue-800 dark:hover:text-orange-300 font-semibold transition-colors duration-200"
+                className="text-sm text-blue-700 dark:text-orange-200 hover:text-blue-800 dark:hover:text-orange-300 font-semibold transition-colors duration-200 hover:cursor-pointer"
               >
                 Forgot Password?
               </button>

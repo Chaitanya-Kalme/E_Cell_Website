@@ -238,7 +238,7 @@ export default function EventCreation() {
             onSubmit={handleSubmit}
             disabled={submitButtonDisable}
           >
-            Create Event
+            {submitButtonDisable? "Creating Event": "Create Event"}
           </button>
 
         </form>

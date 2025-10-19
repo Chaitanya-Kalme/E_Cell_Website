@@ -20,6 +20,7 @@ type event = {
   description: string,
   eventImage: string
   webPageLink: string
+  eventRuleBook: string
 };
 
 
@@ -97,7 +98,7 @@ export function ExpandableCardDemo() {
       .then((response) => {
         toast.success("Event Delete Successfully")
         setTimeout(() => router.refresh(), 1000)
-        router.refresh()  
+        location.reload()
 
       })
       .catch((error) => {
@@ -231,6 +232,10 @@ export function ExpandableCardDemo() {
                 </div>
                 <div>Event Date: {new Date(active.eventDateAndTime).toDateString()}</div>
                 <div>Event Time: {new Date(active.eventDateAndTime).toLocaleTimeString()}</div>
+                <div>
+                  Event RuleBook: 
+                  {active.eventRuleBook? (<a href={active.eventRuleBook} target="_blank" className="text-blue-700 hover:cursor-pointer"> Link</a>) : (" No Rule Book")}
+                </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
                     layout
