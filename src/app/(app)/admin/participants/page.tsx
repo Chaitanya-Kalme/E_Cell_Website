@@ -81,7 +81,7 @@ export type participant = {
     participants: user[]
 };
 
-export const columns: ColumnDef<participant>[] = [
+const columns: ColumnDef<participant>[] = [
     {
         accessorKey: "id",
         header: "id",
