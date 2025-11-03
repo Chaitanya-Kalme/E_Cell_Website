@@ -75,8 +75,22 @@ export async function POST(req: NextRequest) {
         }
 
         let participantsArrayIds: string[]=[];
+        const seenUsers = new Set<string>();
 
         for (let i = 0; i < userData.length; i++) {
+
+            const { email, mobileNo, userName } = userData[i];
+
+            // Check for duplicate in the input array itself
+            const uniqueKey = `${email}|${mobileNo}|${userName}`;
+            if (seenUsers.has(uniqueKey)) {
+                return NextResponse.json({
+                    success: false,
+                    message: `Duplicate user in input: ${userName}`
+                }, { status: 400 });
+            }
+            seenUsers.add(uniqueKey);
+            
             const user = await prisma.user.findFirst({
                 where: {
                     email: userData[i].email,

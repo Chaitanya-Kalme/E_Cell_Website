@@ -57,7 +57,7 @@ export const headMembers = [
     name: "Chaitanya Kalme",
     position: "Web Development Head",
     image: "https://res.cloudinary.com/dykbuvd20/image/upload/v1760450043/Chaitanya_mbikos.jpg",
-    linkedin: "www.linkedin.com/in/chaitanya-kalme-1a610a346",
+    linkedin: "https://www.linkedin.com/in/chaitanya-kalme-1a610a346",
     email: "2023csb1112@iitrpr.ac.in",
   },
 ];

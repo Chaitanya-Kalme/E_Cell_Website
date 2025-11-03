@@ -124,7 +124,7 @@ export default function EventRegistrationModal({ event, onClose, onSubmit }: Mod
         </h3>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
+          {event.maxSize!>1 && (<div>
             <label htmlFor="teamName" className="block text-sm font-medium text-gray-700 mb-1">
               Team Name
             </label>
@@ -137,7 +137,7 @@ export default function EventRegistrationModal({ event, onClose, onSubmit }: Mod
               placeholder="Enter team name"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6f72bfff] focus:border-transparent outline-none"
             />
-          </div>
+          </div>)}
 
           <div>
             <div className="flex justify-between items-center mb-3">

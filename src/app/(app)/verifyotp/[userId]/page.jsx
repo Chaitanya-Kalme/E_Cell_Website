@@ -65,8 +65,30 @@ const VerifyOtp = () => {
     }
   };
 
+  const sendOTP = async () => {
+    try {
+      const response = await axios.post(
+        `/api/user/sendOTPForResetPassword`,
+        { type: "VERIFY", userId: params.userId }
+      );
+
+      if (response.data.success) {
+        toast.success("OTP sent to your email!");
+        issetOtpSent(true);
+        setUserId(response.data.data.id)
+      } else {
+        toast.error(response.data.message || "Failed to send OTP");
+      }
+    } catch (error) {
+      console.error("Error sending OTP:", error);
+      const errorMessage =
+        error.response?.data?.message || "An error occurred while sending OTP.";
+      toast.error(errorMessage);
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200">
       <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-2xl">
         {/* Logo and Header */}
         <div className="flex flex-col items-center mb-8">
@@ -99,7 +121,13 @@ const VerifyOtp = () => {
               />
             ))}
           </div>
-
+          <button
+            type="button"
+            onClick={sendOTP}
+            className="mt-2 text-sm text-blue-700 dark:text-orange-200 hover:text-blue-800 dark:hover:text-orange-300 font-semibold transition-colors duration-200 cursor-pointer"
+          >
+            Resend OTP
+          </button>
           {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
           <button

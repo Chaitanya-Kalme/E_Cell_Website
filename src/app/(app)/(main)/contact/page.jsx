@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Mail, User, MessageSquare, Send } from "lucide-react";
+import axios from "axios";
 
 const contact = () => {
   const { coreTeam, teamMembers } = useContext(dataContext);
@@ -21,10 +22,21 @@ const contact = () => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
-      toast.success("Feedback submitted successfully! We'll get back to you soon.");
+      await axios.post("/api/user/sendRequestEmail",{
+        fullName: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message 
+      })
+      .then((response) =>{
+        toast.success("Feedback submitted successfully! We'll get back to you soon.");
+      })
+      .catch((error) =>{
+        toast.error(error.response.data.message)
+      })
       reset();
     } catch (error) {
+      console.log(error)
       toast.error("Failed to submit feedback. Please try again.");
     } finally {
       setIsSubmitting(false);
