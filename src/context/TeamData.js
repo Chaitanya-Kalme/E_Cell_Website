@@ -4,8 +4,8 @@ export const coreTeamMembers = [
     name: "Dikshant Parashar",
     position: "President",
     image: "https://res.cloudinary.com/dykbuvd20/image/upload/v1760449718/dikshant_d9r9yt.jpg",
-    linkedin: "https://linkedin.com/in/aarav-sharma",
-    email: "aarav.sharma@example.com",
+    linkedin: "https://www.linkedin.com/in/dikshant-parashar-31a0a2259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "dikshantparashar04@gmail.com",
   },
   {
     name: "Animesh Anand",
@@ -15,16 +15,23 @@ export const coreTeamMembers = [
     email: "2023ceb1024@iitrpr.ac.in",
   },
   {
-    name: "Rohan Mehta",
+    name: "Omm Shree",
     position: "Secretary",
     image: "/images/rohan.jpg",
     linkedin: "https://linkedin.com/in/rohan-mehta",
-    email: "rohan.mehta@example.com",
+    email: "ommshreeaspires@gmail.com",
   },
 ];
 
 // Department Heads (6 members)
 export const headMembers = [
+  {
+    name: "Ishan Srivastava",
+    position: "Event Management Head",
+    image: "https://example.com/images/neha.jpg",
+    linkedin: "https://www.linkedin.com/in/ishan-s-05b222193?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    email: "ishansri.srivastava@gmail.com",
+  },
   {
     name: "Yash Tikaram Hatwar ",
     position: "Design Head",
@@ -79,6 +86,13 @@ export const coordinatorMembers = [
     email: "2024eeb1243@iitrpr.ac.in",
   },
   {
+    name: "Sunita",
+    position: "Event Management Coordinator",
+    image: "https://example.com/images/meera.jpg",
+    linkedin: "https://www.linkedin.com/in/nimesh-sankpal-38a942221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "2024chb1086@iitrpr.ac.in",
+  },
+  {
     name: "Nimesh Sankpal ",
     position: "Event Management Coordinator",
     image: "https://example.com/images/meera.jpg",
@@ -105,6 +119,13 @@ export const coordinatorMembers = [
     image: "https://example.com/images/dev.jpg",
     linkedin: "https://www.linkedin.com/in/sarthak-manav-518673207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "2025dss1022@iitrpr.ac.in",
+  },
+  {
+    name: "Raghav Gupta ",
+    position: "Outreach Coordinator",
+    image: "https://example.com/images/dev.jpg",
+    linkedin: "https://www.linkedin.com/in/raghav-gupta-35769a355?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "2024eeb1236@iitrpr.ac.in",
   },
   {
     name: "I Nikhil Varma",
@@ -156,18 +177,18 @@ export const coordinatorMembers = [
     email: "2024csb1123@iitrpr.ac.in",
   },
   {
-    name: "Varun Bhardwaj ",
-    position: "Web Development Coordinator",
-    image: "https://example.com/images/saurabh.jpg",
-    linkedin: "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav",
-    email: "2024epb1282@iitrpr.ac.in",
-  },
-  {
     name: "Ratnadeep Paul",
     position: "Web Development Coordinator",
     image: "https://example.com/images/saurabh.jpg",
     linkedin: "https://www.linkedin.com/in/ratnadeeppaul/",
     email: "2024chb1075@iitrpr.ac.in",
+  },
+  {
+    name: "Varun Bhardwaj ",
+    position: "Web Development Coordinator",
+    image: "https://example.com/images/saurabh.jpg",
+    linkedin: "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav",
+    email: "2024epb1282@iitrpr.ac.in",
   },
 ];
 

@@ -31,7 +31,7 @@ export default function AdminNavbar() {
     await axios.post("/api/admin/logout")
       .then(() => {
         toast.success("Admin Logout Successfully")
-        router.replace("/admin/login")
+        router.replace("/E_Cell_IITRPR_Admin/login")
       })
       .catch((error) => {
         toast.error(error.response.data.message)
@@ -49,7 +49,7 @@ export default function AdminNavbar() {
             width={48}
             height={48}
             className="border rounded-xl ml-4"
-            onClick={() => router.replace("/admin")}
+            onClick={() => router.replace("/E_Cell_IITRPR_Admin")}
           />
         </div>
         <div className="w-full flex items-center justify-center gap-4">
@@ -61,7 +61,7 @@ export default function AdminNavbar() {
           </button>
           <button className="p-[2px] relative">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-md" />
-            <div className="px-6 py-1 bg-black rounded-md relative group text-white hover:bg-transparent hover:cursor-pointer" onClick={() => router.replace('/admin/participants')}>
+            <div className="px-6 py-1 bg-black rounded-md relative group text-white hover:bg-transparent hover:cursor-pointer" onClick={() => router.replace('/E_Cell_IITRPR_Admin/participants')}>
               Participant
             </div>
           </button>
@@ -70,8 +70,8 @@ export default function AdminNavbar() {
             <div className="px-6 py-1 bg-black rounded-md relative group text-white hover:bg-transparent">
               <MenuItem setActive={setActive} active={active} item="Events">
                 <div className="flex flex-col space-y-4 text-m">
-                  <HoveredLink href="/admin/createEvent">Create Event</HoveredLink>
-                  <HoveredLink href="/admin/eventList">Show Event List</HoveredLink>
+                  <HoveredLink href="/E_Cell_IITRPR_Admin/createEvent">Create Event</HoveredLink>
+                  <HoveredLink href="/E_Cell_IITRPR_Admin/eventList">Show Event List</HoveredLink>
                 </div>
               </MenuItem>
             </div>

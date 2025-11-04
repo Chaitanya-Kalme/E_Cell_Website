@@ -34,6 +34,10 @@
     - To Stop the container to run 
         - `docker-compose down`
 4. Access the website on browser at: http://localhost:8080
+5. To access any container:
+    - docker exec -it <container_id> bash 
+6. To access database:
+    - docker exec -it postgres_db psql -U E_Cell -d E_Cell_Website
 
 ### Important Note:- 
     1. Admin Password should be placed here in the encrypted form by bcrypt.

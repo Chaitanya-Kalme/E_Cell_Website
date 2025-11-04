@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken"
+import bcrypt from "bcryptjs";
 
 
 export async function POST(req: NextRequest){
@@ -12,7 +13,7 @@ export async function POST(req: NextRequest){
                 message: "Email and Password are required"
             },{status: 404})
         }
-        if(email !== process.env.ADMIN_EMAIL || password !==process.env.ADMIN_PASSWORD){
+        if(email !== process.env.ADMIN_EMAIL || password!==process.env.ADMIN_PASSWORD){
             return NextResponse.json({
                 success: false,
                 message: "Email or password is INCORRECT."

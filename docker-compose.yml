@@ -61,7 +61,34 @@ services:
       - '5432:5432'
     networks:
       - app-network
-
+  db_backup:
+    image: postgres:15
+    container_name: postgres_backup
+    depends_on:
+      - db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - ./backup:/backups
+    networks:
+      - app-network
+    command: >
+      bash -c "
+        echo '🚀 Database backup service started';
+        while true; do
+          echo '📦 Running backup at' $(date);
+          BACKUP_FILE=/backups/backup_$(date +%Y%m%d_%H%M%S).sql.gz;
+          pg_dump -h db -U ${POSTGRES_USER} ${POSTGRES_DB} | gzip > $BACKUP_FILE;
+          echo '✅ Backup saved to' $BACKUP_FILE;
+          # Keep only the 5 latest backups
+          ls -t /backups/backup_*.sql.gz | tail -n +6 | xargs -r rm --;
+          echo '🧹 Old backups cleaned up';
+          echo '⏳ Sleeping for 3 weeks...';
+          sleep $((21*24*60*60));  # 3 weeks
+        done
+      "
 volumes:
   pgdata:
 

@@ -22,7 +22,7 @@ export default function AdminLoginPage() {
       await axios.post("/api/admin/login",{email: email,password: password})
       .then(() =>{
         toast.success("Admin Logged In Successfully")
-        router.replace("/admin")
+        router.replace("/E_Cell_IITRPR_Admin")
       })
       .catch((error) =>{
         toast.error(error.response.data.message)
