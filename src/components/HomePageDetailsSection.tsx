@@ -64,12 +64,12 @@ function HomePageDetailsSection() {
                     </CarouselContent>
                 </Carousel2>
             </div>
-            <h1 className='text-center font-bold text-gray-800 text-3xl pt-3 dark:text-white'>Testimonial</h1>
+            {/* <h1 className='text-center font-bold text-gray-800 text-3xl pt-3 dark:text-white'>Testimonial</h1>
             <div className='text-center justify-center flex pb-4 mt-4'>
                 <div className="relative overflow-hidden w-3/4 max-h-screen">
                     <Carousel slides={testimonialData} />
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )
