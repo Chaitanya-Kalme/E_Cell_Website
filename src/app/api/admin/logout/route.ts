@@ -12,7 +12,7 @@ export async function POST(req: NextRequest){
         },{status: 200})
         
         res.cookies.set('token', '', {
-            path: '/admin',
+            path: '/E_Cell_IITRPR_Admin',
             expires: new Date(0),
         });
         return res;

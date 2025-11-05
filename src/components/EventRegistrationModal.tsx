@@ -73,7 +73,7 @@ export default function EventRegistrationModal({ event, onClose, onSubmit }: Mod
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!teamName.trim()) {
+    if (event.maxSize!>1 && !teamName.trim()) {
       alert('Please enter team name');
       return;
     }

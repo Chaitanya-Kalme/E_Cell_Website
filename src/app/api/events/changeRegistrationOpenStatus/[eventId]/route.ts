@@ -7,7 +7,7 @@ import { success } from "zod";
 export async function POST(req: NextRequest, {params}:{params: {eventId: string}}){
     try {
         const urlParams = await params
-        const eventId = params.eventId
+        const eventId = urlParams.eventId
 
         if(!eventId){
             return NextResponse.json({

@@ -139,7 +139,7 @@ export async function POST(req: NextRequest) {
 
         return NextResponse.json({
             success: true,
-            message: "Participation is created successfully"
+            message: "Participated successfully"
         }, { status: 200 })
 
     } catch (error: any) {

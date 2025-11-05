@@ -38,7 +38,7 @@ export async function POST(req: NextRequest){
             httpOnly: true,
             secure: true,
             sameSite: 'strict',
-            path: '/admin'
+            path: '/E_Cell_IITRPR_Admin'
         })
 
         return response
