@@ -36,9 +36,15 @@ export default function NavBar() {
 
   const router = useRouter()
   const { data: session } = useSession()
+  const [open, setOpen] = React.useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
   const user = session?.user as User
   const isDark = resolvedTheme === 'dark'
+
+  const handleNavigate = (href: string) => {
+    setOpen(false)
+    router.push(href)
+  }
 
   const Logout = async () => {
 
@@ -133,66 +139,70 @@ export default function NavBar() {
           )}
         </NavigationMenuList>
 
-        <DropdownMenu>
+        <DropdownMenu open={open} onOpenChange={setOpen}>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-10 w-10 p-0 md:hidden">
               <Menu size={28} />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="mt-6 ml-auto right-0">
-            <DropdownMenuItem><Link href="/" className="hover:text-gray-300">Home</Link></DropdownMenuItem>
+          <DropdownMenuContent align="start" className="mt-6 ml-auto md:hidden">
+            <DropdownMenuItem onClick={() => handleNavigate("/")}>Home</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem><Link href="/initivatives" className="hover:text-gray-300">Initivaties</Link></DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/initiatives")}>Initiatives</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem><Link href="/about" className="hover:text-gray-300">About Us</Link></DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/about")}>About Us</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem><Link href="/contact" className="hover:text-gray-300">Contact Us</Link></DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/contact")}>Contact Us</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem><Link href="/blogs" className="hover:text-gray-300">Blogs</Link></DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/blogs")}>Blogs</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem><Link href="/gallery" className="hover:text-gray-300">Gallery</Link></DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/gallery")}>Gallery</DropdownMenuItem>
             <DropdownMenuSeparator />
             {/* Theme Toggle Button */}
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => setTheme(isDark ? 'light' : 'dark')}
-                  className="font-bold"
-                >
-                  <Moon
-                    className={`h-4 w-4 transition-all ${isDark ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`}
-                  />
-                  <Sun
-                    className={`absolute h-4 w-4 transition-all ${isDark ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'}`}
-                  />
-                </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => {
+                setTheme(isDark ? "light" : "dark")
+                setOpen(false)
+              }}
+              className="font-bold"
+            >
+              <Moon
+                className={`h-4 w-4 transition-all ${isDark ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`}
+              />
+              <Sun
+                className={`absolute h-4 w-4 transition-all ${isDark ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'}`}
+              />
+            </Button>
             <DropdownMenuSeparator />
             {session ? (
-              <div className=" text-black dark:text-white">
-                <DropdownMenuItem className="hover:cursor-pointer hover:text-gray-300">
+              <div className="text-black dark:text-white">
+                <DropdownMenuItem onClick={() => handleNavigate(`/profile/${session.user.id}`)}>
                   Profile
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => Logout()} className="hover:bg-blue-300 hover:cursor-pointer">
-                  Logout
-                  <div>
-                    <LogOut />
-                  </div>
+                <DropdownMenuItem
+                  onClick={() => {
+                    Logout()
+                    setOpen(false)
+                  }}
+                  className="hover:bg-blue-300"
+                >
+                  Logout <LogOut className="ml-2" />
                 </DropdownMenuItem>
               </div>
             ) : (
               <div>
-                <DropdownMenuItem><Link href="/registration" className="block px-2 text-center hover:bg-gray-700 rounded">
+                <DropdownMenuItem onClick={() => handleNavigate("/registration")}>
                   Register
-                </Link></DropdownMenuItem>
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem><Link href="/login" className="block px-2 hover:bg-gray-700 rounded">
+                <DropdownMenuItem onClick={() => handleNavigate("/login")}>
                   Login
-                </Link></DropdownMenuItem>
+                </DropdownMenuItem>
               </div>
             )}
-
-
           </DropdownMenuContent>
         </DropdownMenu>
       </NavigationMenu>

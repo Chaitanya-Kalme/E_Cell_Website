@@ -21,11 +21,14 @@ function HomePageHeroSection() {
     ];
 
     return (
-        <div className="w-full overflow-hidden mt-23" style={{ height: `calc(100vh - 6rem)` }}>
-            <div className="relative overflow-hidden w-full h-full">
-                <Carousel slides={slideData} />
+        <div className="w-full overflow-hidden mt-23">
+            <div className="relative overflow-hidden w-full md:h-[calc(100vh-6rem)]">
+                <Carousel
+                    slides={slideData}
+                />
             </div>
         </div>
+
     )
 }
 

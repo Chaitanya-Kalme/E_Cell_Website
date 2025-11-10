@@ -22,12 +22,12 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src} = slide;
+  const { src } = slide;
 
   return (
     <li
       ref={slideRef}
-      className="w-screen h-screen relative flex items-center justify-center text-white z-10 overflow-hidden"
+      className="w-full h-50 md:h-screen relative flex items-center justify-center text-white z-10 overflow-hidden"
       onClick={() => handleSlideClick(index)}
       style={{
         transform:
@@ -46,7 +46,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <img
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-600 ease-in-out size-fit"
+          className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-600 ease-in-out"
           style={{ opacity: current === index ? 1 : 0.5 }}
           alt={`Image${index}`}
           src={src}
@@ -93,46 +93,41 @@ interface CarouselProps {
 
 export default function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(0);
+  const [carouselHeight, setCarouselHeight] = useState<string>("100vh");
 
-  const handlePreviousClick = () => {
-    const previous = current - 1;
-    setCurrent(previous < 0 ? slides.length - 1 : previous);
-  };
+  useEffect(() => {
+    // Function to update height based on window width
+    const updateHeight = () => {
+      if (window.innerWidth >= 768) {
+        // md breakpoint and above
+        setCarouselHeight(`calc(100vh - 6rem)`);
+      } else {
+        // mobile: let height fit images naturally
+        setCarouselHeight("auto");
+      }
+    };
 
-  const handleNextClick = () => {
-    const next = current + 1;
-    setCurrent(next === slides.length ? 0 : next);
-  };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
 
-  const handleSlideClick = (index: number) => {
-    if (current !== index) {
-      setCurrent(index);
-    }
-  };
-  const height = `calc(100vh - 6rem)`;
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prevCurrent) => (prevCurrent + 1) % slides.length);
-    }, 3000); // Change slide every 3000ms (3 seconds)
+    }, 3000);
 
-    return () => clearInterval(interval); // Clean up on unmount
+    return () => clearInterval(interval);
   }, [slides.length]);
 
-
-  const id = useId();
-
   return (
-    <div
-      className="w-full overflow-hidden relative"
-      style={{ height }}
-      aria-labelledby={`carousel-heading-${id}`}
-    >
+    <div className="w-full overflow-hidden relative" style={{ height: carouselHeight }}>
       <ul
         className="flex transition-transform duration-1000 ease-in-out"
         style={{
           width: `${slides.length * 100}vw`,
-          height,
+          height: carouselHeight,
           transform: `translateX(-${current * 100}vw)`,
         }}
       >
@@ -142,23 +137,23 @@ export default function Carousel({ slides }: CarouselProps) {
             slide={slide}
             index={index}
             current={current}
-            handleSlideClick={handleSlideClick}
+            handleSlideClick={(i) => setCurrent(i)}
           />
         ))}
       </ul>
-
 
       <div className="absolute top-1/2 left-0 right-0 flex justify-between items-center">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
-          handleClick={handlePreviousClick}
+          handleClick={() =>
+            setCurrent((prev) => (prev - 1 < 0 ? slides.length - 1 : prev - 1))
+          }
         />
-
         <CarouselControl
           type="next"
           title="Go to next slide"
-          handleClick={handleNextClick}
+          handleClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
         />
       </div>
     </div>

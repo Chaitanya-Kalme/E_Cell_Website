@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/about-us-image.png"
+              src="/about_us_image1.jpg"
               alt="About Us"
               width={400}
               height={400}
@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row-reverse items-center gap-12">
           <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/vision-image.png"
+              src="/about_us_image2.jpg"
               alt="Vision"
               width={400}
               height={250}
@@ -56,7 +56,7 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/our-mission-image.png"
+              src="/about_us_image3.jpg"
               alt="Mission"
               width={400}
               height={250}
@@ -74,7 +74,7 @@ export default function AboutPage() {
         </div>
 
         {/* Section 4: Startup Process */}
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        {/* <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
             <p className="text-xl  mb-6">
               We think entrepreneurship is not so much about founding businesses, it is about problem solving, leadership and impact. It is on this belief that we aim to create a robust community of innovators that will be able to shape the future.
@@ -89,7 +89,7 @@ export default function AboutPage() {
               className="rounded-2xl shadow-xl object-contain"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   return (
     <li
-      className="w-full h-auto flex flex-col md:flex-row items-center justify-between bg-[#1D1F2F] text-white p-4 rounded-lg overflow-hidden transition-all duration-500 ease-in-out"
+      className="w-full h-auto flex flex-col md:flex-row items-center bg-[#1D1F2F] text-white p-4 rounded-lg overflow-hidden transition-all duration-500 ease-in-out"
       onClick={() => handleSlideClick(index)}
       style={{
         transform: current !== index ? "scale(0.98)" : "scale(1)",
@@ -33,9 +33,9 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
       }}
     >
       {/* Left - Image */}
-      <div className="w-full md:w-1/2 h-64 md:h-80 overflow-hidden rounded-md">
+      <div className="w-full md:w-1/2 md:h-80 overflow-hidden rounded-md">
         <img
-          className="w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+          className="md:size-fit object-cover transition-opacity duration-700 ease-in-out"
           alt={title}
           src={src}
           onLoad={imageLoaded}
@@ -46,12 +46,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
 
       {/* Right - Text */}
-      <article className="w-full md:w-1/2 p-6 text-left">
+      <article className="w-full md:w-1/2 p-6 text-left max-h-86 md:max-h-full overflow-y-auto">
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <button className="mt-4 px-4 py-2 text-sm text-black bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+        <button className="px-4  text-sm text-black bg-white rounded-2xl shadow-lg hover:shadow-xl transition overflow-y-visible">
           {description}
         </button>
       </article>
+
     </li>
   );
 };
