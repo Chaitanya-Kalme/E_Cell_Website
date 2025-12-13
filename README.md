@@ -48,3 +48,5 @@
 6. To access database:
     - docker exec -it postgres_db psql -U E_Cell -d E_Cell_Website
 
+
+
