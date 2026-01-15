@@ -14,15 +14,34 @@ import {
   TableCell,
   TableCaption,
 } from "@/components/ui/table";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import { Edit2, Key, CheckCircle, XCircle } from "lucide-react";
 import axios from "axios";
+import QRCode from 'qrcode';
+import { QRCodeCanvas } from 'qrcode.react';
+import QrScanner from "@/components/QRCodeScanner";
 
 const ProfilePage = () => {
   const params = useParams();
   const router = useRouter();
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [qrCodeLoading, setQRCodeLoading] = useState(false);
   const [participations, setParticipations] = useState([]);
+  const [qr, setQr] = useState('');
+
+
+  const [scanResult, setScanResult] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Uncomment when API is ready
   useEffect(() => {
@@ -30,7 +49,6 @@ const ProfilePage = () => {
       try {
         await axios.get(`/api/user/profile/${params.userId}`)
           .then((response) => {
-            console.log(response)
             setUserData(response.data.data);
             setParticipations(response.data.data.participation || []);
           })
@@ -42,8 +60,8 @@ const ProfilePage = () => {
           })
       }
       catch {
-          toast.error("Error while fetching user")
-        }
+        toast.error("Error while fetching user")
+      }
     }
 
     fetchUserData();
@@ -61,6 +79,37 @@ const ProfilePage = () => {
   const handleResetPassword = () => {
     router.push(`/profile/${params.userId}/reset-password`);
   };
+
+  const generateQRCode = async (participationId) => {
+    setQRCodeLoading(true);
+    await axios.post(`/api/participant/generateQRCode/${participationId}`)
+      .then((response) => {
+        setQr(response.data.data)
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message)
+      })
+      .finally(() => setQRCodeLoading(false))
+
+  }
+
+
+
+  const handleScan = async (qrData) => {
+    try {
+      // send QR code to backend for verification
+      const res = await axios.post("/api/admin/verifyQRCode", { QRCodeData: qrData })
+      console.log(res.data.data)
+
+      setScanResult(res.data.data);
+      setIsOpen(true);
+    } catch (err) {
+      setScanResult({ success: false, error: "Scan failed" });
+      setIsOpen(true);
+    }
+  };
+
+
 
   if (loading) {
     return (
@@ -97,6 +146,62 @@ const ProfilePage = () => {
                     {userData?.userName}
                   </p>
                 </div>
+                {/* <div>
+                  <QrScanner onScan={handleScan} />
+                </div>
+                {isOpen && (
+                  <div
+                    style={{
+                      position: "fixed",
+                      top: 0,
+                      left: 0,
+                      width: "100vw",
+                      height: "100vh",
+                      backgroundColor: "rgba(0,0,0,0.5)",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      zIndex: 1000,
+                    }}
+                  >
+                    <div
+                      style={{
+                        backgroundColor: "#fff",
+                        padding: "2rem",
+                        borderRadius: "8px",
+                        maxWidth: "400px",
+                        textAlign: "center",
+                      }}
+                    >
+                      {scanResult ? (
+                        <>
+                          <h2>Scan Successful ✅</h2>
+                          <p>Event Name: {scanResult.EventName}</p>
+                          <p>feesPaid: {scanResult.feesPaid? "True" :"False"}</p>
+                        </>
+                      ) : (
+                        <>
+                          <h2>Scan Failed ❌</h2>
+                          <p>{scanResult?.error || "Invalid QR code"}</p>
+                        </>
+                      )}
+                      <button
+                        onClick={() => setIsOpen(false)}
+                        style={{
+                          marginTop: "1rem",
+                          padding: "0.5rem 1rem",
+                          border: "none",
+                          borderRadius: "4px",
+                          backgroundColor: "#0070f3",
+                          color: "#fff",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )} */}
                 <div>
                   <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Email</h2>
                   <p className="text-lg font-medium text-gray-900 dark:text-white">
@@ -211,6 +316,26 @@ const ProfilePage = () => {
                               .map((participant) => participant.userName)
                               .join(", ")}
                           </TableCell>
+                          {/* <TableCell>
+                            <Dialog>
+                              <DialogTrigger as Child>
+                                <Button variant="outline" onClick={() => generateQRCode(participation.id)}>QR</Button>
+                              </DialogTrigger>
+                              <DialogContent className="sm:max-w-[425px]">
+                                <DialogHeader>
+                                  <DialogTitle className="text-center font-bold">{participation.EventParticipated.eventName}</DialogTitle>
+                                  <DialogDescription className="font-bold text-center">
+                                    This QR Code is Required during event.
+                                  </DialogDescription>
+                                  {qrCodeLoading ? (
+                                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-700 dark:border-orange-200"></div>
+                                  ) : (
+                                    <QRCodeCanvas value={qr} size={300} />
+                                  )}
+                                </DialogHeader>
+                              </DialogContent>
+                            </Dialog>
+                          </TableCell> */}
                         </TableRow>
                       ))
                     )}
