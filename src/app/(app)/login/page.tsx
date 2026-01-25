@@ -94,7 +94,7 @@ const LoginPage = () => {
     }
     else {
       toast.success("User Login Successfully")
-      router.replace('/')
+      router.replace('/E-Summit')
     }
     setLoading(false)
   }
