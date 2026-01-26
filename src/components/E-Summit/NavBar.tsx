@@ -102,11 +102,6 @@ export default function NavBar() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/E-Summit/workshop" className="hover:text-gray-300">
-              Workshops
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
             <div className="flex justify-center items-center h-full m-0 size-8 mx-4 my-2">
               <Button
                 variant="outline"
@@ -207,12 +202,6 @@ export default function NavBar() {
               onClick={() => handleNavigate("/E-Summit/StartUpExpo")}
             >
               StartUp Expo
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit/workshops")}
-            >
-              Workshops
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             {/* Theme Toggle Button */}
