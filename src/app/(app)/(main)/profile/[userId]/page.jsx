@@ -146,7 +146,7 @@ const ProfilePage = () => {
                     {userData?.userName}
                   </p>
                 </div>
-                {/* <div>
+                <div>
                   <QrScanner onScan={handleScan} />
                 </div>
                 {isOpen && (
@@ -201,7 +201,7 @@ const ProfilePage = () => {
                       </button>
                     </div>
                   </div>
-                )} */}
+                )}
                 <div>
                   <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">Email</h2>
                   <p className="text-lg font-medium text-gray-900 dark:text-white">
@@ -316,7 +316,7 @@ const ProfilePage = () => {
                               .map((participant) => participant.userName)
                               .join(", ")}
                           </TableCell>
-                          {/* <TableCell>
+                          <TableCell>
                             <Dialog>
                               <DialogTrigger as Child>
                                 <Button variant="outline" onClick={() => generateQRCode(participation.id)}>QR</Button>
@@ -335,7 +335,7 @@ const ProfilePage = () => {
                                 </DialogHeader>
                               </DialogContent>
                             </Dialog>
-                          </TableCell> */}
+                          </TableCell>
                         </TableRow>
                       ))
                     )}

@@ -8,6 +8,7 @@ import { SessionProvider } from "next-auth/react";
 import AuthProvider from "@/context/AuthProvider";
 import NavBar from "@/components/E-Summit/NavBar";
 import Footer from "@/components/E-Summit/footer";
+import SocialSidebar from "@/components/E-Summit/SocialMediaSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "E-Cell IIT Ropar",
+  title: "E-Summit 2026",
 };
 
 export default function RootLayout({
@@ -42,6 +43,7 @@ export default function RootLayout({
           >
             <DataProvider>
               <NavBar />
+              {/* <SocialSidebar/> */}
               <div className="pt-24">
                 {children}
               </div>

@@ -1,117 +1,132 @@
-import { Mail, MapPinIcon } from 'lucide-react';
-import Image from 'next/image';
+"use client"
+import Image from "next/image";
+import { Mail, MapPinIcon } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
+import { useEffect } from "react";
 
 export default function Footer() {
+
+  useEffect(() => {
+    const onScroll = () => {
+      document.documentElement.style.setProperty(
+        "--scroll",
+        `${window.scrollY * 0.05}px`
+      );
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div>
-      <footer className="w-full bg-gray-900 text-white py-8 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between">
-          {/* Left - Logo/Image */}
-          <div className="mb-6 md:mb-0 md:w-1/4 flex-shrink-0">
-            <Image
-              src="/E-Cell Image.jpg" // Change this to your logo path
-              alt="Logo"
-              width={150}
-              height={150}
-              priority
+    <div className="relative">
+      {/* 🌊 Ocean Footer */}
+      <footer className="ocean relative text-white pt-24 pb-16 px-4">
+        <div className="ocean-depth" />
+        {/* 🌊 SVG WAVE */}
+        <div className="wave-top">
+          <svg
+            viewBox="0 0 1440 100"
+            preserveAspectRatio="none"
+            className="w-full h-[80px]"
+          >
+            <path
+              d="M0,60 C120,90 360,20 720,40 1080,60 1320,20 1440,40 L1440,0 L0,0 Z"
+              fill="white"
             />
-            <div className='mt-2 flex gap-x-2'>
-              <a href="https://www.linkedin.com/company/e-cell-iit-ropar/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className='size-7 hover:cursor-pointer' />
-              </a>
-              <a href="https://www.instagram.com/ecell_iitrpr/?hl=en" target="_blank" rel="noopener noreferrer">
-                <FaSquareInstagram className='size-7 hover:cursor-pointer' />
+          </svg>
+        </div>
+
+        {/* 💧 BUBBLES */}
+        {[...Array(14)].map((_, i) => (
+          <span
+            key={i}
+            className="bubble"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${18 + Math.random() * 20}s`,
+              animationDelay: `${Math.random() * 10}s`,
+              width: `${6 + Math.random() * 8}px`,
+              height: `${6 + Math.random() * 8}px`,
+            }}
+          />
+        ))}
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+          {/* LOGO */}
+          {/* LOGO + SOCIALS */}
+          <div className="flex flex-col items-start">
+            {/* Logo */}
+            <Image
+              src="/E-Summit Logo.png"
+              alt="E-Summit"
+              width={800}
+              height={800}
+            />
+
+            {/* Social Media Icons */}
+            <div className="mt-4 flex items-center gap-4 ml-20 text-center w-full">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="size-10 hover:scale-110 transition duration-300" />
               </a>
 
-              
-              
-              
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaSquareInstagram className="size-10 hover:scale-110 transition duration-300" />
+              </a>
             </div>
           </div>
-          {/* Right - Columns */}
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {/* Event Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Event Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/events/upcoming" className="hover:underline">
-                    Upcoming Events
-                  </a>
-                </li>
-                <li>
-                  <a href="/events/archive" className="hover:underline">
-                    Past Events
-                  </a>
-                </li>
-                <li>
-                  <a href="/events/submit" className="hover:underline">
-                    Submit Event
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Social Media */}
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Useful Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/" rel="noopener noreferrer" className="hover:underline">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="/about" rel="noopener noreferrer" className="hover:underline">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" rel="noopener noreferrer" className="hover:underline">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="/gallery" rel="noopener noreferrer" className="hover:underline">
-                    Gallery
-                  </a>
-                </li>
-                <li>
-                  <a href="/blogs" rel="noopener noreferrer" className="hover:underline">
-                    Blogs
-                  </a>
-                </li>
-              </ul>
-            </div>
 
-            {/* Address */}
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Contact</h3>
-              <a className="not-italic flex" href='https://maps.app.goo.gl/sxtvLWVFFpE48EmS8' target='_blank'>
-                <span className='mr-2'>
-                  <MapPinIcon className='bg-gray-900' />
-                </span>
-                Admin Block, IIT Ropar,<br />
-                India,140001
-              </a>
-              <a className="not-italic flex mt-2" href="mailto:ecell@iitrpr.ac.in" >
-                <span className='mr-2 '>
-                  <Mail />
-                </span>
-                ecell@iitrpr.ac.in
-              </a>
-              <div>
-              </div>
+
+          {/* EVENTS */}
+          <div>
+            <h3 className="font-semibold text-lg mb-3">Events</h3>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li className="hover:cursor-pointer">Upcoming Events</li>
+              <li className="hover:cursor-pointer">Past Events</li>
+              <li className="hover:cursor-pointer">Submit Event</li>
+            </ul>
+          </div>
+
+          {/* LINKS */}
+          <div>
+            <h3 className="font-semibold text-lg mb-3">Useful Links</h3>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li className="hover:cursor-pointer">Home</li>
+              <li className="hover:cursor-pointer">About</li>
+              <li className="hover:cursor-pointer">Gallery</li>
+              <li className="hover:cursor-pointer">Blogs</li>
+            </ul>
+          </div>
+
+          {/* CONTACT */}
+          <div>
+            <h3 className="font-semibold text-lg mb-3">Contact</h3>
+            <div className="flex items-center gap-2 text-sm opacity-90">
+              <MapPinIcon /> India
+            </div>
+            <div className="flex items-center gap-2 text-sm opacity-90 mt-2">
+              <Mail /> info@esummit.com
             </div>
           </div>
         </div>
       </footer>
-      <div className='text-center py-4 bg-gray-950 text-white'>
-        © 2025 Copyright: E-Cell IIT Ropar
+
+      {/* COPYRIGHT */}
+      <div className="bg-black text-white text-center py-4 text-sm">
+        © 2026 E-Summit. All rights reserved.
       </div>
     </div>
   );
-};
+}

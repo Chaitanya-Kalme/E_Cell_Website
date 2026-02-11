@@ -1,6 +1,128 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+
+:root {
+  --ocean-deep: #020617;
+  --ocean-mid: #042f4a;
+  --ocean-light: #0ea5e9;
+  --foam: rgba(255, 255, 255, 0.35);
+}
+
+.dark {
+  --ocean-deep: #000814;
+  --ocean-mid: #001d3d;
+  --ocean-light: #003566;
+  --foam: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   🌊 OCEAN CONTAINER
+   ========================= */
+.ocean {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+  180deg,
+  var(--ocean-light) 0%,
+  var(--ocean-mid) 45%,
+  var(--ocean-deep) 100%
+);
+}
+
+/* =========================
+   🌊 WATER FLOW LAYERS
+   ========================= */
+.ocean::before,
+.ocean::after {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  background-repeat: repeat;
+  background-size: 60% 100%;
+  pointer-events: none;
+}
+
+.ocean::before {
+  background-image: radial-gradient(
+    circle at 50% 20%,
+    var(--foam) 16%,
+    transparent 65%
+  );
+  opacity: 0.5;
+  animation: waterFlow 16s linear infinite;
+}
+
+.ocean::after {
+  background-image: radial-gradient(
+    circle at 50% 35%,
+    rgba(255,255,255,0.12) 20%,
+    transparent 70%
+  );
+  opacity: 0.25;
+  animation: waterFlowReverse 24s linear infinite;
+}
+
+.ocean-depth {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08) 0%,
+    rgba(0,0,0,0.35) 75%,
+    rgba(0,0,0,0.6) 100%
+  );
+  pointer-events: none;
+}
+
+@keyframes waterFlow {
+  from { transform: translateX(0) translateY(0); }
+  to { transform: translateX(30%) translateY(10%); }
+}
+
+@keyframes waterFlowReverse {
+  from { transform: translateX(0) translateY(0); }
+  to { transform: translateX(-30%) translateY(8%); }
+}
+
+/* =========================
+   💧 FLOATING BUBBLES
+   ========================= */
+.bubble {
+  position: absolute;
+  bottom: -10%;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+  animation: bubbleRise linear infinite;
+}
+
+@keyframes bubbleRise {
+  from {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  10% { opacity: 0.6; }
+  to {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   🌊 SVG WAVE
+   ========================= */
+.wave-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 5;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -163,3 +285,463 @@
     }
   }
 }
+
+
+
+/* ---------------------- */
+/* CLOUDS */
+/* ---------------------- */
+.clouds {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat-x;
+  background-size: 1200px 200px;
+  opacity: 0.8;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.clouds-1 {
+  top: 20%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='200'%3E%3Cpath fill='%23ffffff' d='M0 120c50-60 150-60 200 0s150 60 200 0 150-60 200 0 150 60 200 0 150-60 200 0v80H0z'/%3E%3C/svg%3E");
+  animation: moveClouds1 40s linear infinite;
+  opacity: 0.9;
+}
+
+.clouds-2 {
+  top: 40%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='200'%3E%3Cpath fill='%23ffffff' d='M0 120c80-80 180-80 260 0s180 80 260 0 180-80 260 0 180 80 260 0 180-80 260 0v80H0z'/%3E%3C/svg%3E");
+  animation: moveClouds2 70s linear infinite;
+  opacity: 0.7;
+}
+
+.clouds-3 {
+  top: 60%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='200'%3E%3Cpath fill='%23ffffff' d='M0 120c40-40 120-40 160 0s120 40 160 0 120-40 160 0 120 40 160 0 120-40 160 0v80H0z'/%3E%3C/svg%3E");
+  animation: moveClouds3 110s linear infinite;
+  opacity: 0.55;
+}
+
+@keyframes moveClouds1 { 0% { transform: translateX(-20%); } 100% { transform: translateX(120%); } }
+@keyframes moveClouds2 { 0% { transform: translateX(-30%); } 100% { transform: translateX(130%); } }
+@keyframes moveClouds3 { 0% { transform: translateX(-40%); } 100% { transform: translateX(140%); } }
+
+
+/* ---------------------- */
+/* LIGHTNING */
+/* ---------------------- */
+.lightning {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  animation: lightningFlash 6s infinite;
+}
+
+@keyframes lightningFlash {
+  0%, 85% { opacity: 0; }
+  86% { opacity: 0.7; }
+  87% { opacity: 0; }
+  88% { opacity: 0.8; }
+  90% { opacity: 0; }
+}
+
+/* Realistic Cloud Animation */
+.real-clouds-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cloud-layer {
+  position: absolute;
+  width: 200%; /* Extra width for seamless looping */
+  height: 100%;
+  background-repeat: repeat-x;
+  background-size: contain;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+/* Using a high-quality transparent cloud PNG */
+.cloud1 {
+  background-image: url('https://www.pngmart.com/files/12/Clouds-Transparent-Background.png');
+  animation: move-clouds 60s linear infinite;
+  height: 300px;
+  top: 5%;
+}
+
+.cloud2 {
+  background-image: url('https://www.pngmart.com/files/12/Clouds-PNG-Photos.png');
+  animation: move-clouds 90s linear infinite;
+  height: 400px;
+  top: 15%;
+  opacity: 0.4;
+}
+
+@keyframes move-clouds {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Background Flow for Navbar and Hero */
+.sky-gradient-nav {
+  background: linear-gradient(to bottom, #020617, #1e3a8a);
+}
+
+.sky-gradient-hero {
+  background: linear-gradient(to bottom, #1e3a8a, #60a5fa, #0a0e27);
+}
+
+/* Container for the Sky Transition */
+.sky-container {
+  /* This starts with the same color the navbar ends with */
+  background: linear-gradient(to bottom, #1e3a8a 0%, #3b82f6 30%, #93c5fd 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Curly Fluffy Cloud Shape */
+.cloud-curly {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  background: #dbeafe; /* Light blue shade fill */
+  border-radius: 100px;
+  filter: blur(1px);
+  opacity: 0.8;
+  animation: moveClouds linear infinite;
+}
+
+/* Adding "Curls" to the cloud using pseudo-elements */
+.cloud-curly::after, .cloud-curly::before {
+  content: '';
+  position: absolute;
+  background: #dbeafe;
+  border-radius: 50%;
+}
+
+.cloud-curly::after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 40px;
+}
+
+.cloud-curly::before {
+  width: 120px;
+  height: 120px;
+  top: -70px;
+  left: 90px;
+}
+
+/* Cloud Animation */
+@keyframes moveClouds {
+  from { transform: translateX(-150%); }
+  to { transform: translateX(100vw); }
+}
+
+/* Speed Variations */
+.cloud-slow { animation-duration: 50s; }
+.cloud-med { animation-duration: 35s; }
+.cloud-fast { animation-duration: 25s; }
+
+/* Sky Header Background - Matches Navbar Blue */
+.sky-header-gradient {
+  background: linear-gradient(to bottom, #1e3a8a 0%, #3b82f6 40%, #93c5fd 100%);
+}
+
+/* Curly "Fluffy" Cloud */
+.cloud-curly {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  /* Light blue shades fill */
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  border-radius: 50px;
+  filter: blur(2px);
+  animation: moveClouds linear infinite;
+}
+
+/* Side Curls (Top and Bottom) */
+.cloud-curly::after, 
+.cloud-curly::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+/* Top Curly Bump */
+.cloud-curly::after {
+  width: 100px;
+  height: 100px;
+  top: -45px;
+  left: 30px;
+  box-shadow: 40px 10px 0 -10px #e0f2fe; /* Adds a secondary curly bump */
+}
+
+/* Bottom Curly Bump */
+.cloud-curly::before {
+  width: 80px;
+  height: 80px;
+  bottom: -30px;
+  right: 40px;
+}
+
+/* Animation Speeds */
+@keyframes moveClouds {
+  from { transform: translateX(-150%); }
+  to { transform: translateX(100vw); }
+}
+
+.cloud-slow { animation-duration: 65s; }
+.cloud-med { animation-duration: 45s; }
+.cloud-fast { animation-duration: 30s; }
+
+
+/* Realistic Morning Sky Gradient */
+.sky-header-gradient {
+  /* Starts white to match your Navbar's bottom, then moves to sky blue */
+  background: linear-gradient(
+    to bottom, 
+    #ffffff 0%, 
+    #e0f2fe 20%, 
+    #7dd3fc 60%, 
+    #0ea5e9 100%
+  );
+}
+
+/* Highly Curly Fluffy Cloud */
+.cloud-curly {
+  position: absolute;
+  width: 180px;
+  height: 50px;
+  background: #ffffff;
+  /* Light blue inner shadow for depth */
+  box-shadow: inset -10px -5px 20px #bae6fd;
+  border-radius: 100px;
+  filter: blur(1px);
+  animation: moveClouds linear infinite;
+  opacity: 0.9;
+}
+
+/* Extra curls for all-around fluffiness */
+.cloud-curly::after, 
+.cloud-curly::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  box-shadow: inherit;
+  border-radius: 50%;
+}
+
+/* Top-left curl */
+.cloud-curly::after {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 20px;
+}
+
+/* Top-right/bottom curl */
+.cloud-curly::before {
+  width: 70px;
+  height: 70px;
+  top: -30px;
+  left: 85px;
+}
+
+/* Keyframes and Speeds */
+@keyframes moveClouds {
+  from { transform: translateX(-150%); }
+  to { transform: translateX(100vw); }
+}
+
+.cloud-slow { animation-duration: 70s; }
+.cloud-med { animation-duration: 50s; }
+.cloud-fast { animation-duration: 35s; }
+
+
+/* The Realistic Sky Gradient */
+.sky-header-gradient {
+  background: linear-gradient(
+    to bottom, 
+    #ffffff 0%,     /* Matches Navbar white */
+    #f0f9ff 15%,    /* Very light blue tint */
+    #7dd3fc 60%,    /* Mid-sky blue */
+    #0ea5e9 100%    /* Deep sky blue */
+  );
+}
+
+/* Enhanced Curly Cloud */
+.cloud-curly {
+  position: absolute;
+  width: 170px;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 100px;
+  /* Soft blue inner glow for volume */
+  box-shadow: inset -8px -4px 15px #e0f2fe;
+  filter: blur(1px);
+  animation: moveClouds linear infinite;
+}
+
+/* Multi-sided curls using pseudo-elements */
+.cloud-curly::after, 
+.cloud-curly::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  box-shadow: inherit;
+  border-radius: 50%;
+}
+
+.cloud-curly::after {
+  width: 85px;
+  height: 85px;
+  top: -45px;
+  left: 15px;
+}
+
+.cloud-curly::before {
+  width: 65px;
+  height: 65px;
+  top: -25px;
+  left: 80px;
+}
+
+@keyframes moveClouds {
+  from { transform: translateX(-150%); }
+  to { transform: translateX(100vw); }
+}
+
+.cloud-slow { animation-duration: 80s; }
+.cloud-med { animation-duration: 55s; }
+.cloud-fast { animation-duration: 40s; }
+
+
+/* White-to-Image Fade (No Blue) */
+.sky-header-container {
+  /* Starts white to match Navbar, then fades out to reveal the image */
+  background: white;
+  position: relative;
+}
+
+/* Curly "Fluffy" Cloud */
+.cloud-curly {
+  position: absolute;
+  width: 180px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 100px;
+  /* Light blue shades fill only inside the cloud for depth */
+  box-shadow: inset -10px -5px 20px #bfdbfe; 
+  filter: blur(1px);
+  animation: moveClouds linear infinite;
+  opacity: 0.9;
+}
+
+/* Curls on all sides */
+.cloud-curly::after, 
+.cloud-curly::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  box-shadow: inherit;
+  border-radius: 50%;
+}
+
+/* Top curly bump */
+.cloud-curly::after {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 20px;
+}
+
+/* Side curly bump */
+.cloud-curly::before {
+  width: 75px;
+  height: 75px;
+  top: -25px;
+  left: 85px;
+}
+
+@keyframes moveClouds {
+  from { transform: translateX(-150%); }
+  to { transform: translateX(100vw); }
+}
+
+.cloud-slow { animation-duration: 75s; }
+.cloud-med { animation-duration: 50s; }
+.cloud-fast { animation-duration: 35s; }
+
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ... (Keep your existing theme and base styles here) ... */
+
+/* Sky Header Container - Background removed to let image show */
+.sky-header-container {
+  position: relative;
+}
+
+/* Curly "Fluffy" Cloud */
+.cloud-curly {
+  position: absolute;
+  width: 180px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 100px;
+  /* Light blue shades fill only inside the cloud for depth */
+  box-shadow: inset -10px -5px 20px #bfdbfe;
+  filter: blur(1px);
+  animation: moveClouds linear infinite;
+  opacity: 0.9;
+}
+
+/* Curls on all sides */
+.cloud-curly::after, 
+.cloud-curly::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  box-shadow: inherit;
+  border-radius: 50%;
+}
+
+/* Top curly bump */
+.cloud-curly::after {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 20px;
+}
+
+/* Side curly bump */
+.cloud-curly::before {
+  width: 75px;
+  height: 75px;
+  top: -25px;
+  left: 85px;
+}
+
+@keyframes moveClouds {
+  from { transform: translateX(-150%); }
+  to { transform: translateX(100vw); }
+}
+
+.cloud-slow { animation-duration: 75s; }
+.cloud-med { animation-duration: 50s; }
+.cloud-fast { animation-duration: 35s; }
+
+/* ... (Keep any other existing styles) ... */
+
+

@@ -110,7 +110,7 @@ export default function Footer() {
         </div>
       </footer>
       <div className='text-center py-4 bg-gray-950 text-white'>
-        © 2025 Copyright: E-Cell IIT Ropar
+        © 2026 Copyright: E-Cell IIT Ropar
       </div>
     </div>
   );
