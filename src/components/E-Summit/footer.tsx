@@ -24,7 +24,7 @@ export default function Footer() {
       <footer className="ocean relative text-white pt-24 pb-16 px-4">
         <div className="ocean-depth" />
         {/* 🌊 SVG WAVE */}
-        <div className="wave-top">
+        <div className="wave-top -mt-8">
           <svg
             viewBox="0 0 1440 100"
             preserveAspectRatio="none"
