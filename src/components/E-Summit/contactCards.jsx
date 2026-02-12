@@ -12,7 +12,7 @@ const ContactCards = ({ member }) => {
 
   return (
     <div
-      className="relative w-54 h-64 bg-white dark:bg-gray-800 border-4 border-blue-700 dark:border-orange-200 rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-2xl mx-4 my-6"
+      className="relative w-56 h-64 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-white/15 mx-4 my-6"
       onClick={handleCardClick} // handle mobile click
     >
       {/* Default state content */}
@@ -22,15 +22,15 @@ const ContactCards = ({ member }) => {
         } group-hover:opacity-0`}
       >
         {/* Profile picture */}
-        <div className="w-24 h-24 mb-4 overflow-hidden rounded-full border-2 border-blue-700 dark:border-orange-200">
+        <div className="w-28 h-28 mb-3 overflow-hidden rounded-full border-2 border-blue-400/60">
           <img src={image} alt={name} className="w-full h-full object-cover" />
         </div>
 
         {/* Name and position */}
-        <h3 className="text-blue-700 dark:text-orange-200 text-xl font-bold text-center mb-2">
+        <h3 className="text-blue-400 text-lg font-bold text-center mb-1">
           {name}
         </h3>
-        <p className="text-blue-600 dark:text-orange-300 text-center font-medium">
+        <p className="text-gray-300/80 text-center text-sm font-medium px-2">
           {position}
         </p>
       </div>
@@ -44,30 +44,34 @@ const ContactCards = ({ member }) => {
         {/* Expanded background image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-          style={{ backgroundImage: `url(${image})`, width: "100%", height: "100%" }}
+          style={{
+            backgroundImage: `url(${image})`,
+            width: "100%",
+            height: "100%",
+          }}
         >
           {/* Overlay for better icon visibility */}
-          <div className="absolute inset-0 bg-black/40 dark:bg-black/60 z-10"></div>
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10"></div>
         </div>
 
         {/* Icons container */}
-        <div className="absolute inset-0 flex items-center justify-center space-x-8 z-20">
+        <div className="absolute inset-0 flex items-center justify-center space-x-6 z-20">
           <a
             href={`mailto:${email}`}
-            className="p-3 bg-white dark:bg-orange-100 bg-opacity-90 rounded-full hover:bg-opacity-100 transition-all duration-200 hover:scale-110 shadow-lg"
+            className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-200 hover:scale-110 shadow-lg border border-white/30"
             onClick={(e) => e.stopPropagation()}
           >
-            <Mail className="w-6 h-6 text-blue-700 dark:text-orange-700" />
+            <Mail className="w-5 h-5 text-white" />
           </a>
 
           <a
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 bg-white dark:bg-orange-100 bg-opacity-90 rounded-full hover:bg-opacity-100 transition-all duration-200 hover:scale-110 shadow-lg"
+            className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-200 hover:scale-110 shadow-lg border border-white/30"
             onClick={(e) => e.stopPropagation()}
           >
-            <Linkedin className="w-6 h-6 text-blue-700 dark:text-orange-700" />
+            <Linkedin className="w-5 h-5 text-white" />
           </a>
         </div>
       </div>
