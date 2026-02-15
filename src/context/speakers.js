@@ -32,6 +32,6 @@ export const speakers = [
     {
         imageSrc: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323098/bharulata_kamble_nbvjp4_dirgc3.jpg",
         name: "Bharulata Kamble",
-        position: "CEO And Founder of multi speciality",
+        position: "CEO And Founder of Multi Speciality Hospital",
     },
 ]

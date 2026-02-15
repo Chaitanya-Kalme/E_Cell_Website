@@ -742,6 +742,22 @@
 .cloud-med { animation-duration: 50s; }
 .cloud-fast { animation-duration: 35s; }
 
-/* ... (Keep any other existing styles) ... */
 
+
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 6s ease infinite;
+}
 

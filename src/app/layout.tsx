@@ -8,6 +8,12 @@ import { DataProvider } from "@/context/dataContext";
 import { SessionProvider } from "next-auth/react";
 import AuthProvider from "@/context/AuthProvider";
 
+
+
+export const metadata: Metadata = {
+  title: "E-Cell IIT Ropar",
+};
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,9 +24,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "E-Cell IIT Ropar",
-};
 
 export default function RootLayout({
   children,
@@ -30,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={` ${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <AuthProvider>
           <ThemeProvider

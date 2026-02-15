@@ -1,6 +1,6 @@
 
 "use client";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion, useScroll, useTransform, useViewportScroll } from "framer-motion";
 import StartupExpoCard from "@/components/E-Summit/StartupExpoCard";
 import EventCard from "@/components/E-Summit/EventCard";
 import AccommodationForm from "@/components/E-Summit/AccommodationForm";
@@ -13,7 +13,7 @@ import { Rocket, Calendar } from "lucide-react";
 export default function ESummitPage() {
   const [showStartupExpoForm, setShowStartupExpoForm] = useState(false);
 
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const [scrollRange, setScrollRange] = useState(1); // avoid division by zero
 
   useEffect(() => {
@@ -60,12 +60,12 @@ export default function ESummitPage() {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Calendar className="text-blue-400" size={40} />
-              <h2 className="text-4xl md:text-5xl font-bold pb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <Calendar className="text-blue-900" size={40} />
+              <h2 className="text-4xl text-blue-900 md:text-5xl font-bold pb-2 bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 Major Events
               </h2>
             </div>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+            <p className="text-blue-600 text-lg max-w-2xl mx-auto">
               Explore our diverse range of competitions, workshops, and networking opportunities
             </p>
             <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" />

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { galleryImages1 } from "@/context/galleryImages";
@@ -9,11 +9,15 @@ import { pastSpeakers } from "@/context/E-Summit/speakersData"
 
 import StartupExpoCard from '@/components/E-Summit/StartupExpoCard';
 import AccommodationForm from '@/components/E-Summit/AccommodationForm';
-import { startupExpoData } from '@/context/E-Summit/dataObjects';
+import { allEvents, startupExpoData } from '@/context/E-Summit/dataObjects';
+import { Calendar, MapPin, Users } from "lucide-react";
+import EventCard from "@/components/E-Summit/EventCard";
+import { useRouter } from "next/navigation";
 
 export default function ESummitPage() {
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const [scrollRange, setScrollRange] = useState(1); // avoid division by zero
+  const router = useRouter()
 
   useEffect(() => {
     function updateScrollRange() {
@@ -34,6 +38,41 @@ export default function ESummitPage() {
 
   // Map scroll progress 0 → 1 to scale 1 → 1.15
   const scale = useTransform(scrollProgress, [0, 1], [1, 1.15]);
+
+  const hoverCard = {
+    initial: {
+      scale: 1,
+      y: 0,
+    },
+    hover: {
+      scale: 1.08,
+      y: -6,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 18,
+      },
+    },
+  };
+
+  const hoverIcon = {
+    initial: { rotate: 0, scale: 1 },
+    hover: {
+      rotate: 8,
+      scale: 1.15,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const hoverText = {
+    initial: { opacity: 0.9 },
+    hover: {
+      opacity: 1,
+      textShadow: "0 0 12px rgba(255,255,255,0.35)",
+      transition: { duration: 0.3 },
+    },
+  };
+
 
   return (
     <div
@@ -80,8 +119,8 @@ export default function ESummitPage() {
         {/* Hero Section */}
         <h1
           className="
-    text-5xl md:text-7xl font-bold italic mb-10 
-    bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500
+    text-5xl md:text-9xl font-bold italic mb-10 
+    bg-gradient-to-r from-blue-900 to-blue-500
     bg-clip-text text-transparent
     drop-shadow-[0_0_15px_rgba(255,234,0,0.8)]
   "
@@ -98,12 +137,62 @@ export default function ESummitPage() {
           />
         </p>
 
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16 mt-2"
+        >
+          {[
+            { icon: Calendar, text: "Dates: April 11-12, 2026", color: "orange" },
+            { icon: MapPin, text: "Venue: IIT Ropar", color: "purple" },
+            { icon: Users, text: "1000+ Participants", color: "blue" },
+          ].map(({ icon: Icon, text, color }) => (
+            <motion.div
+              key={text}
+              variants={hoverCard}
+              initial="initial"
+              whileHover="hover"
+              className={`
+        group flex items-center space-x-3
+        bg-black/60 backdrop-blur-md
+        px-5 py-3 rounded-full cursor-default
+        border border-${color}-400/40
+        hover:bg-black/80
+        transition-colors duration-300
+      `}
+            >
+              {/* Icon */}
+              <motion.span
+                variants={hoverIcon}
+                className={`text-${color}-300`}
+              >
+                <Icon size={24} />
+              </motion.span>
+
+              {/* Text */}
+              <motion.span
+                variants={hoverText}
+                className={`text-base md:text-lg font-semibold text-${color}-200`}
+              >
+                {text}
+              </motion.span>
+
+              {/* Glow ring */}
+              <span
+                className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 
+          blur-xl bg-${color}-500/10 transition-opacity duration-300`}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+
         {/* About Section */}
-        <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-tight">
-          <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 
-                   bg-clip-text text-transparent 
-                   drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
-            About E-Summit
+        <h2 className="text-2xl mt-5 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
+          <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
+            <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-3 font-medium text-yellow-300 backdrop-blur-3xl ">
+                About E-Summit 2026
+              </span>
+            </button>
           </span>
         </h2>
 
@@ -138,24 +227,60 @@ export default function ESummitPage() {
         </div>
 
         <section className="mb-24 mt-10">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-tight">
-            <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 
-                   bg-clip-text text-transparent 
-                   drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
-              Events 
+          <h2 className="text-2xl mt-5 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
+            <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
+              <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-2 font-bold text-blue-200 backdrop-blur-3xl ">
+                  Events 
+                </span>
+              </button>
             </span>
           </h2>
           <p className="text-center text-blue-200 mb-12 max-w-2xl mx-auto">
             Meet innovative startups and entrepreneurs from across the country
           </p>
-          <StartupExpoCard startups={startupExpoData} />
+          <EventCard events={allEvents.slice(0, 8)} />
+
+          <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-0.5 font-semibold leading-6 mt-7  text-white inline-block" onClick={() => router.push("/E-Summit/events")
+          }>
+            <span className="absolute inset-0 overflow-hidden rounded-full">
+              <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            </span>
+            <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 p-2 px-4 py-2 ring-1 ring-white/10 ">
+              <span>
+                Explore More Events
+              </span>
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.75 8.75L14.25 12L10.75 15.25"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            </div>
+            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+          </button>
         </section>
 
 
 
-        <h2 className="text-4xl mt-5 md:text-6xl font-extrabold mb-6 drop-shadow-lg">
-          <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Past Speakers
+        <h2 className="text-2xl mt-5 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
+          <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
+            <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-3 font-medium text-white backdrop-blur-3xl ">
+                Past Speakers
+              </span>
+            </button>
           </span>
         </h2>
 
@@ -167,7 +292,7 @@ export default function ESummitPage() {
 
 
       </div>
-    </div>
+    </div >
   );
 }
 

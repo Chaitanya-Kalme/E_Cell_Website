@@ -1,5 +1,10 @@
 export const pastSpeakers = [
     {
+        imageSrc: "./ashneer_grover.jpg",
+        name: "Ashneer Grover",
+        position: "Entrepreneur and former managing director of BharatPe",
+    },
+    {
         imageSrc: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323100/SS_Mahal_bq5qw5_nre3jd.jpg",
         name: "Lt. Gen. S S Mahal",
         position: "Lieutenant General",
@@ -32,6 +37,6 @@ export const pastSpeakers = [
     {
         imageSrc: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323098/bharulata_kamble_nbvjp4_dirgc3.jpg",
         name: "Bharulata Kamble",
-        position: "CEO And Founder of multi speciality",
+        position: "CEO And Founder of Multi Speciality Hospital",
     },
 ]

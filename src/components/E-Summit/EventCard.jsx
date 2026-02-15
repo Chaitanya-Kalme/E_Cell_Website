@@ -86,7 +86,7 @@ export function ExpandableEventCards({ events }) {
 
       <AnimatePresence>
         {active && typeof active === "object" && !showRegistration ? (
-          <div className="fixed inset-0 grid place-items-center z-[110] p-4 mt-20">
+          <div className="fixed inset-0 grid place-items-center z-[110] p-4 mt-26">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -299,7 +299,7 @@ export function ExpandableEventCards({ events }) {
               >
                 <div className="absolute inset-0 bg-black/10"></div>
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="text-4xl drop-shadow-lg">{event.icon}</span>
+                  <span className="text-4xl drop-shadow-lg mt-3">{event.icon}</span>
                   <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold text-white">
                     {event.category}
                   </span>
@@ -349,12 +349,11 @@ export function ExpandableEventCards({ events }) {
               </div>
 
               {/* Registration Status Badge */}
-              {event.isRegistrationOpen && (
-                <div className="absolute top-2 left-2 bg-green-500/90 backdrop-blur-sm px-2 py-1 rounded-full text-white text-xs font-bold flex items-center gap-1">
-                  <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                  Open
-                </div>
-              )}
+
+              <div className={`absolute top-2 left-2 ${event.isRegistrationOpen? "bg-green-500/90" : "bg-red-500"} backdrop-blur-sm px-2 py-1 rounded-full text-white text-xs font-bold flex items-center gap-1`}>
+                <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                { event.isRegistrationOpen? "Open": "Closed"}
+              </div>
             </div>
           </motion.div>
         ))}

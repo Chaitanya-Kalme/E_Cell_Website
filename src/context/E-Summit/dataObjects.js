@@ -26,7 +26,7 @@ export const allEvents = [
     teamSize: { min: 1, max: 5 },
     registrationFee: '₹500 per startup',
     prizes: 'Cash prizes + Incubation opportunities',
-    isRegistrationOpen: true,
+    isRegistrationOpen: false,
     image: '/images/startup-expo.jpg',
     highlights: [
       'Showcase your product',
@@ -48,7 +48,7 @@ export const allEvents = [
     teamSize: { min: 2, max: 4 },
     registrationFee: '₹200 per team',
     prizes: '₹50,000 worth of prizes',
-    isRegistrationOpen: true,
+    isRegistrationOpen: false,
     image: '/images/ipl-auction.jpg',
     highlights: [
       'Real-time bidding experience',

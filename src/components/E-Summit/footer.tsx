@@ -125,7 +125,7 @@ export default function Footer() {
 
       {/* COPYRIGHT */}
       <div className="bg-black text-white text-center py-4 text-sm">
-        © 2026 E-Summit. All rights reserved.
+        © E-Summit 2026. All rights reserved.
       </div>
     </div>
   );

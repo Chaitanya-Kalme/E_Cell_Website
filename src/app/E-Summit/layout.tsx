@@ -10,6 +10,16 @@ import NavBar from "@/components/E-Summit/NavBar";
 import Footer from "@/components/E-Summit/footer";
 import SocialSidebar from "@/components/E-Summit/SocialMediaSection";
 
+
+import { Playfair_Display } from "next/font/google";
+
+const calligraphy = Playfair_Display({
+  variable: "--font-calligraphy",
+  subsets: ["latin"],
+  weight: ["900"], // very thick
+});
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={`${calligraphy.variable} antialiased min-h-screen`}
       >
         <AuthProvider>
           <ThemeProvider

@@ -83,26 +83,33 @@ export const SpeakersListCards = ({
             key={idx}
             className="relative w-[250px] max-w-full shrink-0 rounded-2xl overflow-visible border border-transparent md:w-[350px] bg-transparent shadow-none"
           >
-            <div className="relative w-full h-[300px] md:h-[400px] overflow-visible rounded-2xl">
-              <img
-                src={item.imageSrc}
-                alt={item.alt || "Speaker Image"}
-                className="w-full h-full object-cover rounded-2xl"
-              />
-              {/* Name & Position */}
-              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-center px-2">
+            <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-white">
+
+              {/* Upper Section - Image */}
+              <div className="w-full h-[200px] md:h-[300px]">
+                <img
+                  src={item.imageSrc}
+                  alt={item.alt || "Speaker Image"}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Lower Section - Text */}
+              <div className="py-4 px-3 text-center bg-yellow-100">
                 {item.name && (
-                  <h3 className="text-lg md:text-xl font-bold text-white drop-shadow-lg">
+                  <h3 className="text-lg md:text-2xl font-bold text-gray-900">
                     {item.name}
                   </h3>
                 )}
                 {item.position && (
-                  <p className="text-sm md:text-base text-white drop-shadow-md mt-1">
+                  <p className="text-sm md:text-base text-gray-600 mt-1">
                     {item.position}
                   </p>
                 )}
               </div>
+
             </div>
+
           </li>
         ))}
       </ul>
