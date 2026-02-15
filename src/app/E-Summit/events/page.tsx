@@ -1,55 +1,53 @@
 
 "use client";
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import StartupExpoCard from "@/components/E-Summit/StartupExpoCard";
 import EventCard from "@/components/E-Summit/EventCard";
 import AccommodationForm from "@/components/E-Summit/AccommodationForm";
 import StartupExpoForm from "@/components/E-Summit/StartupExpoForm";
 import { startupExpoData, allEvents } from "@/context/E-Summit/dataObjects";
 import { EncryptedText } from "@/components/ui/encrypted-text";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Rocket, Calendar } from "lucide-react";
 
 export default function ESummitPage() {
   const [showStartupExpoForm, setShowStartupExpoForm] = useState(false);
 
+  const { scrollY } = useViewportScroll();
+  const [scrollRange, setScrollRange] = useState(1); // avoid division by zero
+
+  useEffect(() => {
+    function updateScrollRange() {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const innerHeight = window.innerHeight;
+      setScrollRange(scrollHeight - innerHeight);
+    }
+
+    updateScrollRange();
+    window.addEventListener("resize", updateScrollRange);
+    return () => window.removeEventListener("resize", updateScrollRange);
+  }, []);
+
+  // Calculate scroll progress as 0 → 1 across the full scrollable height
+  const scrollProgress = useTransform(scrollY, [0, scrollRange], [0, 1], {
+    clamp: true,
+  });
+
+  // Map scroll progress 0 → 1 to scale 1 → 1.15
+  const scale = useTransform(scrollProgress, [0, 1], [1, 1.15]);
+
   return (
     <div className="min-h-screen bg-[#0a0e27]">
-      {/* --- TOP SECTION (Hero with Clouds) --- */}
-      <div className="relative w-full overflow-hidden sky-header-container">
-        {/* Layer 2: Animated Curly Clouds */}
-        <div className="absolute inset-0 h-[300px] pointer-events-none z-10">
-          <div className="cloud-curly cloud-slow top-[10%] left-[-5%] scale-125" />
-          <div className="cloud-curly cloud-med top-[30%] left-[20%] opacity-80" />
-          <div className="cloud-curly cloud-fast top-[15%] left-[60%] scale-75 opacity-50" />
-          <div className="cloud-curly cloud-med top-[50%] left-[45%] scale-110" />
-        </div>
 
-        {/* Layer 3: Content (Logo) */}
-        <div className="relative z-20 pb-10 flex flex-col items-center pt-5">
-          <motion.div
-            initial={{ y: 5, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-blue-800 italic">
-              E-Summit'26
-            </h1>
-            <p className="md:text-sm font-black text-black mt-10 tracking-[0.5em] uppercase text-center">
-              <EncryptedText
-                text="Ideas • Innovation • Growth"
-                encryptedClassName="text-black"
-                revealedClassName="text-black text-sm"
-                revealDelayMs={70}
-              />
-            </p>
-          </motion.div>
-        </div>
+      {/* Background Image */}
+      <motion.div
+        style={{ scale }}
+        className="fixed inset-0 bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-0"
+      />
 
-        {/* Layer 4: Fade transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0a0e27] to-transparent z-30" />
-      </div>
+      {/* Overlay to improve text readability */}
+      <div className="fixed inset-0 bg-black/25 pointer-events-none z-10" />
+
 
       {/* --- EVENTS SECTION --- */}
       <section className="relative py-20 px-4 md:px-8 lg:px-12">
@@ -63,7 +61,7 @@ export default function ESummitPage() {
           >
             <div className="flex items-center justify-center gap-3 mb-4">
               <Calendar className="text-blue-400" size={40} />
-              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <h2 className="text-4xl md:text-5xl font-bold pb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 Major Events
               </h2>
             </div>
@@ -79,7 +77,7 @@ export default function ESummitPage() {
       </section>
 
       {/* --- STARTUP EXPO SECTION --- */}
-      <section className="relative py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-[#0a0e27] via-[#1a1f3f] to-[#0a0e27]">
+      <section className="relative py-20 px-4 md:px-8 lg:px-12">
         <div className="max-w-[1600px] mx-auto">
           {/* Section Header */}
           <motion.div

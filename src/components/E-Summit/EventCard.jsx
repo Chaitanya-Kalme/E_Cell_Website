@@ -86,7 +86,7 @@ export function ExpandableEventCards({ events }) {
 
       <AnimatePresence>
         {active && typeof active === "object" && !showRegistration ? (
-          <div className="fixed inset-0 grid place-items-center z-[110] p-4">
+          <div className="fixed inset-0 grid place-items-center z-[110] p-4 mt-20">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -341,7 +341,7 @@ export function ExpandableEventCards({ events }) {
                       {event.registrationFee}
                     </span>
                   </div>
-                  
+
                   <p className="text-blue-200 text-xs drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
                     Click to learn more
                   </p>
