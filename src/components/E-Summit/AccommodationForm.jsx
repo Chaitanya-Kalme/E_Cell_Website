@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Home, User, Phone, Mail, Calendar, Users, MapPin, CheckCircle } from "lucide-react";
+import { Home, User, CheckCircle } from "lucide-react";
 
 const AccommodationForm = () => {
   const [formData, setFormData] = useState({
@@ -63,20 +63,20 @@ const AccommodationForm = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="max-w-2xl mx-auto p-8"
+        className="max-w-2xl mx-auto p-4 sm:p-8"
       >
-        <div className="bg-gradient-to-br from-[#0a1628] to-[#1e3a5f] border-2 border-green-400/50 rounded-3xl p-12 text-center shadow-2xl shadow-green-500/20">
+        <div className="bg-gradient-to-br from-[#0a1628] to-[#1e3a5f] border-2 border-green-400/50 rounded-3xl p-8 sm:p-12 text-center shadow-2xl shadow-green-500/20">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
           >
-            <CheckCircle className="mx-auto text-green-400 mb-6" size={80} />
+            <CheckCircle className="mx-auto text-green-400 mb-6" size={60} />
           </motion.div>
-          <h2 className="text-3xl font-bold text-white mb-4 drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]">
             Accommodation Request Submitted!
           </h2>
-          <p className="text-blue-200 text-lg">
+          <p className="text-blue-200 text-base sm:text-lg">
             We'll get back to you shortly with confirmation details.
           </p>
         </div>
@@ -88,32 +88,32 @@ const AccommodationForm = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-4xl mx-auto p-4 sm:p-8"
+      className="max-w-4xl mx-auto p-2 sm:p-4"
     >
-      <div className="bg-gradient-to-br from-[#0a1628] to-[#1e3a5f] backdrop-blur-lg border-2 border-blue-400/30 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-blue-500/20">
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Home className="text-cyan-400" size={40} />
-            <h2 className="text-3xl sm:text-4xl font-bold text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)]">
+      <div className="bg-gradient-to-br from-[#0a1628] to-[#1e3a5f] backdrop-blur-lg border-2 border-blue-400/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 shadow-2xl shadow-blue-500/20">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <Home className="text-cyan-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)]">
               Accommodation Request
             </h2>
           </div>
-          <p className="text-blue-200 text-sm sm:text-base">
+          <p className="text-blue-200 text-xs sm:text-sm md:text-base">
             Fill out the form below to request accommodation for E-Summit
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           {/* Personal Information */}
-          <div className="bg-black/30 rounded-2xl p-6 border border-cyan-400/20">
-            <h3 className="text-cyan-300 font-semibold text-lg mb-4 flex items-center gap-2">
-              <User size={20} />
+          <div className="bg-black/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-cyan-400/20">
+            <h3 className="text-cyan-300 font-semibold text-base sm:text-lg mb-3 sm:mb-4 flex items-center gap-2">
+              <User size={18} />
               Personal Information
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Full Name *
                 </label>
                 <input
@@ -122,13 +122,13 @@ const AccommodationForm = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                   placeholder="Enter your full name"
                 />
               </div>
 
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Email Address *
                 </label>
                 <input
@@ -137,13 +137,13 @@ const AccommodationForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Phone Number *
                 </label>
                 <input
@@ -152,13 +152,13 @@ const AccommodationForm = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                   placeholder="+91 XXXXX XXXXX"
                 />
               </div>
 
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   College/University *
                 </label>
                 <input
@@ -167,13 +167,13 @@ const AccommodationForm = () => {
                   value={formData.college}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                   placeholder="Your institution name"
                 />
               </div>
 
-              <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+              <div className="md:col-span-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Gender *
                 </label>
                 <select
@@ -181,7 +181,7 @@ const AccommodationForm = () => {
                   value={formData.gender}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                 >
                   <option value="">Select Gender</option>
                   <option value="male">Male</option>
@@ -193,15 +193,15 @@ const AccommodationForm = () => {
           </div>
 
           {/* Accommodation Details */}
-          <div className="bg-black/30 rounded-2xl p-6 border border-purple-400/20">
-            <h3 className="text-purple-300 font-semibold text-lg mb-4 flex items-center gap-2">
-              <Home size={20} />
+          <div className="bg-black/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-purple-400/20">
+            <h3 className="text-purple-300 font-semibold text-base sm:text-lg mb-3 sm:mb-4 flex items-center gap-2">
+              <Home size={18} />
               Accommodation Details
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Check-in Date *
                 </label>
                 <input
@@ -210,12 +210,14 @@ const AccommodationForm = () => {
                   value={formData.checkIn}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  min="2026-02-13"
+                  max="2026-02-16"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Check-out Date *
                 </label>
                 <input
@@ -224,12 +226,14 @@ const AccommodationForm = () => {
                   value={formData.checkOut}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  min="2026-02-14"
+                  max="2026-02-17"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Room Type *
                 </label>
                 <select
@@ -237,7 +241,7 @@ const AccommodationForm = () => {
                   value={formData.roomType}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                 >
                   <option value="">Select Room Type</option>
                   <option value="shared">Shared Room (4-6 people)</option>
@@ -247,7 +251,7 @@ const AccommodationForm = () => {
               </div>
 
               <div>
-                <label className="block text-blue-200 text-sm font-medium mb-2">
+                <label className="block text-blue-200 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">
                   Number of People *
                 </label>
                 <input
@@ -258,7 +262,7 @@ const AccommodationForm = () => {
                   required
                   min="1"
                   max="10"
-                  className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                   placeholder="1"
                 />
               </div>
@@ -266,8 +270,8 @@ const AccommodationForm = () => {
           </div>
 
           {/* Special Requests */}
-          <div className="bg-black/30 rounded-2xl p-6 border border-green-400/20">
-            <h3 className="text-green-300 font-semibold text-lg mb-4">
+          <div className="bg-black/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-green-400/20">
+            <h3 className="text-green-300 font-semibold text-base sm:text-lg mb-3 sm:mb-4">
               Special Requests (Optional)
             </h3>
             <textarea
@@ -275,7 +279,7 @@ const AccommodationForm = () => {
               value={formData.specialRequests}
               onChange={handleChange}
               rows="4"
-              className="w-full px-4 py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all resize-none"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/40 border border-blue-400/30 rounded-lg text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all resize-none"
               placeholder="Any dietary restrictions, accessibility needs, or other special requirements..."
             />
           </div>
@@ -286,7 +290,7 @@ const AccommodationForm = () => {
             disabled={loading}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full py-4 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-cyan-500/40 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 sm:py-4 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-base sm:text-lg rounded-xl hover:shadow-lg hover:shadow-cyan-500/40 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="flex items-center justify-center gap-2">
@@ -313,7 +317,7 @@ const AccommodationForm = () => {
             )}
           </motion.button>
 
-          <p className="text-center text-blue-300 text-sm">
+          <p className="text-center text-blue-300 text-xs sm:text-sm">
             * Required fields
           </p>
         </form>

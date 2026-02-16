@@ -144,35 +144,35 @@ const StartupExpoForm = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl max-w-5xl w-full my-8 border border-orange-500/20 shadow-2xl shadow-orange-500/10">
-        {/* Header */}
-        <div className="relative bg-gradient-to-r from-orange-600 to-red-600 p-6 rounded-t-2xl">
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-start justify-center overflow-y-auto p-2 sm:p-4">
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-xl sm:rounded-2xl w-full max-w-5xl my-4 sm:my-8 border border-orange-500/20 shadow-2xl shadow-orange-500/10">
+        {/* Fixed Header - Mobile Optimized */}
+        <div className="sticky top-0 z-10 bg-gradient-to-r from-orange-600 to-red-600 p-4 sm:p-6 rounded-t-xl sm:rounded-t-2xl">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white/80 hover:text-white transition-colors p-1"
           >
-            <X size={24} />
+            <X size={20} className="sm:w-6 sm:h-6" />
           </button>
-          <div className="flex items-center gap-3 mb-2">
-            <Rocket size={32} className="text-white" />
-            <h2 className="text-3xl font-bold text-white">Startup Expo Registration</h2>
+          <div className="flex items-center gap-2 sm:gap-3 mb-2 pr-8">
+            <Rocket size={24} className="text-white sm:w-8 sm:h-8" />
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">Startup Expo Registration</h2>
           </div>
-          <p className="text-orange-100">Showcase your innovation at E-Summit 2026</p>
+          <p className="text-orange-100 text-xs sm:text-sm">Showcase your innovation at E-Summit 2026</p>
         </div>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="p-6 space-y-6">
+        {/* Scrollable Form Content */}
+        <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-4 sm:space-y-6 max-h-[calc(100vh-120px)] overflow-y-auto">
           {/* Startup Information */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-orange-400 flex items-center gap-2">
-              <Rocket size={20} />
+          <div className="space-y-3 sm:space-y-4">
+            <h3 className="text-lg sm:text-xl font-semibold text-orange-400 flex items-center gap-2">
+              <Rocket size={18} className="sm:w-5 sm:h-5" />
               Startup Information
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Startup Name *
                 </label>
                 <input
@@ -180,16 +180,16 @@ const StartupExpoForm = ({ onClose }) => {
                   name="startupName"
                   value={formData.startupName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.startupName ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors`}
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors`}
                   placeholder="Enter your startup name"
                 />
-                {errors.startupName && <p className="text-red-400 text-sm mt-1">{errors.startupName}</p>}
+                {errors.startupName && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.startupName}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Industry/Sector *
                 </label>
                 <input
@@ -197,16 +197,16 @@ const StartupExpoForm = ({ onClose }) => {
                   name="industry"
                   value={formData.industry}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.industry ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors`}
-                  placeholder="e.g., FinTech, HealthTech, EdTech"
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors`}
+                  placeholder="e.g., FinTech, HealthTech"
                 />
-                {errors.industry && <p className="text-red-400 text-sm mt-1">{errors.industry}</p>}
+                {errors.industry && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.industry}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Founded Year *
                 </label>
                 <input
@@ -216,16 +216,16 @@ const StartupExpoForm = ({ onClose }) => {
                   max="2026"
                   value={formData.foundedYear}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.foundedYear ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors`}
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors`}
                   placeholder="2024"
                 />
-                {errors.foundedYear && <p className="text-red-400 text-sm mt-1">{errors.foundedYear}</p>}
+                {errors.foundedYear && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.foundedYear}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Team Size
                 </label>
                 <input
@@ -233,13 +233,13 @@ const StartupExpoForm = ({ onClose }) => {
                   name="teamSize"
                   value={formData.teamSize}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors"
                   placeholder="e.g., 5-10"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Location
                 </label>
                 <input
@@ -247,13 +247,13 @@ const StartupExpoForm = ({ onClose }) => {
                   name="location"
                   value={formData.location}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors"
                   placeholder="City, Country"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Website
                 </label>
                 <input
@@ -261,33 +261,33 @@ const StartupExpoForm = ({ onClose }) => {
                   name="website"
                   value={formData.website}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors"
                   placeholder="https://yourstartup.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Current Stage *
                 </label>
                 <select
                   name="stage"
                   value={formData.stage}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.stage ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors`}
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors`}
                 >
                   <option value="">Select Stage</option>
                   {stageOptions.map(option => (
                     <option key={option} value={option}>{option}</option>
                   ))}
                 </select>
-                {errors.stage && <p className="text-red-400 text-sm mt-1">{errors.stage}</p>}
+                {errors.stage && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.stage}</p>}
               </div>
 
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Startup Description *
                 </label>
                 <textarea
@@ -295,26 +295,26 @@ const StartupExpoForm = ({ onClose }) => {
                   value={formData.description}
                   onChange={handleChange}
                   rows="4"
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.description ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors resize-none`}
-                  placeholder="Describe what your startup does, the problem you're solving, and your unique value proposition..."
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors resize-none`}
+                  placeholder="Describe what your startup does..."
                 />
-                {errors.description && <p className="text-red-400 text-sm mt-1">{errors.description}</p>}
+                {errors.description && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.description}</p>}
               </div>
             </div>
           </div>
 
           {/* Founder Information */}
-          <div className="space-y-4 border-t border-orange-500/20 pt-6">
-            <h3 className="text-xl font-semibold text-orange-400 flex items-center gap-2">
-              <Users size={20} />
+          <div className="space-y-3 sm:space-y-4 border-t border-orange-500/20 pt-4 sm:pt-6">
+            <h3 className="text-lg sm:text-xl font-semibold text-orange-400 flex items-center gap-2">
+              <Users size={18} className="sm:w-5 sm:h-5" />
               Primary Founder Information
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Full Name *
                 </label>
                 <input
@@ -322,16 +322,16 @@ const StartupExpoForm = ({ onClose }) => {
                   name="founderName"
                   value={formData.founderName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.founderName ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors`}
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors`}
                   placeholder="Founder's name"
                 />
-                {errors.founderName && <p className="text-red-400 text-sm mt-1">{errors.founderName}</p>}
+                {errors.founderName && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.founderName}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Email *
                 </label>
                 <input
@@ -339,16 +339,16 @@ const StartupExpoForm = ({ onClose }) => {
                   name="founderEmail"
                   value={formData.founderEmail}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.founderEmail ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors`}
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors`}
                   placeholder="founder@startup.com"
                 />
-                {errors.founderEmail && <p className="text-red-400 text-sm mt-1">{errors.founderEmail}</p>}
+                {errors.founderEmail && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.founderEmail}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Phone *
                 </label>
                 <input
@@ -356,16 +356,16 @@ const StartupExpoForm = ({ onClose }) => {
                   name="founderPhone"
                   value={formData.founderPhone}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-slate-800/50 border ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border ${
                     errors.founderPhone ? 'border-red-500' : 'border-orange-500/30'
-                  } rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors`}
+                  } rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors`}
                   placeholder="+91 XXXXX XXXXX"
                 />
-                {errors.founderPhone && <p className="text-red-400 text-sm mt-1">{errors.founderPhone}</p>}
+                {errors.founderPhone && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.founderPhone}</p>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   LinkedIn Profile
                 </label>
                 <input
@@ -373,8 +373,8 @@ const StartupExpoForm = ({ onClose }) => {
                   name="founderLinkedIn"
                   value={formData.founderLinkedIn}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
-                  placeholder="https://linkedin.com/in/yourprofile"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  placeholder="https://linkedin.com/in/..."
                 />
               </div>
             </div>
@@ -382,51 +382,51 @@ const StartupExpoForm = ({ onClose }) => {
             {/* Co-founders */}
             <div className="space-y-3 mt-4">
               <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-300">Co-founders (Optional)</label>
+                <label className="text-xs sm:text-sm font-medium text-gray-300">Co-founders (Optional)</label>
                 <button
                   type="button"
                   onClick={addCoFounder}
                   disabled={formData.coFounders.length >= 5}
-                  className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="text-orange-400 hover:text-orange-300 text-xs sm:text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   + Add Co-founder
                 </button>
               </div>
 
               {formData.coFounders.map((coFounder, index) => (
-                <div key={index} className="bg-slate-800/30 p-4 rounded-lg space-y-3">
+                <div key={index} className="bg-slate-800/30 p-3 sm:p-4 rounded-lg space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-400">Co-founder {index + 1}</span>
+                    <span className="text-xs sm:text-sm font-medium text-gray-400">Co-founder {index + 1}</span>
                     {index > 0 && (
                       <button
                         type="button"
                         onClick={() => removeCoFounder(index)}
-                        className="text-red-400 hover:text-red-300 text-sm transition-colors"
+                        className="text-red-400 hover:text-red-300 text-xs sm:text-sm transition-colors"
                       >
                         Remove
                       </button>
                     )}
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 gap-3">
                     <input
                       type="text"
                       value={coFounder.name}
                       onChange={(e) => handleCoFounderChange(index, 'name', e.target.value)}
-                      className="px-3 py-2 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-orange-500"
+                      className="px-3 py-2 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white text-xs sm:text-sm focus:outline-none focus:border-orange-500"
                       placeholder="Name"
                     />
                     <input
                       type="email"
                       value={coFounder.email}
                       onChange={(e) => handleCoFounderChange(index, 'email', e.target.value)}
-                      className="px-3 py-2 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-orange-500"
+                      className="px-3 py-2 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white text-xs sm:text-sm focus:outline-none focus:border-orange-500"
                       placeholder="Email"
                     />
                     <input
                       type="text"
                       value={coFounder.role}
                       onChange={(e) => handleCoFounderChange(index, 'role', e.target.value)}
-                      className="px-3 py-2 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-orange-500"
+                      className="px-3 py-2 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white text-xs sm:text-sm focus:outline-none focus:border-orange-500"
                       placeholder="Role (e.g., CTO)"
                     />
                   </div>
@@ -436,22 +436,22 @@ const StartupExpoForm = ({ onClose }) => {
           </div>
 
           {/* Funding & Achievement */}
-          <div className="space-y-4 border-t border-orange-500/20 pt-6">
-            <h3 className="text-xl font-semibold text-orange-400 flex items-center gap-2">
-              <Award size={20} />
+          <div className="space-y-3 sm:space-y-4 border-t border-orange-500/20 pt-4 sm:pt-6">
+            <h3 className="text-lg sm:text-xl font-semibold text-orange-400 flex items-center gap-2">
+              <Award size={18} className="sm:w-5 sm:h-5" />
               Funding & Achievements
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
+              <div>
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Funding Status
                 </label>
                 <select
                   name="fundingStatus"
                   value={formData.fundingStatus}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors"
                 >
                   <option value="">Select Funding Status</option>
                   {fundingOptions.map(option => (
@@ -460,8 +460,8 @@ const StartupExpoForm = ({ onClose }) => {
                 </select>
               </div>
 
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+              <div>
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Achievements & Awards
                 </label>
                 <textarea
@@ -469,23 +469,23 @@ const StartupExpoForm = ({ onClose }) => {
                   value={formData.achievements}
                   onChange={handleChange}
                   rows="3"
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors resize-none"
-                  placeholder="List any awards, recognition, or major milestones..."
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                  placeholder="List any awards or achievements..."
                 />
               </div>
             </div>
           </div>
 
           {/* Pitch Materials */}
-          <div className="space-y-4 border-t border-orange-500/20 pt-6">
-            <h3 className="text-xl font-semibold text-orange-400 flex items-center gap-2">
-              <LinkIcon size={20} />
+          <div className="space-y-3 sm:space-y-4 border-t border-orange-500/20 pt-4 sm:pt-6">
+            <h3 className="text-lg sm:text-xl font-semibold text-orange-400 flex items-center gap-2">
+              <LinkIcon size={18} className="sm:w-5 sm:h-5" />
               Pitch Materials
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Pitch Deck Link
                 </label>
                 <input
@@ -493,14 +493,14 @@ const StartupExpoForm = ({ onClose }) => {
                   name="pitchDeckLink"
                   value={formData.pitchDeckLink}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors"
                   placeholder="Google Drive/Dropbox link"
                 />
-                <p className="text-xs text-gray-400 mt-1">Share a public link to your pitch deck (PDF)</p>
+                <p className="text-xs text-gray-400 mt-1">Share a public link (PDF)</p>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                   Pitch Video Link
                 </label>
                 <input
@@ -508,22 +508,22 @@ const StartupExpoForm = ({ onClose }) => {
                   name="videoLink"
                   value={formData.videoLink}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors"
                   placeholder="YouTube/Vimeo link"
                 />
-                <p className="text-xs text-gray-400 mt-1">Optional: 2-3 minute pitch video</p>
+                <p className="text-xs text-gray-400 mt-1">Optional: 2-3 min video</p>
               </div>
             </div>
           </div>
 
           {/* What You're Looking For */}
-          <div className="space-y-4 border-t border-orange-500/20 pt-6">
-            <h3 className="text-xl font-semibold text-orange-400 flex items-center gap-2">
-              <FileText size={20} />
+          <div className="space-y-3 sm:space-y-4 border-t border-orange-500/20 pt-4 sm:pt-6">
+            <h3 className="text-lg sm:text-xl font-semibold text-orange-400 flex items-center gap-2">
+              <FileText size={18} className="sm:w-5 sm:h-5" />
               What are you looking for at E-Summit?
             </h3>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
               {lookingForOptions.map(option => (
                 <label key={option} className="flex items-center space-x-2 cursor-pointer">
                   <input
@@ -532,16 +532,16 @@ const StartupExpoForm = ({ onClose }) => {
                     onChange={() => handleCheckboxChange(option)}
                     className="w-4 h-4 rounded border-orange-500/30 bg-slate-800/50 text-orange-600 focus:ring-orange-500 focus:ring-offset-0"
                   />
-                  <span className="text-sm text-gray-300">{option}</span>
+                  <span className="text-xs sm:text-sm text-gray-300">{option}</span>
                 </label>
               ))}
             </div>
           </div>
 
           {/* Special Requests */}
-          <div className="space-y-4 border-t border-orange-500/20 pt-6">
+          <div className="space-y-3 sm:space-y-4 border-t border-orange-500/20 pt-4 sm:pt-6">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
                 Special Requests or Requirements
               </label>
               <textarea
@@ -549,31 +549,31 @@ const StartupExpoForm = ({ onClose }) => {
                 value={formData.specialRequests}
                 onChange={handleChange}
                 rows="3"
-                className="w-full px-4 py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors resize-none"
-                placeholder="Any special requirements for your booth, demo setup, or other needs..."
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-orange-500/30 rounded-lg text-sm sm:text-base text-white focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                placeholder="Any special requirements..."
               />
             </div>
           </div>
 
-          {/* Submit Buttons */}
-          <div className="flex gap-4 pt-4">
+          {/* Submit Buttons - Mobile Optimized */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sticky bottom-0 bg-slate-900 py-3 sm:py-4 -mx-4 sm:-mx-6 px-4 sm:px-6 border-t border-orange-500/20">
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-medium transition-colors"
+              className="flex-1 px-4 sm:px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-medium transition-colors text-sm sm:text-base"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg font-medium transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              className="flex-1 px-4 sm:px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-lg font-medium transition-all transform hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
             >
-              <Rocket size={20} />
+              <Rocket size={18} className="sm:w-5 sm:h-5" />
               Register Startup
             </button>
           </div>
 
-          <p className="text-center text-sm text-gray-400">
+          <p className="text-center text-xs text-gray-400 pb-2">
             * Required fields | All information will be kept confidential
           </p>
         </form>
