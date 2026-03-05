@@ -59,7 +59,6 @@ export default function NavBar() {
 
   return (
     <div className="w-full bg-gradient-to-b from-blue-950 via-blue-900 to-white fixed top-0 left-0 right-0 z-50 text-lg">
-
       <NavigationMenu
         viewport={false}
         className="text-whitepx-1 py-3 pt-4 max-w-full md:mr-5 2xl:mr-10 flex justify-between"
@@ -113,6 +112,19 @@ export default function NavBar() {
               after:duration-300 hover:after:w-full"
             >
               Our Team
+            </Link>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link
+              href="/E-Summit/sponsorship"
+              className="relative px-3 py-1 transition-all duration-300
+              hover:text-yellow-300
+              after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+              after:w-0 after:bg-yellow-300 after:transition-all
+              after:duration-300 hover:after:w-full"
+            >
+              Sponsors
             </Link>
           </NavigationMenuItem>
 
@@ -238,6 +250,17 @@ export default function NavBar() {
             <DropdownMenuSeparator className="bg-blue-200" />
 
             <DropdownMenuItem
+              onClick={() => handleNavigate("/E-Summit/sponsorship")}
+              className="text-blue-950 font-semibold
+               hover:bg-blue-100 hover:text-blue-900
+               rounded-md cursor-pointer"
+            >
+              Sponsors
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator className="bg-blue-200" />
+
+            <DropdownMenuItem
               onClick={() => handleNavigate("/E-Summit/contact")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
@@ -300,6 +323,4 @@ export default function NavBar() {
       </NavigationMenu>
     </div>
   );
-
-
 }
