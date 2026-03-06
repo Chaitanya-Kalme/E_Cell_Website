@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform, useViewportScroll } from "framer-motion";
 import StartupExpoCard from "@/components/E-Summit/StartupExpoCard";
 import EventCard from "@/components/E-Summit/EventCard";
-import AccommodationForm from "@/components/E-Summit/AccommodationForm";
 import StartupExpoForm from "@/components/E-Summit/StartupExpoForm";
 import { startupExpoData, allEvents } from "@/context/E-Summit/dataObjects";
 import { EncryptedText } from "@/components/ui/encrypted-text";
@@ -114,27 +113,7 @@ export default function ESummitPage() {
         </div>
       </section>
 
-      {/* --- ACCOMMODATION SECTION --- */}
-      <section className="relative py-20 px-4 md:px-8 lg:px-12">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4">
-              Accommodation
-            </h2>
-            <p className="text-purple-200 text-lg">
-              Need a place to stay? Book your accommodation now!
-            </p>
-            <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
-          </motion.div>
-
-          <AccommodationForm />
-        </div>
-      </section>
+  
 
       {/* Startup Expo Form Modal */}
       {showStartupExpoForm && (

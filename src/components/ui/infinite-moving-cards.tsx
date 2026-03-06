@@ -13,6 +13,7 @@ export const InfiniteMovingCards = ({
   items: {
     src: string;
     alt?: string;
+    name?: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -87,17 +88,23 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className="relative w-[350px] max-w-full shrink-0 rounded-2xl overflow-hidden border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-0 py-0 md:w-[450px] dark:border-amber-700"
-            key={item.src}
+            key={`${item.src}-${idx}`}
           >
             <div className="relative w-full h-full">
               <img
                 src={item.src}
-                alt={item.alt || "Image"}
+                alt={item.alt || item.name || "Image"}
                 className="w-full h-full object-cover rounded-2xl"
               />
+              {item.name && (
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-4 py-3">
+                  <p className="text-white text-sm md:text-base font-semibold text-center truncate">
+                    {item.name}
+                  </p>
+                </div>
+              )}
             </div>
           </li>
-
         ))}
       </ul>
     </div>
