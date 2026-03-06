@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, AnimatePresence } from "framer-motion";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { galleryImages1 } from "@/context/galleryImages";
@@ -13,10 +13,14 @@ import { allEvents, startupExpoData } from '@/context/E-Summit/dataObjects';
 import { Calendar, MapPin, Users } from "lucide-react";
 import EventCard from "@/components/E-Summit/EventCard";
 import { useRouter } from "next/navigation";
+import Antigravity from "@/components/Antigravity"
+import ParticleBackground from "@/components/E-Summit/ParticleBackground"
+import ProtonLoader from "@/components/E-Summit/ProtonLoader";
 
 export default function ESummitPage() {
   const { scrollY } = useScroll();
   const [scrollRange, setScrollRange] = useState(1); // avoid division by zero
+  const [loading, setLoading] = useState(true);
   const router = useRouter()
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export default function ESummitPage() {
   });
 
   // Map scroll progress 0 → 1 to scale 1 → 1.15
-  const scale = useTransform(scrollProgress, [0, 1], [1, 1.15]);
+  const scale = useTransform(scrollProgress, [0, 1], [1, 1.5]);
 
   const hoverCard = {
     initial: {
@@ -75,58 +79,50 @@ export default function ESummitPage() {
 
 
   return (
+    <>
+      {/* ── Full-screen loader — sits above everything, unmounts when done ── */}
+      <AnimatePresence>
+        {loading && (
+          <motion.div
+            key="loader"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 9999,
+              background: "#010408",
+            }}
+          >
+            <ProtonLoader onComplete={() => setLoading(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     <div
-      className="relative min-h-screen bg-[#6BB0E7] overflow-x-hidden"
-      style={{ minHeight: "200vh" }} // enough height for scrolling
+      className="relative min-h-screen bg-black overflow-x-hidden"
+      style={{ minHeight: "200vh" }}
     >
-      {/* Background Image */}
       <motion.div
-        style={{ scale }}
-        className="fixed inset-0 bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-0"
+        className="absolute top-0 left-0 w-full h-screen bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-5"
+        style={{scale}}
       />
 
-      {/* Overlay to improve text readability */}
-      <div className="fixed inset-0 bg-black/25 pointer-events-none z-10" />
-
-      <motion.div
-        className="absolute top-0 left-0 w-full pointer-events-none z-20"
-        style={{
-          // Use window.innerWidth to determine mobile or desktop
-          height: window.innerWidth < 768 ? 150 : 300, // 150px for mobile, 300px for desktop
-          opacity: useTransform(
-            scrollY,
-            window.innerWidth < 768 ? [0, 150] : [0, 300],
-            [1, 0]
-          ),
-          y: useTransform(
-            scrollY,
-            window.innerWidth < 768 ? [0, 150] : [0, 300],
-            [0, -30]
-          ),
-        }}
-      >
-        <div className="cloud-curly cloud-slow top-[10%] left-[-5%] scale-125" />
-        <div className="cloud-curly cloud-med top-[30%] left-[20%] opacity-80" />
-        <div className="cloud-curly cloud-fast top-[15%] left-[60%] scale-75 opacity-50" />
-        {/* <div className="cloud-curly cloud-med top-[50%] left-[45%] scale-110" /> */}
-      </motion.div>
-
-
+      {/* Overlay */}
+      <div className="absolute top-0 left-0 w-full h-screen bg-black/25 pointer-events-none z-10" />
 
 
       {/* Content */}
-      <div className="relative z-30 px-6 pt-20 pb-40 max-w-7xl mx-auto text-center text-white">
-        {/* Hero Section */}
-        <h1
-          className="
-    text-5xl md:text-9xl font-bold italic mb-10 
-    bg-gradient-to-r from-blue-900 to-blue-500
-    bg-clip-text text-transparent
-    drop-shadow-[0_0_15px_rgba(255,234,0,0.8)]
-  "
-        >
-          E-Summit'26
-        </h1>
+      <div className="relative z-30 px-6 pt-10 pb-40 max-w-7xl mx-auto text-center text-white">
+
+        {/* Hero Section Logo instead of heading */}
+        <div className="flex justify-center mb-10">
+          <img
+            src="/E-Summit Logo.png"
+            alt="E-Summit 2026"
+            className="h-[300px] w-[260px] md:w-[700px]"
+          />
+        </div>
 
         <p className="md:text-sm font-black tracking-[0.5em] uppercase mb-20 drop-shadow-md">
           <EncryptedText
@@ -185,7 +181,9 @@ export default function ESummitPage() {
         </motion.div>
 
         {/* About Section */}
-        <h2 className="text-2xl mt-5 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
+        <ParticleBackground />
+
+        <h2 className="text-2xl md:mt-90 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
           <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
             <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -231,8 +229,8 @@ export default function ESummitPage() {
             <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
               <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-2 font-bold text-blue-200 backdrop-blur-3xl ">
-                  Events 
+                <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-2 font-bold text-yellow-300 backdrop-blur-3xl ">
+                  Events
                 </span>
               </button>
             </span>
@@ -293,6 +291,7 @@ export default function ESummitPage() {
 
       </div>
     </div >
+    </>
   );
 }
 

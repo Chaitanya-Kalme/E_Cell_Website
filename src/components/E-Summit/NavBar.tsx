@@ -65,7 +65,7 @@ export default function NavBar() {
         className="text-whitepx-1 py-3 pt-4 max-w-full md:mr-5 2xl:mr-10 flex justify-between"
       >
         {/* Left side: Image */}
-        <NavigationMenuItem className="flex items-start">
+        <NavigationMenuItem className="flex items-start h-20 ml-4">
           <Image
             src="/E-Summit Logo.png"
             alt="E-Summit Logo"

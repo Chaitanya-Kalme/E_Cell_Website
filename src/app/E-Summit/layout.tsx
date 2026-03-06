@@ -9,9 +9,12 @@ import AuthProvider from "@/context/AuthProvider";
 import NavBar from "@/components/E-Summit/NavBar";
 import Footer from "@/components/E-Summit/footer";
 import SocialSidebar from "@/components/E-Summit/SocialMediaSection";
+import CursorTrail from "@/components/E-Summit/CursorTrail"
 
-
+import SplashCursor from '@/components/SplashCursor'
 import { Playfair_Display } from "next/font/google";
+import { CursorProvider } from "@/components/animate-ui/components/animate/cursor";
+import { Cursor } from "@/components/animate-ui/components/animate/cursor";
 
 const calligraphy = Playfair_Display({
   variable: "--font-calligraphy",
@@ -52,17 +55,21 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <DataProvider>
-              <NavBar />
-              {/* <SocialSidebar/> */}
-              <div className="pt-24">
-                {children}
-              </div>
-              <Footer />
+              <CursorProvider>
+                <Cursor className="text-blue-100" />
+                <NavBar />
+                {/* <SocialSidebar/> */}
+                <div className="pt-24">
+                  {/* <SplashCursor /> */}
+                  {children}
+                </div>
+                <Footer />
+              </CursorProvider>
             </DataProvider>
             <Toaster expand={true} richColors closeButton={true} />
           </ThemeProvider>
         </AuthProvider>
       </body>
-    </html>
+    </html >
   );
 }

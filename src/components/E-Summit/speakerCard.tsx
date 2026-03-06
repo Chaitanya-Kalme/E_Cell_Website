@@ -86,7 +86,7 @@ export const SpeakersListCards = ({
             <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-white">
 
               {/* Upper Section - Image */}
-              <div className="w-full h-[200px] md:h-[300px]">
+              <div className="w-full h-[300px] md:h-[400px]">
                 <img
                   src={item.imageSrc}
                   alt={item.alt || "Speaker Image"}
