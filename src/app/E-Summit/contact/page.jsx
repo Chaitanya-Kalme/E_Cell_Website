@@ -7,7 +7,13 @@ import Image from "next/image";
 const contact = () => {
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen bg-[#0a0e27]">
+      {/* Decorative Elements */}
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+      </div>
       <div className="relative z-10">
         <div className="container mx-auto py-8 min-h-screen pt-24 px-4">
           {/* Two Column Layout */}

@@ -61,10 +61,24 @@ export function ExpandableEventCards({ events }) {
     }
   });
 
-  const handleRegisterClick = (e) => {
-    e.stopPropagation();
+  // const handleRegisterClick = (e) => {
+  //   e.stopPropagation();
+  //   setShowRegistration(true);
+  // };
+const UNSTOP_LINKS = {
+  'gtm-war': 'https://unstop.com/competitions/gtm-go-to-market-strategy-war-e-summit-2026-indian-institute-of-technology-iit-ropar-1654640',
+  'startup-sprint': 'https://unstop.com/competitions/startup-sprint-e-summit-2026-indian-institute-of-technology-iit-ropar-1654591',
+  'pitch-120': 'https://unstop.com/competitions/pitch-120-e-summit-2026-indian-institute-of-technology-iit-ropar-1654618',
+};
+
+const handleRegisterClick = (e) => {
+  e.stopPropagation();
+  if (active?.id && UNSTOP_LINKS[active.id]) {
+    window.open(UNSTOP_LINKS[active.id], "_blank");
+  } else {
     setShowRegistration(true);
-  };
+  }
+};
 
   const handleCloseRegistration = () => {
     setShowRegistration(false);
