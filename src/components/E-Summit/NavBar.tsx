@@ -58,7 +58,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-blue-950 via-blue-900 to-white fixed top-0 left-0 right-0 z-50 text-lg">
+   <div className="w-full bg-gradient-to-b from-blue-950 to-blue-900 fixed top-0 left-0 right-0 z-50 text-lg">
       <NavigationMenu
         viewport={false}
         className="text-whitepx-1 py-3 pt-4 max-w-full md:mr-5 2xl:mr-10 flex justify-between"
