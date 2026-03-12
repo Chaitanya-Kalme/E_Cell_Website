@@ -1,66 +1,114 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CursorTrail() {
   const canvasRef = useRef(null);
   const particles = useRef([]);
+  const lastSpawn = useRef(0);
+  const rafId = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    // Disable on mobile/touch devices - no cursor to trail
+    const checkMobile = () => {
+      const mobile =
+        window.matchMedia("(pointer: coarse)").matches ||
+        window.matchMedia("(max-width: 768px)").matches ||
+        "ontouchstart" in window;
+      setIsMobile(mobile);
+      return mobile;
+    };
 
+    if (checkMobile()) return;
+
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    // Use 2d context with performance hints
+    const ctx = canvas.getContext("2d", { alpha: true, desynchronized: true });
+    if (!ctx) return;
+
+    // Use half resolution for better performance
+    const scale = 0.5;
     let width = window.innerWidth;
     let height = window.innerHeight;
 
-    canvas.width = width;
-    canvas.height = height;
-
-    const resize = () => {
+    const setupCanvas = () => {
       width = window.innerWidth;
       height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
+      ctx.scale(scale, scale);
     };
 
-    window.addEventListener("resize", resize);
+    setupCanvas();
+
+    const resize = () => {
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform before resize
+      setupCanvas();
+    };
+
+    window.addEventListener("resize", resize, { passive: true });
 
     const addParticle = (x, y) => {
+      // Stricter particle limit
+      if (particles.current.length > 30) return;
+
       particles.current.push({
         x,
         y,
-        size: Math.random() * 6 + 4,
+        size: Math.random() * 4 + 2,
         life: 1,
-        speedX: (Math.random() - 0.5) * 2,
-        speedY: (Math.random() - 0.5) * 2,
+        speedX: (Math.random() - 0.5) * 1.2,
+        speedY: (Math.random() - 0.5) * 1.2,
       });
     };
 
     const handleMouseMove = (e) => {
+      // Throttle: spawn particle only every 25ms (~40fps input)
+      const now = performance.now();
+      if (now - lastSpawn.current < 25) return;
+      lastSpawn.current = now;
+
       addParticle(e.clientX, e.clientY);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     const animate = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
-      ctx.fillRect(0, 0, width, height);
+      // Clear with faster method
+      ctx.clearRect(0, 0, width, height);
 
-      particles.current.forEach((p, index) => {
+      const len = particles.current.length;
+      if (len === 0) {
+        rafId.current = requestAnimationFrame(animate);
+        return;
+      }
+
+      // Batch all particles with same fill style
+      ctx.fillStyle = "rgba(255, 215, 0, 0.8)";
+
+      let writeIdx = 0;
+      for (let i = 0; i < len; i++) {
+        const p = particles.current[i];
         p.x += p.speedX;
         p.y += p.speedY;
-        p.life -= 0.02;
+        p.life -= 0.06; // Even faster decay
 
-        if (p.life <= 0) {
-          particles.current.splice(index, 1);
+        if (p.life > 0) {
+          particles.current[writeIdx++] = p;
+          ctx.globalAlpha = p.life;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+          ctx.fill();
         }
+      }
+      particles.current.length = writeIdx;
+      ctx.globalAlpha = 1;
 
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 215, 0, ${p.life})`; // Yellow glow
-        ctx.fill();
-      });
-
-      requestAnimationFrame(animate);
+      rafId.current = requestAnimationFrame(animate);
     };
 
     animate();
@@ -68,8 +116,12 @@ export default function CursorTrail() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", resize);
+      if (rafId.current) cancelAnimationFrame(rafId.current);
     };
   }, []);
+
+  // Don't render canvas on mobile
+  if (isMobile) return null;
 
   return (
     <canvas
@@ -80,6 +132,7 @@ export default function CursorTrail() {
         left: 0,
         pointerEvents: "none",
         zIndex: 9999,
+        willChange: "contents",
       }}
     />
   );
