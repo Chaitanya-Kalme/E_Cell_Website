@@ -39,6 +39,13 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+import { Viga } from "next/font/google";
+
+const viga = Viga({
+  subsets: ["latin"],
+  weight: "400", // Viga only has one weight
+});
+
 export default function ESummitPage() {
   const { scrollY } = useScroll();
   const [scrollRange, setScrollRange] = useState(1); // avoid division by zero
@@ -102,7 +109,7 @@ export default function ESummitPage() {
   return (
     <>
       {/* ── Full-screen loader — sits above everything, unmounts when done ── */}
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {loading && (
           <motion.div
             key="loader"
@@ -119,7 +126,7 @@ export default function ESummitPage() {
             <ProtonLoader onComplete={() => setLoading(false)} />
           </motion.div>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
 
       {/* ── HERO SECTION — background image + parallax scale, NO particles ── */}
       <div
@@ -264,15 +271,15 @@ export default function ESummitPage() {
                 <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
-                  <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
+                  <span className={`inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl`}>
                     Events
                   </span>
 
                 </button>
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-12" />
-            <p className="text-center text-blue-200 mb-12 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-3" />
+            <p className={` ${viga.className} text-center text-blue-200 mb-12 max-w-2xl mx-auto`}>
               Meet innovative startups and entrepreneurs from across the country
             </p>
             <EventCard events={allEvents.slice(0, 8)} />

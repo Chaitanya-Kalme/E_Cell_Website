@@ -433,7 +433,7 @@ export function ExpandableStartupExpoCards({ startups }) {
           const activeIndex = startups.findIndex(s => s.startupName === active.startupName);
           const col = COLOR_MAP[active.color || COLOR_KEYS[activeIndex % COLOR_KEYS.length]];
           return (
-            <div className="fixed inset-0 grid place-items-center z-[110] p-4 mt-16">
+            <div className="fixed inset-0 grid place-items-center z-[110] p-4 mt-20">
               <motion.button
                 key={`btn-${active.startupName}-${id}`} layout
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }}
