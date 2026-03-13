@@ -16,6 +16,7 @@ import { useRouter } from "next/navigation";
 import Antigravity from "@/components/Antigravity"
 import ParticleBackground from "@/components/E-Summit/ParticleBackground"
 import ProtonLoader from "@/components/E-Summit/ProtonLoader";
+import ShinyText from '@/components/ShinyText';
 
 import { Montserrat } from "next/font/google";
 
@@ -146,11 +147,20 @@ export default function ESummitPage() {
         <div className="relative z-30 px-6 pt-10 pb-40 max-w-7xl mx-auto text-center text-white">
 
           {/* Hero Section Logo */}
-          <div className="flex justify-center mb-10">
-            <img
-              src="/E-Summit Logo.png"
-              alt="E-Summit 2026"
-              className="h-[200px] w-[500px] sm:w-[650px] sm:h-[300px]"
+          <div className="flex justify-center mb-10 items-center pt-30">
+            
+            <ShinyText
+              text="E-Summit 2026"
+              speed={2}
+              delay={0}
+              gradientColors={["#34d399","#06b6d4","#818cf8"]}  // amber → orange → red
+              shineColor="#ffffff"
+              spread={120}
+              direction="left"
+              yoyo={false}
+              pauseOnHover={false}
+              disabled={false}
+              className={`text-6xl font-bold md:text-9xl ${playfair.className}`}
             />
           </div>
 
@@ -159,7 +169,8 @@ export default function ESummitPage() {
               text="Ideas • Innovation • Growth"
               encryptedClassName="text-white"
               revealedClassName="text-white text-sm"
-              revealDelayMs={70}
+              revealDelayMs={60}
+              className={`${ibmPlexMono.className}`}
             />
           </p>
 
@@ -183,6 +194,7 @@ export default function ESummitPage() {
                   border border-${color}-400/40
                   hover:bg-black/80
                   transition-colors duration-300
+                  ${ibmPlexMono.className}
                 `}
               >
                 {/* Icon */}
@@ -315,18 +327,18 @@ export default function ESummitPage() {
 
           {/* Past Speakers Section */}
           <h2 className={`${playfair.className} md:mt-10 font-extrabold mb-6 drop-shadow-lg`}>
-              <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
-                <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
+              <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
-                  <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
-                    Past Speakers
-                  </span>
+                <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
+                  Past Speakers
+                </span>
 
-                </button>
-              </span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-12" />
+              </button>
+            </span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-12" />
           <SpeakersListCards
             items={pastSpeakers}
             direction="right"
