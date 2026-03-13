@@ -45,7 +45,7 @@ export default function ESummitPage() {
       />
 
       {/* Overlay to improve text readability */}
-      <div className="fixed inset-0 bg-black/25 pointer-events-none z-10" />
+      <div className="fixed inset-0 bg-black/40 pointer-events-none z-10" />
 
 
       {/* --- EVENTS SECTION --- */}

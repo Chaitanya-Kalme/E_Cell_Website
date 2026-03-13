@@ -109,7 +109,7 @@ export default function ESummitPage() {
       />
 
       {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-screen bg-black/25 pointer-events-none z-10" />
+      <div className="absolute top-0 left-0 w-full h-screen bg-black/40 pointer-events-none z-10" />
 
 
       {/* Content */}
