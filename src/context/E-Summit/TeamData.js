@@ -14,13 +14,13 @@ export const coreTeamMembers = [
     linkedin: "https://www.linkedin.com/in/animesh-anand-iitrpr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "2023ceb1024@iitrpr.ac.in",
   },
-  {
-    name: "Omm Shree",
-    position: "Secretary",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323043/IMG_3024_-_Omm_Shree_ebmobb.jpg",
-    linkedin: "https://www.linkedin.com/in/omm-shree-b9910b1b9/",
-    email: "ommshreeaspires@gmail.com",
-  },
+  // {
+  //   name: "Omm Shree",
+  //   position: "Secretary",
+  //   image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323043/IMG_3024_-_Omm_Shree_ebmobb.jpg",
+  //   linkedin: "https://www.linkedin.com/in/omm-shree-b9910b1b9/",
+  //   email: "ommshreeaspires@gmail.com",
+  // },
 ];
 
 // Department Heads (6 members)

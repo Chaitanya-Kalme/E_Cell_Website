@@ -1,4 +1,4 @@
-StartupExpoCard.jsx"use client";
+"use client";
 import React, { act, useEffect, useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
