@@ -147,20 +147,11 @@ export default function ESummitPage() {
         <div className="relative z-30 px-6 pt-10 pb-40 max-w-7xl mx-auto text-center text-white">
 
           {/* Hero Section Logo */}
-          <div className="flex justify-center mb-10 items-center pt-30">
-            
-            <ShinyText
-              text="E-Summit 2026"
-              speed={2}
-              delay={0}
-              gradientColors={["#34d399","#06b6d4","#818cf8"]}  // amber → orange → red
-              shineColor="#ffffff"
-              spread={120}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-              disabled={false}
-              className={`text-6xl font-bold md:text-9xl ${playfair.className}`}
+          <div className="flex justify-center mb-10">
+            <img
+              src="/E-Summit Logo.png"
+              alt="E-Summit 2026"
+              className="h-[150px] w-[450px] sm:w-[600px] sm:h-[250px]"
             />
           </div>
 
