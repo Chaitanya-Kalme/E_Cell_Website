@@ -3,6 +3,18 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
+import { Montserrat, Playfair_Display } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
 export const SpeakersListCards = ({
   items,
   direction = "left",
@@ -65,7 +77,7 @@ export const SpeakersListCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-svw overflow-visible", // overflow-visible instead of hidden
+        "scroller relative z-20 max-w-svw overflow-visible",
         className
       )}
     >
@@ -76,16 +88,15 @@ export const SpeakersListCards = ({
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
-        style={{ background: "transparent" }} // fully transparent
       >
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="relative w-[250px] max-w-full shrink-0 rounded-2xl overflow-visible border border-transparent md:w-[350px] bg-transparent shadow-none"
+            className="relative w-[250px] max-w-full shrink-0 rounded-2xl overflow-visible md:w-[350px]"
           >
-            <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-white">
+            <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-white hover:scale-105 transition-transform duration-300">
 
-              {/* Upper Section - Image */}
+              {/* Image */}
               <div className="w-full h-[300px] md:h-[400px]">
                 <img
                   src={item.imageSrc}
@@ -94,22 +105,28 @@ export const SpeakersListCards = ({
                 />
               </div>
 
-              {/* Lower Section - Text */}
-              <div className="py-4 px-3 text-center bg-yellow-100">
+              {/* Text Section */}
+              <div className="py-5 px-4 text-center bg-yellow-50">
+
                 {item.name && (
-                  <h3 className="text-lg md:text-2xl font-bold text-gray-900">
+                  <h3
+                    className={`${playfair.className} text-xl md:text-2xl font-semibold text-gray-900 tracking-wide`}
+                  >
                     {item.name}
                   </h3>
                 )}
+
                 {item.position && (
-                  <p className="text-sm md:text-base text-gray-600 mt-1">
+                  <p
+                    className={`${montserrat.className} text-sm md:text-base text-gray-600 mt-1 tracking-wide`}
+                  >
                     {item.position}
                   </p>
                 )}
+
               </div>
 
             </div>
-
           </li>
         ))}
       </ul>

@@ -17,6 +17,28 @@ import Antigravity from "@/components/Antigravity"
 import ParticleBackground from "@/components/E-Summit/ParticleBackground"
 import ProtonLoader from "@/components/E-Summit/ProtonLoader";
 
+import { Montserrat } from "next/font/google";
+
+import { Playfair_Display } from 'next/font/google'
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900']
+})
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
+});
+
+import { IBM_Plex_Mono } from "next/font/google";
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
 export default function ESummitPage() {
   const { scrollY } = useScroll();
   const [scrollRange, setScrollRange] = useState(1); // avoid division by zero
@@ -40,7 +62,7 @@ export default function ESummitPage() {
     clamp: true,
   });
 
-  // Map scroll progress 0 → 1 to scale 1 → 1.15
+  // Map scroll progress 0 → 1 to scale 1 → 1.5
   const scale = useTransform(scrollProgress, [0, 1], [1, 1.5]);
 
   const hoverCard = {
@@ -77,11 +99,10 @@ export default function ESummitPage() {
     },
   };
 
-
   return (
     <>
       {/* ── Full-screen loader — sits above everything, unmounts when done ── */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {loading && (
           <motion.div
             key="loader"
@@ -98,200 +119,215 @@ export default function ESummitPage() {
             <ProtonLoader onComplete={() => setLoading(false)} />
           </motion.div>
         )}
-      </AnimatePresence>
-    <div
-      className="relative min-h-screen bg-black overflow-x-hidden"
-      style={{ minHeight: "200vh" }}
-    >
-      <motion.div
-        className="absolute top-0 left-0 w-full h-screen bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-5"
-        style={{scale}}
-      />
+      </AnimatePresence> */}
 
-      {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-screen bg-black/40 pointer-events-none z-10" />
-
-
-      {/* Content */}
-      <div className="relative z-30 px-6 pt-10 pb-40 max-w-7xl mx-auto text-center text-white">
-
-        {/* Hero Section Logo instead of heading */}
-        <div className="flex justify-center mb-10">
-          <img
-            src="/E-Summit Logo.png"
-            alt="E-Summit 2026"
-            className="h-[300px] w-[260px] md:w-[700px]"
-          />
-        </div>
-
-        <p className="md:text-sm font-black tracking-[0.5em] uppercase mb-20 drop-shadow-md">
-          <EncryptedText
-            text="Ideas • Innovation • Growth"
-            encryptedClassName="text-white"
-            revealedClassName="text-white text-sm"
-            revealDelayMs={70}
-          />
-        </p>
-
+      {/* ── HERO SECTION — background image + parallax scale, NO particles ── */}
+      <div
+        className="relative bg-black overflow-x-hidden"
+        style={{ minHeight: "100vh" }}
+      >
+        {/* Parallax background image */}
         <motion.div
-          className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16 mt-2"
-        >
-          {[
-            { icon: Calendar, text: "Dates: April 11-12, 2026", color: "orange" },
-            { icon: MapPin, text: "Venue: IIT Ropar", color: "purple" },
-            { icon: Users, text: "1000+ Participants", color: "blue" },
-          ].map(({ icon: Icon, text, color }) => (
-            <motion.div
-              key={text}
-              variants={hoverCard}
-              initial="initial"
-              whileHover="hover"
-              className={`
-        group flex items-center space-x-3
-        bg-black/60 backdrop-blur-md
-        px-5 py-3 rounded-full cursor-default
-        border border-${color}-400/40
-        hover:bg-black/80
-        transition-colors duration-300
-      `}
-            >
-              {/* Icon */}
-              <motion.span
-                variants={hoverIcon}
-                className={`text-${color}-300`}
-              >
-                <Icon size={24} />
-              </motion.span>
+          className="absolute top-0 left-0 w-full h-screen bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-5"
+          style={{ scale }}
+        />
 
-              {/* Text */}
-              <motion.span
-                variants={hoverText}
-                className={`text-base md:text-lg font-semibold text-${color}-200`}
-              >
-                {text}
-              </motion.span>
+        {/* Dark overlay */}
+        <div className="absolute top-0 left-0 w-full h-screen bg-black/40 pointer-events-none z-10" />
 
-              {/* Glow ring */}
-              <span
-                className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 
-          blur-xl bg-${color}-500/10 transition-opacity duration-300`}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Hero content */}
+        <div className="relative z-30 px-6 pt-10 pb-40 max-w-7xl mx-auto text-center text-white">
 
-        {/* About Section */}
-        <ParticleBackground />
-
-        <h2 className="text-2xl md:mt-90 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
-          <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
-            <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
-              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-              <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-3 font-medium text-yellow-300 backdrop-blur-3xl ">
-                About E-Summit 2026
-              </span>
-            </button>
-          </span>
-        </h2>
-
-        <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-12" />
-
-        <div className="max-w-6xl mx-auto bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-10 text-gray-200">
-          <div className="flex-shrink-0">
+          {/* Hero Section Logo */}
+          <div className="flex justify-center mb-10">
             <img
-              src="/spiral.jpg"
-              alt="IIT Ropar Spiral"
-              className="w-64 md:w-80 lg:w-96 rounded-2xl shadow-xl hover:scale-105 transition duration-500 ease-in-out"
+              src="/E-Summit Logo.png"
+              alt="E-Summit 2026"
+              className="h-[200px] w-[500px] sm:w-[650px] sm:h-[300px]"
             />
           </div>
 
-          <p className="text-lg md:text-xl leading-relaxed text-left">
-            <span className="text-white font-semibold">E-Summit</span> is the
-            <span className="text-purple-300 font-semibold">
-              {" "}
-              flagship annual entrepreneurial fest{" "}
-            </span>
-            organized by the{" "}
-            <span className="text-white font-medium">Entrepreneurship Cell (E-Cell)</span> and{" "}
-            <span className="text-white font-medium">TBIF IIT Ropar</span>, held in April.
-            <br />
-            <br />
-            It fosters{" "}
-            <span className="text-blue-300 font-semibold">innovation</span>,
-            <span className="text-blue-300 font-semibold"> networking</span>, and{" "}
-            <span className="text-blue-300 font-semibold">startup growth</span> through keynote sessions, panel discussions, the Startup Expo,
-            Investors Arena, and interactive workshops — connecting students with industry leaders, founders, and investors.
+          <p className="md:text-sm font-black tracking-[0.5em] uppercase mb-20 drop-shadow-md">
+            <EncryptedText
+              text="Ideas • Innovation • Growth"
+              encryptedClassName="text-white"
+              revealedClassName="text-white text-sm"
+              revealDelayMs={70}
+            />
           </p>
-        </div>
 
-        <section className="mb-24 mt-10">
-          <h2 className="text-2xl mt-5 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16 mt-2"
+          >
+            {[
+              { icon: Calendar, text: "Dates: April 11-12, 2026", color: "orange" },
+              { icon: MapPin, text: "Venue: IIT Ropar", color: "purple" },
+              { icon: Users, text: "1000+ Participants", color: "blue" },
+            ].map(({ icon: Icon, text, color }) => (
+              <motion.div
+                key={text}
+                variants={hoverCard}
+                initial="initial"
+                whileHover="hover"
+                className={`
+                  group flex items-center space-x-3
+                  bg-black/60 backdrop-blur-md
+                  px-5 py-3 rounded-full cursor-default
+                  border border-${color}-400/40
+                  hover:bg-black/80
+                  transition-colors duration-300
+                `}
+              >
+                {/* Icon */}
+                <motion.span
+                  variants={hoverIcon}
+                  className={`text-${color}-300`}
+                >
+                  <Icon size={24} />
+                </motion.span>
+
+                {/* Text */}
+                <motion.span
+                  variants={hoverText}
+                  className={`text-base md:text-lg font-semibold text-${color}-200`}
+                >
+                  {text}
+                </motion.span>
+
+                {/* Glow ring */}
+                <span
+                  className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 
+                    blur-xl bg-${color}-500/10 transition-opacity duration-300`}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+
+        </div>
+      </div>
+
+      {/* ── LOWER SECTION — ParticleBackground starts here from About onwards ── */}
+      <div className="relative bg-black overflow-x-hidden">
+        {/* ParticleBackground scoped only to this lower section */}
+        <ParticleBackground />
+
+        <div className="relative z-30 px-6 py-16 max-w-7xl mx-auto text-center text-white">
+
+          {/* About Section */}
+          <h2 className={`${playfair.className} md:mt-10 font-extrabold mb-6 drop-shadow-lg`}>
             <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
-              <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+              <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-2 font-bold text-yellow-300 backdrop-blur-3xl ">
-                  Events
+
+                <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
+                  About E-Summit 2026
                 </span>
+
               </button>
             </span>
           </h2>
-          <p className="text-center text-blue-200 mb-12 max-w-2xl mx-auto">
-            Meet innovative startups and entrepreneurs from across the country
-          </p>
-          <EventCard events={allEvents.slice(0, 8)} />
 
-          <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-0.5 font-semibold leading-6 mt-7  text-white inline-block" onClick={() => router.push("/E-Summit/events")
-          }>
-            <span className="absolute inset-0 overflow-hidden rounded-full">
-              <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-            </span>
-            <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 p-2 px-4 py-2 ring-1 ring-white/10 ">
-              <span>
-                Explore More Events
-              </span>
-              <svg
-                fill="none"
-                height="16"
-                viewBox="0 0 24 24"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.75 8.75L14.25 12L10.75 15.25"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                />
-              </svg>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-12" />
+
+          <div className="max-w-6xl mx-auto bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-10 text-gray-200">
+            <div className="flex-shrink-0">
+              <img
+                src="/spiral.jpg"
+                alt="IIT Ropar Spiral"
+                className="w-64 md:w-80 lg:w-96 rounded-2xl shadow-xl hover:scale-105 transition duration-500 ease-in-out"
+              />
             </div>
-            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
-          </button>
-        </section>
 
-
-
-        <h2 className="text-2xl mt-5 md:text-4xl font-extrabold mb-6 drop-shadow-lg">
-          <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
-            <button className="relative inline-flex w-fit h-full size-30  overflow-hidden rounded-full  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
-              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-              <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-7 py-3 font-medium text-white backdrop-blur-3xl ">
-                Past Speakers
+            <p className={`${montserrat.className} text-lg md:text-xl leading-relaxed text-left`}>
+              <span className="text-white font-semibold">E-Summit</span> is the
+              <span className="text-purple-300 font-semibold">
+                {" "}
+                flagship annual entrepreneurial fest{" "}
               </span>
+              organized by the{" "}
+              <span className="text-white font-medium">Entrepreneurship Cell (E-Cell)</span> and{" "}
+              <span className="text-white font-medium">TBIF IIT Ropar</span>, held in April.
+              <br />
+              <br />
+              It fosters{" "}
+              <span className="text-blue-300 font-semibold">innovation</span>,
+              <span className="text-blue-300 font-semibold"> networking</span>, and{" "}
+              <span className="text-blue-300 font-semibold">startup growth</span> through keynote sessions, panel discussions, the Startup Expo,
+              Investors Arena, and interactive workshops — connecting students with industry leaders, founders, and investors.
+            </p>
+          </div>
+
+          {/* Events Section */}
+          <section className="mb-24 mt-10">
+            <h2 className={`${playfair.className} md:mt-10 font-extrabold mb-6 drop-shadow-lg`}>
+              <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
+                <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+
+                  <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
+                    Events
+                  </span>
+
+                </button>
+              </span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-12" />
+            <p className="text-center text-blue-200 mb-12 max-w-2xl mx-auto">
+              Meet innovative startups and entrepreneurs from across the country
+            </p>
+            <EventCard events={allEvents.slice(0, 8)} />
+
+            <button
+              className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-0.5 font-semibold leading-6 mt-7 text-white inline-block"
+              onClick={() => router.push("/E-Summit/events")}
+            >
+              <span className="absolute inset-0 overflow-hidden rounded-full">
+                <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              </span>
+              <div className="relative flex space-x-2 items-center z-5 rounded-full bg-zinc-950 p-2 px-4 py-2 ring-1 ring-white/10">
+                <span>Explore More Events</span>
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.75 8.75L14.25 12L10.75 15.25"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              </div>
+              <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
             </button>
-          </span>
-        </h2>
+          </section>
 
-        <SpeakersListCards
-          items={pastSpeakers}
-          direction="right"
-          speed="slow"
-        />
+          {/* Past Speakers Section */}
+          <h2 className={`${playfair.className} md:mt-10 font-extrabold mb-6 drop-shadow-lg`}>
+              <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
+                <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
+                  <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
+                    Past Speakers
+                  </span>
 
+                </button>
+              </span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mb-12" />
+          <SpeakersListCards
+            items={pastSpeakers}
+            direction="right"
+            speed="slow"
+          />
+
+        </div>
       </div>
-    </div >
     </>
   );
 }
-

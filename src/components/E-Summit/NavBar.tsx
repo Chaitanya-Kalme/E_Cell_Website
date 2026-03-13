@@ -42,20 +42,6 @@ export default function NavBar() {
     router.push(href);
   };
 
-  const Logout = async () => {
-    await signOut({ redirect: false, callbackUrl: "/" })
-      .then(() => {
-        toast.success("User Logout Successfully");
-        setTimeout(() => {
-          router.push("/E-Summit");
-        }, 1000);
-      })
-      .catch((error) => {
-        toast.error("Error while Logout", {
-          description: error.message,
-        });
-      });
-  };
 
   return (
     <div className="w-full bg-gradient-to-b from-blue-950 to-blue-900 fixed top-0 left-0 right-0 z-50 text-lg">
@@ -66,7 +52,7 @@ export default function NavBar() {
         {/* Left side: Image */}
         <NavigationMenuItem className="flex items-start h-20 ml-4">
           <Image
-            src="/E-Summit Logo.png"
+            src="/E-Summit Logo2.png"
             alt="E-Summit Logo"
             width={300}
             height={700}
@@ -154,57 +140,6 @@ export default function NavBar() {
             </Link>
           </NavigationMenuItem>
 
-          {session ? (
-            <div className="space-x-2 md:flex text-white">
-              {/* Profile Section */}
-              <Link
-                href={`/profile/${session.user.id}`}
-                className="rounded-md px-3 py-1 bg-white/10 hover:bg-white/25 text-white font-semibold transition"
-              >
-                Profile
-              </Link>
-
-              <Button
-                onClick={() => Logout()}
-                className="rounded-md px-3 py-1 bg-white/10 hover:bg-white/25 text-white font-semibold transition"
-              >
-                Logout
-                <div>
-                  <LogOut />
-                </div>
-              </Button>
-            </div>
-          ) : (
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="dark:bg-white text-black hover:text-black cursor-pointer">
-                Join Us
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-full">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/registration"
-                        className="block px-2 text-center hover:bg-gray-700 rounded"
-                      >
-                        Register
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/login"
-                        className="block px-2 hover:bg-gray-700 rounded"
-                      >
-                        Login
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          )}
         </NavigationMenuList>
 
         {/* Mobile Menu Button */}
@@ -293,55 +228,6 @@ export default function NavBar() {
               Contact Us
             </DropdownMenuItem>
 
-            {/* Auth Section */}
-            {session ? (
-              <>
-                <DropdownMenuSeparator className="bg-blue-300" />
-
-                <DropdownMenuItem
-                  onClick={() => handleNavigate(`/profile/${session.user.id}`)}
-                  className="text-indigo-900 font-semibold
-                   hover:bg-indigo-100 rounded-md"
-                >
-                  Profile
-                </DropdownMenuItem>
-
-                <DropdownMenuSeparator className="bg-blue-200" />
-
-                <DropdownMenuItem
-                  onClick={() => {
-                    Logout();
-                    setOpen(false);
-                  }}
-                  className="text-red-600 font-semibold
-                   hover:bg-red-100 rounded-md"
-                >
-                  Logout <LogOut className="ml-2 h-4 w-4" />
-                </DropdownMenuItem>
-              </>
-            ) : (
-              <>
-                <DropdownMenuSeparator className="bg-blue-300" />
-
-                <DropdownMenuItem
-                  onClick={() => handleNavigate("/registration")}
-                  className="text-green-700 font-semibold
-                   hover:bg-green-100 rounded-md"
-                >
-                  Register
-                </DropdownMenuItem>
-
-                <DropdownMenuSeparator className="bg-blue-200" />
-
-                <DropdownMenuItem
-                  onClick={() => handleNavigate("/login")}
-                  className="text-blue-700 font-semibold
-                   hover:bg-blue-100 rounded-md"
-                >
-                  Login
-                </DropdownMenuItem>
-              </>
-            )}
           </DropdownMenuContent>
         </DropdownMenu>
       </NavigationMenu>

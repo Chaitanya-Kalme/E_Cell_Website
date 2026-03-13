@@ -8,6 +8,39 @@ import { startupExpoData, allEvents } from "@/context/E-Summit/dataObjects";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { useEffect, useState } from "react";
 import { Rocket, Calendar } from "lucide-react";
+import ParticleBackground from "@/components/E-Summit/ParticleBackground";
+
+import { Ubuntu } from "next/font/google";
+
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
+
+
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+
+import { Viga } from "next/font/google";
+
+const viga = Viga({
+  subsets: ["latin"],
+  weight: "400", // Viga only has one weight
+});
+
+
+import { IBM_Plex_Mono } from "next/font/google";
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
 
 export default function ESummitPage() {
   const [showStartupExpoForm, setShowStartupExpoForm] = useState(false);
@@ -39,17 +72,20 @@ export default function ESummitPage() {
     <div className="min-h-screen bg-[#0a0e27]">
 
       {/* Background Image */}
-      <motion.div
+      {/* <motion.div
         style={{ scale }}
         className="fixed inset-0 bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-0"
-      />
+      /> */}
 
       {/* Overlay to improve text readability */}
-      <div className="fixed inset-0 bg-black/40 pointer-events-none z-10" />
+      {/* <div className="fixed inset-0 bg-black/40 pointer-events-none z-10" /> */}
+
+
 
 
       {/* --- EVENTS SECTION --- */}
       <section className="relative py-20 px-4 md:px-8 lg:px-12">
+        <ParticleBackground />
         <div className="max-w-[1600px] mx-auto">
           {/* Section Header */}
           <motion.div
@@ -58,13 +94,19 @@ export default function ESummitPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Calendar className="text-blue-900" size={40} />
-              <h2 className="text-4xl text-blue-900 md:text-5xl font-bold pb-2 bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Major Events
-              </h2>
-            </div>
-            <p className="text-blue-600 text-lg max-w-2xl mx-auto">
+            <h2 className={`${ibmPlexMono.className} md:mt-10 font-extrabold mb-6 drop-shadow-lg`}>
+              <span className="bg-gradient-to-r from-purple-100 to-blue-300 bg-clip-text text-transparent">
+                <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+
+                  <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
+                    Major Events
+                  </span>
+
+                </button>
+              </span>
+            </h2>
+            <p className={`text-blue-600 text-lg max-w-4xl mx-auto ${viga.className}`}>
               Explore our diverse range of competitions, workshops, and networking opportunities
             </p>
             <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" />
@@ -77,6 +119,7 @@ export default function ESummitPage() {
 
       {/* --- STARTUP EXPO SECTION --- */}
       <section className="relative py-20 px-4 md:px-8 lg:px-12">
+        <ParticleBackground />
         <div className="max-w-[1600px] mx-auto">
           {/* Section Header */}
           <motion.div
@@ -113,7 +156,7 @@ export default function ESummitPage() {
         </div>
       </section>
 
-  
+
 
       {/* Startup Expo Form Modal */}
       {showStartupExpoForm && (

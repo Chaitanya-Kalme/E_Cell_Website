@@ -15,6 +15,7 @@ import SplashCursor from '@/components/SplashCursor'
 import { Playfair_Display } from "next/font/google";
 import { CursorProvider } from "@/components/animate-ui/components/animate/cursor";
 import { Cursor } from "@/components/animate-ui/components/animate/cursor";
+import BlobCursor from "@/components/E-Summit/CursorTrail";
 
 const calligraphy = Playfair_Display({
   variable: "--font-calligraphy",
@@ -56,7 +57,8 @@ export default function RootLayout({
           >
             <DataProvider>
               <CursorProvider>
-                <Cursor className="text-blue-100" />
+                {/* <Cursor className="text-blue-100" /> */}
+                {/* <BlobCursor/> */}
                 <NavBar />
                 {/* <SocialSidebar/> */}
                 <div className="pt-24">
