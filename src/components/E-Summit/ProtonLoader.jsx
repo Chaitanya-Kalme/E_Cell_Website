@@ -8,7 +8,7 @@ const T = {
   EXPLOSION     : 2200,   // 0.4s flash
   GATHER        : 3600,   // 1.4s burst & scatter
   TEXT          : 3900,   // text burns in shortly after
-  DONE          : 6000,   // done
+  DONE          : 10000,  // extended text hold
 };
 
 export default function ProtonLoader({ onComplete }) {
@@ -85,7 +85,7 @@ export default function ProtonLoader({ onComplete }) {
         tx: sx + i * glyph + glyph / 2, ty,
         x:  s.CX + (Math.random() - 0.5) * 60,
         y:  s.CY  + (Math.random() - 0.5) * 60,
-        alpha: 0, delay: i * 0.08, fs,
+        alpha: 0, delay: i * 0.01, fs,
       }));
     }
 
@@ -210,53 +210,46 @@ export default function ProtonLoader({ onComplete }) {
 
       // PHASE 4 — E-SUMMIT'26 text burns in from the blast centre
       if (el >= T.TEXT) {
-          if (!s.groundTextFired) {
-            s.groundTextFired = true;
-            initGroundText();
-          }
-          const tText = clamp((el - T.TEXT) / (T.DONE - T.TEXT), 0, 1);
+        if (!s.groundTextFired) { s.groundTextFired = true; initGroundText(); }
+        const tText = clamp((el - T.TEXT) / (T.DONE - T.TEXT), 0, 1);
 
-          // blast rings at pad
-          const rs2 = easeOut3(tText) * 110;
-          [1, 0.65, 0.35].forEach((f, i) => {
-            ctx.beginPath();
-            ctx.arc(CX, groundY, rs2 * f, Math.PI, Math.PI * 2);
-            const cols = [
-              "rgba(100,190,255",
-              "rgba(255,140,60",
-              "rgba(200,100,255",
-            ];
-            ctx.strokeStyle = `${cols[i]},${(0.38 - i * 0.08) * (1 - tText * 0.7)})`;
-            ctx.lineWidth = 1.2 - i * 0.2;
-            ctx.stroke();
-          });
+        // expanding ring at blast origin
+        const rs2 = easeOut3(tText) * 140;
+        [1, 0.65, 0.35].forEach((f, i) => {
+          ctx.beginPath(); ctx.arc(CX, CY, rs2 * f, 0, Math.PI * 2);
+          const cols = ["rgba(100,190,255", "rgba(255,140,60", "rgba(200,100,255"];
+          ctx.strokeStyle = `${cols[i]},${(0.38 - i * 0.08) * (1 - tText * 0.7)})`;
+          ctx.lineWidth = 1.4 - i * 0.2; ctx.stroke();
+        });
 
-          ctx.save();
-          s.groundLetters.forEach((gl) => {
-            const lt = clamp((tText - gl.delay) / 0.38, 0, 1);
-            gl.alpha = easeOut3(lt);
-            gl.x = lerp(gl.x, gl.tx, easeOut3(Math.min(1, lt * 1.5)));
-            gl.y = lerp(gl.y, gl.ty, easeOut3(Math.min(1, lt * 1.5)));
-            if (gl.alpha <= 0) return;
-            ctx.font = `bold ${gl.fs}px 'Courier New',monospace`;
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            ctx.shadowBlur = 50;
-            ctx.shadowColor = `rgba(0,100,255,${gl.alpha})`;
-            ctx.fillStyle = `rgba(0,140,255,${gl.alpha})`;
-            ctx.fillText(gl.ch, gl.x, gl.y);
-            ctx.shadowBlur = 22;
-            ctx.shadowColor = `rgba(60,180,255,${gl.alpha * 0.9})`;
-            ctx.fillStyle = `rgba(20,160,255,${gl.alpha})`;
-            ctx.fillText(gl.ch, gl.x, gl.y);
-            ctx.shadowBlur = 7;
-            ctx.shadowColor = `rgba(160,220,255,${gl.alpha * 0.7})`;
-            ctx.fillStyle = `rgba(130,215,255,${gl.alpha})`;
-            ctx.fillText(gl.ch, gl.x, gl.y);
-            ctx.shadowBlur = 0;
-          });
-          ctx.restore();
-        }
+        ctx.save();
+        s.groundLetters.forEach(gl => {
+          const lt = clamp((tText - gl.delay) / 0.08, 0, 1);
+          gl.alpha = easeOut3(lt);
+          gl.x = lerp(gl.x, gl.tx, easeOut3(Math.min(1, lt * 1.5)));
+          gl.y = lerp(gl.y, gl.ty, easeOut3(Math.min(1, lt * 1.5)));
+          if (gl.alpha <= 0) return;
+          ctx.font = `bold ${gl.fs}px 'Courier New',monospace`;
+          ctx.textAlign = "center"; ctx.textBaseline = "middle";
+
+          // deep blue outer glow
+          ctx.shadowBlur = 50; ctx.shadowColor = `rgba(0,100,255,${gl.alpha})`;
+          ctx.fillStyle = `rgba(0,140,255,${gl.alpha})`;
+          ctx.fillText(gl.ch, gl.x, gl.y);
+
+          // mid glow
+          ctx.shadowBlur = 22; ctx.shadowColor = `rgba(60,180,255,${gl.alpha * 0.9})`;
+          ctx.fillStyle = `rgba(20,160,255,${gl.alpha})`;
+          ctx.fillText(gl.ch, gl.x, gl.y);
+
+          // bright top layer
+          ctx.shadowBlur = 7; ctx.shadowColor = `rgba(160,220,255,${gl.alpha * 0.7})`;
+          ctx.fillStyle = `rgba(130,215,255,${gl.alpha})`;
+          ctx.fillText(gl.ch, gl.x, gl.y);
+          ctx.shadowBlur = 0;
+        });
+        ctx.restore();
+      }
 
       // done
       if (el > T.DONE + 1200 && !s.doneCalled) {

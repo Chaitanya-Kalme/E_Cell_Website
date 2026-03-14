@@ -290,7 +290,7 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
           }}
         />
 
-        <Image src="/E-Summit Logo.png" alt="Logo" width={400} height={400} />
+        <Image src="/E-Summit Logo.png" alt="Logo" width={600} height={600} />
         {/* <span
           id="atom-logo-slot"
           className="relative z-10 flex items-center justify-center"
