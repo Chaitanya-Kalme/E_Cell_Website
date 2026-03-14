@@ -15,7 +15,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import ParticleBackground from "@/components/E-Summit/ParticleBackground";
-
+import HeroSectionBackground from "@/components/E-Summit/HeroSectionBackground"
 const CA_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSeLUGqtnbOGiqHrztp2jvSkEu_GwJmwTHdln8r6tFWQPqcOlw/viewform?usp=dialog";
 
@@ -134,13 +134,13 @@ const CampusAmbassador = () => {
     <div className="relative min-h-screen bg-black overflow-x-hidden">
       <div className="relative h-screen" style={{ minHeight: "100vh" }}>
         {/* Background Image with Scroll Effect */}
-        <motion.div
+        {/* <motion.div
           className="absolute top-0 left-0 w-full h-full bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-0"
           style={{ scale }}
-        />
-
+        /> */}
+        <HeroSectionBackground/>
         {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40 pointer-events-none z-10" />
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-black/40 pointer-events-none z-10" /> */}
 
         {/* Hero Content */}
         <div className="relative z-20 h-full flex flex-col items-center justify-center px-6 text-center text-white">
