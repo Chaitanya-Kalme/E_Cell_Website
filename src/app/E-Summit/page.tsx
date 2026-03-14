@@ -135,32 +135,29 @@ export default function ESummitPage() {
         className="relative bg-black overflow-x-hidden"
         style={{ minHeight: "100vh" }}
       >
-        <ParticleBackground />
 
         {/* Parallax background image */}
-        {/* <motion.div
+        <motion.div
           className="absolute top-0 left-0 w-full h-screen bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-5"
-          style={{ scale }}
-        /> */}
+        />
 
-        <HeroSectionBackground/>
 
         {/* Dark overlay */}
-        {/* <div className="absolute top-0 left-0 w-full h-screen bg-black/40 pointer-events-none z-10" /> */}
+        <div className="absolute top-0 left-0 w-full h-screen bg-black/40 pointer-events-none z-10" />
 
         {/* Hero content */}
         <div className="relative z-30 px-6 pt-10 pb-40 max-w-7xl mx-auto text-center text-white">
 
           {/* Hero Section Logo */}
-          {/* <div className="flex justify-center mb-10">
+          <div className="flex justify-center mb-10">
             <img
               src="/E-Summit Logo.png"
               alt="E-Summit 2026"
               className="h-[150px] w-[450px] sm:w-[600px] sm:h-[200px]"
             />
-          </div> */}
+          </div>
 
-          {/* <p className="md:text-sm font-black tracking-[0.5em] uppercase mb-20 drop-shadow-md">
+          <p className="md:text-sm font-black tracking-[0.5em] uppercase mb-20 drop-shadow-md">
             <EncryptedText
               text="Ideas • Innovation • Growth"
               encryptedClassName="text-white"
@@ -193,7 +190,7 @@ export default function ESummitPage() {
                   ${ibmPlexMono.className}
                 `}
               >
-                
+
                 <motion.span
                   variants={hoverIcon}
                   className={`text-${color}-300`}
@@ -201,7 +198,7 @@ export default function ESummitPage() {
                   <Icon size={24} />
                 </motion.span>
 
-                
+
                 <motion.span
                   variants={hoverText}
                   className={`text-base md:text-lg font-semibold text-${color}-200`}
@@ -209,15 +206,15 @@ export default function ESummitPage() {
                   {text}
                 </motion.span>
 
-                
+
                 <span
                   className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 
                     blur-xl bg-${color}-500/10 transition-opacity duration-300`}
                 />
               </motion.div>
             ))}
-          </motion.div> */}
-          
+          </motion.div>
+
 
         </div>
       </div>
@@ -225,7 +222,7 @@ export default function ESummitPage() {
       {/* ── LOWER SECTION — ParticleBackground starts here from About onwards ── */}
       <div className="relative bg-black overflow-x-hidden">
         {/* ParticleBackground scoped only to this lower section */}
-<ParticleBackground />
+        <ParticleBackground />
         <div className="relative z-30 px-6 py-16 max-w-7xl mx-auto text-center text-white">
 
           {/* About Section */}
@@ -279,7 +276,7 @@ export default function ESummitPage() {
                 <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
-                  <span className={`inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl`}>
+                  <span className={`inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-white backdrop-blur-3xl`}>
                     Events
                   </span>
 
@@ -327,7 +324,7 @@ export default function ESummitPage() {
               <button className="relative inline-flex w-fit h-full overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 p-1">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
-                <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-yellow-300 backdrop-blur-3xl">
+                <span className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-3xl md:text-6xl font-medium text-white backdrop-blur-3xl">
                   Past Speakers
                 </span>
 

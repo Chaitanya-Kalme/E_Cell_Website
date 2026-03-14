@@ -470,10 +470,6 @@ const ContactCards = ({ member, isOC = false }) => {
             <div className="corner-accent" />
 
             {/* Name + position overlaid on top of image */}
-            <div className="back-name-bar">
-              <p className="back-top-name">{name}</p>
-              <p className="back-top-position">{position}</p>
-            </div>
 
             {/* Portrait fills card minus signature strip */}
             <div className="back-image-wrap">
@@ -489,8 +485,12 @@ const ContactCards = ({ member, isOC = false }) => {
                   className="signature-img"
                 />
               ) : (
-                <span className="signature-fallback">{name}</span>
+                <></>
+                // <span className="signature-fallback">{name}</span>
               )}
+            <div className="back-name-bar">
+              <p className="back-top-name">{name}</p>
+            </div>
             </div>
           </div>
 

@@ -47,16 +47,16 @@ export default function NavBar() {
     <div className="w-full bg-gradient-to-b from-blue-950 to-blue-900 fixed top-0 left-0 right-0 z-50 text-lg">
       <NavigationMenu
         viewport={false}
-        className="text-whitepx-1 pt-2 max-w-full md:mr-5 2xl:mr-10 flex justify-between"
+        className="text-whitepx-1 pt-2 py-4 max-w-full md:mr-5 2xl:mr-10 flex justify-between"
       >
         {/* Left side: Image */}
-        <NavigationMenuItem className="flex items-start h-18  ml-4">
+        <NavigationMenuItem className="flex items-start h-18 ml-4">
           <Image
             src="/E-Summit Logo2.png"
             alt="E-Summit Logo"
             width={300}
             height={700}
-            className="rounded"
+            className="rounded pt-1"
           />
         </NavigationMenuItem>
 

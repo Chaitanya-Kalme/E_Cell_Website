@@ -99,7 +99,7 @@ const OurTeam = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="text-center mb-16">
+            {/* <div className="text-center mb-16">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Shield className="text-purple-400" size={40} />
                 <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -110,7 +110,7 @@ const OurTeam = () => {
                 The dedicated team driving every initiative forward
               </p>
               <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 justify-items-center">
               {teamMembers.map((member, index) => (
