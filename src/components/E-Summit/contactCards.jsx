@@ -402,7 +402,6 @@ const styles = `
     background: rgba(255,255,255,0.3);
   }
 `;
-
 const ContactCards = ({ member, isOC = false }) => {
   const { name, position, image, signature, linkedin, email } = member;
   const [isHovered, setIsHovered] = useState(false);
@@ -465,32 +464,33 @@ const ContactCards = ({ member, isOC = false }) => {
             <span className="flip-hint">back <ArrowUpRight size={8} /></span>
           </div>
 
-          {/* ── BACK (default) ── */}
+          {/* ── BACK (default / resting state) ── */}
           <div className="card-face card-back">
             <div className="corner-accent" />
 
-            {/* Name + position overlaid on top of image */}
-
-            {/* Portrait fills card minus signature strip */}
+            {/* Portrait image fills top portion */}
             <div className="back-image-wrap">
               <img src={image} alt={name} />
             </div>
 
-            {/* Signature strip pinned to bottom */}
+            {/* WHITE signature strip pinned to bottom */}
             <div className="back-signature-strip">
-              {signature ? (
+              {/* Signature image if available */}
+              {signature && (
                 <img
                   src={signature}
                   alt={`${name} signature`}
                   className="signature-img"
                 />
-              ) : (
-                <></>
-                // <span className="signature-fallback">{name}</span>
               )}
-            <div className="back-name-bar">
-              <p className="back-top-name">{name}</p>
-            </div>
+
+              {/* Name + position on white background */}
+              <div className="back-name-bar">
+                <p className="back-top-name">{name}</p>
+                {position && (
+                  <p className="back-top-position">{position}</p>
+                )}
+              </div>
             </div>
           </div>
 

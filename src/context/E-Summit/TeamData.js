@@ -1,19 +1,19 @@
 // Core Team (3 members)
 export const coreTeamMembers = [
   {
+    name: "Animesh Anand",
+    position: "Vice President",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773594448/Gemini_Generated_Image_gj3plxgj3plxgj3p_-_Animesh_Anand_f1tsav.png",
+    linkedin: "https://www.linkedin.com/in/animesh-anand-iitrpr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "2023ceb1024@iitrpr.ac.in",
+    // signature: "/animesh_sign.png"
+  },
+  {
     name: "Dikshant Parashar",
     position: "President",
     image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323028/Dikshant_-_Dikshant_Parashar_ditstp.jpg",
     linkedin: "https://www.linkedin.com/in/dikshant-parashar-31a0a2259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "dikshantparashar04@gmail.com",
-  },
-  {
-    name: "Animesh Anand",
-    position: "Vice President",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574668/Gemini_Generated_Image_gj3plxgj3plxgj3p_-_Animesh_Anand_o6vtfc.jpg",
-    linkedin: "https://www.linkedin.com/in/animesh-anand-iitrpr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2023ceb1024@iitrpr.ac.in",
-    signature: "/animesh_sign.png"
   },
 
 ];

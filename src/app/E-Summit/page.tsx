@@ -287,7 +287,9 @@ export default function ESummitPage() {
             <p className={` ${viga.className} text-center text-blue-200 mb-12 max-w-2xl mx-auto`}>
               Meet innovative startups and entrepreneurs from across the country
             </p>
-            <EventCard events={allEvents.slice(0, 3)} />
+            <div className="text-center justify-center flex justify-items-center">
+              <EventCard events={allEvents.slice(0, 3)} />
+            </div>
 
             <button
               className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-0.5 font-semibold leading-6 mt-7 text-white inline-block"
