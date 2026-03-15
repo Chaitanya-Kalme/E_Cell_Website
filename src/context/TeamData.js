@@ -190,6 +190,10 @@ export const coordinatorMembers = [
     linkedin: "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav",
     email: "2024epb1282@iitrpr.ac.in",
   },
+
+
+
+
 ];
 
 export const demoBlogs = [
