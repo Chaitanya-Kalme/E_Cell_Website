@@ -106,7 +106,7 @@ export default function ESummitPage() {
                 </button>
               </span>
             </h2>
-            <p className={`text-blue-600 text-lg max-w-4xl mx-auto ${viga.className}`}>
+            <p className={`text-blue-600 text-lg max-w-4xl mx-auto ${viga.className} relative z-20`}>
               Explore our diverse range of competitions, workshops, and networking opportunities
             </p>
             <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" />
@@ -118,7 +118,7 @@ export default function ESummitPage() {
       </section>
 
       {/* --- STARTUP EXPO SECTION --- */}
-      <section className="relative py-20 px-4 md:px-8 lg:px-12">
+      <section className="relative z-20 py-20 px-4 md:px-8 lg:px-12">
         <ParticleBackground />
         <div className="max-w-[1600px] mx-auto">
           {/* Section Header */}
@@ -126,15 +126,15 @@ export default function ESummitPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center mb-12"
+            className="text-center mb-12 relative z-10"
           >
-            <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex items-center justify-center gap-3 mb-4 z-10">
               <Rocket className="text-orange-400" size={40} />
-              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 z-5">
                 Startup Expo
               </h2>
             </div>
-            <p className="text-orange-200 text-lg max-w-2xl mx-auto mb-6">
+            <p className="text-orange-200 text-lg max-w-2xl mx-auto mb-6 z-20">
               Meet innovative startups and explore groundbreaking products
             </p>
             <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8" />
