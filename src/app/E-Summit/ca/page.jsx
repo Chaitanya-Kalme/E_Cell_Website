@@ -134,13 +134,13 @@ const CampusAmbassador = () => {
     <div className="relative min-h-screen bg-black overflow-x-hidden">
       <div className="relative h-screen" style={{ minHeight: "100vh" }}>
         {/* Background Image with Scroll Effect */}
-        {/* <motion.div
+        <motion.div
           className="absolute top-0 left-0 w-full h-full bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-0"
           style={{ scale }}
-        /> */}
-        <HeroSectionBackground/>
+        />
+        {/* <HeroSectionBackground/> */}
         {/* Overlay */}
-        {/* <div className="absolute top-0 left-0 w-full h-full bg-black/40 pointer-events-none z-10" /> */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 pointer-events-none z-10" />
 
         {/* Hero Content */}
         <div className="relative z-20 h-full flex flex-col items-center justify-center px-6 text-center text-white">
@@ -219,7 +219,7 @@ const CampusAmbassador = () => {
         <ParticleBackground />
 
         {/* Target Scale Section */}
-        <section className="relative z-20 py-16 px-4 md:px-8">
+        {/* <section className="relative z-20 py-16 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -262,7 +262,7 @@ const CampusAmbassador = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Responsibilities Section */}
         <section className="relative z-20 py-16 px-4 md:px-8 bg-gradient-to-b from-transparent via-[#1a1f3f]/50 to-transparent">
