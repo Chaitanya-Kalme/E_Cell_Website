@@ -4,8 +4,12 @@ import { Mail, MapPinIcon } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+
+  const router = useRouter()
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -69,7 +73,7 @@ export default function Footer() {
             {/* Social Media Icons */}
             <div className="mt-4 flex items-center gap-4 ml-20 text-center w-full">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/e-cell-iit-ropar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -78,7 +82,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/ecell_iitrpr/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -103,10 +107,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-3">Useful Links</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li className="hover:cursor-pointer">Home</li>
-              <li className="hover:cursor-pointer">About</li>
-              <li className="hover:cursor-pointer">Gallery</li>
-              <li className="hover:cursor-pointer">Blogs</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit")}>Home</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/events")}>Events</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/team")}>Our Team</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/sponsorship")}>Sponsors</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/ca")}>Campus Ambassador</li>
             </ul>
           </div>
 
@@ -114,10 +119,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-3">Contact</h3>
             <div className="flex items-center gap-2 text-sm opacity-90">
-              <MapPinIcon /> India
+              <MapPinIcon /> IIT Ropar,India
             </div>
             <div className="flex items-center gap-2 text-sm opacity-90 mt-2">
-              <Mail /> info@esummit.com
+              <Mail /> ecell@iitrpr.ac.in
             </div>
           </div>
         </div>

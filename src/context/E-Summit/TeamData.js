@@ -15,21 +15,16 @@ export const coreTeamMembers = [
     email: "2023ceb1024@iitrpr.ac.in",
     signature: "/animesh_sign.png"
   },
-  {
-    name: "Omm Shree",
-    position: "Pronite Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574666/1772905383357_2_-_Omm_Shree_olzzlo.jpg",
-    linkedin: "https://www.linkedin.com/in/omm-shree-wins",
-    email: "2023meb1419@iitrpr.ac.in",
-  },
+
 ];
 
 // Department Heads
 export const headMembers = [
+  
   {
     name: "Ishan Srivastava",
     position: "Overall Competitions Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574670/IMG_8665_-_Ishan_Srivastava_vmorm5.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574670/IMG_8665_-_Ishan_Srivastava_vmorm5.png",
     linkedin: "https://www.linkedin.com/in/ishan-s-05b222193?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
     email: "ishansri.srivastava@gmail.com",
   },
@@ -68,132 +63,6 @@ export const headMembers = [
     linkedin: "https://www.linkedin.com/in/chaitanya-kalme-1a610a346",
     email: "2023csb1112@iitrpr.ac.in",
   },
-];
-
-// Coordinators + New Heads
-export const coordinatorMembers = [
-  {
-    name: "Akash Muhal",
-    position: "Event Management Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323041/IMG-20250925-WA0026_-_Akash_Muhal_auu5pf.jpg",
-    linkedin: "https://www.linkedin.com/in/akash-muhal-6aa074329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2024mcb1286@iitrpr.ac.in",
-  },
-  {
-    name: "Samardeep Singh",
-    position: "Event Management Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323047/Screenshot_2025-09-23-23-27-11-59_99c04817c0de5652397fc8b56c3b3817_-_Samardeep_Singh_li9iex.jpg",
-    linkedin: "https://www.linkedin.com/in/samardeep-singh-845216329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2024eeb1243@iitrpr.ac.in",
-  },
-  {
-    name: "Sunita",
-    position: "Event Management Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323041/IMG_20250921_160525_-_Sunitha_Nayak_u4yeas.jpg",
-    linkedin: "",
-    email: "2024chb1086@iitrpr.ac.in",
-  },
-  {
-    name: "Nimesh Sankpal",
-    position: "Event Management Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323039/IMG-20250610-WA0037_-_Sankpal_Nimesh_Sanjay_t6aedi.jpg",
-    linkedin: "https://www.linkedin.com/in/nimesh-sankpal-38a942221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2024chb0182@iitrpr.ac.in",
-  },
-  {
-    name: "Palak",
-    position: "Design Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323043/IMG-20251011-WA0160_2_-_Palak___vwqod4.jpg",
-    linkedin: "https://in.linkedin.com/in/palak-gulati-14863a330",
-    email: "2024csb1137@iitrpr.ac.in",
-  },
-  {
-    name: "Komal Goyal",
-    position: "Design Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323041/IMG_20251016_104255_-_Komal_Goyal_wcqpwu.jpg",
-    linkedin: "https://www.linkedin.com/in/komal-goyal-71b69734a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2024mcb1298@iitrpr.ac.in",
-  },
-  {
-    name: "Sarthak Manav",
-    position: "Startup Expo & Investors Arena",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574674/185A0009_-_Sarthak_Manav_lmuwq0.jpg",
-    linkedin: "https://www.linkedin.com/in/sarthak-manav-518673207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "manavsarthak706@gmail.com",
-  },
-  {
-    name: "Raghav Gupta",
-    position: "Outreach Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323035/IMG_20251011_222712_-_Raghav_Gupta_uwz3wa.jpg",
-    linkedin: "https://www.linkedin.com/in/raghav-gupta-35769a355?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2024eeb1236@iitrpr.ac.in",
-  },
-  {
-    name: "I Nikhil Varma",
-    position: "Outreach Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323056/IMG20251005093308_-_Indukuri_Nikhil_Rama_Manikanta_Varma_snyflb.jpg",
-    linkedin: "https://www.linkedin.com/in/nikhil-varma-i-26b1ba33b/",
-    email: "2024aib1350@iitrpr.ac.in",
-  },
-  {
-    name: "Shaurya Mishra",
-    position: "Outreach Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323038/IMG_20250923_235946_-_Shaurya_Mishra_wjvuea.jpg",
-    linkedin: "https://www.linkedin.com/in/shaurya-mishra-iitrpr-b3439b337",
-    email: "2024meb1386@iitrpr.ac.in",
-  },
-  {
-    name: "Rajat Kuldeep",
-    position: "Media and Publicity Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323030/IMG_20250929_104517_-_Rajat_Kuldeep_vtay36.jpg",
-    linkedin: "https://www.linkedin.com/in/rajat-kuldeep-77876627b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2024eeb1238@iitrpr.ac.in",
-  },
-  {
-    name: "Dhriti",
-    position: "Media and Publicity Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323046/IMG_20250723_113034_-_Dhriti___vaalzh.jpg",
-    linkedin: "https://www.linkedin.com/in/dhriti-a84a14323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    email: "2024aib1005@iitrpr.ac.in",
-  },
-  {
-    name: "Shubham Mahich",
-    position: "Media and Publicity Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323027/IMG_5427_-_Shubham_Mahich_ubinz0.jpg",
-    linkedin: "https://www.linkedin.com/in/shubham-mahich-1b8442328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    email: "2024ceb1050@iitrpr.ac.in",
-  },
-  {
-    name: "Tanmay Kadu",
-    position: "Media and Publicity Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323037/IMG_9062_-_Kadu_Tanmay_Nanasaheb_krrztk.jpg",
-    linkedin: "https://linkedin.com/in/tanmay-kadu-806a73327",
-    email: "2024eeb1213@iitrpr.ac.in",
-  },
-  {
-    name: "Keshav Verma",
-    position: "Web Development Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323048/Screenshot_2025-10-15-10-44-59-993_com.miui.gallery-edit_-_Keshav_Verma_dfmxvw.jpg",
-    linkedin: "https://www.linkedin.com/in/keshav-verma-2ba48331b",
-    email: "2024csb1123@iitrpr.ac.in",
-  },
-  {
-    name: "Ratnadeep Paul",
-    position: "Web Development Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323047/Self_Photo_Passport_-_Ratnadeep_Paul_gfocoi.jpg",
-    linkedin: "https://www.linkedin.com/in/ratnadeeppaul/",
-    email: "2024chb1075@iitrpr.ac.in",
-  },
-  {
-    name: "Varun Bhardwaj",
-    position: "Web Development Coordinator",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323049/Screenshot_20250920-221159.Photos_-_Varun_Bhardwaj_x5qcjm.png",
-    linkedin: "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav",
-    email: "2024epb1282@iitrpr.ac.in",
-  },
-
-  // ── NEW HEADS ──────────────────────────────────────────────────────────────
-
   {
     name: "Aditya Khajuria",
     position: "Logistics Head",
@@ -201,10 +70,17 @@ export const coordinatorMembers = [
     linkedin: "https://www.linkedin.com/in/aditya-khajuria-27853330a",
     email: "2023mcb1323@iitrpr.ac.in",
   },
+    {
+    name: "Omm Shree",
+    position: "Pronite Head",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574666/1772905383357_2_-_Omm_Shree_olzzlo.jpg",
+    linkedin: "https://www.linkedin.com/in/omm-shree-wins",
+    email: "2023meb1419@iitrpr.ac.in",
+  },
   {
     name: "Sumit Kumar",
     position: "Intern Fair and Creators Conclave Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574673/WhatsApp_Image_2026-03-04_at_7.07.43_PM_-_Sumit_Kumar_zfmku6.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773583760/WhatsApp_Image_2026-03-04_at_7.07.43_PM_-_Sumit_Kumar_zfmku6.jpg",
     linkedin: "https://www.linkedin.com/in/sumit-kumar-79a6902a8",
     email: "2023ceb1050@iitrpr.ac.in",
   },
@@ -239,14 +115,14 @@ export const coordinatorMembers = [
   {
     name: "Adarsh Kumar",
     position: "Publicity Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574673/WhatsApp_Image_2026-03-05_at_14.24.09_-_Adarsh_Kumar_cn14eg.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773584878/WhatsApp_Image_2026-03-05_at_14.24.09_-_Adarsh_Kumar_cn14eg.jpg",
     linkedin: "https://www.linkedin.com/in/adarsh-kumar-2a8809286/",
     email: "2023chb1058@iitrpr.ac.in",
   },
   {
     name: "Garv Raj",
     position: "Logistics Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574672/WhatsApp_Image_2026-01-17_at_4.29.29_PM-Photoroom_-_Garv_Raj_ruqdss.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574672/WhatsApp_Image_2026-01-17_at_4.29.29_PM-Photoroom_-_Garv_Raj_ruqdss.png",
     linkedin: "https://www.linkedin.com/in/garv-raj-31166a2a6/",
     email: "2023eeb1029@iitrpr.ac.in",
   },
@@ -260,7 +136,7 @@ export const coordinatorMembers = [
   {
     name: "Shreshth Shukla",
     position: "Talks and Pronite Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574670/DSC09101_-_Shreshth_Shukla_1_lblrag.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773583843/DSC09101_-_Shreshth_Shukla_rkeudj.jpg",
     linkedin: "https://www.linkedin.com/in/shreshth-shukla-9446a328b/",
     email: "shreshth.shukla474@gmail.com",
   },
@@ -272,9 +148,16 @@ export const coordinatorMembers = [
     email: "2023eeb1234@iitrpr.ac.in",
   },
   {
+    name: "Sarthak Manav",
+    position: "Startup Expo Investor’s Arena",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574674/185A0009_-_Sarthak_Manav_lmuwq0.jpg",
+    linkedin: "https://www.linkedin.com/in/sarthak-manav-518673207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "2025dss1022@iitrpr.ac.in",
+  },
+  {
     name: "Kunal Dhiman",
     position: "Hospitality Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574679/DSC09063_1_-_Kunal_Dhiman_jnmj1w.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773583906/DSC09063_1_-_Kunal_Dhiman_jnmj1w.jpg",
     linkedin: "https://www.linkedin.com/in/kunal-dhiman-661541293/",
     email: "828kd000@gmail.com",
   },
@@ -302,7 +185,7 @@ export const coordinatorMembers = [
   {
     name: "Manajigari Harshitha",
     position: "Workshops & Hackathons Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574673/WhatsApp_Image_2026-03-05_at_9.21.20_PM_-_Manajigari_Harshitha_h2ugif.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773583952/WhatsApp_Image_2026-03-05_at_9.21.20_PM_-_Manajigari_Harshitha_h2ugif.jpg",
     linkedin: "https://www.linkedin.com/in/harshitha-manajigari-692554253/",
     email: "2022eeb1189@iitrpr.ac.in",
   },
@@ -323,7 +206,7 @@ export const coordinatorMembers = [
   {
     name: "Desireddy Sreelakshmi",
     position: "Sponsorship Head",
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773574669/IMG_4844_-_Desireddy_Sreelakshmi_aonziu.jpg",
+    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1773583986/IMG_4844_-_Desireddy_Sreelakshmi_aonziu.jpg",
     linkedin: "https://www.linkedin.com/in/desireddy-sreelakshmi-53639028a/",
     email: "2023ceb1027@iitrpr.ac.in",
   },
@@ -364,10 +247,8 @@ export const coordinatorMembers = [
   },
 ];
 
-export const demoBlogs = [
-  {
-    image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323217/tedx_image_lk04ao_ccfi0o.jpg",
-    title: "First Ever TEDx Talk In IIT Ropar",
-    link: "https://www.linkedin.com/posts/e-cell-iit-ropar_tedx-iitropar-ideasworthspreading-activity-7382626002948247552-4EKv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFaDcI4B99l0pipTSaOrhJbfQ3RV1R03AlY"
-  },
+// Coordinators + New Heads
+export const coordinatorMembers = [
 ];
+
+export const demoBlogs=[]

@@ -16,6 +16,10 @@ import {
 } from "lucide-react";
 import ParticleBackground from "@/components/E-Summit/ParticleBackground";
 import HeroSectionBackground from "@/components/E-Summit/HeroSectionBackground"
+import Hyperspeed from "@/components/Hyperspeed"
+
+
+
 const CA_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSeLUGqtnbOGiqHrztp2jvSkEu_GwJmwTHdln8r6tFWQPqcOlw/viewform?usp=dialog";
 
@@ -132,141 +136,133 @@ const CampusAmbassador = () => {
 
   return (
     <div className="relative min-h-screen bg-black overflow-x-hidden">
-      <div className="relative h-screen" style={{ minHeight: "100vh" }}>
-        {/* Background Image with Scroll Effect */}
-        <motion.div
-          className="absolute top-0 left-0 w-full h-full bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-0"
-          style={{ scale }}
+
+      {/* ─── Hyperspeed: fixed behind everything, full viewport ─── */}
+      <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
+        <Hyperspeed
+          effectOptions={{
+            distortion: "turbulentDistortion",
+            length: 400,
+            roadWidth: 10,
+            islandWidth: 2,
+            lanesPerRoad: 3,
+            fov: 90,
+            fovSpeedUp: 150,
+            speedUp: 2,
+            carLightsFade: 0.4,
+            totalSideLightSticks: 20,
+            lightPairsPerRoadWay: 40,
+            shoulderLinesWidthPercentage: 0.05,
+            brokenLinesWidthPercentage: 0.1,
+            brokenLinesLengthPercentage: 0.5,
+            lightStickWidth: [0.12, 0.5],
+            lightStickHeight: [1.3, 1.7],
+            movingAwaySpeed: [60, 80],
+            movingCloserSpeed: [-120, -160],
+            carLightsLength: [12, 80],
+            carLightsRadius: [0.05, 0.14],
+            carWidthPercentage: [0.3, 0.5],
+            carShiftX: [-0.8, 0.8],
+            carFloorSeparation: [0, 5],
+            colors: {
+              roadColor: 526344,
+              islandColor: 657930,
+              background: 0,
+              shoulderLines: 1250072,
+              brokenLines: 1250072,
+              leftCars: [14177983, 6770850, 12732332],
+              rightCars: [242627, 941733, 3294549],
+              sticks: 242627,
+            },
+          }}
         />
-        {/* <HeroSectionBackground/> */}
-        {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40 pointer-events-none z-10" />
-
-        {/* Hero Content */}
-        <div className="relative z-20 h-full flex flex-col items-center justify-center px-6 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto"
-          >
-            {/* Title */}
-            <div className="flex flex-col items-center gap-4 mb-6">
-              <Users className="text-cyan-400" size={64} />
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
-                Campus Ambassador
-              </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-white/90">
-                Program
-              </h2>
-            </div>
-
-            <div className="h-1 w-48 mx-auto bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-8" />
-
-            <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
-              Become the face of E-Summit IIT Ropar at your campus! Join our
-              ambassador program and help us build a thriving entrepreneurial
-              community while earning exciting rewards.
-            </p>
-
-            {/* Info Badges */}
-            <motion.div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-10">
-              {[
-                {
-                  icon: Calendar,
-                  text: "E-Summit April 2026",
-                  color: "orange",
-                },
-                { icon: MapPin, text: "IIT Ropar", color: "purple" },
-                { icon: Sparkles, text: "Exclusive Rewards", color: "cyan" },
-              ].map(({ icon: Icon, text, color }) => (
-                <motion.div
-                  key={text}
-                  variants={hoverCard}
-                  initial="initial"
-                  whileHover="hover"
-                  className={`group flex items-center space-x-3 bg-black/60 backdrop-blur-md px-5 py-3 rounded-full cursor-default border border-${color}-400/40 hover:bg-black/80 transition-colors duration-300`}
-                >
-                  <span className={`text-${color}-300`}>
-                    <Icon size={24} />
-                  </span>
-                  <span
-                    className={`text-base md:text-lg font-semibold text-${color}-200`}
-                  >
-                    {text}
-                  </span>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* CTA Button */}
-            <a href={CA_FORM_URL} target="_blank" rel="noopener noreferrer">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-200"
-              >
-                <Users size={24} />
-                Apply Now
-              </motion.button>
-            </a>
-          </motion.div>
-        </div>
       </div>
 
-      <div className="relative bg-black">
-        {/* Particle Background for rest of page */}
-        <ParticleBackground />
+      {/* ─── Global dark scrim: sits above Hyperspeed, below content ─── */}
+      {/* Lighter on hero (let the effect breathe), darker on scroll sections */}
+      <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-10 pointer-events-none" />
 
-        {/* Target Scale Section */}
-        {/* <section className="relative z-20 py-16 px-4 md:px-8">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Target className="text-orange-400" size={36} />
-                <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Our Target Scale
-                </h2>
-              </div>
-              <div className="h-1 w-32 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-full" />
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { number: "15-25", label: "Partner Colleges" },
-                { number: "3-4", label: "Ambassadors per College" },
-                { number: "5K+", label: "Hackathon Registrations" },
-                { number: "1K+", label: "Offline Event Registrations" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-md border border-orange-500/20 rounded-2xl p-6 text-center hover:border-orange-500/40 transition-all duration-300"
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-orange-200 text-sm md:text-base">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+      {/* ═══════════════════════════════════════════════
+          HERO SECTION
+      ═══════════════════════════════════════════════ */}
+      <div className="relative z-20 h-screen flex flex-col items-center justify-center px-6 text-center text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto"
+        >
+          {/* Title */}
+          <div className="flex flex-col items-center gap-4 mb-6">
+            <Users className="text-cyan-400" size={64} />
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+              Campus Ambassador
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white/90">
+              Program
+            </h2>
           </div>
-        </section> */}
 
-        {/* Responsibilities Section */}
-        <section className="relative z-20 py-16 px-4 md:px-8 bg-gradient-to-b from-transparent via-[#1a1f3f]/50 to-transparent">
-          <div className="max-w-6xl mx-auto">
+          <div className="h-1 w-48 mx-auto bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-8" />
+
+          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
+            Become the face of E-Summit IIT Ropar at your campus! Join our
+            ambassador program and help us build a thriving entrepreneurial
+            community while earning exciting rewards.
+          </p>
+
+          {/* Info Badges */}
+          <motion.div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-10">
+            {[
+              { icon: Calendar, text: "E-Summit April 2026", color: "orange" },
+              { icon: MapPin, text: "IIT Ropar", color: "purple" },
+              { icon: Sparkles, text: "Exclusive Rewards", color: "cyan" },
+            ].map(({ icon: Icon, text, color }) => (
+              <motion.div
+                key={text}
+                variants={hoverCard}
+                initial="initial"
+                whileHover="hover"
+                className={`group flex items-center space-x-3 bg-black/60 backdrop-blur-md px-5 py-3 rounded-full cursor-default border border-${color}-400/40 hover:bg-black/80 transition-colors duration-300`}
+              >
+                <span className={`text-${color}-300`}>
+                  <Icon size={24} />
+                </span>
+                <span className={`text-base md:text-lg font-semibold text-${color}-200`}>
+                  {text}
+                </span>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* CTA Button */}
+          <a href={CA_FORM_URL} target="_blank" rel="noopener noreferrer">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-200"
+            >
+              <Users size={24} />
+              Apply Now
+            </motion.button>
+          </a>
+        </motion.div>
+      </div>
+
+      {/* ═══════════════════════════════════════════════
+          SCROLLABLE CONTENT — all z-20, above scrim
+      ═══════════════════════════════════════════════ */}
+      <div className="relative z-20">
+
+        {/* Optional: particle layer on top of Hyperspeed for extra depth */}
+        {/* <ParticleBackground /> */}
+
+        {/* ─── Responsibilities Section ─── */}
+        <section className="relative py-16 px-4 md:px-8">
+          {/* per-section dark backdrop for readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-[#1a1f3f]/70 to-black/0 pointer-events-none" />
+
+          <div className="relative max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -291,16 +287,14 @@ const CampusAmbassador = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-white/5 backdrop-blur-md border border-${item.color}-500/20 rounded-2xl p-6 hover:border-${item.color}-500/40 transition-all duration-300 group`}
+                  className={`bg-black/50 backdrop-blur-md border border-${item.color}-500/20 rounded-2xl p-6 hover:border-${item.color}-500/40 transition-all duration-300 group`}
                 >
                   <div
                     className={`w-14 h-14 rounded-xl bg-gradient-to-br from-${item.color}-500/20 to-${item.color}-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >
                     <item.icon className={`text-${item.color}-400`} size={28} />
                   </div>
-                  <h3
-                    className={`text-xl font-bold text-${item.color}-300 mb-3`}
-                  >
+                  <h3 className={`text-xl font-bold text-${item.color}-300 mb-3`}>
                     {item.title}
                   </h3>
                   <p className="text-blue-200/80 text-sm leading-relaxed">
@@ -312,9 +306,11 @@ const CampusAmbassador = () => {
           </div>
         </section>
 
-        {/* Incentives Section */}
-        <section className="relative z-20 py-16 px-4 md:px-8">
-          <div className="max-w-6xl mx-auto">
+        {/* ─── Incentives Section ─── */}
+        <section className="relative py-16 px-4 md:px-8">
+          <div className="absolute inset-0 bg-black/50 pointer-events-none" />
+
+          <div className="relative max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -341,14 +337,14 @@ const CampusAmbassador = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-md border border-green-500/20 rounded-2xl p-6"
+                className="bg-black/50 backdrop-blur-md border border-green-500/20 rounded-2xl p-6"
               >
                 <h3 className="text-2xl font-bold text-green-400 mb-6 flex items-center gap-2">
                   <Award size={24} />
                   Offline Events Registrations
                 </h3>
                 <div className="space-y-4">
-                  {offlineIncentives.map((tier, index) => (
+                  {offlineIncentives.map((tier) => (
                     <div
                       key={tier.range}
                       className="bg-green-500/5 border border-green-500/10 rounded-xl p-4 hover:border-green-500/30 transition-all duration-300"
@@ -382,14 +378,14 @@ const CampusAmbassador = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6"
+                className="bg-black/50 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6"
               >
                 <h3 className="text-2xl font-bold text-purple-400 mb-6 flex items-center gap-2">
                   <Gift size={24} />
                   Online Hackathon Registrations
                 </h3>
                 <div className="space-y-4">
-                  {onlineIncentives.map((tier, index) => (
+                  {onlineIncentives.map((tier) => (
                     <div
                       key={tier.range}
                       className="bg-purple-500/5 border border-purple-500/10 rounded-xl p-4 hover:border-purple-500/30 transition-all duration-300"
@@ -420,9 +416,11 @@ const CampusAmbassador = () => {
           </div>
         </section>
 
-        {/* Community & Support Section */}
-        <section className="relative z-20 py-16 px-4 md:px-8 bg-gradient-to-b from-transparent via-[#1a1f3f]/50 to-transparent">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* ─── Ambassador Community Section ─── */}
+        <section className="relative py-16 px-4 md:px-8">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-[#1a1f3f]/70 to-black/0 pointer-events-none" />
+
+          <div className="relative max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -437,7 +435,7 @@ const CampusAmbassador = () => {
               </div>
               <div className="h-1 w-32 mx-auto bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mb-8" />
 
-              <div className="bg-white/5 backdrop-blur-md border border-pink-500/20 rounded-2xl p-8">
+              <div className="bg-black/50 backdrop-blur-md border border-pink-500/20 rounded-2xl p-8">
                 <p className="text-lg text-blue-200/90 leading-relaxed mb-6">
                   Join our exclusive WhatsApp community (created 3 weeks before
                   the summit) where you'll receive:
@@ -473,9 +471,11 @@ const CampusAmbassador = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="relative z-20 py-20 px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* ─── Final CTA Section ─── */}
+        <section className="relative py-20 px-4 md:px-8">
+          <div className="absolute inset-0 bg-black/50 pointer-events-none" />
+
+          <div className="relative max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -503,8 +503,10 @@ const CampusAmbassador = () => {
             </motion.div>
           </div>
         </section>
+
       </div>
-      {/* End of Rest of Page with Particle Background */}
+      {/* End scrollable content */}
+
     </div>
   );
 };
