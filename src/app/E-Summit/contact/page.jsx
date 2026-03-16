@@ -28,7 +28,7 @@ const contact = () => {
             >
               <div className="relative">
                 <img
-                  src="/E-Summit Logo.png"
+                  src="E-Summit Logo.png"
                   alt="E-Summit Logo"
                   width="600"
                   height="600"

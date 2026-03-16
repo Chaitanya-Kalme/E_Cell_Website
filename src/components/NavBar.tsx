@@ -67,7 +67,7 @@ export default function NavBar() {
         {/* Left side: Image */}
         <NavigationMenuItem className="flex items-center">
           <img
-            src="/E-Cell Image.jpg"
+            src="E-Cell Image.jpg"
             alt="E-Cell Image"
             width="70"
             height="70"
@@ -77,12 +77,12 @@ export default function NavBar() {
 
         {/* Right side: Navigation Buttons */}
         <NavigationMenuList className="gap-x-6 hidden md:flex dark:text-white">
-          <NavigationMenuItem><Link href="/" className="hover:text-gray-300">Home</Link></NavigationMenuItem>
-          <NavigationMenuItem><Link href="/initiatives" className="hover:text-gray-300">Initiatives</Link></NavigationMenuItem>
-          <NavigationMenuItem><Link href="/about" className="hover:text-gray-300">About Us</Link></NavigationMenuItem>
-          <NavigationMenuItem><Link href="/contact" className="hover:text-gray-300">Contact Us</Link></NavigationMenuItem>
-          <NavigationMenuItem><Link href="/blogs" className="hover:text-gray-300">Blogs</Link></NavigationMenuItem>
-          <NavigationMenuItem><Link href="/gallery" className="hover:text-gray-300">Gallery</Link></NavigationMenuItem>
+          <NavigationMenuItem><Link href="/e-cell/" className="hover:text-gray-300">Home</Link></NavigationMenuItem>
+          <NavigationMenuItem><Link href="/e-cell/initiatives" className="hover:text-gray-300">Initiatives</Link></NavigationMenuItem>
+          <NavigationMenuItem><Link href="/e-cell/about" className="hover:text-gray-300">About Us</Link></NavigationMenuItem>
+          <NavigationMenuItem><Link href="/e-cell/contact" className="hover:text-gray-300">Contact Us</Link></NavigationMenuItem>
+          <NavigationMenuItem><Link href="/e-cell/blogs" className="hover:text-gray-300">Blogs</Link></NavigationMenuItem>
+          <NavigationMenuItem><Link href="/e-cell/gallery" className="hover:text-gray-300">Gallery</Link></NavigationMenuItem>
           <NavigationMenuItem>
             <div className="flex justify-center items-center h-full m-0 size-8 mx-4 my-2">
               <Button
@@ -120,14 +120,14 @@ export default function NavBar() {
                 <ul className="grid w-full">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/registration" className="block px-2 text-center hover:bg-gray-700 rounded">
+                      <Link href="/e-cell/registration" className="block px-2 text-center hover:bg-gray-700 rounded">
                         Register
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/login" className="block px-2 hover:bg-gray-700 rounded">
+                      <Link href="/e-cell/login" className="block px-2 hover:bg-gray-700 rounded">
                         Login
                       </Link>
                     </NavigationMenuLink>
@@ -145,17 +145,17 @@ export default function NavBar() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" className="mt-6 ml-auto md:hidden">
-            <DropdownMenuItem onClick={() => handleNavigate("/")}>Home</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/e-cell/")}>Home</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => handleNavigate("/initiatives")}>Initiatives</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/e-cell/initiatives")}>Initiatives</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => handleNavigate("/about")}>About Us</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/e-cell/about")}>About Us</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => handleNavigate("/contact")}>Contact Us</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/e-cell/contact")}>Contact Us</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => handleNavigate("/blogs")}>Blogs</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/e-cell/blogs")}>Blogs</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => handleNavigate("/gallery")}>Gallery</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleNavigate("/e-cell/gallery")}>Gallery</DropdownMenuItem>
             <DropdownMenuSeparator />
             {/* Theme Toggle Button */}
             <Button
@@ -177,7 +177,7 @@ export default function NavBar() {
             <DropdownMenuSeparator />
             {session ? (
               <div className="text-black dark:text-white">
-                <DropdownMenuItem onClick={() => handleNavigate(`/profile/${session.user.id}`)}>
+                <DropdownMenuItem onClick={() => handleNavigate(`/e-cell/profile/${session.user.id}`)}>
                   Profile
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
@@ -193,11 +193,11 @@ export default function NavBar() {
               </div>
             ) : (
               <div>
-                <DropdownMenuItem onClick={() => handleNavigate("/registration")}>
+                <DropdownMenuItem onClick={() => handleNavigate("/e-cell/registration")}>
                   Register
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => handleNavigate("/login")}>
+                <DropdownMenuItem onClick={() => handleNavigate("/e-cell/login")}>
                   Login
                 </DropdownMenuItem>
               </div>

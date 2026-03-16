@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Left - Logo/Image */}
           <div className="mb-6 md:mb-0 md:w-1/4 flex-shrink-0">
             <img
-              src="/E-Cell Image.jpg"  // Change this to your logo path
+              src="E-Cell Image.jpg"  // Change this to your logo path
               alt="Logo"
               width="150"
               height="150"

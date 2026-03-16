@@ -284,7 +284,7 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
         />
 
         <img
-          src="/E-Summit Logo.png"
+          src="E-Summit Logo.png"
           alt="Logo"
           width="600"
           height="600"

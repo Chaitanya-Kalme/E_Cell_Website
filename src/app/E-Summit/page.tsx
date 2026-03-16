@@ -151,7 +151,7 @@ export default function ESummitPage() {
           {/* Hero Section Logo */}
           <div className="flex justify-center mb-10">
             <img
-              src="/E-Summit Logo2.png"
+              src="E-Summit Logo2.png"
               alt="E-Summit 2026"
               className="h-[150px] w-[450px] sm:w-[600px] sm:h-[200px]"
             />
@@ -244,7 +244,7 @@ export default function ESummitPage() {
           <div className="max-w-6xl mx-auto bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-10 text-gray-200">
             <div className="flex-shrink-0">
               <img
-                src="/spiral.jpg"
+                src="spiral.jpg"
                 alt="IIT Ropar Spiral"
                 className="w-64 md:w-80 lg:w-96 rounded-2xl shadow-xl hover:scale-105 transition duration-500 ease-in-out"
               />

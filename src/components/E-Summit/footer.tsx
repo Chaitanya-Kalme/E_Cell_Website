@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             {/* Logo */}
             <img
-              src="/E-Summit Logo.png"
+              src="E-Summit Logo.png"
               alt="E-Summit"
               width="800"
               height="800"

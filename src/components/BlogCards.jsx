@@ -23,7 +23,7 @@ const BlogCards = ({ blog }) => {
 
         <div className="flex items-center gap-2">
           <img
-            src="/E-Cell Image.jpg"
+            src="E-Cell Image.jpg"
             alt="E-Cell Logo"
             width="40"
             height="40"

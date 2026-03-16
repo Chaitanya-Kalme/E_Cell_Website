@@ -46,7 +46,7 @@ export default function NavBar() {
       >
         <NavigationMenuItem className="flex items-center h-16 ml-4 top-1">
           <Image
-            src="/E-Summit Logo2.png"
+            src="E-Summit Logo2.png"
             alt="E-Summit Logo"
             width={300}
             height={500}
@@ -58,7 +58,7 @@ export default function NavBar() {
         <NavigationMenuList className="flex gap-x-2 hidden md:flex right-0 text-white text-xl font-semibold">
           <NavigationMenuItem>
             <Link
-              href="/E-Summit"
+              href="/e-cell/E-Summit"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -71,7 +71,7 @@ export default function NavBar() {
 
           <NavigationMenuItem>
             <Link
-              href="/E-Summit/events"
+              href="/e-cell/E-Summit/events"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -84,7 +84,7 @@ export default function NavBar() {
 
           <NavigationMenuItem>
             <Link
-              href="/E-Summit/team"
+              href="/e-cell/E-Summit/team"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -97,7 +97,7 @@ export default function NavBar() {
 
           <NavigationMenuItem>
             <Link
-              href="/E-Summit/sponsorship"
+              href="/e-cell/E-Summit/sponsorship"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -110,7 +110,7 @@ export default function NavBar() {
 
           <NavigationMenuItem>
             <Link
-              href="/E-Summit/ca"
+              href="/e-cell/E-Summit/ca"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -123,7 +123,7 @@ export default function NavBar() {
 
           <NavigationMenuItem>
             <Link
-              href="/E-Summit/contact"
+              href="/e-cell/E-Summit/contact"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -159,7 +159,7 @@ export default function NavBar() {
           >
             {/* Main Links */}
             <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit")}
+              onClick={() => handleNavigate("/e-cell/E-Summit")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"
@@ -170,7 +170,7 @@ export default function NavBar() {
             <DropdownMenuSeparator className="bg-blue-200" />
 
             <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit/events")}
+              onClick={() => handleNavigate("/e-cell/E-Summit/events")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"
@@ -181,7 +181,7 @@ export default function NavBar() {
             <DropdownMenuSeparator className="bg-blue-200" />
 
             <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit/team")}
+              onClick={() => handleNavigate("/e-cell/E-Summit/team")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"
@@ -192,7 +192,7 @@ export default function NavBar() {
             <DropdownMenuSeparator className="bg-blue-200" />
 
             <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit/sponsorship")}
+              onClick={() => handleNavigate("/e-cell/E-Summit/sponsorship")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"
@@ -203,7 +203,7 @@ export default function NavBar() {
             <DropdownMenuSeparator className="bg-blue-200" />
 
             <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit/ca")}
+              onClick={() => handleNavigate("/e-cell/E-Summit/ca")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"
@@ -214,7 +214,7 @@ export default function NavBar() {
             <DropdownMenuSeparator className="bg-blue-200" />
 
             <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit/contact")}
+              onClick={() => handleNavigate("/e-cell/E-Summit/contact")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"

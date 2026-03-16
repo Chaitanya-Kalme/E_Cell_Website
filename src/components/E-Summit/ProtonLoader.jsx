@@ -116,7 +116,7 @@ export default function ProtonLoader({ onComplete }) {
 
       // preload logo
       const img = new Image();
-      img.src = "/E-Summit Logo.png";
+      img.src = "E-Summit Logo.png";
       img.onload = () => { stateRef.current.logoImage = img; };
       stateRef.current.logoImage = img;
     }
