@@ -11,11 +11,14 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: true,
+    path: '/e-cell/_next/image',
   },
   typescript: {
     ignoreBuildErrors: true,
   },
   outputFileTracingRoot: path.join(__dirname),
+  assetPrefix: '/e-cell/',
 };
 
 export default nextConfig;
