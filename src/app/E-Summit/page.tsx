@@ -54,6 +54,9 @@ export default function ESummitPage() {
   const [loading, setLoading] = useState(true);
   const router = useRouter()
 
+  const imageName = 'IIT_Ropar_Main_Gate.png';
+
+
   useEffect(() => {
     function updateScrollRange() {
       const scrollHeight = document.documentElement.scrollHeight;
@@ -138,8 +141,9 @@ export default function ESummitPage() {
 
         {/* Parallax background image */}
         <motion.div
-          className="absolute top-0 left-0 w-full h-screen bg-[url('IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-5"
-        />
+          className="absolute top-0 left-0 w-full h-screen bg-center bg-no-repeat bg-cover pointer-events-none z-5"
+          style={{ backgroundImage: `url(${imageName})` }}
+        /
 
 
         {/* Dark overlay */}
