@@ -30,8 +30,6 @@ const contact = () => {
                 <img
                   src="E-Summit Logo2.png"
                   alt="E-Summit Logo"
-                  width="600"
-                  height="600"
                   className="object-contain drop-shadow-[0_0_40px_rgba(34,211,238,0.6)]"
                 />
               </div>

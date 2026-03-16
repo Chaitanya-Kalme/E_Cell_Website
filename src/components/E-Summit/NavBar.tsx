@@ -121,7 +121,7 @@ export default function NavBar() {
             </Link>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <Link
               href="/e-cell/E-Summit/contact"
               className="relative px-3 py-1 transition-all duration-300
@@ -132,7 +132,7 @@ export default function NavBar() {
             >
               Contact Us
             </Link>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
 
         </NavigationMenuList>
 
@@ -213,14 +213,14 @@ export default function NavBar() {
 
             <DropdownMenuSeparator className="bg-blue-200" />
 
-            <DropdownMenuItem
+            {/* <DropdownMenuItem
               onClick={() => handleNavigate("/e-cell/E-Summit/contact")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"
             >
               Contact Us
-            </DropdownMenuItem>
+            </DropdownMenuItem> */}
 
           </DropdownMenuContent>
         </DropdownMenu>
