@@ -31,11 +31,7 @@ import { useTheme } from "next-themes";
 
 export default function NavBar() {
   const router = useRouter();
-  const { data: session } = useSession();
   const [open, setOpen] = React.useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  const user = session?.user as User;
-  const isDark = resolvedTheme === "dark";
 
   const handleNavigate = (href: string) => {
     setOpen(false);
@@ -46,17 +42,15 @@ export default function NavBar() {
   return (
     <div className="w-full bg-gradient-to-b from-blue-950 to-blue-900 fixed top-0 left-0 right-0 z-50 text-lg">
       <NavigationMenu
-        viewport={false}
-        className="text-whitepx-1 pt-2 py-4 max-w-full md:mr-5 2xl:mr-10 flex justify-between"
+        className="text-white px-1 py-2 max-w-full md:mr-5 2xl:mr-10 flex justify-between"
       >
-        {/* Left side: Image */}
-        <NavigationMenuItem className="flex items-start h-18 ml-4">
+        <NavigationMenuItem className="flex items-center h-16 ml-4 top-1">
           <Image
             src="/E-Summit Logo2.png"
             alt="E-Summit Logo"
             width={300}
-            height={700}
-            className="rounded pt-1"
+            height={500}
+            className="rounded"
           />
         </NavigationMenuItem>
 
@@ -147,12 +141,12 @@ export default function NavBar() {
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
-              className="h-10 w-10 p-0 md:hidden
-               bg-white/10 backdrop-blur
-               text-white hover:bg-white/20
-               rounded-full"
+              className="h-8 w-8 p-0 md:hidden
+   bg-white/10 backdrop-blur
+   text-white hover:bg-white/20
+   rounded-full"
             >
-              <Menu size={26} />
+              <Menu size={20} />
             </Button>
           </DropdownMenuTrigger>
 

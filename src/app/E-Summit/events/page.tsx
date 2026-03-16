@@ -35,6 +35,7 @@ const viga = Viga({
 
 
 import { IBM_Plex_Mono } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function ESummitPage() {
 
   const { scrollY } = useScroll();
   const [scrollRange, setScrollRange] = useState(1); // avoid division by zero
+  const router = useRouter()
 
   useEffect(() => {
     function updateScrollRange() {
@@ -79,6 +81,7 @@ export default function ESummitPage() {
 
       {/* Overlay to improve text readability */}
       {/* <div className="fixed inset-0 bg-black/40 pointer-events-none z-10" /> */}
+
 
 
 
@@ -117,6 +120,7 @@ export default function ESummitPage() {
         </div>
       </section>
 
+
       {/* --- STARTUP EXPO SECTION --- */}
       <section className="relative z-20 py-20 px-4 md:px-8 lg:px-12">
         <ParticleBackground />
@@ -143,7 +147,7 @@ export default function ESummitPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setShowStartupExpoForm(true)}
+              onClick={() => router.replace("")}
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold rounded-full shadow-lg shadow-orange-500/50 transition-all duration-200"
             >
               <Rocket size={20} />
@@ -155,6 +159,7 @@ export default function ESummitPage() {
           <StartupExpoCard startups={startupExpoData} />
         </div>
       </section>
+
 
 
 

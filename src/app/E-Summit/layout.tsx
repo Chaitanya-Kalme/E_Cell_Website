@@ -61,7 +61,7 @@ export default function RootLayout({
                 {/* <BlobCursor/> */}
                 <NavBar />
                 {/* <SocialSidebar/> */}
-                <div className="pt-24">
+                <div className="pt-20">
                   {/* <SplashCursor /> */}
                   {children}
                 </div>

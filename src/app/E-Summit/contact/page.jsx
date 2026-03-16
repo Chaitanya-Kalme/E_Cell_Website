@@ -26,13 +26,14 @@ const contact = () => {
               transition={{ duration: 0.8 }}
               className="flex flex-col items-center justify-center space-y-4"
             >
-              <div className="relative w-48 h-48 md:w-64 md:h-64">
+              <div className="relative">
                 <Image
-                  src="/E-Cell Image.jpg"
+                  src="/E-Summit Logo.png"
                   alt="E-Summit Logo"
-                  fill
+                  // fill
                   className="object-contain drop-shadow-[0_0_40px_rgba(34,211,238,0.6)]"
                   priority
+                  width={600} height={600}
                 />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold">

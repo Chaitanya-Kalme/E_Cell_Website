@@ -135,7 +135,6 @@ const OurTeam = () => {
               className="text-center mb-12"
             >
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Crown className="text-blue-400" size={32} />
                 <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                   Organising Committee
                 </h2>

@@ -96,7 +96,7 @@ const Sponsorship = () => {
       </section>
 
       {/* Sponsor Category Sections */}
-      <div className="pb-20 space-y-20 px-4 md:px-8 lg:px-12">
+      {/* <div className="pb-20 space-y-20 px-4 md:px-8 lg:px-12">
         {sponsorCategories.map((category, catIdx) => {
           const colors =
             categoryColors[category.title] || categoryColors["Event Sponsors"];
@@ -111,7 +111,6 @@ const Sponsorship = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              {/* Category Header */}
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center gap-3 mb-3">
                   <IconComponent className={colors.icon} size={32} />
@@ -126,7 +125,6 @@ const Sponsorship = () => {
                 />
               </div>
 
-              {/* Infinite Moving Sponsor Logos */}
               <div className="rounded-md flex flex-col antialiased items-center justify-center relative">
                 <InfiniteMovingCards
                   items={category.sponsors}
@@ -138,6 +136,10 @@ const Sponsorship = () => {
             </motion.section>
           );
         })}
+      </div> */}
+
+      <div className="pb-20 space-y-20 px-4 md:px-8 lg:px-12 text-white text-center text-5xl">
+        Coming Soon...
       </div>
 
       {/* Become a Sponsor CTA */}
