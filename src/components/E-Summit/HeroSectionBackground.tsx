@@ -1,6 +1,4 @@
 'use client';
-
-import Image from 'next/image';
 import { useEffect, useRef, useCallback } from 'react';
 
 interface AtomBackgroundProps {
@@ -10,15 +8,15 @@ interface AtomBackgroundProps {
 
 const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const sceneRef  = useRef<HTMLDivElement>(null);
+  const sceneRef = useRef<HTMLDivElement>(null);
   const centerRef = useRef<HTMLDivElement>(null);
-  const animRef   = useRef<number>(0);
-  const tRef      = useRef(0);
-  const lastRef   = useRef(0);
+  const animRef = useRef<number>(0);
+  const tRef = useRef(0);
+  const lastRef = useRef(0);
 
   const orbitDefs = [
-    { rx: 58, ry: 20, tilt:  10, speed: 0.35, phase: 0,   eColor: '#00eeff' },
-    { rx: 50, ry: 18, tilt:  70, speed: 0.50, phase: 2.1, eColor: '#80f0ff' },
+    { rx: 58, ry: 20, tilt: 10, speed: 0.35, phase: 0, eColor: '#00eeff' },
+    { rx: 50, ry: 18, tilt: 70, speed: 0.50, phase: 2.1, eColor: '#80f0ff' },
     { rx: 55, ry: 22, tilt: -50, speed: 0.25, phase: 4.2, eColor: '#00aaff' },
   ];
 
@@ -42,13 +40,13 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
   ) => {
     const pts: { x: number; y: number }[] = [{ x: x1, y: y1 }];
     for (let i = 1; i < segments; i++) {
-      const p  = i / segments;
+      const p = i / segments;
       const bx = x1 + (x2 - x1) * p;
       const by = y1 + (y2 - y1) * p;
-      const nx = fractalNoise(p * 4 + time * 0.22, seed * 10,     5);
+      const nx = fractalNoise(p * 4 + time * 0.22, seed * 10, 5);
       const ny = fractalNoise(p * 4 + time * 0.22, seed * 10 + 7, 5);
       const perp = { x: -(y2 - y1), y: x2 - x1 };
-      const len  = Math.sqrt(perp.x * perp.x + perp.y * perp.y) || 1;
+      const len = Math.sqrt(perp.x * perp.x + perp.y * perp.y) || 1;
       const dist = 55 * (1 - Math.abs(p * 2 - 1));
       pts.push({
         x: bx + nx * dist + ny * 18 * (perp.x / len),
@@ -60,8 +58,8 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
   }, [fractalNoise]);
 
   useEffect(() => {
-    const canvas   = canvasRef.current;
-    const sceneEl  = sceneRef.current;
+    const canvas = canvasRef.current;
+    const sceneEl = sceneRef.current;
     const centerEl = centerRef.current;
     if (!canvas || !sceneEl || !centerEl) return;
 
@@ -81,9 +79,9 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
       W = sceneEl!.offsetWidth;
       H = sceneEl!.offsetHeight;
       const dpr = window.devicePixelRatio || 1;
-      canvas!.width  = W * dpr;
+      canvas!.width = W * dpr;
       canvas!.height = H * dpr;
-      canvas!.style.width  = W + 'px';
+      canvas!.style.width = W + 'px';
       canvas!.style.height = H + 'px';
       ctx!.scale(dpr, dpr);
     }
@@ -92,10 +90,10 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
 
     const PAD = 90;
     const corners = () => [
-      { x: PAD,     y: PAD },
+      { x: PAD, y: PAD },
       { x: W - PAD, y: PAD },
       { x: W - PAD, y: H - PAD },
-      { x: PAD,     y: H - PAD },
+      { x: PAD, y: H - PAD },
     ];
 
     function drawStars() {
@@ -140,7 +138,7 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
 
       // Nucleus glow only — no filled sphere
       const pr = 1 + Math.sin(time * 2.5 + idx) * 0.07;
-      const r  = 14 * scale * pr;
+      const r = 14 * scale * pr;
       const ng = ctx!.createRadialGradient(cx - 3 * scale, cy - 3 * scale, 0.5, cx, cy, r);
       ng.addColorStop(0, '#d0faff');
       ng.addColorStop(0.3, '#00d4ff');
@@ -216,21 +214,21 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
       drawStars();
 
       const centerRect = centerEl!.getBoundingClientRect();
-      const sceneRect  = sceneEl!.getBoundingClientRect();
-      const lx = centerRect.left - sceneRect.left + centerRect.width  / 2;
-      const ly = centerRect.top  - sceneRect.top  + centerRect.height / 2;
+      const sceneRect = sceneEl!.getBoundingClientRect();
+      const lx = centerRect.left - sceneRect.left + centerRect.width / 2;
+      const ly = centerRect.top - sceneRect.top + centerRect.height / 2;
 
       drawCenterGlow(lx, ly);
 
       const cs = corners();
 
       cs.forEach((c, i) => {
-        const seed    = i * 3.7 + 1.2;
+        const seed = i * 3.7 + 1.2;
         const flicker = 0.55 + Math.sin(t * 0.7 + i * 1.7) * 0.25 + Math.random() * 0.08;
 
         for (let b = 0; b < 2; b++) {
           const bSeed = seed + b * 1.9 + t * 0.025;
-          const pts   = electricPath(c.x, c.y, lx, ly, bSeed, t + b * 0.8, 22);
+          const pts = electricPath(c.x, c.y, lx, ly, bSeed, t + b * 0.8, 22);
           drawElectricLine(pts, flicker * (b === 0 ? 1 : 0.5), b === 0 ? 1.5 : 0.7,
             'rgba(0,230,255,1)', 'rgba(180,240,255,1)');
         }
@@ -269,11 +267,6 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
 
-      {/* ── Logo slot ────────────────────────────────────────────────────────
-          Electric lines converge to this element.
-          Replace the inner <span> content with your <Image> or <svg> logo.
-          The outer div stays centred; keep pointer-events-none on the wrapper
-          so it never blocks clicks on the hero content above.              */}
       <div
         ref={centerRef}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
@@ -290,7 +283,12 @@ const AtomBackground = ({ className = '', style }: AtomBackgroundProps) => {
           }}
         />
 
-        <Image src="/E-Summit Logo.png" alt="Logo" width={600} height={600} />
+        <img
+          src="/E-Summit Logo.png"
+          alt="Logo"
+          width="600"
+          height="600"
+        />
         {/* <span
           id="atom-logo-slot"
           className="relative z-10 flex items-center justify-center"

@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { Mail, MapPinIcon } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -63,11 +62,11 @@ export default function Footer() {
           {/* LOGO + SOCIALS */}
           <div className="flex flex-col items-start">
             {/* Logo */}
-            <Image
+            <img
               src="/E-Summit Logo.png"
               alt="E-Summit"
-              width={800}
-              height={800}
+              width="800"
+              height="800"
             />
 
             {/* Social Media Icons */}

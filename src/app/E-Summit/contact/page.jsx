@@ -18,7 +18,7 @@ const contact = () => {
         <div className="container mx-auto py-8 min-h-screen pt-24 px-4">
           {/* Two Column Layout */}
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-12rem)] py-12">
-            
+
             {/* Left Side - Logo and Theme */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -27,13 +27,12 @@ const contact = () => {
               className="flex flex-col items-center justify-center space-y-4"
             >
               <div className="relative">
-                <Image
+                <img
                   src="/E-Summit Logo.png"
                   alt="E-Summit Logo"
-                  // fill
+                  width="600"
+                  height="600"
                   className="object-contain drop-shadow-[0_0_40px_rgba(34,211,238,0.6)]"
-                  priority
-                  width={600} height={600}
                 />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold">

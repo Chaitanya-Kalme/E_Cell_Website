@@ -12,7 +12,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import Image from "next/image"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -67,11 +66,11 @@ export default function NavBar() {
       <NavigationMenu viewport={false} className="flex items-center justify-between text-white px-4 py-3 max-w-screen-xl mx-auto">
         {/* Left side: Image */}
         <NavigationMenuItem className="flex items-center">
-          <Image
+          <img
             src="/E-Cell Image.jpg"
             alt="E-Cell Image"
-            width={70}
-            height={70}
+            width="70"
+            height="70"
             className="rounded"
           />
         </NavigationMenuItem>

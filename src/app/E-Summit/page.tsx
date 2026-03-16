@@ -151,7 +151,7 @@ export default function ESummitPage() {
           {/* Hero Section Logo */}
           <div className="flex justify-center mb-10">
             <img
-              src="/E-Summit Logo.png"
+              src="/E-Summit Logo2.png"
               alt="E-Summit 2026"
               className="h-[150px] w-[450px] sm:w-[600px] sm:h-[200px]"
             />

@@ -6,7 +6,6 @@ import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import axios from "axios";
 import { toast } from "sonner";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
@@ -43,11 +42,11 @@ export default function AdminNavbar() {
     <div className="fixed top-0 inset-x-0 max-w-full h-14 mx-auto z-50 text-xl text-center justify-center gap-x-2">
       <Menu setActive={setActive}>
         <div>
-          <Image
+          <img
             src="/E-Cell Image.jpg"
             alt="My Photo"
-            width={48}
-            height={48}
+            width="48"
+            height="48"
             className="border rounded-xl ml-4"
             onClick={() => router.replace("/E_Cell_IITRPR_Admin")}
           />

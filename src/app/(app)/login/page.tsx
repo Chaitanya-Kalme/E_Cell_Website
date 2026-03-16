@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import { signIn } from "next-auth/react"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -28,15 +27,15 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
   const [isForgotPassword, setIsForgotPassword] = useState(false);
-  const [newPassword,setNewPassword] = useState("");
-  const [confirmPassword,setConfirmPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [isotpSent, issetOtpSent] = useState(false);
   const [email, setEmail] = useState("");
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
-  const [userId,setUserId] = useState("");
+  const [userId, setUserId] = useState("");
 
   const form = useForm<z.infer<typeof signInSchema>>({
     resolver: zodResolver(signInSchema),
@@ -128,45 +127,45 @@ const LoginPage = () => {
     }
   };
 
-  const handleResetPassword= async () => {
-      try {
-        if(newPassword!==confirmPassword){
-          toast.error("New Password and confirm password does not match")
-          return ;
-        }
-        const response = await axios.post(
-            `/api/user/resetPassword/${userId}`,
-            {
-              resetPasswordCode: otp.join(""),
-              newPassword: newPassword,
-              confirmPassword: confirmPassword,
-            }
-          );
-  
-        if(response.data.success) {
-          toast.success(response.data.message);
-          router.replace("/login")
-        } else {
-          toast.error(response.data.message || "Failed to reset password");
-        }
-      } catch (error:any) {
-        console.error("Error resetting password:", error);
-        const errorMessage =
-          error.response?.data?.message || "An error occurred. Please try again.";
-        toast.error(errorMessage);
+  const handleResetPassword = async () => {
+    try {
+      if (newPassword !== confirmPassword) {
+        toast.error("New Password and confirm password does not match")
+        return;
       }
-    };
+      const response = await axios.post(
+        `/api/user/resetPassword/${userId}`,
+        {
+          resetPasswordCode: otp.join(""),
+          newPassword: newPassword,
+          confirmPassword: confirmPassword,
+        }
+      );
+
+      if (response.data.success) {
+        toast.success(response.data.message);
+        router.replace("/login")
+      } else {
+        toast.error(response.data.message || "Failed to reset password");
+      }
+    } catch (error: any) {
+      console.error("Error resetting password:", error);
+      const errorMessage =
+        error.response?.data?.message || "An error occurred. Please try again.";
+      toast.error(errorMessage);
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-300 dark:from-orange-400 dark:to-orange-200">
       <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-2xl">
         {/* Logo and Header */}
         <div className="flex flex-col items-center mb-8">
-          <Image
+          <img
             src="/E-Cell Image.jpg"
             alt="E-Cell Logo"
-            width={80}
-            height={80}
+            width="80"
+            height="80"
             className="rounded-full mb-4"
           />
           <h2 className="text-3xl font-bold text-blue-700 dark:text-orange-200">Welcome Back</h2>

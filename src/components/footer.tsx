@@ -1,5 +1,4 @@
 import { Mail, MapPinIcon } from 'lucide-react';
-import Image from 'next/image';
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -12,12 +11,11 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between">
           {/* Left - Logo/Image */}
           <div className="mb-6 md:mb-0 md:w-1/4 flex-shrink-0">
-            <Image
-              src="/E-Cell Image.jpg" // Change this to your logo path
+            <img
+              src="/E-Cell Image.jpg"  // Change this to your logo path
               alt="Logo"
-              width={150}
-              height={150}
-              priority
+              width="150"
+              height="150"
             />
             <div className='mt-2 flex gap-x-2'>
               <a href="https://www.linkedin.com/company/e-cell-iit-ropar/" target="_blank" rel="noopener noreferrer">
@@ -27,9 +25,9 @@ export default function Footer() {
                 <FaSquareInstagram className='size-7 hover:cursor-pointer' />
               </a>
 
-              
-              
-              
+
+
+
             </div>
           </div>
           {/* Right - Columns */}

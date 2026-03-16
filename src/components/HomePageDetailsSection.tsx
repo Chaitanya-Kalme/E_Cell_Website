@@ -33,7 +33,12 @@ function HomePageDetailsSection() {
                 <div className="flex justify-center space-x-20 text-xl pb-5">
                     <div>
                         <div className="bg-gray-800 flex justify-center items-center">
-                            <Image src={light_bulb_image} alt="Light Bulb" width={200} height={200} />
+                            <img
+                                src={light_bulb_image.src}
+                                alt="Light Bulb"
+                                width="200"
+                                height="200"
+                            />
                         </div>
                         {inView && <CountUp end={100} duration={2} />}
                         +

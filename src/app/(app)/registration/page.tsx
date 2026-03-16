@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import {useForm } from "react-hook-form";
 import { toast } from "sonner";
-import Image from "next/image";
 import { Mail, Lock, User, Phone, Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -76,7 +75,7 @@ const RegistrationPage = () => {
       <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-2xl">
         {/* Logo and Header */}
         <div className="flex flex-col items-center mb-8">
-          <Image
+          <img
             src="/E-Cell Image.jpg"
             alt="E-Cell Logo"
             width={80}
