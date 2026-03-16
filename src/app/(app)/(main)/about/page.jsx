@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/about_us_image1.jpg"
+              src="about_us_image1.jpg"
               alt="About Us"
               width={400}
               height={400}
@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row-reverse items-center gap-12">
           <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/about_us_image2.jpg"
+              src="about_us_image2.jpg"
               alt="Vision"
               width={400}
               height={250}
@@ -56,7 +56,7 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 flex justify-center">
             <Image
-              src="/about_us_image3.jpg"
+              src="about_us_image3.jpg"
               alt="Mission"
               width={400}
               height={250}

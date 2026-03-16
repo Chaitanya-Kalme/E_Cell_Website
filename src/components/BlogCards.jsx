@@ -8,11 +8,11 @@ const BlogCards = ({ blog }) => {
       target='_blank'
       className="block w-[320px] bg-white dark:bg-gray-800 border-2 border-blue-700 dark:border-orange-200 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl"
     >
-      <div className="relative w-full pb-[75%]">
+      <div className="relative w-full">
         <img
           src={blog.image}
           alt={blog.title}
-          className="object-cover w-full h-full"
+          className="object-cover "
         />
       </div>
 

@@ -138,7 +138,7 @@ export default function ESummitPage() {
 
         {/* Parallax background image */}
         <motion.div
-          className="absolute top-0 left-0 w-full h-screen bg-[url('/IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-5"
+          className="absolute top-0 left-0 w-full h-screen bg-[url('IIT_Ropar_Main_Gate.png')] bg-center bg-no-repeat bg-cover pointer-events-none z-5"
         />
 
 
