@@ -72,7 +72,7 @@ export default function Footer() {
             {/* Social Media Icons */}
             <div className="mt-4 flex items-center gap-4 ml-20 text-center w-full">
               <a
-                href="https://www.linkedin.com/company/e-cell-iit-ropar/"
+                href="https://www.linkedin.com/in/e-cell-iit-ropar-48694117b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -106,11 +106,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-3">Useful Links</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit")}>Home</li>
-              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/events")}>Events</li>
-              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/team")}>Our Team</li>
-              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/sponsorship")}>Sponsors</li>
-              <li className="hover:cursor-pointer" onClick={() => router.push("/E-Summit/ca")}>Campus Ambassador</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/e-cell/E-Summit")}>Home</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/e-cell/E-Summit/events")}>Events</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/e-cell/E-Summit/team")}>Our Team</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/e-cell/E-Summit/sponsorship")}>Sponsors</li>
+              <li className="hover:cursor-pointer" onClick={() => router.push("/e-cell/E-Summit/ca")}>Campus Ambassador</li>
             </ul>
           </div>
 

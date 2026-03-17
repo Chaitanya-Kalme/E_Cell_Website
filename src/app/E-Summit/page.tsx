@@ -157,7 +157,7 @@ export default function ESummitPage() {
             <img
               src="E-Summit Logo2.png"
               alt="E-Summit 2026"
-              className="h-[100px] w-[300px] sm:h-[200px] sm:w-[500px]"
+              className="h-[80px] w-[350px] sm:h-[125px] sm:w-[500px]"
             />
           </div>
 
@@ -175,9 +175,9 @@ export default function ESummitPage() {
             className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16 mt-2"
           >
             {[
-              { icon: Calendar, text: "Dates: Coming Soon", color: "orange" },
+              { icon: Calendar, text: "Coming Soon", color: "orange" },
               { icon: MapPin, text: "Venue: IIT Ropar", color: "purple" },
-              { icon: Users, text: "1000+ Participants", color: "blue" },
+              { icon: Users, text: "5000+ Participants", color: "blue" },
             ].map(({ icon: Icon, text, color }) => (
               <motion.div
                 key={text}
