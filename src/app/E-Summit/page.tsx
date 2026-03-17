@@ -157,7 +157,7 @@ export default function ESummitPage() {
             <img
               src="E-Summit Logo2.png"
               alt="E-Summit 2026"
-              className="h-[80px] w-[200px] sm:h-[120px] sm:w-[300px]"
+              className="h-[180px] w-[400px] sm:h-[320px] sm:w-[500px]"
             />
           </div>
 
