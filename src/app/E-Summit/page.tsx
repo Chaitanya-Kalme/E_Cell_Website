@@ -141,11 +141,8 @@ export default function ESummitPage() {
 
         {/* Parallax background image */}
         <motion.div
-          className="absolute top-0 left-0 w-full h-screen bg-center bg-no-repeat pointer-events-none z-5"
-          style={{
-            backgroundImage: `url(${imageName})`,
-            backgroundSize: "70%", // try 50%, 60%, etc.
-          }}
+          className="absolute top-0 left-0 w-full h-screen bg-center bg-no-repeat bg-cover pointer-events-none z-5"
+          style={{ backgroundImage: `url(${imageName})` }}
         />
 
 
@@ -160,7 +157,7 @@ export default function ESummitPage() {
             <img
               src="E-Summit Logo2.png"
               alt="E-Summit 2026"
-              className="h-[150px] w-[450px] sm:w-[600px] sm:h-[200px]"
+              className="h-[100px] w-[250px] sm:w-[400px] sm:h-[300px]"
             />
           </div>
 
