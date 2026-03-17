@@ -141,8 +141,11 @@ export default function ESummitPage() {
 
         {/* Parallax background image */}
         <motion.div
-          className="absolute top-0 left-0 w-full h-screen bg-center bg-no-repeat bg-cover pointer-events-none z-5"
-          style={{ backgroundImage: `url(${imageName})` }}
+          className="absolute top-0 left-0 w-full h-screen bg-center bg-no-repeat pointer-events-none z-5"
+          style={{
+            backgroundImage: `url(${imageName})`,
+            backgroundSize: "70%", // try 50%, 60%, etc.
+          }}
         />
 
 
@@ -175,7 +178,7 @@ export default function ESummitPage() {
             className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16 mt-2"
           >
             {[
-              { icon: Calendar, text: "Dates: April 11-12, 2026", color: "orange" },
+              { icon: Calendar, text: "Dates: Coming Soon", color: "orange" },
               { icon: MapPin, text: "Venue: IIT Ropar", color: "purple" },
               { icon: Users, text: "1000+ Participants", color: "blue" },
             ].map(({ icon: Icon, text, color }) => (

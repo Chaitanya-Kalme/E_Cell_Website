@@ -101,22 +101,13 @@ const OurTeam = () => {
                 Meet the Team Behind E-Summit IIT Ropar 2026
               </p>
               <p className="text-base text-blue-200/80 leading-relaxed mb-4">
-                E-Summit IIT Ropar 2026 is powered by a dynamic team of
-                innovators, leaders, and changemakers driven by a shared vision —
-                to ignite the entrepreneurial spirit and foster a culture of bold
-                ideas and impactful ventures.
+                E-Summit IIT Ropar 2026 is driven by a dynamic team of innovators, leaders, and changemakers united by a shared vision, to ignite entrepreneurial spirit and foster bold ideas.
               </p>
               <p className="text-base text-blue-200/80 leading-relaxed mb-4">
-                Our team comprises passionate students, creative thinkers, and
-                dedicated organizers who work tirelessly to bring together
-                founders, investors, industry leaders, and aspiring entrepreneurs
-                under one inspiring platform. With a commitment to excellence and
-                innovation, they strive to create meaningful experiences, powerful
-                conversations, and opportunities that transform ideas into action.
+                Our team of passionate students, creative thinkers, and dedicated organizers works tirelessly to bring together founders, investors, and aspiring entrepreneurs on one platform. Committed to excellence, they create meaningful experiences and opportunities that turn ideas into action.
               </p>
               <p className="text-base text-blue-200/80 leading-relaxed">
-                Together, we are building more than an event — we are building a
-                thriving entrepreneurial ecosystem.
+                Together, we are building not just an event, but a thriving entrepreneurial ecosystem.
               </p>
             </motion.div>
           </div>
