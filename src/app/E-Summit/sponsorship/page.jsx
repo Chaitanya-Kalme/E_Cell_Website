@@ -76,16 +76,16 @@ const Sponsorship = () => {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Handshake className="text-yellow-400" size={40} />
-              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+              <Handshake className="text-cyan-400" size={40} />
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
                 Our Sponsors
               </h2>
             </div>
-            <p className="text-yellow-200 text-lg max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Powering E-Summit IIT Ropar 2026
             </p>
-            <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full" />
-            <p className="text-base text-blue-200 leading-relaxed max-w-3xl mx-auto mt-6">
+            <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full" />
+            <p className="text-2xl text-blue-200 leading-relaxed max-w-3xl mx-auto mt-6">
               E-Summit IIT Ropar 2026 is made possible by the generous support
               of our sponsors and partners. Their belief in innovation and
               entrepreneurship fuels the experiences, conversations, and

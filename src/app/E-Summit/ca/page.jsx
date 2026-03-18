@@ -18,7 +18,12 @@ import ParticleBackground from "@/components/E-Summit/ParticleBackground";
 import HeroSectionBackground from "@/components/E-Summit/HeroSectionBackground"
 import Hyperspeed from "@/components/Hyperspeed"
 
+import { IBM_Plex_Mono } from "next/font/google";
 
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const CA_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSeLUGqtnbOGiqHrztp2jvSkEu_GwJmwTHdln8r6tFWQPqcOlw/viewform?usp=dialog";
@@ -58,19 +63,19 @@ const CampusAmbassador = () => {
       icon: Megaphone,
       title: "Promote Events",
       desc: "Share speaker announcements, startup competitions, and workshops across your campus.",
-      color: "blue",
+      color: "white",
     },
     {
       icon: Share2,
       title: "Drive Registrations",
       desc: "Use your unique referral code to get students to register for E-Summit events on Unstop/Google Forms.",
-      color: "cyan",
+      color: "white",
     },
     {
       icon: MessageSquare,
       title: "Spread the Word",
       desc: "Leverage WhatsApp groups, LinkedIn, and Instagram to maximize reach and engagement.",
-      color: "purple",
+      color: "black",
     },
     {
       icon: Users,
@@ -214,9 +219,9 @@ const CampusAmbassador = () => {
           {/* Info Badges */}
           <motion.div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-10">
             {[
-              { icon: Calendar, text: "E-Summit April 2026", color: "orange" },
-              { icon: MapPin, text: "IIT Ropar", color: "purple" },
-              { icon: Sparkles, text: "Exclusive Rewards", color: "cyan" },
+              { icon: Calendar, text: "E-Summit April 2026", color: "blue" },
+              { icon: MapPin, text: "IIT Ropar", color: "blue" },
+              { icon: Sparkles, text: "Exclusive Rewards", color: "blue" },
             ].map(({ icon: Icon, text, color }) => (
               <motion.div
                 key={text}
@@ -287,17 +292,17 @@ const CampusAmbassador = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-black/50 backdrop-blur-md border border-${item.color}-500/20 rounded-2xl p-6 hover:border-${item.color}-500/40 transition-all duration-300 group`}
+                  className={`bg-black/50 backdrop-blur-md border border-${item.color} rounded-2xl p-6 hover:border-${item.color} transition-all duration-300 group`}
                 >
                   <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br from-${item.color}-500/20 to-${item.color}-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-xl ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <item.icon className={`text-${item.color}-400`} size={28} />
+                    <item.icon className="text-white" size={28} />
                   </div>
-                  <h3 className={`text-xl font-bold text-${item.color}-300 mb-3`}>
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-blue-200/80 text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </motion.div>
@@ -319,15 +324,15 @@ const CampusAmbassador = () => {
               className="text-center mb-12"
             >
               <div className="flex items-center justify-center gap-3 mb-4">
-                <Trophy className="text-yellow-400" size={36} />
-                <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+                <Trophy className="text-blue-400" size={36} />
+                <h2 className="text-3xl md:text-4xl font-bold text-blue-500">
                   Incentives & Rewards
                 </h2>
               </div>
-              <p className="text-yellow-200 text-lg max-w-2xl mx-auto mb-2">
+              <p className="text-white text-lg max-w-2xl mx-auto mb-2">
                 Earn exciting rewards based on your performance!
               </p>
-              <div className="h-1 w-32 mx-auto bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full" />
+              <div className="h-1 w-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-700 rounded-full" />
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8">
@@ -337,9 +342,9 @@ const CampusAmbassador = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-md border border-green-500/20 rounded-2xl p-6"
+                className="bg-black/50 backdrop-blur-md border border-white/20 rounded-2xl p-6"
               >
-                <h3 className="text-2xl font-bold text-green-400 mb-6 flex items-center gap-2">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
                   <Award size={24} />
                   Offline Events Registrations
                 </h3>
@@ -347,21 +352,17 @@ const CampusAmbassador = () => {
                   {offlineIncentives.map((tier) => (
                     <div
                       key={tier.range}
-                      className="bg-green-500/5 border border-green-500/10 rounded-xl p-4 hover:border-green-500/30 transition-all duration-300"
+                      className="border border-white/20 rounded-xl p-4 transition-all duration-300"
                     >
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-xl font-bold text-green-300">
-                          {tier.range}
-                        </span>
-                        <span className="text-green-400 text-sm">
-                          Registrations
-                        </span>
+                        <span className="text-xl font-bold text-white">{tier.range}</span>
+                        <span className="text-white/80 text-sm">Registrations</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {tier.rewards.map((reward) => (
                           <span
                             key={reward}
-                            className="px-3 py-1 bg-green-500/10 text-green-200 text-xs rounded-full border border-green-500/20"
+                            className="px-3 py-1 text-white text-xs rounded-full border border-white/20"
                           >
                             {reward}
                           </span>
@@ -378,9 +379,9 @@ const CampusAmbassador = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6"
+                className="bg-black/50 backdrop-blur-md border border-white/20 rounded-2xl p-6"
               >
-                <h3 className="text-2xl font-bold text-purple-400 mb-6 flex items-center gap-2">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
                   <Gift size={24} />
                   Online Hackathon Registrations
                 </h3>
@@ -388,21 +389,17 @@ const CampusAmbassador = () => {
                   {onlineIncentives.map((tier) => (
                     <div
                       key={tier.range}
-                      className="bg-purple-500/5 border border-purple-500/10 rounded-xl p-4 hover:border-purple-500/30 transition-all duration-300"
+                      className="border border-white/20 rounded-xl p-4 hover:border-white/40 transition-all duration-300"
                     >
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-xl font-bold text-purple-300">
-                          {tier.range}
-                        </span>
-                        <span className="text-purple-400 text-sm">
-                          Registrations
-                        </span>
+                        <span className="text-xl font-bold text-white">{tier.range}</span>
+                        <span className="text-white/80 text-sm">Registrations</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {tier.rewards.map((reward) => (
                           <span
                             key={reward}
-                            className="px-3 py-1 bg-purple-500/10 text-purple-200 text-xs rounded-full border border-purple-500/20"
+                            className="px-3 py-1 text-white text-xs rounded-full border border-white/20"
                           >
                             {reward}
                           </span>
@@ -416,7 +413,7 @@ const CampusAmbassador = () => {
           </div>
         </section>
 
-        {/* ─── Ambassador Community Section ─── */}
+        {/* Ambassador Community Section */}
         <section className="relative py-16 px-4 md:px-8">
           <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-[#1a1f3f]/70 to-black/0 pointer-events-none" />
 
@@ -428,15 +425,15 @@ const CampusAmbassador = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center justify-center gap-3 mb-4">
-                <MessageSquare className="text-pink-400" size={36} />
-                <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+                <MessageSquare className="text-blue-400" size={36} />
+                <h2 className="text-3xl md:text-4xl font-bold text-blue-500">
                   Ambassador Community
                 </h2>
               </div>
-              <div className="h-1 w-32 mx-auto bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mb-8" />
+              <div className="h-1 w-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-700 rounded-full mb-8" />
 
-              <div className="bg-black/50 backdrop-blur-md border border-pink-500/20 rounded-2xl p-8">
-                <p className="text-lg text-blue-200/90 leading-relaxed mb-6">
+              <div className="bg-black/50 backdrop-blur-md border border-blue-500/20 rounded-2xl p-8">
+                <p className="text-white text-lg leading-relaxed mb-6">
                   Join our exclusive WhatsApp community (created 3 weeks before
                   the summit) where you'll receive:
                 </p>
@@ -457,12 +454,10 @@ const CampusAmbassador = () => {
                   ].map((item) => (
                     <div
                       key={item.title}
-                      className="bg-pink-500/5 border border-pink-500/10 rounded-xl p-4"
+                      className="bg-blue-500/5 border border-blue-500/10 rounded-xl p-4"
                     >
-                      <h4 className="text-pink-300 font-semibold mb-2">
-                        {item.title}
-                      </h4>
-                      <p className="text-blue-200/70 text-sm">{item.desc}</p>
+                      <h4 className="text-blue-500 font-semibold mb-2">{item.title}</h4>
+                      <p className="text-white/80 text-sm">{item.desc}</p>
                     </div>
                   ))}
                 </div>
