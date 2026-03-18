@@ -292,7 +292,8 @@ export default function ESummitPage() {
               Meet innovative startups and entrepreneurs from across the country
             </p>
             <div className="text-center justify-center flex justify-items-center">
-              <EventCard events={allEvents.slice(0, 3)} />
+              {/* <EventCard events={allEvents.slice(0, 3)} /> */}
+              <h1 className="text-center font-bold text-4xl">Coming Soon...</h1>
             </div>
 
             <button

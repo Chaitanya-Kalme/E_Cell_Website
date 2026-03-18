@@ -167,50 +167,50 @@ export const allEvents = [
   //     'Social impact'
   //   ]
   // },
-  {
-    id: 'gtm-war',
-    title: 'GTM War (Go-To-Market Strategy Challenge)',
-    category: eventCategories.COMPETITION,
-    description: 'GTM War strives to develop strategies to ensure the successful market entry of the products.',
-    icon: '🎯',
-    color: 'from-teal-600 to-cyan-600',
-    date: '14 Feb 2026',
-    time: '2:00 PM - 6:00 PM',
-    venue: 'Marketing Lab',
-    teamSize: { min: 2, max: 4 },
-    registrationFee: '₹250 per team',
-    prizes: '₹35,000 worth of prizes',
-    isRegistrationOpen: true,
-    image: '/images/gtm-war.jpg',
-    highlights: [
-      'Market entry strategy',
-      'Customer analysis',
-      'Competitive positioning',
-      'Go-to-market planning'
-    ]
-  },
-  {
-    id: 'startup-sprint',
-    title: 'Startup Sprint - 60',
-    category: eventCategories.COMPETITION,
-    description: 'Startup Sprint is an accelerated competition based on the concept wherein the entire team needs to come up with and present a startup idea within 60 minutes.',
-    icon: '⚡',
-    color: 'from-yellow-600 to-orange-600',
-    date: '16 Feb 2026',
-    time: '11:00 AM - 2:00 PM',
-    venue: 'Innovation Hub',
-    teamSize: { min: 2, max: 4 },
-    registrationFee: '₹200 per team',
-    prizes: '₹20,000 worth of prizes',
-    isRegistrationOpen: true,
-    image: '/images/startup-sprint.jpg',
-    highlights: [
-      '60-minute challenge',
-      'Rapid ideation',
-      'Quick pitch preparation',
-      'Fast decision making'
-    ]
-  },
+  // {
+  //   id: 'gtm-war',
+  //   title: 'GTM War (Go-To-Market Strategy Challenge)',
+  //   category: eventCategories.COMPETITION,
+  //   description: 'GTM War strives to develop strategies to ensure the successful market entry of the products.',
+  //   icon: '🎯',
+  //   color: 'from-teal-600 to-cyan-600',
+  //   date: '14 Feb 2026',
+  //   time: '2:00 PM - 6:00 PM',
+  //   venue: 'Marketing Lab',
+  //   teamSize: { min: 2, max: 4 },
+  //   registrationFee: '₹250 per team',
+  //   prizes: '₹35,000 worth of prizes',
+  //   isRegistrationOpen: true,
+  //   image: '/images/gtm-war.jpg',
+  //   highlights: [
+  //     'Market entry strategy',
+  //     'Customer analysis',
+  //     'Competitive positioning',
+  //     'Go-to-market planning'
+  //   ]
+  // },
+  // {
+  //   id: 'startup-sprint',
+  //   title: 'Startup Sprint - 60',
+  //   category: eventCategories.COMPETITION,
+  //   description: 'Startup Sprint is an accelerated competition based on the concept wherein the entire team needs to come up with and present a startup idea within 60 minutes.',
+  //   icon: '⚡',
+  //   color: 'from-yellow-600 to-orange-600',
+  //   date: '16 Feb 2026',
+  //   time: '11:00 AM - 2:00 PM',
+  //   venue: 'Innovation Hub',
+  //   teamSize: { min: 2, max: 4 },
+  //   registrationFee: '₹200 per team',
+  //   prizes: '₹20,000 worth of prizes',
+  //   isRegistrationOpen: true,
+  //   image: '/images/startup-sprint.jpg',
+  //   highlights: [
+  //     '60-minute challenge',
+  //     'Rapid ideation',
+  //     'Quick pitch preparation',
+  //     'Fast decision making'
+  //   ]
+  // },
   // {
   //   id: 'mun',
   //   title: 'MUN (Theme - Board Room)',

@@ -169,7 +169,7 @@ const Sponsorship = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/E-Summit/contact"
+                href="mailto:ecell@iitrpr.ac.in"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-bold rounded-full shadow-lg shadow-blue-500/50 transition-all duration-200"
               >
                 <Handshake size={20} />

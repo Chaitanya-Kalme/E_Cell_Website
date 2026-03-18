@@ -71,8 +71,8 @@ export default function ESummitPage() {
   const scale = useTransform(scrollProgress, [0, 1], [1, 1.15]);
 
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
-
+    // <div className="min-h-screen bg-[#0a0e27]">
+    <div className=" bg-[#0a0e27]">
       {/* Background Image */}
       {/* <motion.div
         style={{ scale }}
@@ -113,16 +113,16 @@ export default function ESummitPage() {
           </motion.div>
 
           {/* Events Grid */}
-          <EventCard events={allEvents} />
+          {/* <EventCard events={allEvents} /> */}
+          <h1 className="text-center font-bold text-4xl text-white z-96 relative">Coming Soon...</h1>
         </div>
       </section>
 
 
       {/* --- STARTUP EXPO SECTION --- */}
-      <section className="relative z-20 py-20 px-4 md:px-8 lg:px-12">
+      {/* <section className="relative z-20 py-20 px-4 md:px-8 lg:px-12">
         <ParticleBackground />
         <div className="max-w-[1600px] mx-auto">
-          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -140,7 +140,6 @@ export default function ESummitPage() {
             </p>
             <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8" />
 
-            {/* Register Your Startup Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -152,10 +151,9 @@ export default function ESummitPage() {
             </motion.button>
           </motion.div>
 
-          {/* Startup Cards Grid */}
           <StartupExpoCard startups={startupExpoData} />
         </div>
-      </section>
+      </section> */}
 
 
 
