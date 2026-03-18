@@ -54,7 +54,7 @@ export default function ESummitPage() {
   const [loading, setLoading] = useState(true);
   const router = useRouter()
 
-  const imageName = 'IIT_Ropar_Main_Gate.png';
+  const imageName = 'https://res.cloudinary.com/doxe1rjaj/image/upload/v1773841713/IIT_Ropar_Main_Gate_mvs8yg.png';
 
 
   useEffect(() => {
@@ -155,7 +155,7 @@ export default function ESummitPage() {
           {/* Hero Section Logo */}
           <div className="flex justify-center mb-10">
             <img
-              src="E-Summit Logo2.png"
+              src="https://res.cloudinary.com/doxe1rjaj/image/upload/v1773841714/E-Summit_Logo2_pljfto.png"
               alt="E-Summit 2026"
               className="h-[80px] w-[350px] sm:h-[125px] sm:w-[500px]"
             />
