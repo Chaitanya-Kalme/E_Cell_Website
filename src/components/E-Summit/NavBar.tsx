@@ -46,7 +46,7 @@ export default function NavBar() {
       >
         <NavigationMenuItem className="flex items-center h-16 ml-4 top-1">
           <Image
-            src="E-Summit Logo2.png"
+            src="/E-Summit Logo2.png"
             alt="E-Summit Logo"
             width={300}
             height={500}

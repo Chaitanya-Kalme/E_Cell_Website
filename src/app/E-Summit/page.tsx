@@ -175,9 +175,9 @@ export default function ESummitPage() {
             className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16 mt-2"
           >
             {[
-              { icon: Calendar, text: "Coming Soon", color: "orange" },
-              { icon: MapPin, text: "Venue: IIT Ropar", color: "purple" },
-              { icon: Users, text: "5000+ Participants", color: "blue" },
+              { icon: Calendar, text: "Coming Soon", color: "white" },
+              { icon: MapPin, text: "Venue: IIT Ropar", color: "white" },
+              { icon: Users, text: "5000+ Participants", color: "white" },
             ].map(({ icon: Icon, text, color }) => (
               <motion.div
                 key={text}
@@ -256,7 +256,7 @@ export default function ESummitPage() {
 
             <p className={`${montserrat.className} text-lg md:text-xl leading-relaxed text-left`}>
               <span className="text-white font-semibold">E-Summit</span> is the
-              <span className="text-purple-300 font-semibold">
+              <span className="text-blue-700 font-semibold">
                 {" "}
                 flagship annual entrepreneurial fest{" "}
               </span>
@@ -266,9 +266,9 @@ export default function ESummitPage() {
               <br />
               <br />
               It fosters{" "}
-              <span className="text-blue-300 font-semibold">innovation</span>,
-              <span className="text-blue-300 font-semibold"> networking</span>, and{" "}
-              <span className="text-blue-300 font-semibold">startup growth</span> through keynote sessions, panel discussions, the Startup Expo,
+              <span className="text-blue-700 font-semibold">innovation</span>,
+              <span className="text-blue-700 font-semibold"> networking</span>, and{" "}
+              <span className="text-blue-700 font-semibold">startup growth</span> through keynote sessions, panel discussions, the Startup Expo,
               Investors Arena, and interactive workshops — connecting students with industry leaders, founders, and investors.
             </p>
           </div>
@@ -297,7 +297,7 @@ export default function ESummitPage() {
 
             <button
               className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-0.5 font-semibold leading-6 mt-7 text-white inline-block"
-              onClick={() => router.push("/E-Summit/events")}
+              onClick={() => router.push("/e-cell/E-Summit/events")}
             >
               <span className="absolute inset-0 overflow-hidden rounded-full">
                 <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

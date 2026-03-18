@@ -109,9 +109,6 @@ export default function ESummitPage() {
                 </button>
               </span>
             </h2>
-            <p className={`text-blue-600 text-lg max-w-4xl mx-auto ${viga.className} relative z-20`}>
-              Explore our diverse range of competitions, workshops, and networking opportunities
-            </p>
             <div className="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" />
           </motion.div>
 
@@ -147,7 +144,7 @@ export default function ESummitPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => router.replace("")}
+              // onClick={() => router.replace("")}
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold rounded-full shadow-lg shadow-orange-500/50 transition-all duration-200"
             >
               <Rocket size={20} />
