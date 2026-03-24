@@ -54,7 +54,7 @@ export default function ESummitPage() {
   const [loading, setLoading] = useState(true);
   const router = useRouter()
 
-  const imageName = 'https://res.cloudinary.com/doxe1rjaj/image/upload/v1773841713/IIT_Ropar_Main_Gate_mvs8yg.png';
+  const imageName = 'https://res.cloudinary.com/doxe1rjaj/image/upload/v1774327559/spiral_image_he2mhi.png';
 
 
   useEffect(() => {
@@ -138,11 +138,13 @@ export default function ESummitPage() {
         className="relative bg-black overflow-x-hidden"
         style={{ minHeight: "100vh" }}
       >
+        <ParticleBackground />
 
         {/* Parallax background image */}
-        <motion.div
-          className="absolute top-0 left-0 w-full h-screen bg-center bg-no-repeat bg-cover pointer-events-none z-5"
-          style={{ backgroundImage: `url(${imageName})` }}
+        <img
+          src={imageName}
+          alt=""
+          className="absolute top-0 left-0 w-full h-screen object-cover object-center pointer-events-none z-10"
         />
 
 
@@ -172,29 +174,22 @@ export default function ESummitPage() {
           </p>
 
           <motion.div
-            className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16 mt-2"
+            className="flex flex-col gap-4 md:gap-6 mb-16 mt-2 w-full items-center font-bold"
           >
             {[
-              { icon: Calendar, text: "Coming Soon", color: "white" },
+              { icon: Calendar, text: "11-12 April 2026", color: "white" },
               { icon: MapPin, text: "Venue: IIT Ropar", color: "white" },
               { icon: Users, text: "5000+ Participants", color: "white" },
             ].map(({ icon: Icon, text, color }) => (
               <motion.div
                 key={text}
-                variants={hoverCard}
-                initial="initial"
-                whileHover="hover"
                 className={`
-                  group flex items-center space-x-3
-                  bg-black/60 backdrop-blur-md
-                  px-5 py-3 rounded-full cursor-default
-                  border border-${color}-400/40
-                  hover:bg-black/80
-                  transition-colors duration-300
-                  ${ibmPlexMono.className}
-                `}
+        group flex items-center space-x-3
+        cursor-default
+        ${ibmPlexMono.className}
+        font-bold
+      `}
               >
-
                 <motion.span
                   variants={hoverIcon}
                   className={`text-${color}-300`}
@@ -202,19 +197,12 @@ export default function ESummitPage() {
                   <Icon size={24} />
                 </motion.span>
 
-
                 <motion.span
                   variants={hoverText}
-                  className={`text-base md:text-lg font-semibold text-${color}-200`}
+                  className={`text-base md:text-xl font-bold text-${color}-200`}
                 >
                   {text}
                 </motion.span>
-
-
-                <span
-                  className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 
-                    blur-xl bg-${color}-500/10 transition-opacity duration-300`}
-                />
               </motion.div>
             ))}
           </motion.div>
@@ -292,8 +280,8 @@ export default function ESummitPage() {
               Meet innovative startups and entrepreneurs from across the country
             </p>
             <div className="text-center justify-center flex justify-items-center">
-              {/* <EventCard events={allEvents.slice(0, 3)} /> */}
-              <h1 className="text-center font-bold text-4xl">Coming Soon...</h1>
+              <EventCard events={allEvents.slice(0, 3)} />
+              {/* <h1 className="text-center font-bold text-4xl">Coming Soon...</h1> */}
             </div>
 
             <button

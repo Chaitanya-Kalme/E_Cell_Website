@@ -1,1885 +1,396 @@
 [
-    {
-        "companyName": "Macmillan Education India",
-        "emailList": [
-            "rahul.dixit@macmillaneducation.com",
-            "prabhat.jha@macmillaneducation.com",
-            "suruchi.sharan@macmillaneducation.com",
-            "gaurav.chaturvedi@macmillaneducation.com",
-            "somanjan.bandyopadhyay@macmillaneducation.com",
-            "shreesh.garg@macmillaneducation.com",
-            "rai@macmillaneducation.in",
-            "ashes.saha@macmillaneducation.in",
-            "baidya@macmillaneducation.in",
-            "garima.taneja@macmillaneducation.com",
-            "divya.agarwal@macmillaneducation.com",
-            "anisha.chettri@macmillaneducation.in",
-            "vincy.victor@macmillaneducation.com"
-        ]
-    },
-    {
-        "companyName": "Nirma University",
-        "emailList": [
-            "hitendra.purohit@nirmauni.ac.in",
-            "rashmika.shah@nirmauni.ac.in",
-            "rajesh.bhandari@nirmauni.ac.in",
-            "sanjay.patel@nirmauni.ac.in",
-            "18bdc012@nirmauni.ac.in"
-        ]
-    },
-    {
-        "companyName": "Center for Creative Leadership",
-        "emailList": [
-            "narangp@ccl.org",
-            "rautr@ccl.org",
-            "sudanv@ccl.org",
-            "guravn@ccl.org",
-            "chhabram@ccl.org",
-            "tiwarina@ccl.org",
-            "sudanv@ccl.org",
-            "mehtas@ccl.org",
-            "tiwarin@ccl.org",
-            "dewanih@ccl.org",
-            "kumarsu@ccl.org",
-            "vasudevanm@ccl.org",
-            "kumars@ccl.org"
-        ]
-    },
-    {
-        "companyName": "Royal Caribbean Group",
-        "emailList": [
-            "afernandes@rccl.com",
-            "No email",
-            "jsilva@rccl.com",
-            "ameyashshirur@rccl.com",
-            "mrana@rccl.com",
-            "sshaikh@rccl.com",
-            "No email",
-            "ajuyal@rccl.com",
-            "prao@rccl.com",
-            "jdsouza@rccl.com",
-            "sabraham@rccl.com",
-            "spinto@royal.com"
-        ]
-    },
-    {
-        "companyName": "Prestige Constructions",
-        "emailList": [
-            "mansoor.mir@prestigeconstructions.com",
-            "manjunath.r@prestigeconstructions.co.in",
-            "waseem.k@prestigeconstructions.com",
-            "anilkumar@prestigeconstructions.com",
-            "suresh.s@prestigeconstructions.com",
-            "savitha.pawar@prestigeconstructions.com",
-            "kichu.poulose@prestigeconstructions.com",
-            "sarthak.rastogi@prestigeconstructions.com",
-            "deepthi.najana@prestigeconstructions.com",
-            "anvita.mumbarkar@prestigeconstructions.com",
-            "aman.soni@prestigeconstructions.com",
-            "shiva.kumar@prestigeconstructions.com",
-            "suresh.s@prestigeconstructions.com",
-            "satywik.chakraborty@prestigeconstructions.com",
-            "sangeetha.vm@prestigeconstructions.com",
-            "shakher.saini@prestigeconstructions.com",
-            "soumyadip.paul@prestigeconstructions.com",
-            "nitin.gajre@prestigeconstructions.com",
-            "srinivasa.murthy@prestigeconstructions.com",
-            "janvi.shah@prestigeconstructions.com"
-        ]
-    },
-    {
-        "companyName": "Camlin Kokuyo",
-        "emailList": [
-            "akshata.sawant@kokuyocamlin.com",
-            "pankaj.singh@kokuyocamlin.com",
-            "farzeen.kochhar@kokuyocamlin.com",
-            "manish.jain@kokuyocamlin.com",
-            "vijay.sundram@kokuyocamlin.com",
-            "cpdeshmukh@kokuyocamlin.com",
-            "saurabh.malvankar@kokuyocamlin.com",
-            "rupali.thakur@kokuyocamlin.com",
-            "santosh.kale@kokuyocamlin.com",
-            "sandesh.acharekar@kokuyocamlin.com",
-            "satish.veerappa@kokuyocamlin.com",
-            "nilangshu.bhattacharya@kokuyocamlin.com",
-            "ashwin.agnihotri@kokuyocamlin.com",
-            "chahat.surana@kokuyocamlin.com",
-            "sdharth.batra@kokuyocamlin.com",
-            "ritik.saxena@kokuyocamlin.com",
-            "vinod.mehra@kokuyocamlin.com",
-            "gowtham.kumar@kokuyocamlin.com",
-            "rajesh.kumar@kokuyocamlin.com",
-            "s.bhalerao@kokuyocamlin.com"
-        ]
-    },
-    {
-        "companyName": "Flair Pens",
-        "emailList": [
-            "santosh@flairpens.com",
-            "kumarsingh@flairpens.com",
-            "yamini@flairpens.com",
-            "amresh-kumar@flairpens.com",
-            "sales@flairpens.com",
-            "pallav.gaur@flairpens.com",
-            "alok@flairpens.com",
-            "exports@flairpens.com",
-            "anup@flairpens.com",
-            "anandshetty@flairpens.com",
-            "keny@flairpens.com",
-            "kolkatta-gautam@flairpens.com",
-            "vijay@flairpens.com",
-            "kannan@flairpens.com",
-            "visakumar@flairpens.com",
-            "ambhore@flairpens.com",
-            "shyam@flairpens.com",
-            "vineet@flairpens.com",
-            "rakesh@flairpens.com",
-            "kaushik@flairpens.com"
-        ]
-    },
-    {
-        "companyName": "Faber-Castell India",
-        "emailList": [
-            "arpita.kedia@sterlite.com",
-            "aruna.ghanghoria@sterlite.com",
-            "k.arun@sterlite.com",
-            "pritish.dash@sterlitepower.in",
-            "saurabh.sinha@sterlite.com",
-            "narendra.dhal@sterlite.com",
-            "himani.gaur@sterlitepower.in",
-            "priyanka.buda@sterlitepower.com",
-            "rasika.joshi@sterlite.com",
-            "mukesh.kirodiwal@sterlite.com",
-            "amrut.patil1@sterlite.com",
-            "swati.verma@sterlitepower.in",
-            "dhananjay.parashar@sterlite.com",
-            "ritika.c@sterlitepower.com",
-            "shivani.joshi1@sterlite.com",
-            "raghvendra.pande@sterlite.com",
-            "monali.chaudhari@sterlite.com"
-        ]
-    },
-    {
-        "companyName": "Maped",
-        "emailList": [
-            "pierre.luchini@maped.fr",
-            "marie.zagaglia@maped.fr",
-            "ikotllar@maped.com.ar",
-            "julie.ratte@maped.ca",
-            "afournier@mapedsilco.com",
-            "laurent.vadon@maped.fr",
-            "galexander@maped-helixusa.com",
-            "claudia.joo@maped.pe",
-            "miblancas@mapedsilco.com",
-            "aurelie.mudry@maped.fr",
-            "jean-christophe.letrillard@maped.com",
-            "juliana.patudo@maped.com.br",
-            "celine.wacheux@maped.fr",
-            "virginie.queyrel@maped.fr",
-            "ramedina@mapedsilco.com",
-            "charlotte.douge@maped.fr",
-            "chloe.bertolini@maped.com"
-        ]
-    },
-    {
-        "companyName": "Sakura",
-        "emailList": [
-            "sasirekha_n@pegatroncorp.com",
-            "vignesh_s@pegatroncorp.com",
-            "vinothini_vijayendran@pegatroncorp.com",
-            "reena_b@pegatroncorp.com",
-            "revathi_pasupathi@pegatroncorp.com",
-            "perumal_raman@pegatroncorp.com",
-            "naveen.jayachandran@pegatroncorp.com",
-            "geetha_kannan@pegatroncorp.com",
-            "lakshmi_rajendran@pegatroncorp.com",
-            "jovitha_s@pegatroncorp.com",
-            "kumaraguru.s@pegatroncorp.com"
-        ]
-    },
-    {
-        "companyName": "Doms India",
-        "emailList": [
-            "nitin.bhandari@domsindia.com",
-            "roy@domsindia.com",
-            "rakesh.dixit@domsindia.com",
-            "aishwarya.shinde@domsindia.com",
-            "ajay@domsindia.com",
-            "vinay.sharma@domsindia.com",
-            "vijay@domsindia.com",
-            "santosh@domsindia.com",
-            "ronak.gangar@domsindia.com",
-            "sumit@domsindia.com",
-            "devang@domsindia.com",
-            "dinesh@domsindia.com",
-            "darshanshukla@domsindia.com",
-            "hiren-bhagat@domsindia.com",
-            "saloni.gupta@domsindia.com",
-            "suraj@domsindia.com",
-            "yusuf.khan@domsindia.com",
-            "hema.nair@domsindia.com",
-            "saumitra.prasad@modibeautyproducts.com",
-            "rahul@domsindia.com"
-        ]
-    },
-    {
-        "companyName": "Cello Write",
-        "emailList": [
-            "mahesh.chauhan@celloworld.com",
-            "sathish.kumar@celloworld.com",
-            "suveg.sarvankar@celloworld.com",
-            "nikita.rathod@celloworld.com",
-            "rameshwar.upwanshi@celloworld.com",
-            "dharmendra.kumar@celloworld.com",
-            "jayant.more@celloworld.com",
-            "mukesh.cello@celloworld.com",
-            "sameer.nagwanshi@celloworld.com",
-            "sandeep.solanki@celloworld.com",
-            "diwakar.kumar@celloworld.com",
-            "mohit.agarwal@celloworld.com",
-            "ninad.pathak@celloworld.com",
-            "dsathish.kumar@celloworld.com",
-            "yogesh.tupe@celloworld.com",
-            "No email",
-            "No email",
-            "mukesh.jha@celloworld.com",
-            "amandeep.sharma@celloworld.com",
-            "poorna.prasad@celloworld.com"
-        ]
-    },
-    {
-        "companyName": "Navneet",
-        "emailList": [
-            "shriha.kadam@navneet.com",
-            "navinsolanki@navneet.com",
-            "alekhya.naini@navneet.com",
-            "meena.gohil@navneet.com",
-            "ruchitatapase@navneettoptech.com",
-            "anurag.khetan@navneet.com",
-            "pranavbhatt@navneet.com",
-            "saheb.jha@navneet.com",
-            "urvipandya@navneet.com",
-            "santosh.pawar@navneet.com",
-            "bhumikamodi@navneet.com",
-            "kunal.mandlekar@navneet.com",
-            "rutuja.rajurkar@navneet.com",
-            "kunal.kadam@navneet.com",
-            "siddhartha.krishna@navneet.com",
-            "satyawan.gawde@navneet.com",
-            "aishwariya.patil@navneet.com",
-            "neha.jangid@navneet.com",
-            "roshni.vishwakarma@navneet.com",
-            "ag@navneet.com"
-        ]
-    },
-    {
-        "companyName": "Bharat Versity",
-        "emailList": []
-    },
-    {
-        "companyName": "Masters Union",
-        "emailList": [
-            "aman.malhotra@mastersunion.org",
-            "vikas.singha@mastersunion.org",
-            "vineet.kauran@mastersunion.org",
-            "pratham.jain@mastersunion.org",
-            "ananya.verma@mastersunion.org",
-            "gurji@mastersunion.org",
-            "sakshi.sunil@mastersunion.org",
-            "hitakshi@mastersunion.org",
-            "manpreet.kaur@mastersunion.org",
-            "swathy.sivram@mastersunion.org",
-            "abhinav.goyal@mastersunion.org",
-            "rakshit.malhotra@mastersunion.org",
-            "shilpa.sharma@mastersunion.org",
-            "keith.dsouza@mastersunion.org",
-            "lavanya.pant@mastersunion.org",
-            "namita@mastersunion.org",
-            "swati.punia@mastersunion.org",
-            "shruti.prakash@mastersunion.org",
-            "krishan.agarwal@mastersunion.org",
-            "manik.malhotra@mastersunion.org",
-            "rishabh.puri@mastersunion.org",
-            "shivani.gupta@mastersunion.org",
-            "mannat.khurana@mastersunion.org",
-            "saket.ranjan@mastersunion.org",
-            "sanchit.gupta@mastersunion.org"
-        ]
-    },
-    {
-        "companyName": "Camp K12",
-        "emailList": []
-    },
-    {
-        "companyName": "Coding Ninjas",
-        "emailList": [
-            "geetika.tiwari@codingninjas.in",
-            "neha.kaushal@codingninjas.com",
-            "pinku.pandey@codingninjas.com",
-            "azhaan.yezdani@codingninjas.com",
-            "khushi.yadav@codingninjas.com",
-            "prem.sagar@codingninjas.com",
-            "ateesh.kropha@codingninjas.com",
-            "pooja.rathore@codingninjas.com",
-            "pooja.chawla@codingninjas.com",
-            "archit.kala@codingninjas.com",
-            "palak.takkar@codingninjas.com",
-            "priyanka.singh@codingninjas.com",
-            "karan.khanna@codingninjas.com",
-            "aviral.dadlani@codingninjas.com",
-            "arsalan.wani@codingninjas.com",
-            "arushi.choudhary@codingninjas.com",
-            "diksha.dhiman@codingninjas.com",
-            "deepanshu.arora@codingninjas.com",
-            "umang.mishra@codingninjas.com",
-            "varun.verma@codingninjas.in",
-            "shivani.gaur@codingninjas.com",
-            "muskan.vashishtha@codingninjas.com",
-            "shashank.sharma@codingninjas.com",
-            "yashasvi.mittal@codingninjas.com",
-            "shashank.yadav@codingninjas.com",
-            "abhishek.shukla@codingninjas.com",
-            "ankush.goyal@codingninjas.com",
-            "ankush.goyal90@gmail.com",
-            "jangam.shivani@codingninjas.com",
-            "vivek@codingninjas.com"
-        ]
-    },
-    {
-        "companyName": "Emeritus",
-        "emailList": [
-            "riya.patwa@emeritus.org",
-            "akshay.jadhav@emeritus.org",
-            "neil.dcruz@emeritus.org",
-            "sidhant.kamra@emeritus.org",
-            "vinayak.prabhu@emeritus.org",
-            "shankar.iyer@emeritus.org",
-            "payal.thakker@emeritus.org",
-            "saloni.dubey@emeritus.org",
-            "aparajita.tiwari@emeritus.org",
-            "akash.gupta@emeritus.org",
-            "shruti.shrivastava@emeritus.org",
-            "peyush.kakkar@emeritus.org",
-            "sapna.sawant@emeritus.org",
-            "zaid.sayed@emeritus.org",
-            "hitesh.goel@emeritus.org",
-            "palak.jain@emeritus.org",
-            "madhav.ahuja@emeritus.org",
-            "debamita.nag@emeritus.org",
-            "shikha.gupta@emeritus.org",
-            "himanshu.chand@emeritus.org",
-            "shruti.jha@emeritus.org",
-            "karthick.r@emeritus.org",
-            "reeya.bose@emeritus.org",
-            "vibhor.bhimsariya@emeritus.org",
-            "chetna.kholia@emeritus.org",
-            "deep.kakkad@info.emeritus.org",
-            "saurabh.thakker@emeritus.org",
-            "sonam.chandni@emeritus.org",
-            "chetna.mahakalkar@emeritus.org",
-            "kajal.dhage@emeritus.org",
-            "akanksha.bhatia@emeritus.org",
-            "archisha.singh@emeritus.org",
-            "sanika.tendulkar@emeritus.org",
-            "shantanu.pund@emeritus.org",
-            "shubham.bansal@emeritus.org"
-        ]
-    },
-    {
-        "companyName": "Extramarks",
-        "emailList": [
-            "divya.kumari2@extramarks.com",
-            "prerna.sodhi@extramarks.com",
-            "subham.biswas@extramarks.com",
-            "nisha.sharma@extramarks.com",
-            "nikita.singh@extramarks.com",
-            "sherapamsa@extramarks.com",
-            "hema.chandwani@extramarks.com",
-            "revathy.raghu@extramarks.com",
-            "sakshi.jha@extramarks.com",
-            "amreen.fatima@extramarks.com",
-            "payal.kumari@extramarks.com",
-            "zahid.husain@extramarks.com",
-            "extramarks.ltd@extramarks.com",
-            "s_mishra@extramarks.com",
-            "sundrams@extramarks.com",
-            "vaibhav.roy@extramarks.com",
-            "sakshi.miglani@extramarks.com",
-            "priyanka.hooda@extramarks.com",
-            "shwetank.mishra@extramarks.com",
-            "rama.laxmi@extramarks.com",
-            "geetika.rajput@extramarks.com",
-            "komal.mishra@extramarks.com",
-            "ankita@extramarks.com",
-            "deepinder.kaur@extramarks.com",
-            "srijan.tiwari@extramarks.com"
-        ]
-    },
-    {
-        "companyName": "IDP Education",
-        "emailList": [
-            "swapnil.bawane@idp.com",
-            "rajat.rajwansh@idp.com",
-            "chahat.bhardwaj@idp.com",
-            "sourabh.b@idp.com",
-            "shyenjeet.singh@idp.com",
-            "naina.dwivedi@idp.com",
-            "shivangi.rastogi@idp.com",
-            "gaurav.punyani@idp.com",
-            "dinesh.murugesan@idp.com",
-            "shubham.singh@idp.com",
-            "rohit.chauhan@idp.com",
-            "dhiraj.bhagat@idp.com",
-            "abhishek.anand@idp.com",
-            "shweta.nain@idp.com",
-            "pratheep.rathinam@idp.com",
-            "ashish.gupta@idp.com",
-            "mohit.desai@idp.com",
-            "akanksha.pandit@idp.com",
-            "shubhamv.kumar@idp.com",
-            "ambika.sharma@idp.com",
-            "neha.gupta@idp.com",
-            "vishwash.gaur@idp.com",
-            "ankur.khanna@idp.com",
-            "pranitha.palani@idp.com",
-            "kriti.singhal@idp.com",
-            "ajmal.ilyas@idp.com",
-            "jebish.s@idp.com",
-            "karandeep.rai@idp.com",
-            "shijo.yesudhas@idp-connect.com",
-            "gayathri.veera@idp.com",
-            "mohit.bisht@idp.com",
-            "sanjib.barman@idp.com",
-            "monika.gupta@idp.com",
-            "harika.v@idp.com"
-        ]
-    },
-    {
-        "companyName": "Imarticus Learning",
-        "emailList": [
-            "priya.dubey@imarticus.com",
-            "ankit.khandelwal@imarticus.com",
-            "akshay.dudhe@imarticus.com",
-            "utkarsh.soni@imarticus.com",
-            "hitesh.c@imarticus.com",
-            "valonia.pereira@imarticus.com",
-            "zaina.deshpande@imarticus.com",
-            "laxmi.kori@imarticus.com",
-            "niraj.singh@imarticus.com",
-            "akbar.shikoh@imarticus.com",
-            "chinmay.sawant@imarticus.com",
-            "reena.pujari@imarticus.com",
-            "pallavi.ratanpal@imarticus.com",
-            "sachin.v@imarticus.com",
-            "chirag.solanki@imarticus.com",
-            "rahul.selvam@imarticus.com",
-            "harshit.pawar@imarticus.com",
-            "shikha.chaubey@imarticus.com",
-            "rohit.raghuvanshi@imarticus.com",
-            "muthukumar.r@imarticus.com",
-            "amarjeet.kumar@imarticus.com",
-            "urvashi.pandey@imarticus.com",
-            "raj.goyal@imarticus.com",
-            "sanchaita.ghosh@imarticus.com",
-            "vinay.chidurala@imarticus.com"
-        ]
-    },
-    {
-        "companyName": "Scaler",
-        "emailList": [
-            "dhananjay.sharma@scaler.com",
-            "prashanth.j@scaler.com",
-            "mohammeed.afeef@scaler.com",
-            "ritika.sipani@scaler.com",
-            "snehas.sindhe@scaler.com",
-            "nupur.mishra@scaler.com",
-            "tanisha@scaler.com",
-            "chitra.chetri@scaler.com",
-            "abhishek.kaul@scaler.com",
-            "keshav.grover@scaler.com",
-            "gauri.tripathi@scaler.com",
-            "roshini@scaler.com",
-            "pratik.sejpal@scaler.com",
-            "venkatesh.n@scaler.com",
-            "syed.imroz@scaler.com",
-            "mihil.dikshit@scaler.com",
-            "soumya.pansari@scaler.com",
-            "anmol.p@scaler.com",
-            "aman.singh@scaler.com",
-            "rayyan.khan@scaler.com",
-            "ishit.dhurve@scaler.com",
-            "aravind.vinod@scaler.com",
-            "surarchi.kumar@scaler.com",
-            "sidhant.sharma@scaler.com",
-            "ibrahim.usmani@scaler.com",
-            "ashirbad.panda@scaler.com",
-            "payal.singh@scaler.com",
-            "emmanuel.costa@scaler.com",
-            "shreya.m@scaler.com",
-            "ritika.wahi@scaler.com",
-            "sourav@scaler.com",
-            "aastha.shringi@scaler.com",
-            "soham.mukherjee@scaler.com",
-            "srujan.bharadwaj@scaler.com",
-            "manoj.naidu@scaler.com",
-            "priya.sahu@scaler.com",
-            "prageeth.acharya@scaler.com",
-            "sagar.devadiga@scaler.com",
-            "shubham.bankar@scaler.com",
-            "mehak.bhagat@scaler.com",
-            "apurva.mishra@scaler.com",
-            "aadri.vishal@scaler.com",
-            "anmol.banka@scaler.com",
-            "riya.sarkar@scaler.com",
-            "piyal.jain@scaler.com",
-            "aditi.rai@scaler.com",
-            "julash.thangavel@scaler.com",
-            "shashvi.shrivastava@scaler.com",
-            "srinath@scaler.com"
-        ]
-    },
-    {
-        "companyName": "Tutorials Point",
-        "emailList": []
-    },
-    {
-        "companyName": "Udemy",
-        "emailList": [
-            "marshalene.sibloon@udemy.com",
-            "sachit.bhargava@udemy.com",
-            "srinivas.gollakota@udemy.com",
-            "gopi@rgopinath.com",
-            "neha.thard@udemy.com",
-            "hariprasath.venkatesan@udemy.com",
-            "roshan.nair@udemy.com",
-            "kiran.kalpande@udemy.com",
-            "anuja.raut@udemy.com",
-            "vivek.sankar@udemy.com",
-            "shubham.chakraborty@udemy.com",
-            "faraaz.farshori@udemy.com",
-            "sandeep.hegde@udemy.com",
-            "azeez.zubaria@udemy.com",
-            "siddhi.bhutani@udemy.com",
-            "mohammad.pakzad@udemy.com",
-            "bharat.bansal@udemy.com",
-            "avinash.tk@udemy.com",
-            "anushka.dey@udemy.com",
-            "ranga@in28minutes.com",
-            "novishwar.dadwal@udemy.com",
-            "shaibalik.pal@udemy.com",
-            "abhishek.raj@udemy.com",
-            "deepanjana.ghosh@udemy.com",
-            "ravinshu.saneja@udemy.com",
-            "vinay.pradhan@udemy.com",
-            "rajesh.ramachandran@udemy.com",
-            "lawanya.ramachandran@udemy.com",
-            "shradha.bhosale@udemy.com",
-            "ravi.rahul@udemy.com",
-            "kritika@metadome.ai",
-            "shalu.gautam@udemy.com",
-            "raka.dalal@udemy.com",
-            "aditya.bucha@udemy.com"
-        ]
-    },
-    {
-        "companyName": "Upgrad",
-        "emailList": [
-            "udit.dalakoti@upgrad.com",
-            "smruti.mahadeshwar@upgrad.com",
-            "amit.mehta@upgrad.com",
-            "mahima.tripathi@upgrad.com",
-            "snigdha.singh@upgrad.com",
-            "akriti.srivastava@upgrad.com",
-            "ruby1.singh@upgrad.com",
-            "akanksha.rana@upgrad.com",
-            "aman.chauhan@upgrad.com",
-            "aakansha.gupta@upgrad.com",
-            "manik.singla@upgrad.com",
-            "arvind.srinivas@upgrad.com",
-            "gaurav2.singh@upgrad.com",
-            "sakshi2.sharma@upgrad.com",
-            "saloni1.saxena@upgrad.com",
-            "akanksha.singh@upgrad.com",
-            "sushma.balachandran@upgrad.com",
-            "rushikesh.joshi@upgrad.com",
-            "monika.saxena@upgrad.com",
-            "vini.nekadi@upgrad.com",
-            "mansi.gupta@upgrad.com",
-            "priya1.singh@upgrad.com",
-            "ankit.thakur@upgrad.com",
-            "priya.dass@upgrad.com",
-            "somesh.jayaswal@upgrad.com",
-            "shubham.wattamwar@upgrad.com",
-            "ankit2.gupta@upgrad.com",
-            "jyoti.kothekar@upgrad.com",
-            "rashmi.singh@upgrad.com",
-            "sagar.kulkarni@upgrad.com",
-            "lokendra1.singh@upgrad.com",
-            "varsha.sahu@upgrad.com",
-            "tripta.bhatia@upgrad.com",
-            "subhash.bose@bit.ly",
-            "abhik.saha@upgrad.com",
-            "kishan.kanodia@upgrad.com",
-            "christabel.singh@upgrad.com",
-            "saiganu.vedula@upgrad.com",
-            "foram.shah@upgrad.com",
-            "apoorva.rai@upgrad.com",
-            "pragya.rai@upgrad.com",
-            "vikram.deshpande@upgrad.com",
-            "vandana.kaushik@upgrad.com",
-            "harshita.tewari@upgrad.com",
-            "ankit.ravankar@upgrad.com"
-        ]
-    },
-    {
-        "companyName": "Coursera",
-        "emailList": [
-            "pmenezes@coursera.org",
-            "zlian@coursera.org",
-            "gsmith@coursera.org",
-            "abasra@coursera.org",
-            "ncherradi@coursera.org",
-            "jkumar@coursera.org",
-            "supatel@coursera.org",
-            "syadav@coursera.org",
-            "vhui@coursera.org",
-            "nphares@coursera.org",
-            "sales@coursera.org",
-            "lmolina@coursera.org",
-            "rbhardwaj@coursera.org",
-            "mbove@coursera.org",
-            "sbush@coursera.org",
-            "mamato@coursera.org",
-            "abatra@coursera.org",
-            "mmbella@coursera.org",
-            "sshettyc@coursera.org",
-            "aavendano@coursera.org",
-            "shgupta@coursera.org",
-            "ccollado@coursera.org",
-            "enierenberg@coursera.org",
-            "kgupta@coursera.org",
-            "sdasgupta@coursera.org",
-            "spatil@coursera.org",
-            "ssaurav@coursera.org",
-            "vnguyen@coursera.org",
-            "schopra@coursera.org",
-            "dmangan@coursera.org",
-            "rmahato@coursera.org",
-            "auchil@coursera.org",
-            "anicol@coursera.org",
-            "lesquivel@coursera.org"
-        ]
-    },
-    {
-        "companyName": "BYJU\u2019S",
-        "emailList": [
-            "shubham.singh79@byjus.com",
-            "mohammad.ikram@byjus.com",
-            "mansi.gupta7@byjus.com",
-            "sunny.gogri@byjus.com",
-            "aman.desai@byjus.com",
-            "No email",
-            "jeevan.c@byjus.com",
-            "nitu.kumari2@byjus.com",
-            "kuldeep.pradhan@byjus.com",
-            "ajay.d@byjus.com",
-            "aashutosh.dubey@byjus.com",
-            "vedant.a@byjus.com",
-            "krutik.rajput@byjus.com",
-            "aditya.s@byjus.com",
-            "akash.baghel5@byjus.com",
-            "gajendra.raghuwanshi@byjus.com",
-            "priyanshi.parihar@byjus.com",
-            "amrita.biswas1@byjus.com",
-            "No email",
-            "nadeem.khan@byjus.com",
-            "ajay.kumar1@byjus.com",
-            "harshit.dhanwani@byjus.com",
-            "saurabh.parihar@byjus.com",
-            "nimesh.yadav@byjus.com",
-            "mahendra.n@byjus.com",
-            "mayank.yadav@byjus.com",
-            "viraj.dalvi@byjus.com",
-            "vansh.birla@byjus.com",
-            "ayush.tripathi2@byjus.com",
-            "gayatri.mehar@byjus.com",
-            "adit.rajan@byjus.com",
-            "karan.pamnani@byjus.com",
-            "nimish.namdeo@byjus.com",
-            "akanksha.sinha@byjus.com",
-            "ashutosh.dixit@byjus.com",
-            "kalyani.r@byjus.com",
-            "kumar.rohit@byjus.com",
-            "nisha.chauhan@byjus.com",
-            "sweta.saha@byjus.com"
-        ]
-    },
-    {
-        "companyName": "Atal Innovation Mission",
-        "emailList": [
-            "Not Found"
-        ]
-    },
-    {
-        "companyName": "PW School of Partners",
-        "emailList": []
-    },
-    {
-        "companyName": "Kotak School of Sustainability",
-        "emailList": []
-    },
-    {
-        "companyName": "Navneet Education",
-        "emailList": [
-            "satyawan.gawde@navneet.com",
-            "natarajan@navneet.com",
-            "alekhya.naini@navneet.com",
-            "bhumikamodi@navneet.com",
-            "aishwariya.patil@navneet.com",
-            "bhavesh.savla@navneet.com",
-            "navinsolanki@navneet.com",
-            "urvipandya@navneet.com",
-            "shriha.kadam@navneet.com",
-            "rutuja.rajurkar@navneet.com",
-            "siddhi.kandalgaonkar@navneet.com",
-            "kunal.kadam@navneet.com",
-            "nilamgupta@navneet.com",
-            "pranavbhatt@navneet.com",
-            "kunal.mandlekar@navneet.com",
-            "siddhartha.krishna@navneet.com",
-            "neha.jangid@navneet.com",
-            "anurag.khetan@navneet.com",
-            "saheb.jha@navneet.com",
-            "santosh.pawar@navneet.com",
-            "roshni.vishwakarma@navneet.com",
-            "sachin.chauhan@navneet.com",
-            "meena.gohil@navneet.com",
-            "anil.gala@navneet.com",
-            "shivaji.dhane@navneet.com"
-        ]
-    },
-    {
-        "companyName": "Penguin Random House India",
-        "emailList": [
-            "kwahi@penguinrandomhouse.in",
-            "mgoyal@penguinrandomhouse.in",
-            "nkhandelwal@penguinrandomhouse.in",
-            "alkesh.biswal@in.penguingroup.com",
-            "rkhanna@penguinrandomhouse.in",
-            "averma@penguinrandomhouse.in",
-            "mshetty@penguinrandomhouse.in",
-            "ssingh@penguinrandomhouse.in",
-            "psarkar@penguinrandomhouse.in",
-            "msatti@penguinrandomhouse.in",
-            "ibhattacharya@penguinrandomhouse.in",
-            "skumar4@penguinrandomhouse.in"
-        ]
-    },
-    {
-        "companyName": "Springer Nature",
-        "emailList": [
-            "priyanka.sapkale@springernature.com",
-            "nishi.mandloi@springernature.com",
-            "ritesh.guram@springernature.com",
-            "sonali.dhaka@springernature.com",
-            "santosh.shelke@springernature.com",
-            "siddhi.badade@springernature.com",
-            "bhargav.rajandekar@springernature.com",
-            "gifty.muku@springernature.com",
-            "chaitali.kundlik@springernature.com",
-            "ashvinder.tikoo@springernature.com"
-        ]
-    },
-    {
-        "companyName": "Elsevier",
-        "emailList": [
-            "r.castelino@elsevier.com",
-            "priyanka.jain@elsevier.com",
-            "v.umrankar@elsevier.com",
-            "a.de@elsevier.com",
-            "m.malhotra@elsevier.com",
-            "d.anand@elsevier.com",
-            "a.raja@elsevier.com",
-            "r.tripathi@elsevier.com",
-            "u.taneja@elsevier.com",
-            "a.arya@elsevier.com",
-            "ra.kumar@elsevier.com",
-            "a.patil@elsevier.com",
-            "vipin.mihani@elsevier.com",
-            "j.k@elsevier.com",
-            "s.yuvanjaline@elsevier.com",
-            "m.v@elsevier.com",
-            "s.warrier@elsevier.com",
-            "c.vaz@elsevier.com",
-            "shobhit.jain@elsevier.com",
-            "r.anand@elsevier.com",
-            "n.yadunandan@elsevier.com",
-            "No email",
-            "a.tripathi@elsevier.com",
-            "as.kumar@elsevier.com",
-            "m.shah@elsevier.com"
-        ]
-    },
-    {
-        "companyName": "Toppr",
-        "emailList": [
-            "deepanshu.dashore@toppr.in",
-            "deepak.chouhan@toppr.com",
-            "ashish.chandel@toppr.com",
-            "saurabh.chourasia@toppr.com",
-            "rohit.s@toppr.com",
-            "shikha.shrivastava@toppr.com",
-            "er.mishra@toppr.com",
-            "sureshkumar@toppr.com",
-            "divyendu.g@toppr.com",
-            "shaik.rahiman@toppr.com",
-            "supreet.kaur@toppr.com",
-            "sakshi.r@toppr.com",
-            "pratiksha.p@toppr.com",
-            "amiyakumar.samal@toppr.com",
-            "barkha.agarwal@toppr.com",
-            "sejal.sekar@toppr.com",
-            "munmun.bhattacharyya@toppr.com",
-            "payal.banerjee@toppr.com",
-            "ashok.ks@toppr.com",
-            "keith.soans@toppr.com",
-            "tanvi.acharya@toppr.com",
-            "ngupta@toppr.com"
-        ]
-    },
-    {
-        "companyName": "Doubtnut",
-        "emailList": []
-    },
-    {
-        "companyName": "FIITJEE",
-        "emailList": [
-            "shyam.sunder@fiitjee.com",
-            "vikram.bakshi@fiitjee.com",
-            "abinash.jha@fiitjee.com",
-            "anshul.vadnere@fiitjee.com",
-            "vandana@fiitjee.com",
-            "shivcharan@fiitjee.com",
-            "dheerendra.chandola@fiitjee.com",
-            "prevesh.sharma@fiitjee.com",
-            "kumar.kshitij@fiitjee.com",
-            "arjit.sahni@fiitjee.com",
-            "seerat.dhir@fiitjee.com",
-            "ashish.agarwal@fiitjee.com",
-            "rajiv.singh@fiitjee.com",
-            "prasanthi.p@fiitjee.com",
-            "vipin.kumar@fiitjee.com"
-        ]
-    },
-    {
-        "companyName": "Pearson",
-        "emailList": [
-            "nikita.varma@pearson.com",
-            "skhan@pearson.co.in",
-            "asif.ali@pearson.com",
-            "firdous.khan@pearson.com",
-            "yatender.sharma@pearson.com",
-            "ranita.bhuyan@pearson.com",
-            "brijesh.pandey@pearson.com",
-            "harjas.makkar@pearson.com",
-            "suresh.venugopal1@pearson.com",
-            "suraj.puravankara@pearson.com",
-            "bhoopesh.bhondle@pearson.com",
-            "gaurav.sharma2@pearson.com",
-            "s.purushotham@pearson.com",
-            "alok.kumar@pearson.com",
-            "prakash.kumar@pearson.com",
-            "zaheer.b@pearson.com",
-            "malvika.chandel@pearson.com",
-            "tanu.rohilla@pearson.com",
-            "soumyo.banerjee@pearson.com",
-            "manigandan.anand@pearson.com",
-            "jyoti.malavade@pearson.com",
-            "hemant.chowdhury@pearson.com",
-            "purushotam.b@pearson.com",
-            "rajdip.sen@pearson.com",
-            "prakash.mengar@pearson.com",
-            "gaurav.gagwani@pearson.com",
-            "samrat.mitra1@pearson.com",
-            "prashant.pradhan@pearson.com",
-            "rahul.kumar3@pearson.com",
-            "manisha.jaya@pearson.com",
-            "sahul.hameed@pearson.com",
-            "tripti.rawal@pearson.com",
-            "hemanta.boruah@pearson.com",
-            "thummala.kiran@pearson.com",
-            "kulmeet.ghai@pearson.com",
-            "akash.agrawal@pearson.com",
-            "sachin.gawde@pearson.com",
-            "roshini.c@pearson.com",
-            "pratik.mazumdar@pearson.com",
-            "sturabi@pearson.co.in",
-            "srikant.rath@pearson.com",
-            "gv.venkata@pearson.com"
-        ]
-    },
-    {
-        "companyName": "Allen Career Institute",
-        "emailList": [
-            "Not Found"
-        ]
-    },
-    {
-        "companyName": "edX",
-        "emailList": []
-    },
-    {
-        "companyName": "NIIT Technologies",
-        "emailList": [
-            "rajib.ghosh@niit-tech.com",
-            "shrishti.singh@coforge.com",
-            "sachin.shet@niit.com",
-            "dev.sh@niit.com",
-            "rahul.tomar@coforge.com",
-            "vivekanand.jha@niit.com",
-            "lavi.mukhraiya@niit.com",
-            "sunil.malhotra@niit-tech.com",
-            "hemant.jain@niit-tech.com",
-            "sushil.behera@niit.com"
-        ]
-    },
-    {
-        "companyName": "Masai",
-        "emailList": [
-            "kishan.pandey@masaischool.com",
-            "akshaya.reddy@masaischool.com",
-            "ishita.chanana@masaischool.com",
-            "meghana.sj@masaischool.com",
-            "younus.fardeen@masaischool.com",
-            "rucha.dokhe@masaischool.com",
-            "arpit.dubey@masaischool.com",
-            "mohamed.saad@masaischool.com",
-            "irom.robert@masaischool.com",
-            "pratyusha.sanivarapu@masaischool.com",
-            "shajed.hussain@masaischool.com",
-            "sweta.ojha@masaischool.com",
-            "sumesh.kumar@masaischool.com",
-            "anushka.baisya@masaischool.com",
-            "paras.chaturvedi@masaischool.com"
-        ]
-    },
-    {
-        "companyName": "Newton School",
-        "emailList": [
-            "chaitee.kar@newtonschool.co",
-            "aparna.bhalla@newtonschool.co",
-            "wilson.pereira@newtonschool.co",
-            "chethan.sanjay@newtonschool.co",
-            "shweta.patil@newtonschool.co",
-            "olivia.das@newtonschool.co",
-            "abhinav.chauhan@newtonschool.co",
-            "No email",
-            "deea.banerjee@newtonschool.co"
-        ]
-    },
-    {
-        "companyName": "Board Infinity",
-        "emailList": [
-            "akash.dwivedi@boardinfinity.com",
-            "kanika@boardinfinity.com",
-            "vdubey@boardinfinity.com",
-            "sanika.kadam@boardinfinity.com",
-            "vaishnavi.mudaliar@boardinfinity.com"
-        ]
-    },
-    {
-        "companyName": "Cuemath",
-        "emailList": [
-            "ankit.k@cuemath.com",
-            "shreya.prakash@cuemath.com",
-            "shikha.khatri@cuemath.com",
-            "dipti.tb@cuemath.com",
-            "cs@cuemath.com",
-            "lav.verma@cuemath.com",
-            "ajay.yadav@cuemath.com",
-            "svetlana.eghterafi@cuemath.com",
-            "vishal.rampal@cuemath.com",
-            "anupam.thaman@cuemath.com",
-            "rashin.nath@cuemath.com",
-            "rishabh.sarawgi@cuemath.com",
-            "karan.singla@cuemath.com",
-            "gunjan.lalchandani@cuemath.com",
-            "ashutosh.j@cuemath.com",
-            "swechha.srivastava@cuemath.com"
-        ]
-    },
-    {
-        "companyName": "EduGorilla",
-        "emailList": [
-            "shobhitdixit@edugorilla.org",
-            "shivendramishra@edugorilla.org",
-            "ankit.verma@edugorilla.org",
-            "ankitsingh@edugorilla.com",
-            "sonal.kesarwani@edugorilla.org",
-            "ritha.shukla@edugorilla.org",
-            "garima.singh@edugorilla.org",
-            "ayushi@edugorilla.com",
-            "vipul@edugorilla.org",
-            "yusuf.zafar@edugorilla.org",
-            "tanishkagupta@edugorilla.org",
-            "sparsh.sethi@edugorilla.com",
-            "shireen@edugorilla.org",
-            "shreyatiwari@edugorilla.org",
-            "tanmay.omar@edugorilla.org",
-            "simran.siddiqui@edugorilla.org",
-            "preetibhatia@edugorilla.org",
-            "om.tiwari@edugorilla.org"
-        ]
-    },
-    {
-        "companyName": "Oliveboard",
-        "emailList": [
-            "manju.dahiya@oliveboard.in",
-            "prashant@oliveboard.in",
-            "dikshant.joshi@oliveboard.in",
-            "hareesh.amjuri@oliveboard.in",
-            "chinmaya.mallick@oliveboard.in",
-            "manoj.s@oliveboard.in",
-            "shashikant.saini@oliveboard.in",
-            "ariba.khan@oliveboard.in",
-            "iffat.aijaz@oliveboard.in",
-            "leena.lal@oliveboard.in",
-            "abhishek.verma@oliveboard.in"
-        ]
-    },
-    {
-        "companyName": "CollegeDekho",
-        "emailList": [
-            "anjali.dwivedi@collegedekho.com",
-            "tejpal.singh@collegedekho.com",
-            "jatin.upadhyay@collegedekho.com",
-            "pavithra.a@collegedekho.com",
-            "sumeet.nausalya@collegedekho.com",
-            "nalini.vatsa@collegedekho.com",
-            "akash.bhagat@collegedekho.com",
-            "isha.mahajan@collegedekho.com",
-            "aman.agarwal1@collegedekho.com",
-            "gautam.yadav@collegedekho.com",
-            "parul.vaidya@collegedekho.com",
-            "parli.jain@collegedekho.com",
-            "sahil.qureshi@collegedekho.com",
-            "priyesh.kumar@collegedekho.com",
-            "vibhuti.kaushik@collegedekho.com",
-            "komal.dhawan@collegedekho.com",
-            "kavita.azad@collegedekho.com",
-            "rohit.kangra@collegedekho.com",
-            "parag.sharma@collegedekho.com",
-            "ananya.pandey@collegedekho.com",
-            "abhinav.upadhyay@collegedekho.com"
-        ]
-    },
-    {
-        "companyName": "StudyIQ",
-        "emailList": [
-            "nadeem@studyiq.com",
-            "sahil.yadav@studyiq.com",
-            "jitendra.singh@studyiq.com",
-            "dinesh.murthy@studyiq.com"
-        ]
-    },
-    {
-        "companyName": "Yocket",
-        "emailList": [
-            "shalvi.doshi@yocket.com",
-            "minal.jaiswal@yocket.com",
-            "joel.dsouza@yocket.com",
-            "mohit.sharma@yocket.com",
-            "durriya.kachwala@yocket.com",
-            "vishnu.praveen@yocket.com",
-            "ahmed.thakur@yocket.in",
-            "utkarsh.bhoumick@yocket.in",
-            "ghanshyam.ravariya@yocket.in",
-            "vedant.mulchandani@yocket.com",
-            "poulami.nag@yocket.in",
-            "rakshith.pai@yocket.in",
-            "astha.khetawat@yocket.com",
-            "siva.nagu@yocket.com",
-            "neha.gupta@yocket.in",
-            "mihir.mehta@yocket.com",
-            "tejal.tripathi@yocket.in",
-            "pawan.gurav@yocket.in",
-            "raza.khan@yocket.com",
-            "srinivas.s@yocket.in",
-            "chaitalee.khandelwal@yocket.com",
-            "aneri.parmar@yocket.com",
-            "anukriti.singh@yocket.com",
-            "raaziya.shaikh@yocket.in",
-            "gilsang.sangma@yocket.com"
-        ]
-    },
-    {
-        "companyName": "PlanetSpark",
-        "emailList": [
-            "muskan.chauhan@planetspark.in",
-            "pulkit.bhargava@planetspark.in",
-            "pragya.gautam@planetspark.in",
-            "rachit.kumar@planetspark.in",
-            "deep.ps@planetspark.in",
-            "supriya.bahl@planetspark.in",
-            "kapil.sharma@planetspark.in",
-            "aman.gupta@planetspark.in",
-            "No email",
-            "neha.chaudhary@planetspark.in",
-            "deepak.chauhan@planetspark.in",
-            "shivangi.gupta@planetspark.in",
-            "divya.rani@planetspark.in",
-            "jahanvee.chauhan@planetspark.in",
-            "hr@planetspark.in",
-            "sherry.bansal@planetspark.in",
-            "vidhya@planetspark.in",
-            "abhivardhan.rathore@planetspark.in",
-            "sonam.sharma@planetspark.in",
-            "disha.vyas@planetspark.in",
-            "priya.bharti@planetspark.in",
-            "amisha.mahajan@planetspark.in",
-            "rishabh.rajgopal@planetspark.in",
-            "sumit.kumar@planetspark.in",
-            "kanika.tanwar@planetspark.in"
-        ]
-    },
-    {
-        "companyName": "Maven Silicon",
-        "emailList": [
-            "vimala@maven-silicon.com",
-            "shravani@maven-silicon.com",
-            "akhilesh@maven-silicon.com",
-            "nayana@maven-silicon.com",
-            "bindhu@maven-silicon.com",
-            "sheema@maven-silicon.com",
-            "indushekar@maven-silicon.com",
-            "fiza@maven-silicon.com",
-            "vedavathi@maven-silicon.com",
-            "uday@maven-silicon.com",
-            "thinesh@maven-silicon.com",
-            "nisha@maven-silicon.com",
-            "anushamishra@maven-silicon.com",
-            "nishath@maven-silicon.com",
-            "anisha@maven-silicon.com",
-            "veeresh@aceic.com",
-            "ibrahim@maven-silicon.com"
-        ]
-    },
-    {
-        "companyName": "IMS India",
-        "emailList": [
-            "suraj.purohit@imsindia.com",
-            "sanyasi.barad@imsindia.com",
-            "anupama.rajoria@imsindia.com",
-            "ravi.kasera@imsindia.com",
-            "prasad.sawant@imsindia.com",
-            "mohit.sharma@imsindia.com",
-            "pratham.podal@imsindia.com",
-            "satish.yadav@imsindia.com",
-            "sachin.shirke@imsindia.com",
-            "abhishek.narayan@imsindia.com",
-            "ajeet.singh@imsindia.com",
-            "puneet.pandeya@imsindia.com",
-            "patna@imsindia.com",
-            "digant.purani@ims.net",
-            "rachel.furtado@imsindia.com",
-            "sandeep.aggarwal@imsindia.com",
-            "kamlesh.s@imsindia.com",
-            "tridal.upadhyay@imsindia.com",
-            "hemang.panchmatia@imsindia.com",
-            "ganesh.gadave@imsindia.com",
-            "naveen.jannavula@imsindia.com",
-            "roshani.gundal@imsindia.com"
-        ]
-    },
-    {
-        "companyName": "T.I.M.E Institute",
-        "emailList": [
-            "atul.gupta@time4education.com",
-            "neha.kharakia@time4education.com",
-            "neeta.patnaik@time4education.com",
-            "harshank.salvi@time4education.com",
-            "jotin@time4education.com",
-            "monish.dutta@time4education.com",
-            "isaac@time4education.com",
-            "kumar.s@time4education.com",
-            "puneet.kumawat@time4education.com",
-            "sheetal@time4education.com",
-            "geetu.wahi@time4education.com",
-            "riya.sinha@time4education.com",
-            "sachin.dubey@time4education.com",
-            "jayesh@time4education.com",
-            "aditya.bhardwaj@turner.com",
-            "sanket.pawar@time4education.com",
-            "amit.karnani@time4education.com",
-            "mark@time4education.com",
-            "chethana.bhumanapalli@time4education.com",
-            "mani@time4education.com"
-        ]
-    },
-    {
-        "companyName": "UNESCO",
-        "emailList": [
-            "k.k@unesco.org"
-        ]
-    },
-    {
-        "companyName": "Wadhwani Foundation",
-        "emailList": [
-            "hitesh.kumar@wadhwanifoundation.org",
-            "ajay.kela@wfglobal.org",
-            "igor.barbosa@wfglobal.org",
-            "vaishnavi.prasad@wfglobal.org",
-            "anushka.lavania@wadhwanifoundation.org",
-            "nidhi.dubey@wadhwanifoundation.org",
-            "ankita.rajput@wfglobal.org",
-            "lorenza.arvizu@wadhwanifoundation.org",
-            "shilpa.ramdurg@wadhwanifoundation.org",
-            "pavani.kallempudi@wadhwanifoundation.org",
-            "aniket.tiwari@wadhwanifoundation.org",
-            "krithika.rao@wfglobal.org",
-            "debdarshan.panda@wadhwanifoundation.org",
-            "sriharsha.nallamilli@wadhwanifoundation.org",
-            "anupama.mukherjee@wfglobal.org",
-            "ayushi.jaiswal@wadhwanifoundation.org",
-            "gaurav.saini@wadhwanifoundation.org",
-            "dayal.rajput@wadhwanifoundation.org"
-        ]
-    },
-    {
-        "companyName": "Startup India",
-        "emailList": []
-    },
-    {
-        "companyName": "NSIC",
-        "emailList": []
-    },
-    {
-        "companyName": "Shiksha",
-        "emailList": [
-            "kumar.praveen@shiksha.com",
-            "anshu.chhabra@shiksha.com",
-            "aashna.grover@shiksha.com",
-            "ruchika.rathee@shiksha.com",
-            "shivesh.singh@shiksha.com",
-            "raj.r@shiksha.com",
-            "sagar.chauhan@shiksha.com",
-            "yogesh.k@shiksha.com",
-            "sneha.jadaun@shiksha.com",
-            "debkalpo.saha@shiksha.com",
-            "chitrak.pal@shiksha.com",
-            "pranav.negi@shiksha.com",
-            "gajender.rawat@shiksha.com",
-            "kartik.sawlani@shiksha.com",
-            "devanshu.sharma@shiksha.com",
-            "prabu.d@shiksha.com",
-            "nikita.trikha@shiksha.com",
-            "aditi.g@shiksha.com",
-            "tarun.singh@shiksha.com",
-            "varun.pandit@shiksha.com"
-        ]
-    },
-    {
-        "companyName": "Univo Education",
-        "emailList": [
-            "asingh@univoedtech.com",
-            "vsingh7@univoedtech.com",
-            "mkumar@univoedtech.com",
-            "asharma5@univoedtech.com",
-            "usuhane@univoedtech.com",
-            "No email",
-            "abhattacharyya@univoedtech.com",
-            "apandey@univoedtech.com",
-            "mbhasin@univoedtech.com",
-            "ade@univoedtech.com",
-            "asikarwar@univoedtech.com",
-            "ichanchal@univoedtech.com",
-            "vchoudhary1@univoedtech.com",
-            "saggarwal1@univoedtech.com",
-            "No email",
-            "sprakash@univoedtech.com",
-            "nsingh1@univoedu.com",
-            "vchauhan@univoedtech.com",
-            "adixit@univoedtech.com",
-            "dsharma@univoedtech.com"
-        ]
-    },
-    {
-        "companyName": "Test yantra",
-        "emailList": [
-            "srilatha.r@testyantra.com",
-            "namrata.t@testyantra.com",
-            "shobha.h@testyantra.com",
-            "indhuja.k@testyantra.com",
-            "raghavendra.g@testyantra.com",
-            "siddarth.s@testyantra.com",
-            "namratha.k01@testyantra.com",
-            "ashwitha.p@testyantra.com",
-            "anusha.g@testyantra.com",
-            "sevanthi.c@testyantra.co.uk",
-            "mohammed.r@testyantra.com",
-            "asha.t@testyantra.com",
-            "swati.k@testyantra.com",
-            "pallavi.g@testyantra.com",
-            "vindhya@testyantra.com",
-            "mohan.k@testyantra.com",
-            "priya.jain@testyantra.com",
-            "raghavendra.s@testyantra.com",
-            "pooja.s@testyantra.com",
-            "ankita.s@testyantra.com"
-        ]
-    },
-    {
-        "companyName": "Test Prep",
-        "emailList": [
-            "Not Found"
-        ]
-    },
-    {
-        "companyName": "Infinity Learn",
-        "emailList": [
-            "vinod.srivastava@infinitylearn.com",
-            "ramya.mutthineni@infinitylearn.com",
-            "shaikayaz.basha@infinitylearn.com",
-            "gowri.n@infinitylearn.com",
-            "faisal.adeeb@infinitylearn.com",
-            "pankaj.anand@infinitylearn.com",
-            "venkatesh.p@infinitylearn.com",
-            "om.rai@infinitylearn.com",
-            "shaeique.mustafa@infinitylearn.com",
-            "naved.sheikh@infinitylearn.com",
-            "nadeem.r@infinitylearn.com",
-            "eshan.bhat@infinitylearn.com",
-            "nabanita.deka@infinitylearn.com",
-            "jatin.dabas@infinitylearn.com",
-            "fahad.ali@infinitylearn.com",
-            "divya.talwar@infinitylearn.com",
-            "pragati.mehrotra@infinitylearn.com"
-        ]
-    },
-    {
-        "companyName": "GUVI",
-        "emailList": [
-            "Not Found"
-        ]
-    },
-    {
-        "companyName": "Sambhav Foundation",
-        "emailList": [
-            "gurudath.bn@sambhavfoundation.org",
-            "vignesh.murugan@sambhavfoundation.org",
-            "pushpa.nair@sambhavfoundation.org",
-            "poonam.shah@sambhavfoundation.org",
-            "giridhar@sambhavfoundation.org",
-            "akanksha.pandey@sambhavfoundation.org",
-            "priya.gupta@sambhavfoundation.org",
-            "suhail.aboli@sambhavfoundation.org",
-            "rajalakshmi.ramesh@sambhavfoundation.org",
-            "vijay.g@sambhavfoundation.org"
-        ]
-    },
-    {
-        "companyName": "Saras AI Institute",
-        "emailList": [
-            "yashika.a@sarasai.org",
-            "prabhkiran.n@sarasai.org",
-            "divyansh.u@sarasai.org",
-            "gauri.b@sarasai.org",
-            "heena.j@sarasai.org",
-            "rashmi.o@sarasai.org",
-            "megha.c@sarasai.org",
-            "komal.m@sarasai.org",
-            "anshuman@sarasai.org",
-            "amit@sarasai.org",
-            "khushi.g@sarasai.org",
-            "rupal.s@sarasai.org",
-            "anil@sarasai.org",
-            "mansi.p@sarasai.org",
-            "rhythm.b@sarasai.org",
-            "shailesh@sarasai.org",
-            "shivangi.s@sarasai.org",
-            "puranjay.s@sarasai.org"
-        ]
-    },
-    {
-        "companyName": "Futurense Technologies",
-        "emailList": [
-            "vishnu.kumar@futurense.com",
-            "chaithra.c@futurense.com",
-            "shruti.jigalur@futurense.com",
-            "nikhil.a@futurense.com",
-            "chaithra.gowda@futurense.com",
-            "spoorthi.l@futurense.com",
-            "raghav@futurense.com",
-            "sree.s@futurense.com",
-            "chayanika.roy@futurense.com",
-            "rashi.roy@futurense.com",
-            "chandrakala.nanjappa@futurense.com",
-            "ramya@futurense.com",
-            "akshata.dharnatti@futurense.com",
-            "hema@futurense.com",
-            "lavanya.n@futurense.com",
-            "lavina.dsouza@futurense.com",
-            "supriya.d@futurense.com",
-            "priyanka.g@futurense.com",
-            "shailendra.singh@futurense.com",
-            "shivani.rawat@futurense.com"
-        ]
-    },
-    {
-        "companyName": "ims",
-        "emailList": [
-            "arushi.gupta@imsnhance.com",
-            "liji.abraham@imsplgroup.com",
-            "hina.rajput@imsplgroup.com",
-            "prachi.shah@imsplgroup.com",
-            "debargha.das@imsplgroup.com",
-            "dhwani.patel@imsplgroup.com",
-            "bhumika.shah@imsplgroup.com",
-            "vanshika.kundnani@imsplgroup.com",
-            "swati.pandit@imsplgroup.com",
-            "jayanshe.sharma@imsplgroup.com",
-            "bhavik.umralia@imsplgroup.com",
-            "prashant.savita@imsplgroup.com",
-            "ankita.rajani@imsplgroup.com",
-            "neha.tyagi@imsplgroup.com",
-            "bhuvaneshwari.mansharamani@imsplgroup.com",
-            "asomaiya@imsplgroup.com"
-        ]
-    },
-    {
-        "companyName": "Student Tribe",
-        "emailList": [
-            "charan@studenttribe.in",
-            "amarnath.kr@studenttribe.in",
-            "corporate@studenttribe.in",
-            "sucharitha@studenttribe.in",
-            "shashank@studenttribe.in",
-            "ameya@studenttribe.in"
-        ]
-    },
-    {
-        "companyName": "Digital Vidya",
-        "emailList": [
-            "neha@digitalvidya.com",
-            "gaurav@digitalvidya.com",
-            "pragati.chawla@digitalvidya.com",
-            "shweta.malhotra@digitalvidya.com",
-            "jaya@digitalvidya.com",
-            "venkata.a@digitalvidya.com",
-            "avichal.anand@digitalvidya.com",
-            "diptanshu@digitalvidya.com",
-            "vikalp@digitalvidya.com",
-            "raj@digitalvidya.com",
-            "saurabh@digitalvidya.com",
-            "jasleenk@digitalvidya.com",
-            "illness@digitalvidya.com",
-            "ppc@digitalvidya.com",
-            "udit@digitalvidya.com",
-            "rajs@digitalvidya.com",
-            "rahulm@digitalvidya.com",
-            "christine@digitalvidya.com"
-        ]
-    },
-    {
-        "companyName": "GyanDhan",
-        "emailList": [
-            "rishabh.gupta@gyandhan.com",
-            "rohit.gupta@gyandhan.com",
-            "anju.singh@gyandhan.com",
-            "ankit.mehra@gyandhan.com",
-            "williamair1@gmail.com",
-            "riya.kalra@gyandhan.com",
-            "neha.singh@gyandhan.com",
-            "rahul.srivastava@gyandhan.com",
-            "aman.jain@gyandhan.com"
-        ]
-    },
-    {
-        "companyName": "Wadhwani Foundation",
-        "emailList": [
-            "hitesh.kumar@wadhwanifoundation.org",
-            "ajay.kela@wfglobal.org",
-            "igor.barbosa@wfglobal.org",
-            "vaishnavi.prasad@wfglobal.org",
-            "anushka.lavania@wadhwanifoundation.org",
-            "nidhi.dubey@wadhwanifoundation.org",
-            "ankita.rajput@wfglobal.org",
-            "lorenza.arvizu@wadhwanifoundation.org",
-            "shilpa.ramdurg@wadhwanifoundation.org",
-            "pavani.kallempudi@wadhwanifoundation.org",
-            "aniket.tiwari@wadhwanifoundation.org",
-            "krithika.rao@wfglobal.org",
-            "debdarshan.panda@wadhwanifoundation.org",
-            "sriharsha.nallamilli@wadhwanifoundation.org",
-            "anupama.mukherjee@wfglobal.org",
-            "ayushi.jaiswal@wadhwanifoundation.org",
-            "gaurav.saini@wadhwanifoundation.org",
-            "dayal.rajput@wadhwanifoundation.org"
-        ]
-    },
-    {
-        "companyName": "Growth School",
-        "emailList": []
-    },
-    {
-        "companyName": "MetaApply",
-        "emailList": [
-            "mjhindal@metaapply.io",
-            "lnaresh@metaapply.io",
-            "sparashari@metaapply.io",
-            "jsharma@metaapply.io",
-            "ksingh@metaapply.io",
-            "ssharma@metaapply.io",
-            "mmathur@metaapply.io",
-            "dbakre@metaapply.io",
-            "kdutta@metaapply.io",
-            "vpatel@metaapply.io",
-            "sjain@metaapply.io",
-            "hsharma@metaapply.io",
-            "tsharma@metaapply.io",
-            "chetna@metaapply.io",
-            "trajan@metaapply.io",
-            "sbhatnagar@metaapply.io"
-        ]
-    },
-    {
-        "companyName": "Hitbullseye",
-        "emailList": [
-            "hirdesh@hitbullseye.com",
-            "anilsharma@hitbullseye.com",
-            "ludhiana@hitbullseye.com",
-            "spruce@hitbullseye.com",
-            "shantanusharma@hitbullseye.com",
-            "aditiahuja@hitbullseye.com",
-            "advertise@hitbullseye.com",
-            "amansharma@hitbullseye.com",
-            "arshi@hitbullseye.com",
-            "bharat@hitbullseye.com",
-            "rakesh@hitbullseye.com",
-            "rajeevmarkanday@hitbullseye.com",
-            "madan.hirdesh@gmail.com",
-            "anil.sharma911@gmail.com",
-            "aman.bullseye@gmail.com",
-            "rakesh@hitbullseye.com"
-        ]
-    },
-    {
-        "companyName": "SkillLabs",
-        "emailList": []
-    },
-    {
-        "companyName": "Seekho App",
-        "emailList": []
-    },
-    {
-        "companyName": "Talerang",
-        "emailList": []
-    },
-    {
-        "companyName": "Skilled Sapiens",
-        "emailList": []
-    },
-    {
-        "companyName": "The Product Folk",
-        "emailList": [
-            "aditya@theproductfolks.com",
-            "aditya71997@gmail.com",
-            "suhasmotwani90@gmail.com",
-            "mu@finiq.com",
-            "mrunaliniu@finiq.com",
-            "suhas@theproductfolks.com",
-            "suhasmotwani22@gmail.com",
-            "lsudharsan040@gmail.com",
-            "smarth@flamebacktech.com",
-            "smarthyvasdev@gmail.com",
-            "abhayjani96@gmail.com"
-        ]
-    },
-    {
-        "companyName": "Gradeup",
-        "emailList": [
-            "ayushi.jain@byjus.com",
-            "adesh.singh@byjusexamprep.com",
-            "ashish.singla@gradeup.co",
-            "shurbhi.jain@byjusexamprep.com",
-            "mansee.rai@byjusexamprep.com",
-            "dharm.singh@byjusexamprep.com",
-            "preeti.walia@gradeup.co",
-            "shefali.aggarwal@byjusexamprep.com",
-            "rajan.solanki@gradeup.co",
-            "jagjot.singh@gradeup.co",
-            "abhishek.s@byjusexamprep.com",
-            "shivani.gupta@gradeup.co",
-            "abhishek.m@byjusexamprep.com",
-            "simran.sadhna@gradeup.co",
-            "nidhi.sinha@byjusexamprep.com"
-        ]
-    },
-    {
-        "companyName": "Leverage edu",
-        "emailList": [
-            "ritik.vats@leverageedu.com",
-            "sanskriti.sharma1@leverageedu.com",
-            "rama.pandey@leverageedu.com",
-            "ravi.ray@leverageedu.com",
-            "isha.sharma@leverageedu.com",
-            "ruchi.p01@leverageedu.com",
-            "sonu.kumar2@leverageedu.com",
-            "akanksha.kumari@leverageedu.com",
-            "dev.rana@leverageedu.com",
-            "rishabh.singh1@leverageedu.com",
-            "rishi.guru@leverageedu.com",
-            "ritik.madan@leverageedu.com",
-            "bryan.maduka@leverageedu.com",
-            "tathagat.mukherjee@leverageedu.com",
-            "kartikey.kedia@leverageedu.com",
-            "jatin.kumar@leverageedu.com",
-            "suraj.meshram@leverageedu.com",
-            "maulik.shastri@leverageedu.com",
-            "khushi.thakur@leverageedu.com",
-            "arya.verma@leverageedu.com",
-            "sumukh.sinha@leverageedu.com",
-            "anurag.srivastav@leverageedu.com",
-            "geetanjali.bhatia@leverageedu.com",
-            "shelly.gandhi@leverageedu.com",
-            "khushi.sarkar@leverageedu.com"
-        ]
-    },
-    {
-        "companyName": "ischoolconnect",
-        "emailList": [
-            "kartik@ischoolconnect.com",
-            "pacharya@ischoolconnect.com",
-            "dwadhia@ischoolconnect.com",
-            "sidharthg@ischoolconnect.com",
-            "snavghare@ischoolconnect.com",
-            "aastha@ischoolconnect.com",
-            "cmajdi@ischoolconnect.com"
-        ]
-    },
-    {
-        "companyName": "Skill-lync",
-        "emailList": [
-            "vivek.baskar@skill-lync.com",
-            "praveen.k@skill-lync.com",
-            "shruthi@skill-lync.com",
-            "shreyas.t@skill-lync.com",
-            "No email",
-            "alda.rovina@skill-lync.com",
-            "venkateshwaran@skill-lync.com",
-            "ravi.varma@skill-lync.com",
-            "tarun.s@skill-lync.com"
-        ]
-    },
-    {
-        "companyName": "Drishti ias",
-        "emailList": [
-            "roshani.roy@drishtiias.com",
-            "vaibhav.singh@drishtiias.com",
-            "mamta.arya@drishtiias.com",
-            "ayush.jain@drishtiias.com",
-            "vipin.kumar@drishtiias.com",
-            "anitesh.kumar@drishtiias.com",
-            "prashant.misra@drishtiias.com",
-            "komal.soni@drishtiias.com",
-            "keerti.sharma@drishtiias.com",
-            "garima.arora@drishtiias.com",
-            "poonam.yadav@drishtiias.com",
-            "bhupendra.dansena@drishtiias.com",
-            "gulshan.kumar@drishtiias.com",
-            "anil.mahato@drishtiias.com",
-            "sgupta@drishtiias.com",
-            "vishal.chaudhary@drishtiias.com",
-            "ksharma@drishtiias.com",
-            "nitish.kumar@drishtiias.com",
-            "pankaj.kumar@drishtiias.com",
-            "mohammad.shahbaz@drishtiias.com",
-            "onkar.singh@drishtiias.com",
-            "anu.raj@drishtiias.com"
-        ]
-    },
-    {
-        "companyName": "vision ias",
-        "emailList": [
-            "samarjeet.pandey@visionias.in",
-            "zaid.khan@visionias.in",
-            "aman@visionias.in",
-            "manmohan.singh@visionias.in",
-            "sarthak.gautam@visionias.in",
-            "krishanu.khatua@visionias.in",
-            "max.jain@visionias.in",
-            "harshendra.singh@visionias.in",
-            "nandish.trehan@visionias.in",
-            "omsharan@visionias.in",
-            "shivendra.singh@visionias.in",
-            "mukta.kapoor@visionias.in",
-            "shweta.sharma@visionias.in",
-            "ashish_kumar01@visionias.in",
-            "megha.sabharwal@visionias.in",
-            "abhay@visionias.in",
-            "rinku@visionias.in",
-            "shiwanshu.dwivedi@visionias.in",
-            "tanya.setia@visionias.in",
-            "prasun.dev@visionias.in",
-            "deepali.dubey@visionias.in"
-        ]
-    },
-    {
-        "companyName": "S chand",
-        "emailList": [
-            "mkumar@schandgroup.com",
-            "glingwal@schandgroup.com",
-            "bkaushik@schandgroup.com",
-            "lsingh@schandgroup.com",
-            "rkaushik@schandgroup.com",
-            "saba.mallick@schandpublishing.com",
-            "asharma2@schandgroup.com",
-            "shrikant.shahi@schandpublishing.com",
-            "kishore.d@schandgroup.com",
-            "gdwivedi@schandgroup.com",
-            "tanisha.tyagi@schandpublishing.com",
-            "myadav@schandgroup.com",
-            "pmalhotra@schandgroup.com",
-            "yogendra.singh@schandpublishing.com",
-            "rsharma@schandgroup.com",
-            "asingh@schandgroup.com",
-            "ashish@schandgroup.com",
-            "ssharma@schandgroup.com",
-            "cgupta@schandgroup.com",
-            "jijo.augustine@schandpublishing.com",
-            "damanjeet.kaur@schandpublishing.com",
-            "ssingh@schandgroup.com"
-        ]
-    },
-    {
-        "companyName": "Almabetter",
-        "emailList": [
-            "kameel.shaikh@almabetter.com",
-            "vishakha.chaudhry@almabetter.com",
-            "kajal.pandey@almabetter.com",
-            "jyotsna.sarkar@almabetter.com",
-            "karthikeyan.m@almabetter.com",
-            "No email",
-            "kritika.jain@yocket.com",
-            "arshyan@almabetter.com",
-            "dheeraj.patidar@almabetter.com",
-            "jakeer.hussain@almabetter.com",
-            "gautam@almabetter.com",
-            "harshita.gaur@almabetter.com",
-            "shubham.barbaile@almabetter.com",
-            "shubham.patel1@almabetter.com",
-            "bharath.kumar@almabetter.com",
-            "abhimanyu.anil@almabetter.com"
-        ]
-    },
-    {
-        "companyName": "Masai school",
-        "emailList": [
-            "kevin.vincent@masaischool.com",
-            "meghana.sj@masaischool.com",
-            "akshaya.reddy@masaischool.com",
-            "sumesh.kumar@masaischool.com",
-            "arpit.dubey@masaischool.com",
-            "rucha.dokhe@masaischool.com",
-            "efilippone@kpmg.com",
-            "vidula.gnanasekaran@masaischool.com",
-            "shajed.hussain@masaischool.com",
-            "sumegh.shah@masaischool.com",
-            "sweta.ojha@masaischool.com",
-            "mohamed.saad@masaischool.com",
-            "anushka.baisya@masaischool.com",
-            "paras.chaturvedi@masaischool.com",
-            "kishan.pandey@masaischool.com",
-            "younus.fardeen@masaischool.com",
-            "navneet.dutt@masaischool.com",
-            "irom.robert@masaischool.com",
-            "ishita.chanana@masaischool.com",
-            "pratyusha.sanivarapu@masaischool.com"
-        ]
-    },
-    {
-        "companyName": "Teachnook",
-        "emailList": [
-            "gigari.praveen@teachnook.com",
-            "afrathasleem.tnint0832@teachnook.com",
-            "megha.tomar@teachnook.com",
-            "ravi.teja@teachnook.com",
-            "abhinav.verma@teachnook.com",
-            "karthick.rams@teachnook.com",
-            "kanak.sharma@teachnook.com",
-            "arpita.chauhan@teachnook.com",
-            "r.sathya@teachnook.com",
-            "atulkushwaha.shtnint0205@teachnook.com",
-            "anvitha.nd@teachnook.com",
-            "vishal.mishra@teachnook.com",
-            "nirmal.james@teachnook.com",
-            "vignesh.k@teachnook.com",
-            "deepika.kumari@teachnook.com",
-            "astha.singh@teachnook.com"
-        ]
-    },
-    {
-        "companyName": "collegedunia",
-        "emailList": [
-            "akash.singhal@collegedunia.com",
-            "niharika.kapoor@collegedunia.com",
-            "sweta.singh@collegedunia.com",
-            "himanshu.arya@collegedunia.com",
-            "sumi.deb@collegedunia.com",
-            "kartikey.duseja@collegedunia.com",
-            "palak.kanwar@collegedunia.com",
-            "shrey.bhardwaj@collegedunia.com",
-            "anchi.suneja@collegedunia.com",
-            "adhyayan.behera@collegedunia.com",
-            "nishant.babu@collegedunia.com",
-            "pulka.mahato@collegedunia.com",
-            "hitesh.kumar@collegedunia.com",
-            "mushtaque.alam@collegedunia.com",
-            "soumyarab.dutta@collegedunia.com",
-            "disha.solanki@collegedunia.com",
-            "ankita.roy@collegedunia.com",
-            "arun.bavanesh@collegedunia.com",
-            "riya.chakraborty@collegedunia.com",
-            "manoj.kumar@collegedunia.com",
-            "himanshu.ranjan@collegedunia.com",
-            "vivek.c@collegedunia.com",
-            "rashmi.dobal@collegedunia.com",
-            "anurag.pandey@retail.collegedunia.com",
-            "rajat.shukla@collegedunia.com"
-        ]
-    },
-    {
-        "companyName": "Analytics vidhya",
-        "emailList": [
-            "manoj@analyticsvidhya.com",
-            "gaurav@analyticsvidhya.com",
-            "harshit@analyticsvidhya.com",
-            "nitika.sharma@analyticsvidhya.com",
-            "sangeeta@analyticsvidhya.com",
-            "ayushi.tayal@analyticsvidhya.com",
-            "swati.sharma@analyticsvidhya.com",
-            "mohammad.asad@analyticsvidhya.com",
-            "neeraj@analyticsvidhya.com",
-            "No email",
-            "keshav.vikram@analyticsvidhya.com",
-            "manoj@analyticsvidhya.com",
-            "shivali@analyticsvidhya.com"
-        ]
-    },
-    {
-        "companyName": "Acredian",
-        "emailList": [
-            "jatin.rajauria@accredian.com",
-            "No email",
-            "ishita.gurung@accredian.com",
-            "priyak.basu@accredian.com",
-            "lohit.nagar@accredian.com",
-            "vishal@accredian.com",
-            "No email",
-            "ankit.rai@accredian.com",
-            "shivpujan.kumar@accredian.com",
-            "shayan@accredian.com",
-            "ashish.anand@accredian.com"
-        ]
-    }
+  {
+    "company_name": "Scroll.in",
+    "emails": [
+      "editors@scroll.in",
+      "ads@scroll.in",
+      "support@scroll.in"
+    ]
+  },
+  {
+    "company_name": "Indian Express Explained",
+    "emails": [
+      "editorial@indianexpress.com",
+      "letters@indianexpress.com",
+      "marketing@indianexpress.com",
+      "support@indianexpress.com",
+      "feedback@indianexpress.com"
+    ]
+  },
+  {
+    "company_name": "The Caravan Magazine",
+    "emails": [
+      "editorial@caravanmagazine.in",
+      "letters@caravanmagazine.in",
+      "subscriptions@caravanmagazine.in",
+      "marketing@caravanmagazine.in",
+      "info@caravanmagazine.in"
+    ]
+  },
+  {
+    "company_name": "YourStory",
+    "emails": [
+      "editorial@yourstory.com",
+      "partnerships@yourstory.com"
+    ]
+  },
+  {
+    "company_name": "Inc42",
+    "emails": [
+      "editor@inc42.com",
+      "pr@inc42.com"
+    ]
+  },
+  {
+    "company_name": "Entrepreneur India",
+    "emails": [
+      "startups@entrepreneur.com",
+      "info@entrepreneurindia.co"
+    ]
+  },
+  {
+    "company_name": "The Better India",
+    "emails": [
+      "editorial@thebetterindia.com",
+      "contact@thebetterindia.com"
+    ]
+  },
+  {
+    "company_name": "Beebom",
+    "emails": [
+      "partner@beebom.com",
+      "contact@beebom.com"
+    ]
+  },
+  {
+    "company_name": "Vice Media",
+    "emails": [
+      "press@vice.com",
+      "culture.pitches@vice.com",
+      "issues.pitches@vice.com",
+      "sales@vice.com"
+    ]
+  },
+  {
+    "company_name": "Hypebeast",
+    "emails": [
+      "advertising@hypebeast.com",
+      "partnerships@hypebeast.com",
+      "editorial@hypebeast.com",
+      "investors@hypebeast.com"
+    ]
+  },
+  {
+    "company_name": "Highsnobiety",
+    "emails": [
+      "advertising@highsnobiety.com",
+      "press@highsnobiety.com",
+      "accessibility@highsnobiety.com",
+      "store@highsnobiety.com"
+    ]
+  },
+  {
+    "company_name": "Penguin Random House",
+    "emails": [
+      "consumerservices@penguinrandomhouse.com",
+      "vikingpublicity@penguinrandomhouse.com",
+      "bha.bis@penguinrandomhouse.com"
+    ]
+  },
+  {
+    "company_name": "Times of India (Times Group)",
+    "emails": [
+      "crm.delhi@timesgroup.com",
+      "subscription@timesgroup.com",
+      "advertising@timesgroup.com"
+    ]
+  },
+  {
+    "company_name": "StartupTalky",
+    "emails": [
+      "contact@startuptalky.com",
+      "editorial@startuptalky.com",
+      "partnerships@startuptalky.com"
+    ]
+  },
+  {
+    "company_name": "Indian Startup News",
+    "emails": [
+      "contact@indianstartupnews.com",
+      "editorial@indianstartupnews.com",
+      "partnerships@indianstartupnews.com"
+    ]
+  },
+  {
+    "company_name": "Entrackr",
+    "emails": [
+      "editor@entrackr.com",
+      "contact@entrackr.com",
+      "partnerships@entrackr.com"
+    ]
+  },
+  {
+    "company_name": "DQ India",
+    "emails": [
+      "editor@dqindia.com",
+      "info@dqindia.com",
+      "marketing@dqindia.com"
+    ]
+  },
+  {
+    "company_name": "IndiaAI",
+    "emails": [
+      "contact@indiaai.gov.in",
+      "editorial@indiaai.gov.in",
+      "partnerships@indiaai.gov.in"
+    ]
+  },
+  {
+    "company_name": "Economic Times Startups",
+    "emails": [
+      "etstartup@timesinternet.in",
+      "feedback@timesinternet.in",
+      "marketing@timesinternet.in"
+    ]
+  },
+  {
+    "company_name": "Forbes India",
+    "emails": [
+      "editor@forbesindia.com",
+      "feedback@forbesindia.com",
+      "marketing@forbesindia.com"
+    ]
+  },
+  {
+    "company_name": "Business Today",
+    "emails": [
+      "btmail@intoday.com",
+      "feedback@businesstoday.in",
+      "marketing@businesstoday.in"
+    ]
+  },
+  {
+    "company_name": "BloombergQuint (BQ Prime)",
+    "emails": [
+      "support@bqprime.com",
+      "editorial@bqprime.com",
+      "marketing@bqprime.com"
+    ]
+  },
+  {
+    "company_name": "CNBC TV18",
+    "emails": [
+      "cnbctv18@nw18.com",
+      "feedback@nw18.com",
+      "marketing@nw18.com"
+    ]
+  },
+  {
+    "company_name": "Financial Express",
+    "emails": [
+      "feonline@indianexpress.com",
+      "letters@financialexpress.com",
+      "marketing@financialexpress.com"
+    ]
+  },
+  {
+    "company_name": "Business Standard",
+    "emails": [
+      "letters@business-standard.com",
+      "feedback@business-standard.com",
+      "marketing@business-standard.com"
+    ]
+  },
+  {
+    "company_name": "Mint",
+    "emails": [
+      "feedback@livemint.com",
+      "editor@livemint.com",
+      "marketing@livemint.com"
+    ]
+  },
+  {
+    "company_name": "Fortune India",
+    "emails": [
+      "editor@fortuneindia.com",
+      "marketing@fortuneindia.com",
+      "contact@fortuneindia.com"
+    ]
+  },
+  {
+    "company_name": "Economic Times",
+    "emails": [
+      "letters@economictimes.com",
+      "feedback@timesinternet.in",
+      "marketing@timesinternet.in"
+    ]
+  },
+  {
+    "company_name": "Moneycontrol",
+    "emails": [
+      "editor@moneycontrol.com",
+      "feedback@moneycontrol.com",
+      "marketing@moneycontrol.com"
+    ]
+  },
+  {
+    "company_name": "NDTV Profit",
+    "emails": [
+      "profit@ndtv.com",
+      "feedback@ndtv.com",
+      "marketing@ndtv.com"
+    ]
+  },
+  {
+    "company_name": "Outlook Business",
+    "emails": [
+      "editor@outlookbusiness.com",
+      "feedback@outlookbusiness.com",
+      "marketing@outlookbusiness.com"
+    ]
+  },
+  {
+    "company_name": "BW Businessworld",
+    "emails": [
+      "editor@businessworld.in",
+      "feedback@businessworld.in",
+      "marketing@businessworld.in"
+    ]
+  },
+  {
+    "company_name": "Exchange4Media",
+    "emails": [
+      "editor@exchange4media.com",
+      "contact@exchange4media.com",
+      "marketing@exchange4media.com"
+    ]
+  },
+  {
+    "company_name": "Mashable India",
+    "emails": [
+      "mashableindia@forkmedia.in",
+      "editorial@forkmedia.in",
+      "partnerships@forkmedia.in"
+    ]
+  },
+  {
+    "company_name": "Digit",
+    "emails": [
+      "digit@9dot9.in",
+      "editor@digit.in",
+      "marketing@digit.in"
+    ]
+  },
+  {
+    "company_name": "Gadgets360",
+    "emails": [
+      "gadgets360@ndtv.com",
+      "editor@gadgets360.com",
+      "partnerships@gadgets360.com"
+    ]
+  },
+  {
+    "company_name": "TechGig",
+    "emails": [
+      "info@techgig.com",
+      "editorial@techgig.com",
+      "marketing@techgig.com"
+    ]
+  },
+  {
+    "company_name": "TechRadar",
+    "emails": [
+      "editor@techradar.com",
+      "contact@techradar.com",
+      "marketing@techradar.com"
+    ]
+  },
+  {
+    "company_name": "CNET",
+    "emails": [
+      "tips@cnet.com",
+      "editor@cnet.com",
+      "partnerships@cnet.com"
+    ]
+  },
+  {
+    "company_name": "ZDNet",
+    "emails": [
+      "editor@zdnet.com",
+      "contact@zdnet.com",
+      "partnerships@zdnet.com"
+    ]
+  },
+  {
+    "company_name": "EdTimes",
+    "emails": [
+      "contact@edtimes.in",
+      "editorial@edtimes.in",
+      "partnerships@edtimes.in"
+    ]
+  },
+  {
+    "company_name": "College Dunia",
+    "emails": [
+      "editorial@collegedunia.com",
+      "contact@collegedunia.com",
+      "partnerships@collegedunia.com"
+    ]
+  },
+  {
+    "company_name": "CollegeTips",
+    "emails": [
+      "contact@collegetips.in",
+      "editorial@collegetips.in",
+      "partnerships@collegetips.in"
+    ]
+  },
+  {
+    "company_name": "Internshala Blog",
+    "emails": [
+      "blog@internshala.com",
+      "media@internshala.com",
+      "partnerships@internshala.com"
+    ]
+  },
+  {
+    "company_name": "ScoopWhoop",
+    "emails": [
+      "business@scoopwhoop.com",
+      "editorial@scoopwhoop.com",
+      "partnerships@scoopwhoop.com"
+    ]
+  },
+  {
+    "company_name": "FilterCopy",
+    "emails": [
+      "contact@filtercopy.com",
+      "editorial@filtercopy.com",
+      "partnerships@filtercopy.com"
+    ]
+  },
+  {
+    "company_name": "The Better India",
+    "emails": [
+      "editorial@thebetterindia.com",
+      "contact@thebetterindia.com",
+      "partnerships@thebetterindia.com"
+    ]
+  },
+  {
+    "company_name": "The Caravan",
+    "emails": [
+      "editorial@caravanmagazine.in",
+      "letters@caravanmagazine.in",
+      "marketing@caravanmagazine.in"
+    ]
+  },
+  {
+    "company_name": "The Print",
+    "emails": [
+      "editor@theprint.in",
+      "feedback@theprint.in",
+      "marketing@theprint.in"
+    ]
+  }
 ]

@@ -113,14 +113,14 @@ export default function ESummitPage() {
           </motion.div>
 
           {/* Events Grid */}
-          {/* <EventCard events={allEvents} /> */}
-          <h1 className="text-center font-bold text-4xl text-white z-96 relative">Coming Soon...</h1>
+          <EventCard events={allEvents} />
+          {/* <h1 className="text-center font-bold text-4xl text-white z-96 relative">Coming Soon...</h1> */}
         </div>
       </section>
 
 
       {/* --- STARTUP EXPO SECTION --- */}
-      {/* <section className="relative z-20 py-20 px-4 md:px-8 lg:px-12">
+      <section className="relative z-20 py-20 px-4 md:px-8 lg:px-12">
         <ParticleBackground />
         <div className="max-w-[1600px] mx-auto">
           <motion.div
@@ -153,7 +153,7 @@ export default function ESummitPage() {
 
           <StartupExpoCard startups={startupExpoData} />
         </div>
-      </section> */}
+      </section>
 
 
 

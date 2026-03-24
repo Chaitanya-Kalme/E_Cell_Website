@@ -246,6 +246,7 @@ const CampusAmbassador = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-200"
+              onClick={() => location.replace(CA_FORM_URL)}
             >
               <Users size={24} />
               Apply Now

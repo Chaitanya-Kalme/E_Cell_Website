@@ -106,11 +106,11 @@ export const SpeakersListCards = ({
               </div>
 
               {/* Text Section */}
-              <div className="py-5 px-4 text-center bg-yellow-50">
+              <div className="py-5 px-4 text-center bg-blue-800">
 
                 {item.name && (
                   <h3
-                    className={`${playfair.className} text-xl md:text-2xl font-semibold text-gray-900 tracking-wide`}
+                    className={`${playfair.className} text-xl md:text-2xl font-bold text-white tracking-wide`}
                   >
                     {item.name}
                   </h3>
@@ -118,7 +118,7 @@ export const SpeakersListCards = ({
 
                 {item.position && (
                   <p
-                    className={`${montserrat.className} text-sm md:text-base text-gray-600 mt-1 tracking-wide`}
+                    className={`${montserrat.className} text-sm md:text-base text-white mt-1 tracking-wide`}
                   >
                     {item.position}
                   </p>
