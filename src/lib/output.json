@@ -1,396 +1,1006 @@
 [
-  {
-    "company_name": "Scroll.in",
-    "emails": [
-      "editors@scroll.in",
-      "ads@scroll.in",
-      "support@scroll.in"
-    ]
-  },
-  {
-    "company_name": "Indian Express Explained",
-    "emails": [
-      "editorial@indianexpress.com",
-      "letters@indianexpress.com",
-      "marketing@indianexpress.com",
-      "support@indianexpress.com",
-      "feedback@indianexpress.com"
-    ]
-  },
-  {
-    "company_name": "The Caravan Magazine",
-    "emails": [
-      "editorial@caravanmagazine.in",
-      "letters@caravanmagazine.in",
-      "subscriptions@caravanmagazine.in",
-      "marketing@caravanmagazine.in",
-      "info@caravanmagazine.in"
-    ]
-  },
-  {
-    "company_name": "YourStory",
-    "emails": [
-      "editorial@yourstory.com",
-      "partnerships@yourstory.com"
-    ]
-  },
-  {
-    "company_name": "Inc42",
-    "emails": [
-      "editor@inc42.com",
-      "pr@inc42.com"
-    ]
-  },
-  {
-    "company_name": "Entrepreneur India",
-    "emails": [
-      "startups@entrepreneur.com",
-      "info@entrepreneurindia.co"
-    ]
-  },
-  {
-    "company_name": "The Better India",
-    "emails": [
-      "editorial@thebetterindia.com",
-      "contact@thebetterindia.com"
-    ]
-  },
-  {
-    "company_name": "Beebom",
-    "emails": [
-      "partner@beebom.com",
-      "contact@beebom.com"
-    ]
-  },
-  {
-    "company_name": "Vice Media",
-    "emails": [
-      "press@vice.com",
-      "culture.pitches@vice.com",
-      "issues.pitches@vice.com",
-      "sales@vice.com"
-    ]
-  },
-  {
-    "company_name": "Hypebeast",
-    "emails": [
-      "advertising@hypebeast.com",
-      "partnerships@hypebeast.com",
-      "editorial@hypebeast.com",
-      "investors@hypebeast.com"
-    ]
-  },
-  {
-    "company_name": "Highsnobiety",
-    "emails": [
-      "advertising@highsnobiety.com",
-      "press@highsnobiety.com",
-      "accessibility@highsnobiety.com",
-      "store@highsnobiety.com"
-    ]
-  },
-  {
-    "company_name": "Penguin Random House",
-    "emails": [
-      "consumerservices@penguinrandomhouse.com",
-      "vikingpublicity@penguinrandomhouse.com",
-      "bha.bis@penguinrandomhouse.com"
-    ]
-  },
-  {
-    "company_name": "Times of India (Times Group)",
-    "emails": [
-      "crm.delhi@timesgroup.com",
-      "subscription@timesgroup.com",
-      "advertising@timesgroup.com"
-    ]
-  },
-  {
-    "company_name": "StartupTalky",
-    "emails": [
-      "contact@startuptalky.com",
-      "editorial@startuptalky.com",
-      "partnerships@startuptalky.com"
-    ]
-  },
-  {
-    "company_name": "Indian Startup News",
-    "emails": [
-      "contact@indianstartupnews.com",
-      "editorial@indianstartupnews.com",
-      "partnerships@indianstartupnews.com"
-    ]
-  },
-  {
-    "company_name": "Entrackr",
-    "emails": [
-      "editor@entrackr.com",
-      "contact@entrackr.com",
-      "partnerships@entrackr.com"
-    ]
-  },
-  {
-    "company_name": "DQ India",
-    "emails": [
-      "editor@dqindia.com",
-      "info@dqindia.com",
-      "marketing@dqindia.com"
-    ]
-  },
-  {
-    "company_name": "IndiaAI",
-    "emails": [
-      "contact@indiaai.gov.in",
-      "editorial@indiaai.gov.in",
-      "partnerships@indiaai.gov.in"
-    ]
-  },
-  {
-    "company_name": "Economic Times Startups",
-    "emails": [
-      "etstartup@timesinternet.in",
-      "feedback@timesinternet.in",
-      "marketing@timesinternet.in"
-    ]
-  },
-  {
-    "company_name": "Forbes India",
-    "emails": [
-      "editor@forbesindia.com",
-      "feedback@forbesindia.com",
-      "marketing@forbesindia.com"
-    ]
-  },
-  {
-    "company_name": "Business Today",
-    "emails": [
-      "btmail@intoday.com",
-      "feedback@businesstoday.in",
-      "marketing@businesstoday.in"
-    ]
-  },
-  {
-    "company_name": "BloombergQuint (BQ Prime)",
-    "emails": [
-      "support@bqprime.com",
-      "editorial@bqprime.com",
-      "marketing@bqprime.com"
-    ]
-  },
-  {
-    "company_name": "CNBC TV18",
-    "emails": [
-      "cnbctv18@nw18.com",
-      "feedback@nw18.com",
-      "marketing@nw18.com"
-    ]
-  },
-  {
-    "company_name": "Financial Express",
-    "emails": [
-      "feonline@indianexpress.com",
-      "letters@financialexpress.com",
-      "marketing@financialexpress.com"
-    ]
-  },
-  {
-    "company_name": "Business Standard",
-    "emails": [
-      "letters@business-standard.com",
-      "feedback@business-standard.com",
-      "marketing@business-standard.com"
-    ]
-  },
-  {
-    "company_name": "Mint",
-    "emails": [
-      "feedback@livemint.com",
-      "editor@livemint.com",
-      "marketing@livemint.com"
-    ]
-  },
-  {
-    "company_name": "Fortune India",
-    "emails": [
-      "editor@fortuneindia.com",
-      "marketing@fortuneindia.com",
-      "contact@fortuneindia.com"
-    ]
-  },
-  {
-    "company_name": "Economic Times",
-    "emails": [
-      "letters@economictimes.com",
-      "feedback@timesinternet.in",
-      "marketing@timesinternet.in"
-    ]
-  },
-  {
-    "company_name": "Moneycontrol",
-    "emails": [
-      "editor@moneycontrol.com",
-      "feedback@moneycontrol.com",
-      "marketing@moneycontrol.com"
-    ]
-  },
-  {
-    "company_name": "NDTV Profit",
-    "emails": [
-      "profit@ndtv.com",
-      "feedback@ndtv.com",
-      "marketing@ndtv.com"
-    ]
-  },
-  {
-    "company_name": "Outlook Business",
-    "emails": [
-      "editor@outlookbusiness.com",
-      "feedback@outlookbusiness.com",
-      "marketing@outlookbusiness.com"
-    ]
-  },
-  {
-    "company_name": "BW Businessworld",
-    "emails": [
-      "editor@businessworld.in",
-      "feedback@businessworld.in",
-      "marketing@businessworld.in"
-    ]
-  },
-  {
-    "company_name": "Exchange4Media",
-    "emails": [
-      "editor@exchange4media.com",
-      "contact@exchange4media.com",
-      "marketing@exchange4media.com"
-    ]
-  },
-  {
-    "company_name": "Mashable India",
-    "emails": [
-      "mashableindia@forkmedia.in",
-      "editorial@forkmedia.in",
-      "partnerships@forkmedia.in"
-    ]
-  },
-  {
-    "company_name": "Digit",
-    "emails": [
-      "digit@9dot9.in",
-      "editor@digit.in",
-      "marketing@digit.in"
-    ]
-  },
-  {
-    "company_name": "Gadgets360",
-    "emails": [
-      "gadgets360@ndtv.com",
-      "editor@gadgets360.com",
-      "partnerships@gadgets360.com"
-    ]
-  },
-  {
-    "company_name": "TechGig",
-    "emails": [
-      "info@techgig.com",
-      "editorial@techgig.com",
-      "marketing@techgig.com"
-    ]
-  },
-  {
-    "company_name": "TechRadar",
-    "emails": [
-      "editor@techradar.com",
-      "contact@techradar.com",
-      "marketing@techradar.com"
-    ]
-  },
-  {
-    "company_name": "CNET",
-    "emails": [
-      "tips@cnet.com",
-      "editor@cnet.com",
-      "partnerships@cnet.com"
-    ]
-  },
-  {
-    "company_name": "ZDNet",
-    "emails": [
-      "editor@zdnet.com",
-      "contact@zdnet.com",
-      "partnerships@zdnet.com"
-    ]
-  },
-  {
-    "company_name": "EdTimes",
-    "emails": [
-      "contact@edtimes.in",
-      "editorial@edtimes.in",
-      "partnerships@edtimes.in"
-    ]
-  },
-  {
-    "company_name": "College Dunia",
-    "emails": [
-      "editorial@collegedunia.com",
-      "contact@collegedunia.com",
-      "partnerships@collegedunia.com"
-    ]
-  },
-  {
-    "company_name": "CollegeTips",
-    "emails": [
-      "contact@collegetips.in",
-      "editorial@collegetips.in",
-      "partnerships@collegetips.in"
-    ]
-  },
-  {
-    "company_name": "Internshala Blog",
-    "emails": [
-      "blog@internshala.com",
-      "media@internshala.com",
-      "partnerships@internshala.com"
-    ]
-  },
-  {
-    "company_name": "ScoopWhoop",
-    "emails": [
-      "business@scoopwhoop.com",
-      "editorial@scoopwhoop.com",
-      "partnerships@scoopwhoop.com"
-    ]
-  },
-  {
-    "company_name": "FilterCopy",
-    "emails": [
-      "contact@filtercopy.com",
-      "editorial@filtercopy.com",
-      "partnerships@filtercopy.com"
-    ]
-  },
-  {
-    "company_name": "The Better India",
-    "emails": [
-      "editorial@thebetterindia.com",
-      "contact@thebetterindia.com",
-      "partnerships@thebetterindia.com"
-    ]
-  },
-  {
-    "company_name": "The Caravan",
-    "emails": [
-      "editorial@caravanmagazine.in",
-      "letters@caravanmagazine.in",
-      "marketing@caravanmagazine.in"
-    ]
-  },
-  {
-    "company_name": "The Print",
-    "emails": [
-      "editor@theprint.in",
-      "feedback@theprint.in",
-      "marketing@theprint.in"
-    ]
-  }
+    {
+        "companyName": "Lenskart",
+        "emailList": [
+            "bhawna.chauhan@lenskart.com",
+            "hemant.tiwari@lenskart.in",
+            "amitc@lenskart.com",
+            "abhishek.gupta@lenskart.com",
+            "kaushal.kumar2@lenskart.com",
+            "prateek.sharma@lenskart.in",
+            "pankaj.malviya@lenskart.in",
+            "mohd.sabir@lenskart.com",
+            "riya.khanna@lenskart.in",
+            "satyapal.gatla@lenskart.in",
+            "manish.kumar@lenskart.in",
+            "amit.yadav2@lenskart.com",
+            "theja.s@lenskartacademy.com",
+            "parul.kataria@lenskartacademy.com",
+            "kuldeep.singh2@lenskart.com",
+            "richa.shruti@lenskart.in",
+            "swati.maheshwari@lenskart.in",
+            "neha.joshi@lenskart.in",
+            "tej.giri@lenskart.in",
+            "sunil.dubey@lenskart.com",
+            "ankit.sharma4@lenskart.in",
+            "yatish.chandra@lenskart.com",
+            "abhishek.gupta@lenskart.com",
+            "prasad.gaikward@lenskart.com",
+            "sushant.karmshil@lenskart.com",
+            "peeyush.sharma@lenskart.com",
+            "aartik.kapoor@lenskart.com",
+            "pranshu.bhatt@lenskart.com",
+            "khushnaz.kamdin@lenskart.in",
+            "sunny.mutreja@lenskart.com",
+            "jeetesh.agrawal@lenskart.in",
+            "shekhar.rajawat@lenskart.com",
+            "peyush.bansal@lenskart.com",
+            "anant.gupta@lenskart.com",
+            "anjali.bharti@lenskart.in",
+            "anuj.kumar2@lenskart.com",
+            "ajay.bhargava@lenskart.com",
+            "ramneek@lenskart.com",
+            "sagar.sahay@lenskart.com",
+            "anant.gupta@lenskart.com",
+            "aman.yadav@lenskart.com",
+            "preetika.arora@lenskart.in",
+            "ankit.sharma4@lenskart.in",
+            "caroline.andrew@lenskart.com",
+            "richa.shruti@lenskart.in",
+            "prateek.sharma@lenskart.in",
+            "khushnaz.kamdin@lenskart.in",
+            "aditi.dhupar@lenskart.in",
+            "chetanshi.kumari@lenskart.com",
+            "k.usman@lenskart.com",
+            "divya@lenskart.in",
+            "jibanananda.mishra@lenskart.in",
+            "nirbhay.gaur@lenskart.com",
+            "shekhar.rajawat@lenskart.com",
+            "narendar.ratnawat@lenskart.com",
+            "anjali.bharti@lenskart.in",
+            "syed.k@lenskart.com",
+            "baljeet.kanwar@lenskart.in",
+            "mukul.sharma@lenskart.com",
+            "abhishek.kumar@lenskart.in"
+        ]
+    },
+    {
+        "companyName": "Hindustan Unilever Ltd",
+        "emailList": [
+            "nirvikar.hingane@unilever.com",
+            "shubham.pawar@unilever.com",
+            "meghna.puri@unilever.com",
+            "sapna.joshi@unilever.com",
+            "joshi.manoj@unilever.com",
+            "melanie.moelders@unilever.com",
+            "sameer.tripathi@unilever.com",
+            "shivam.chatterjee@unilever.com",
+            "rajdeep.dey@unilever.com",
+            "madhukar.kadam@unilever.com",
+            "sagar.singh@unilever.com",
+            "rajeev.kumar@unilever.com",
+            "shashikant.vaidya@unilever.com",
+            "sneha.parab@unilever.com",
+            "radhakrishna.golivi@unilever.com",
+            "orquidea.cuanalo@unilever.com",
+            "liliana.holden@unilever.com",
+            "rahma.farrukh@unilever.com",
+            "jayati.dastidar@unilever.com",
+            "vipul.aggarwal@unilever.com",
+            "sarah.hamdy@unilever.com",
+            "aakriti.phukan@unilever.com",
+            "chidananda.yeyyadi@unilever.com",
+            "sai.namdev@unilever.com",
+            "anoop.thomas@unilever.com",
+            "sarah.hamdy@unilever.com",
+            "pooja.m@unilever.com",
+            "saprativ.ray@unilever.com",
+            "mdsanaullah.mallick@unilever.com",
+            "neha.sharma@unilever.com",
+            "nicholas.r@unilever.com",
+            "ruma.kishore@unilever.com",
+            "rabia.sabat@unilever.com",
+            "jakaria.hosen@unilever.com",
+            "annie.pillay@unilever.com",
+            "aditi.arora@unilever.com",
+            "payroll-process.hulrcmum@unilever.com",
+            "satish.dudhane@unilever.com",
+            "nagarajan.m@unilever.com",
+            "kamlesh.kumar@unilever.com",
+            "aparna.s@unilever.com",
+            "safa.shehzad@unilever.com",
+            "kevin.oshea@unilever.com",
+            "olesya.muravitskaya@unilever.com",
+            "raj.k@unilever.com"
+        ]
+    },
+    {
+        "companyName": "Nestle",
+        "emailList": [
+            "clara.rosero@pa.nestle.com",
+            "marcin@nestle.com",
+            "srimurugan.subramaniam@in.nestle.com",
+            "zracha@nestle.com",
+            "christian.zarate@nestle.com",
+            "tzipi.naor@nestle.com",
+            "yoko.endoh@jp.nestle.com",
+            "ivy.chen@nestle.com",
+            "micaela.quintanilla@pe.nestle.com",
+            "shabbir.ahmed@nestle.com",
+            "dana.melchner@il.nestle.com",
+            "chadlif@nestle.com",
+            "nicolas.martin@nestle.com",
+            "alok.kumar@nestle.com",
+            "santosh.balekundri@in.nestle.com",
+            "ashley.edelstein@nestle.com",
+            "fernanda.arantes@br.nestle.com",
+            "joaquin.mendiola@uy.nestle.com",
+            "No email",
+            "bruna.camargo1@br.nestle.com",
+            "camila.maldonado@cl.nestle.com",
+            "graziella.montanini@br.nestle.com",
+            "barbara.gomez@cl.nestle.com",
+            "muhammad.islam@nestle.com",
+            "trinidad.ferrer@ar.nestle.com",
+            "beth.lucas@uk.nestle.com",
+            "meghan.bhatia@us.nestle.com",
+            "artur.basto@pt.nestle.com",
+            "farhan.akhtar@nestle.com",
+            "myra.garcia@nestle.com",
+            "amelie.plateau@fr.nestle.com",
+            "murilo.pinto@br.nestle.com",
+            "rodrigo.suzuki@br.nestle.com",
+            "didik-wisnu.wicaksono@id.nestle.com",
+            "pilar.ingold@uy.nestle.com",
+            "marjory.muniz@nestle.com",
+            "whitney.kiepura@us.nestle.com",
+            "fausto.antonelli@ar.nestle.com",
+            "carlo.ramirezdearellanorodriguez@us.nestle.com",
+            "thayane.guarnier@br.nestle.com",
+            "panchaya.chanyanupap@th.nestle.com",
+            "jose.stacey@ec.nestle.com",
+            "clara.dodero@ar.nestle.com",
+            "bernardo.carmona@br.nestle.com",
+            "tiara.levers@us.nestle.com"
+        ]
+    },
+    {
+        "companyName": "Divine EAC",
+        "emailList": []
+    },
+    {
+        "companyName": "Dabur India",
+        "emailList": [
+            "hari.mehta@dabur.com",
+            "panwala.niraj@dabur.com",
+            "deo.riya@dabur.com",
+            "himanshi.sabharwal@dabur.com",
+            "fotedarr@dabur.com",
+            "mansi.waghela@dabur.com",
+            "singhd@dabur.com",
+            "bhaiya.amit@dabur.com",
+            "soumyajit.sarkar@arohan.in",
+            "prashant.chauhan@dabur.com",
+            "ashish.srivastava@dabur.com",
+            "hemen.rajbangshi@dabur.com",
+            "mm@dabur.com",
+            "sharmaa@dabur.com",
+            "hrassociate.east@dabur.com",
+            "ganesh.chandra@dabur.com",
+            "avienash.sirigiri@dabur.com",
+            "soumen.paul@dabur.com",
+            "neeraj.s@dabur.com"
+        ]
+    },
+    {
+        "companyName": "PepciCo india",
+        "emailList": [
+            "shreyashi.sugandhi@pepsico.com",
+            "jsk.srinivasan@pepsico.com",
+            "yatin.metha@pepsico.com",
+            "aagarwal@pepsicoindia.co.in",
+            "vasav.varshney@pepsico.com",
+            "asrar.haq@pepsicoindia.co.in",
+            "jason.sequeira@pepsico.com",
+            "bijoy.goswami@pepsico.com",
+            "No email",
+            "ankita.bagchi@pepsico.com",
+            "dhanashree.shetty@pepsico.com",
+            "rashmi.goyal.contractor@pepsico.com",
+            "dhananjay.shinde@pepsico.com",
+            "asharma@pepsicoindia.co.in",
+            "kashish.nogriya@pepsico.com",
+            "supriya.chaganti@pepsico.com",
+            "rhishav.phukan@pepsico.com",
+            "kamia.juneja@pepsico.com",
+            "virendra.yadav@pepsicoindia.co.in",
+            "saher.khan@pepsico.com",
+            "gayatri.das@pepsico.com",
+            "simi.mehta@pepsico.com",
+            "surbhi.bist@pepsico.com"
+        ]
+    },
+    {
+        "companyName": "Bevzilla",
+        "emailList": []
+    },
+    {
+        "companyName": "Hemocue",
+        "emailList": [
+            "clara.svensson@hemocue.se",
+            "evan.herbst@hemocue.se",
+            "ankita.rege@hemocue.in",
+            "kasper.schweitz@hemocue.se",
+            "stefan.wenell@hemocue.com",
+            "shanti.pi@hemocue.se",
+            "petra.lundgren@hemocue.com",
+            "rikard.fredriksson@hemocue.se",
+            "anette.lindbom@hemocue.com",
+            "anton.r@hemocue.com",
+            "hiba.tarsha@hemocue.se",
+            "madeleine.kaeck@hemocue.com",
+            "louise.jeppesengatzke@hemocue.se",
+            "sofie.ljungheimer@hemocue.se",
+            "staffan.ahlandsberg@hemocue.se",
+            "francois.dupont@hemocue.se",
+            "michelle.kline@hemocue.com",
+            "pierre.costabel@hemocue.se",
+            "al-saad.chowdhury@hemocue.com",
+            "emmet.sharghbin@hemocue.se",
+            "jack.groenewout@hemocue.com",
+            "frida.tange@hemocue.se",
+            "magnus.nordahl@hemocue.se",
+            "thomas.laursen@hemocue.se"
+        ]
+    },
+    {
+        "companyName": "Revcare Analytics",
+        "emailList": []
+    },
+    {
+        "companyName": "Diageo",
+        "emailList": [
+            "nallasivam.v@diageo.com",
+            "sunil.khatak@diageo.com",
+            "shagun.chadha@diageo.com",
+            "pankaj.jain@diageo.com",
+            "sanchari.bhattacharya@diageo.com",
+            "pankaj.jotwani@diageo.com",
+            "pawan.sharma@diageo.com",
+            "shashank.malviya@diageo.com",
+            "arindam.mondal@diageo.com",
+            "masoom.raza@diageo.com",
+            "ishant_chopra@unitedspirits.in",
+            "nagaraj.moger@diageo.com",
+            "nandini.r@diageo.com",
+            "sagar.d.tonde@diageo.com",
+            "kasturi.rajkumari@diageo.com",
+            "sunil.gabhane@diageo.com",
+            "umesh.jeswani@diageo.com",
+            "gajanan.kothole@unitedspirits.in",
+            "ravi.kakkar@diageo.com",
+            "mandeep.sharma@diageo.com",
+            "gourav.kashyap@diageo.com",
+            "kuldeep.sharma@diageo.com",
+            "devi.singh@diageo.com",
+            "gyan.prakash@diageo.com",
+            "yatindra.bhatt@diageo.com"
+        ]
+    },
+    {
+        "companyName": "AIIA",
+        "emailList": [
+            "phayward@aiia.com.au",
+            "ross.mcleish@optus.com.au",
+            "erynn@aiia.com.au",
+            "s-j@aiia.com.au",
+            "regine@aiia.com.au",
+            "van@aiia.com.au",
+            "sue@aiia.com.au",
+            "peter.beven@iecprofessional.com",
+            "justin@aiia.com.au"
+        ]
+    },
+    {
+        "companyName": "Publix\u200b",
+        "emailList": [
+            "danilo.castillo@publix.com",
+            "nitish.kumar@publix.com",
+            "virginia.herring@publix.com",
+            "ashley.allen@publix.com",
+            "millie.cologne-maneely@publix.com",
+            "rich.chearno@publix.com",
+            "danielle.wood@publix.com",
+            "lenore.smith@publix.com",
+            "christopher.loso@publix.com",
+            "kyle.smith@publix.com",
+            "seon.lee@publix.com",
+            "david.chase@publix.com",
+            "jason.kaczmarek@publix.com",
+            "andrew.houk@publix.com",
+            "omar.himer@publix.com",
+            "kerringtin.gordon@publix.com",
+            "benjamin.payne@publix.com",
+            "chase.young@publix.com",
+            "keegan.mcnulty@publix.com",
+            "alice.handlin@publix.ch",
+            "dawn.oconnor@publix.ch"
+        ]
+    },
+    {
+        "companyName": "Kroger\u200b",
+        "emailList": []
+    },
+    {
+        "companyName": "Smiletrain\u200b",
+        "emailList": [
+            "wthomas@smiletrain.org",
+            "nbell@smiletrain.org",
+            "jnazzari@smiletrain.org",
+            "kbraslow@smiletrain.org",
+            "mhossain@smiletrain.org",
+            "kdaniels@smiletrain.org",
+            "anurse@smiletrain.org",
+            "emcauliffe@smiletrain.org",
+            "cdickson@smiletrain.org",
+            "cferreira@smiletrain.org",
+            "sgupta@smiletrain.org",
+            "sphillips@smiletrain.org",
+            "shorne@smiletrain.org",
+            "btulloch@smiletrain.org",
+            "rzapolski@smiletrain.org",
+            "mmarot@smiletrain.org",
+            "nobi@smiletrain.org",
+            "mgoldberg@smiletrain.org",
+            "schakraborty@smiletrain.org",
+            "vlewis@smiletrain.org",
+            "jtolan@smiletrain.org",
+            "iballou@smiletrain.org",
+            "sschaefer@smiletrain.org",
+            "erumprecht@smiletrain.org",
+            "nmcgann@smiletrain.org"
+        ]
+    },
+    {
+        "companyName": "Bevzilla Coffee\u200b",
+        "emailList": [
+            "pranay@oneguardian.in"
+        ]
+    },
+    {
+        "companyName": "Coffee FitFeast\u200b",
+        "emailList": [
+            "Not Found"
+        ]
+    },
+    {
+        "companyName": "Gaagar",
+        "emailList": [
+            "pankaj@gaagar.com navya@gaagar.com"
+        ]
+    },
+    {
+        "companyName": "Hershey India",
+        "emailList": [
+            "abhandari@hersheys.com",
+            "unarayan@hersheys.com",
+            "tverma@hersheys.com",
+            "aamberkar@hersheys.com",
+            "vshebe@hersheys.com",
+            "ssingh@hersheys.com",
+            "vikumar@hersheys.com",
+            "apray@hersheys.com",
+            "sdawar@hersheys.com",
+            "aakulkarni@hersheys.com",
+            "rnsalunke@hersheys.com",
+            "kssangha@hersheys.com",
+            "lrao1@hersheys.com",
+            "nnagpal@hersheys.com",
+            "nlatpate@hersheys.com",
+            "kthakur@hersheys.com",
+            "sdsouza@hersheys.com",
+            "rpnegi@hersheys.com",
+            "akumar@hersheys.com"
+        ]
+    },
+    {
+        "companyName": "McDonald's",
+        "emailList": [
+            "sudeep.ghosh@mcdonaldsindia.com",
+            "reeya.paul@mcdonaldsindia.com",
+            "manish.narwani@mcdonaldsindia.com",
+            "kumar.saurabh@sinonnas.com",
+            "deepak@mcdonalds.com.au",
+            "shritika.de@mcdonaldsindia.com",
+            "priyaj@mcdonaldsindia.com"
+        ]
+    },
+    {
+        "companyName": "Chai Sutta Bar",
+        "emailList": []
+    },
+    {
+        "companyName": "Blue Cross",
+        "emailList": [
+            "Not Found"
+        ]
+    },
+    {
+        "companyName": "PRACTO",
+        "emailList": [
+            "Not Found"
+        ]
+    },
+    {
+        "companyName": "Roche India\u200b",
+        "emailList": [
+            "kenneth.rivas@roche.com",
+            "fariss.awlia@roche.com",
+            "shivani.mali@roche.com",
+            "daniele.filippini@roche.com",
+            "alexandre.roche@roche-technologies.com",
+            "suvradatta.jena@roche.com",
+            "thomas.schinecker@roche.com",
+            "daniel.duran@roche.com",
+            "kristen.pressner@roche.com",
+            "jose.sacristan@roche.com",
+            "lutz.knabe@roche.com",
+            "carolina.verdesoto@roche.com",
+            "fernanda.malta@roche.com",
+            "simon.reiser@roche.com",
+            "jessica.bensch@roche.com",
+            "kerin@roche.com",
+            "manzur-ul.alam@roche.com",
+            "omar.mohammad@roche.com",
+            "thomas.schinecker@roche.com",
+            "rabia.farooqui@roche.com",
+            "ines.sanchez_alonso@roche.com",
+            "tshidi.khunou@roche.com",
+            "alan.hippe@roche.com",
+            "adriano.oliveira@roche.com",
+            "helena.liebanas@roche.com"
+        ]
+    },
+    {
+        "companyName": "Abbott India\u200b",
+        "emailList": [
+            "rohini.pethe@abbott.com",
+            "swati@abbott.co.in",
+            "saudas.mitra@abbott.com",
+            "purvi.parmar@abbott.com",
+            "koppala.ganesh@abbott.com",
+            "No email",
+            "dhakad.r@pg.com",
+            "pramod.balkar@abbott.com",
+            "anit.kumar@abbott.com",
+            "arati.balan@hccs.edu",
+            "mohit.mangi@abbott.com",
+            "No email",
+            "sujeet.kumar5@abbott.com",
+            "abhijit.chandgude@abbott.com",
+            "jigar.shah2@abbott.com",
+            "madhura.lathkar@abbott.com",
+            "abdul.bari@abbott.com",
+            "sweta.singh@abbott.com",
+            "subhasish.paul@abbott.com",
+            "ankur.agarwal@abbott.com"
+        ]
+    },
+    {
+        "companyName": "Novartis",
+        "emailList": [
+            "sanjay.naru@novartis.com",
+            "dnyaneshwar.kale@novartis.com",
+            "manish_kumar.majumdar@novartis.com",
+            "shiva.kudate@novartis.com",
+            "sudheer.indukuri@novartis.com",
+            "praful.kumar@novartis.com",
+            "shilpa.joshi@novartis.com",
+            "sagar_ramdas.pachpute@novartis.com",
+            "hemant.bhutani@novartis.com",
+            "svs_gupta.mulukuri@novartis.com",
+            "sandeep.goyal@novartis.com",
+            "aditi.roy@novartis.com",
+            "raghu.ganti@novartis.com",
+            "rishi-2.jain@novartis.com",
+            "shaik.khasimvali@novartis.com",
+            "karuna.shettennavar@novartis.com",
+            "ramya.ramesh@novartis.com",
+            "sowmya.ramamoorthy@novartis.com",
+            "palakh.saraogi@novartis.com",
+            "sridhar@proteogen.com",
+            "utkarsha.khadke@novartis.com",
+            "aniruddha.uike@novartis.com",
+            "sudhindra.devarapalli@novartis.com",
+            "kaustav.mitra@novartis.com",
+            "aparajita.sharma@novartis.com"
+        ]
+    },
+    {
+        "companyName": "Captain Fresh",
+        "emailList": [
+            "Not Found"
+        ]
+    },
+    {
+        "companyName": "eClinicalWorks",
+        "emailList": [
+            "Not Found"
+        ]
+    },
+    {
+        "companyName": "Chupa Chups",
+        "emailList": [
+            "Not Found"
+        ]
+    },
+    {
+        "companyName": "French Essence \n(FMCG: Fragrance Brand)",
+        "emailList": [
+            "Not Found"
+        ]
+    },
+    {
+        "companyName": "Rebel Foods",
+        "emailList": [
+            "deveshree.gawand@rebelfoods.com",
+            "faasos@rebelfoods.com",
+            "ayush.sood@rebelfoods.com",
+            "rahul.goyal@rebelfoods.com",
+            "mishal.jain@rebelfoods.com",
+            "satyawan@rebelfoods.com",
+            "payoja.bhakre@rebelfoods.com",
+            "suraj.ingle@rebelfoods.com",
+            "vikrant.gunjal@rebelfoods.com",
+            "gaurav.chandak@rebelfoods.com",
+            "ishaan.agarwal@rebelfoods.com",
+            "claudia.agudelo@rebelfoods.com",
+            "ishan.gulati@rebelfoods.com",
+            "javed.sayyad@rebelfoods.com",
+            "varun.lather@rebelfoods.com",
+            "mayank.somani@rebelfoods.com",
+            "chetan.salian@rebelfoods.com",
+            "sandipan.manna@rebelfoods.com",
+            "manisha.singh@rebelfoods.com",
+            "deepak.bedekar@rebelfoods.com",
+            "darshana.aher@rebelfoods.com",
+            "oshin.kapoor@rebelfoods.com",
+            "jibrail.mansoori@rebelfoods.com",
+            "mohit.mahajan@rebelfoods.com",
+            "mahika.m@rebelfoods.com",
+            "sharyu.pednekar@rebelfoods.com",
+            "sreehari.a@rebelfoods.com",
+            "neha.gupta@rebelfoods.com",
+            "aruj.garg@rebelfoods.com"
+        ]
+    },
+    {
+        "companyName": "Curefoods",
+        "emailList": [
+            "abhilash@eatfit.in",
+            "richa.batra@curefoods.in",
+            "saurabh.parihar@curefoods.in",
+            "brundhavani@curefoods.in",
+            "krishna.ramdas@curefoods.in",
+            "tanvi.gupta@curefoods.in",
+            "manoj@curefoods.in",
+            "diya.mary@curefoods.in",
+            "shashank@curefoods.in",
+            "kenneth.joel@eatfit.in",
+            "anurag.acharya@curefoods.in",
+            "madhusudan.v@curefoods.in",
+            "rekha@curefoods.in",
+            "yamin@curefoods.in",
+            "aditya.goel@eatfit.in",
+            "nikunj@curefoods.in",
+            "richa.sharma@curefoods.in",
+            "shilpa@curefoods.in",
+            "manoj@curefoods.in",
+            "shashi.kumar@curefoods.in",
+            "amit@curefoods.in",
+            "prasanth.nair@eatfit.in",
+            "shreya.sarraf@curefoods.in",
+            "santosh.n@curefoods.in",
+            "harsha.agrawal@eatfit.in",
+            "abhishek.p@curefoods.in",
+            "sandeep.nivrutti@curefoods.in",
+            "divyanshu.r@curefoods.in",
+            "abraham.lincon@eatfit.in",
+            "tajuddin@eatfit.in",
+            "sameer.chavan@curefoods.in",
+            "neeraj.v@eatfit.in",
+            "gaurav.negi@curefoods.in",
+            "sumant@curefoods.in",
+            "rakshita@curefoods.in",
+            "ishan@eatfit.in",
+            "alekh.rastogi@eatfit.in",
+            "samjad.ali@curefoods.in"
+        ]
+    },
+    {
+        "companyName": "Savlon",
+        "emailList": []
+    },
+    {
+        "companyName": "Hyperpure",
+        "emailList": [
+            "bharat.verma@hyperpure.com",
+            "ashim.mondal@hyperpure.com",
+            "raghav.batra@zomato.com",
+            "shreya.srivastava@hyperpure.com",
+            "pushkar.patel@hyperpure.com",
+            "prashant.tiwari@hyperpure.com",
+            "mayank.patel@hyperpure.com",
+            "manoj.s@hyperpure.com",
+            "saurabh.u@hyperpure.com",
+            "vishal.tripathi@hyperpure.com",
+            "archit.puri@hyperpure.com",
+            "vedant.desai@zomato.com",
+            "manoj.s@hyperpure.com",
+            "darshana.pokharel@hyperpure.com",
+            "rudra.desai@zomato.com",
+            "anil.yadav@hyperpure.com",
+            "geetika.diwan@hyperpure.com",
+            "navjot.b@hyperpure.com",
+            "bhawana.singh@hyperpure.com",
+            "kanika.ghai@hyperpure.com",
+            "shivani.puri@zomato.com",
+            "rajat.bisht@hyperpure.com",
+            "bharti.kumari@hyperpure.com",
+            "rohit.saran@hyperpure.com",
+            "agrim.arora@hyperpure.com",
+            "jivesh.kaul@hyperpure.com",
+            "yashvir.jolly@hyperpure.com",
+            "dhairya.veerwani@hyperpure.com",
+            "jyoti.bhosale@hyperpure.com"
+        ]
+    },
+    {
+        "companyName": "Mapro",
+        "emailList": [
+            "vishal@mapro.com",
+            "ganesh@mapro.com",
+            "vijayb@mapro.com",
+            "amarpal@mapro.com",
+            "mayur@mapro.com",
+            "prashant@mapro.com",
+            "abhishek@mapro.com",
+            "mushtaq@mapro.com",
+            "raju@mapro.com",
+            "shamal@mapro.com",
+            "prashant@mapro.com",
+            "kailash@mapro.com",
+            "mahesh@mapro.com",
+            "rushabh@mapro.com",
+            "priyanka@mapro.com",
+            "rahul@mapro.com",
+            "sandeep@mapro.com",
+            "omkar@mapro.com",
+            "arbaaz@mapro.com",
+            "subhash@mapro.com",
+            "mayur@mapro.com",
+            "sanketk@mapro.com",
+            "amit.aphale@mapro.com",
+            "pravin@mapro.com",
+            "vedanti@mapro.com",
+            "neelam@mapro.com",
+            "akshay@mapro.com",
+            "chandrakant@mapro.com",
+            "pranit@mapro.com",
+            "poojap@mapro.com",
+            "sunil@mapro.com",
+            "vikas@mapro.com",
+            "ganesh@mapro.com",
+            "mayur@mapro.com",
+            "bhushan@mapro.com",
+            "anil@mapro.com",
+            "mangeshy@mapro.com",
+            "mayur@mapro.com"
+        ]
+    },
+    {
+        "companyName": "DocPharma",
+        "emailList": []
+    },
+    {
+        "companyName": "Santoor",
+        "emailList": []
+    },
+    {
+        "companyName": "Rebel Foods",
+        "emailList": [
+            "deveshree.gawand@rebelfoods.com",
+            "faasos@rebelfoods.com",
+            "ayush.sood@rebelfoods.com",
+            "rahul.goyal@rebelfoods.com",
+            "mishal.jain@rebelfoods.com",
+            "satyawan@rebelfoods.com",
+            "payoja.bhakre@rebelfoods.com",
+            "suraj.ingle@rebelfoods.com",
+            "vikrant.gunjal@rebelfoods.com",
+            "gaurav.chandak@rebelfoods.com",
+            "ishaan.agarwal@rebelfoods.com",
+            "claudia.agudelo@rebelfoods.com",
+            "ishan.gulati@rebelfoods.com",
+            "javed.sayyad@rebelfoods.com",
+            "varun.lather@rebelfoods.com",
+            "mayank.somani@rebelfoods.com",
+            "chetan.salian@rebelfoods.com",
+            "sandipan.manna@rebelfoods.com",
+            "manisha.singh@rebelfoods.com",
+            "deepak.bedekar@rebelfoods.com",
+            "darshana.aher@rebelfoods.com",
+            "oshin.kapoor@rebelfoods.com",
+            "jibrail.mansoori@rebelfoods.com",
+            "mohit.mahajan@rebelfoods.com",
+            "mahika.m@rebelfoods.com",
+            "sharyu.pednekar@rebelfoods.com sreehari.a@rebelfoods.com neha.gupta@rebelfoods.com aruj.garg@rebelfoods.com"
+        ]
+    },
+    {
+        "companyName": "Savlon",
+        "emailList": []
+    },
+    {
+        "companyName": "Mapro",
+        "emailList": [
+            "vishal@mapro.com",
+            "ganesh@mapro.com",
+            "vijayb@mapro.com",
+            "amarpal@mapro.com",
+            "mayur@mapro.com",
+            "prashant@mapro.com",
+            "abhishek@mapro.com",
+            "mushtaq@mapro.com",
+            "raju@mapro.com",
+            "shamal@mapro.com",
+            "prashant@mapro.com",
+            "kailash@mapro.com",
+            "mahesh@mapro.com",
+            "rushabh@mapro.com",
+            "priyanka@mapro.com",
+            "rahul@mapro.com",
+            "sandeep@mapro.com",
+            "omkar@mapro.com",
+            "arbaaz@mapro.com",
+            "subhash@mapro.com",
+            "mayur@mapro.com",
+            "sanketk@mapro.com",
+            "amit.aphale@mapro.com",
+            "pravin@mapro.com",
+            "vedanti@mapro.com",
+            "neelam@mapro.com",
+            "akshay@mapro.com",
+            "chandrakant@mapro.com",
+            "pranit@mapro.com",
+            "poojap@mapro.com",
+            "sunil@mapro.com",
+            "vikas@mapro.com",
+            "ganesh@mapro.com",
+            "mayur@mapro.com",
+            "bhushan@mapro.com",
+            "anil@mapro.com",
+            "mangeshy@mapro.com",
+            "mayur@mapro.com"
+        ]
+    },
+    {
+        "companyName": "Curefoods",
+        "emailList": [
+            "abhilash@eatfit.in",
+            "richa.batra@curefoods.in",
+            "saurabh.parihar@curefoods.in",
+            "brundhavani@curefoods.in",
+            "krishna.ramdas@curefoods.in",
+            "tanvi.gupta@curefoods.in",
+            "manoj@curefoods.in",
+            "diya.mary@curefoods.in",
+            "shashank@curefoods.in",
+            "kenneth.joel@eatfit.in",
+            "anurag.acharya@curefoods.in",
+            "madhusudan.v@curefoods.in",
+            "rekha@curefoods.in",
+            "yamin@curefoods.in",
+            "aditya.goel@eatfit.in",
+            "nikunj@curefoods.in",
+            "richa.sharma@curefoods.in",
+            "shilpa@curefoods.in",
+            "manoj@curefoods.in",
+            "shashi.kumar@curefoods.in",
+            "amit@curefoods.in",
+            "prasanth.nair@eatfit.in",
+            "shreya.sarraf@curefoods.in",
+            "santosh.n@curefoods.in",
+            "harsha.agrawal@eatfit.in",
+            "abhishek.p@curefoods.in",
+            "sandeep.nivrutti@curefoods.in",
+            "divyanshu.r@curefoods.in",
+            "abraham.lincon@eatfit.in",
+            "tajuddin@eatfit.in",
+            "sameer.chavan@curefoods.in",
+            "neeraj.v@eatfit.in",
+            "gaurav.negi@curefoods.in",
+            "sumant@curefoods.in",
+            "rakshita@curefoods.in",
+            "ishan@eatfit.in",
+            "alekh.rastogi@eatfit.in",
+            "samjad.ali@curefoods.in"
+        ]
+    },
+    {
+        "companyName": "Hyperpure",
+        "emailList": [
+            "bharat.verma@hyperpure.com",
+            "ashim.mondal@hyperpure.com",
+            "raghav.batra@zomato.com",
+            "shreya.srivastava@hyperpure.com",
+            "pushkar.patel@hyperpure.com",
+            "prashant.tiwari@hyperpure.com",
+            "mayank.patel@hyperpure.com",
+            "manoj.s@hyperpure.com",
+            "saurabh.u@hyperpure.com",
+            "vishal.tripathi@hyperpure.com",
+            "archit.puri@hyperpure.com",
+            "vedant.desai@zomato.com",
+            "manoj.s@hyperpure.com",
+            "darshana.pokharel@hyperpure.com",
+            "rudra.desai@zomato.com",
+            "anil.yadav@hyperpure.com",
+            "geetika.diwan@hyperpure.com",
+            "navjot.b@hyperpure.com",
+            "bhawana.singh@hyperpure.com",
+            "kanika.ghai@hyperpure.com",
+            "shivani.puri@zomato.com",
+            "rajat.bisht@hyperpure.com",
+            "bharti.kumari@hyperpure.com",
+            "rohit.saran@hyperpure.com",
+            "agrim.arora@hyperpure.com",
+            "jivesh.kaul@hyperpure.com",
+            "yashvir.jolly@hyperpure.com",
+            "dhairya.veerwani@hyperpure.com jyoti.bhosale@hyperpure.com"
+        ]
+    },
+    {
+        "companyName": "DocPharma",
+        "emailList": []
+    },
+    {
+        "companyName": "Nurix",
+        "emailList": [
+            "vishal@nurix.ai",
+            "prashant.kumar@nurix.ai",
+            "yashvi@nurix.ai",
+            "rashi@nurix.ai",
+            "aditya.pawsey@nurix.ai",
+            "shravan.pendem@nurix.ai",
+            "pulkit.tyagi@nurix.ai",
+            "kushagra.singh@nurix.ai",
+            "khushi.rathi@nurix.ai",
+            "parambir.singh@nurix.ai",
+            "shreyas.montadka@nurix.ai",
+            "anuj.jain@nurix.ai",
+            "sakshi@nurix.ai",
+            "adya.srivastava@nurix.ai",
+            "zeel.zadafiya@nurix.ai",
+            "muktha.naik@nurix.ai",
+            "abhimanyu@nurix.ai",
+            "satvik.kakkar@nurix.ai",
+            "liton@nurix.ai",
+            "shobhit.mandloi@nurix.ai",
+            "rathod@nurix.ai",
+            "arnab.das@nurix.ai",
+            "karthik.viswanathan@nurix.ai",
+            "abhilash.jain@nurix.ai",
+            "reshma.baskaran@nurix.ai",
+            "tejas.hegde@nurix.ai",
+            "anuj@nurix.ai mukesh@nurix.ai",
+            "tanmay.shrivastava@nurix.ai shishir.sinha@nurix.ai",
+            "anirudh@nurix.ai",
+            "samarjeet.mohite@nurix.ai"
+        ]
+    },
+    {
+        "companyName": "Minimalist",
+        "emailList": [
+            "soumya.upadhyay@beminimalist.co",
+            "mohit@beminimalist.co",
+            "viren.haldwania@beminimalist.co",
+            "aditya.sharma@beminimalist.co",
+            "gopi.yadav@beminimalist.co",
+            "anushka.singh@beminimalist.co",
+            "divyankshi.goswami@beminimalist.co",
+            "prashant.singh@beminimalist.co",
+            "kavita@beminimalist.co",
+            "suman.peswani@beminimalist.co",
+            "akshat.gautam@beminimalist.co",
+            "simran.arora@beminimalist.co",
+            "ankit.maheshwari@beminimalist.co",
+            "ajay.kumawat@beminimalist.co",
+            "rahul@beminimalist.co",
+            "simi.majumder@beminimalist.co",
+            "mansi.shreshtha@beminimalist.co"
+        ]
+    },
+    {
+        "companyName": "Rebel Foods",
+        "emailList": [
+            "deveshree.gawand@rebelfoods.com",
+            "faasos@rebelfoods.com",
+            "ayush.sood@rebelfoods.com",
+            "rahul.goyal@rebelfoods.com",
+            "mishal.jain@rebelfoods.com",
+            "satyawan@rebelfoods.com",
+            "payoja.bhakre@rebelfoods.com",
+            "suraj.ingle@rebelfoods.com",
+            "vikrant.gunjal@rebelfoods.com",
+            "gaurav.chandak@rebelfoods.com",
+            "ishaan.agarwal@rebelfoods.com",
+            "claudia.agudelo@rebelfoods.com",
+            "ishan.gulati@rebelfoods.com",
+            "javed.sayyad@rebelfoods.com",
+            "varun.lather@rebelfoods.com",
+            "mayank.somani@rebelfoods.com",
+            "chetan.salian@rebelfoods.com",
+            "sandipan.manna@rebelfoods.com",
+            "manisha.singh@rebelfoods.com",
+            "deepak.bedekar@rebelfoods.com",
+            "darshana.aher@rebelfoods.com",
+            "oshin.kapoor@rebelfoods.com",
+            "jibrail.mansoori@rebelfoods.com",
+            "mohit.mahajan@rebelfoods.com",
+            "mahika.m@rebelfoods.com",
+            "sharyu.pednekar@rebelfoods.com sreehari.a@rebelfoods.com neha.gupta@rebelfoods.com aruj.garg@rebelfoods.com"
+        ]
+    },
+    {
+        "companyName": "Savlon",
+        "emailList": []
+    },
+    {
+        "companyName": "Babyhug",
+        "emailList": []
+    },
+    {
+        "companyName": "Mapro",
+        "emailList": [
+            "vishal@mapro.com",
+            "ganesh@mapro.com",
+            "vijayb@mapro.com",
+            "amarpal@mapro.com",
+            "mayur@mapro.com",
+            "prashant@mapro.com",
+            "abhishek@mapro.com",
+            "mushtaq@mapro.com",
+            "raju@mapro.com",
+            "shamal@mapro.com",
+            "prashant@mapro.com",
+            "kailash@mapro.com",
+            "mahesh@mapro.com",
+            "rushabh@mapro.com",
+            "priyanka@mapro.com",
+            "rahul@mapro.com",
+            "sandeep@mapro.com",
+            "omkar@mapro.com",
+            "arbaaz@mapro.com",
+            "subhash@mapro.com",
+            "mayur@mapro.com",
+            "sanketk@mapro.com",
+            "amit.aphale@mapro.com",
+            "pravin@mapro.com",
+            "vedanti@mapro.com",
+            "neelam@mapro.com",
+            "akshay@mapro.com",
+            "chandrakant@mapro.com",
+            "pranit@mapro.com",
+            "poojap@mapro.com",
+            "sunil@mapro.com",
+            "vikas@mapro.com",
+            "ganesh@mapro.com",
+            "mayur@mapro.com",
+            "bhushan@mapro.com",
+            "anil@mapro.com",
+            "mangeshy@mapro.com",
+            "mayur@mapro.com"
+        ]
+    }
 ]
