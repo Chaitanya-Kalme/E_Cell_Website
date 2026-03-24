@@ -36,26 +36,26 @@ export const allEvents = [
     ]
   },
   {
-    id: 'ipl-auction',
-    title: 'IPL Auction (Startup Edition)',
-    category: eventCategories.COMPETITION,
-    description: 'The Startup IPL offers students participating in an IPL auction to bid on startups or innovative ideas. They do so while taking into account valuation, scalability, and innovation.',
-    icon: '🏏',
-    color: 'from-purple-600 to-pink-600',
-    date: '15 Feb 2026',
-    time: '2:00 PM - 6:00 PM',
-    venue: 'Auditorium',
-    teamSize: { min: 2, max: 4 },
-    registrationFee: '₹200 per team',
-    prizes: '₹50,000 worth of prizes',
-    isRegistrationOpen: false,
-    image: '/images/ipl-auction.jpg',
-    highlights: [
-      'Real-time bidding experience',
-      'Valuation assessment',
-      'Strategic decision making',
-      'Winner takes all'
-    ]
+   id: 'ipl-auction',
+title: 'IPL Auction House',
+category: eventCategories.COMPETITION,
+description: 'IPL Auction House is a strategy-based simulation where participants act as franchise owners, building teams through live bidding while managing budget, risks, and real-time challenges.',
+icon: '🏏',
+color: 'from-purple-600 to-pink-600',
+date: '11-12 Apr 2026',
+time: 'Full Day Event',
+venue: 'IIT Ropar Main Campus',
+teamSize: { min: 1, max: 4 },
+registrationFee: '₹1600 per team',
+prizes: '₹8,000 + ₹4,000 cash + trophies & goodies',
+isRegistrationOpen: false,
+image: '/images/ipl-auction.jpg',
+highlights: [
+  'Live auction simulation',
+  'Budget & team strategy',
+  'Crisis management rounds',
+  'Press conference + Q&A'
+]
   },
   {
     id: 'job-fair',
@@ -212,70 +212,70 @@ export const allEvents = [
     ]
   },
   {
-    id: 'gtm-war',
-    title: 'GTM War (Go-To-Market Strategy Challenge)',
-    category: eventCategories.COMPETITION,
-    description: 'GTM War strives to develop strategies to ensure the successful market entry of the products.',
-    icon: '🎯',
-    color: 'from-teal-600 to-cyan-600',
-    date: '14 Feb 2026',
-    time: '2:00 PM - 6:00 PM',
-    venue: 'Marketing Lab',
-    teamSize: { min: 2, max: 4 },
-    registrationFee: '₹250 per team',
-    prizes: '₹35,000 worth of prizes',
-    isRegistrationOpen: true,
-    image: '/images/gtm-war.jpg',
-    highlights: [
-      'Market entry strategy',
-      'Customer analysis',
-      'Competitive positioning',
-      'Go-to-market planning'
-    ]
+   id: 'gtm-war',
+title: 'GTM Strategy War',
+category: eventCategories.COMPETITION,
+description: 'GTM Strategy War is the flagship product and strategy competition of E-Summit IIT Ropar where participants design and present go-to-market strategies for real-world business scenarios.',
+icon: '🎯',
+color: 'from-teal-600 to-cyan-600',
+date: '11 Apr 2026',
+time: '09:00 AM - 09:00 PM',
+venue: 'IIT Ropar Campus',
+teamSize: { min: 1, max: 5 },
+registrationFee: 'Free / As per registration portal',
+prizes: '₹7,500 + ₹5,000 + ₹2,500 cash + goodies',
+isRegistrationOpen: true,
+image: '/images/gtm-war.jpg',
+highlights: [
+  'Market analysis & strategy',
+  'Pricing & distribution planning',
+  'Go-to-market execution',
+  'Presentation + Q&A round'
+]
   },
   {
-    id: 'startup-sprint',
-    title: 'Startup Sprint - 60',
-    category: eventCategories.COMPETITION,
-    description: 'Startup Sprint is an accelerated competition based on the concept wherein the entire team needs to come up with and present a startup idea within 60 minutes.',
-    icon: '⚡',
-    color: 'from-yellow-600 to-orange-600',
-    date: '16 Feb 2026',
-    time: '11:00 AM - 2:00 PM',
-    venue: 'Innovation Hub',
-    teamSize: { min: 2, max: 4 },
-    registrationFee: '₹200 per team',
-    prizes: '₹20,000 worth of prizes',
-    isRegistrationOpen: true,
-    image: '/images/startup-sprint.jpg',
-    highlights: [
-      '60-minute challenge',
-      'Rapid ideation',
-      'Quick pitch preparation',
-      'Fast decision making'
-    ]
+   id: 'startup-sprint',
+title: 'Startup Sprint',
+category: eventCategories.COMPETITION,
+description: 'Startup Sprint is the flagship competition of E-Summit IIT Ropar where participants present innovative startup ideas and compete based on originality, feasibility, and business viability.',
+icon: '⚡',
+color: 'from-yellow-600 to-orange-600',
+date: '12 Apr 2026',
+time: '09:00 AM - 09:00 PM',
+venue: 'IIT Ropar Campus',
+teamSize: { min: 1, max: 3 },
+registrationFee: 'Free / As per registration portal',
+prizes: '₹7,500 + ₹5,000 + ₹2,500 cash + goodies',
+isRegistrationOpen: true,
+image: '/images/startup-sprint.jpg',
+highlights: [
+  'Startup idea pitching',
+  'Problem & solution validation',
+  'Business model planning',
+  'Presentation + Q&A round'
+]
   },
   {
-    id: 'mun',
-    title: 'MUN (Theme - Board Room)',
-    category: eventCategories.COMPETITION,
-    description: "In this MUN, the scenario is a boardroom recreation instead of the typical diplomatic activity.",
-    icon: '🗣️',
-    color: 'from-purple-700 to-indigo-700',
-    date: '14-15 Feb 2026',
-    time: '9:00 AM - 6:00 PM',
-    venue: 'MUN Hall',
-    teamSize: { min: 1, max: 1 },
-    registrationFee: '₹300 per delegate',
-    prizes: '₹30,000 worth of prizes + Certificates',
-    isRegistrationOpen: true,
-    image: '/images/mun.jpg',
-    highlights: [
-      'Corporate boardroom simulation',
-      'Debate and negotiation',
-      'Leadership skills',
-      'International exposure'
-    ]
+   id: 'mun',
+title: 'Lok Sabha MUN',
+category: eventCategories.COMPETITION,
+description: 'Lok Sabha MUN at E-Summit IIT Ropar is a boardroom-style simulation where participants debate policies related to India’s economic growth, startups, and innovation ecosystem.',
+icon: '🗣️',
+color: 'from-purple-700 to-indigo-700',
+date: 'E-Summit 2026',
+time: '9:00 AM - 6:00 PM',
+venue: 'IIT Ropar Main Campus',
+teamSize: { min: 1, max: 1 },
+registrationFee: '₹300 per delegate',
+prizes: '₹8,000 + ₹5,000 + ₹3,000 cash + certificates',
+isRegistrationOpen: true,
+image: '/images/mun.jpg',
+highlights: [
+  'Policy debate & discussion',
+  'Startup & economic focus',
+  'Negotiation & drafting',
+  'Leadership & communication'
+]
   },
   {
     id: 'creators-conclave',
@@ -299,6 +299,73 @@ export const allEvents = [
       'Industry connections'
     ]
   }
+    {
+  id: 'pitch-120',
+  title: 'Pitch 120',
+  category: eventCategories.COMPETITION,
+  description: 'Pitch 120 is a fast-paced startup pitching competition where teams present innovative solutions to real-world problems within a limited time frame.',
+  icon: '🚀',
+  color: 'from-blue-600 to-cyan-600',
+  date: '11 Apr 2026',
+  time: '09:00 AM - 09:00 PM',
+  venue: 'IIT Ropar Campus',
+  teamSize: { min: 1, max: 5 },
+  registrationFee: 'Free / As per registration portal',
+  prizes: '₹7,500 + ₹5,000 + ₹2,500 cash + goodies',
+  isRegistrationOpen: true,
+  image: '/images/pitch-120.jpg',
+  highlights: [
+    'Rapid idea pitching',
+    'Problem-solution focus',
+    'Time-bound challenge',
+    'Presentation + Q&A round'
+  ]
+},
+   {
+  id: 'consulting-case-competition',
+  title: 'Consulting Case Competition',
+  category: eventCategories.COMPETITION,
+  description: 'Consulting Case Competition challenges participants to solve real-world business problems through structured analysis, strategy building, and professional presentations.',
+  icon: '📊',
+  color: 'from-green-600 to-emerald-600',
+  date: '27 Mar - 12 Apr 2026',
+  time: 'Multiple Rounds',
+  venue: 'Hybrid (Online + IIT Ropar)',
+  teamSize: { min: 2, max: 3 },
+  registrationFee: 'Free / As per registration portal',
+  prizes: '₹9,000 + ₹6,500 + ₹4,500 cash',
+  isRegistrationOpen: false,
+  image: '/images/consulting.jpg',
+  highlights: [
+    'Case study analysis',
+    'Strategy & consulting approach',
+    'Market & business evaluation',
+    'Final presentation round'
+  ]
+},
+   {
+  id: 'ccb-mun',
+  title: 'Corporations Crisis Board (MUN)',
+  category: eventCategories.COMPETITION,
+  description: 'Corporations Crisis Board is a dynamic MUN simulation where participants represent corporations and respond to real-time global crises through strategy and negotiation.',
+  icon: '🏛️',
+  color: 'from-rose-600 to-pink-600',
+  date: 'E-Summit 2026',
+  time: 'Full Day Event',
+  venue: 'IIT Ropar Campus',
+  teamSize: { min: 1, max: 1 },
+  registrationFee: '₹300 per delegate',
+  prizes: '₹6,000 + ₹4,000 + ₹2,000 cash + certificates',
+  isRegistrationOpen: true,
+  image: '/images/ccb-mun.jpg',
+  highlights: [
+    'Crisis simulation',
+    'Corporate strategy decisions',
+    'Negotiation & adaptation',
+    'Real-time problem solving'
+  ]
+}
+
 ];
 
 // Startup Expo Data

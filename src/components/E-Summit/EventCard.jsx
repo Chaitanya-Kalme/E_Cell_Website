@@ -254,9 +254,19 @@ const UNSTOP_LINKS = {
   "gtm-war":       "https://unstop.com/competitions/gtm-go-to-market-strategy-war-e-summit-2026-indian-institute-of-technology-iit-ropar-1654640",
   "startup-sprint": "https://unstop.com/competitions/startup-sprint-e-summit-2026-indian-institute-of-technology-iit-ropar-1654591",
   "pitch-120":     "https://unstop.com/competitions/pitch-120-e-summit-2026-indian-institute-of-technology-iit-ropar-1654618",
+  "mun":         "https://unstop.com/p/lok-sabha-mun-e-summit-2026-indian-institute-of-technology-iit-ropar-1656192",
+   "ipl-auction": "https://unstop.com/p/ipl-auction-house-e-summit-2026-indian-institute-of-technology-iit-ropar-1657501",
+ "pitch-120": "https://unstop.com/competitions/pitch-120-e-summit-2026-indian-institute-of-technology-iit-ropar-1654618",
+  "consulting-case-competition": "https://unstop.com/p/consulting-case-competition-e-summit-2026-indian-institute-of-technology-iit-ropar-1656808",
+   "ccb-mun": "https://unstop.com/competitions/corporations-crisis-board-mun-e-summit-2026-indian-institute-of-technology-iit-ropar-1664002",
+
+
 };
 
 // ─── Team size label helper ────────────────────────────────────────────────────
+
+
+
 function teamLabel({ min, max }) {
   if (min === max) return `${min} member${min > 1 ? "s" : ""}`;
   return `${min}–${max} members`;
