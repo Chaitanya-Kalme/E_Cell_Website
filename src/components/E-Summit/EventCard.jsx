@@ -259,7 +259,7 @@ const UNSTOP_LINKS = {
  "pitch-120": "https://unstop.com/competitions/pitch-120-e-summit-2026-indian-institute-of-technology-iit-ropar-1654618",
   "consulting-case-competition": "https://unstop.com/p/consulting-case-competition-e-summit-2026-indian-institute-of-technology-iit-ropar-1656808",
    "ccb-mun": "https://unstop.com/competitions/corporations-crisis-board-mun-e-summit-2026-indian-institute-of-technology-iit-ropar-1664002",
-
+   "beyond-transformers-hackathon": "https://hackculture.io/hackathons/ai-hackathon",
 
 };
 

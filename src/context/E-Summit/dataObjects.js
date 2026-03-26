@@ -45,7 +45,7 @@ export const allEvents = [
     date: '11 Apr 2026',
     time: '09:00 AM - 09:00 PM',
     venue: 'IIT Ropar Campus',
-    teamSize: { min: 1, max: 5 },
+    teamSize: { min: 2, max: 5 },
     registrationFee: 'Free',
     prizes: '₹7,500 + ₹5,000 + ₹2,500 cash + goodies',
     isRegistrationOpen: true,
@@ -86,11 +86,11 @@ export const allEvents = [
     description: 'Lok Sabha MUN at E-Summit IIT Ropar is a boardroom-style simulation where participants debate policies related to India’s economic growth, startups, and innovation ecosystem.',
     icon: '🗣️',
     color: 'from-purple-700 to-indigo-700',
-    date: 'E-Summit 2026',
+    date: '11-12 Apr 2026',
     time: '9:00 AM - 6:00 PM',
     venue: 'IIT Ropar Main Campus',
     teamSize: { min: 1, max: 1 },
-    registrationFee: '₹300 per delegate',
+    registrationFee: '₹1200 per delegate',
     prizes: '₹8,000 + ₹5,000 + ₹3,000 cash + certificates',
     isRegistrationOpen: true,
     image: '/images/mun.jpg',
@@ -154,10 +154,10 @@ export const allEvents = [
     icon: '🏛️',
     color: 'from-rose-600 to-pink-600',
     date: 'E-Summit 2026',
-    time: 'Full Day Event',
+    time: ' One Full Day Event',
     venue: 'IIT Ropar Campus',
     teamSize: { min: 1, max: 1 },
-    registrationFee: '₹300 per delegate',
+    registrationFee: '₹1000 per delegate',
     prizes: '₹6,000 + ₹4,000 + ₹2,000 cash + certificates',
     isRegistrationOpen: true,
     image: '/images/ccb-mun.jpg',
@@ -168,6 +168,30 @@ export const allEvents = [
       'Real-time problem solving'
     ]
   },
+  {
+  id: 'beyond-transformers-hackathon',
+  title: 'Beyond Transformers Hackathon',
+  category: eventCategories.COMPETITION,
+  description: 'Beyond Transformers Hackathon is an AI-focused innovation challenge where participants build real-world machine learning solutions through online and offline rounds.',
+  icon: '🤖',
+  color: 'from-purple-600 to-violet-600',
+  date: '20 Mar - 5 Apr 2026',
+  time: 'Multi-stage Event',
+  venue: 'Hybrid (Online + IIT Ropar)',
+  teamSize: { min: 1, max: 4 },
+  registrationFee: 'Free',
+  prizes: '₹12,500 + ₹7,500 + ₹5,000 cash + certificates',
+  isRegistrationOpen: true,
+  image: '/images/beyond-transformers.jpg',
+  highlights: [
+    'AI & ML based solutions',
+    'Online + offline rounds',
+    'Prototype & demo submission',
+    'Final presentation to experts'
+  ]
+}
+
+
 
 
 
