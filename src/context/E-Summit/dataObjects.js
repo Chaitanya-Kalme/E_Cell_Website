@@ -114,7 +114,7 @@ export const allEvents = [
     teamSize: { min: 2, max: 3 },
     registrationFee: 'Free',
     prizes: '₹9,000 + ₹6,500 + ₹4,500 cash',
-    isRegistrationOpen: false,
+    isRegistrationOpen: true,
     image: '/images/consulting.jpg',
     highlights: [
       'Case study analysis',
@@ -136,7 +136,7 @@ export const allEvents = [
     teamSize: { min: 1, max: 4 },
     registrationFee: '₹1600 per team',
     prizes: '₹8,000 + ₹4,000 cash + trophies & goodies',
-    isRegistrationOpen: false,
+    isRegistrationOpen: true,
     image: '/images/ipl-auction.jpg',
     highlights: [
       'Live auction simulation',
