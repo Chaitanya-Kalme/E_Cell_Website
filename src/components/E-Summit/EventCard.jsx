@@ -3,7 +3,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import { Calendar, Clock, MapPin, Users, Trophy, Info, X, ArrowRight } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Trophy, Info, X, ArrowRight, TrophyIcon } from "lucide-react";
 import EventRegistrationForm from "./EventRegistrationForm";
 
 // ─── Accent color map ──────────────────────────────────────────────────────────
@@ -569,7 +569,7 @@ export function ExpandableEventCards({ events }) {
                 <motion.div layoutId={`title-icon-${event.id}-${id}`} className="ec-icon">
                   {event.icon}
                 </motion.div>
-                <div className="ec-prize">{event.prizes?.split(" ")[0] ?? "Prizes"}</div>
+                <div className="ec-prize"><TrophyIcon/>{event.prizes?.split(" ")[0] ?? "Prizes"}</div>
                 {/* accent stripe */}
                 <div style={{
                   position:"absolute", bottom:0, left:0, right:0,
