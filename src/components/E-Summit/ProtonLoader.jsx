@@ -17,6 +17,8 @@ export default function ProtonLoader({ onComplete }) {
   const canvasRef = useRef(null);
   const rafRef    = useRef(null);
   const stateRef  = useRef({});
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -348,7 +350,7 @@ export default function ProtonLoader({ onComplete }) {
       // done — 50ms after logo appears
       if(!s.doneCalled && s.logoAppearTime && (now-s.logoAppearTime)>=1000){
         s.doneCalled=true;
-        if(onComplete) onComplete();
+        onCompleteRef.current?.();
       }
 
       rafRef.current=requestAnimationFrame(frame);
@@ -357,7 +359,7 @@ export default function ProtonLoader({ onComplete }) {
     initState();
     rafRef.current=requestAnimationFrame(frame);
     return ()=>{if(rafRef.current) cancelAnimationFrame(rafRef.current);};
-  },[onComplete]);
+  },[]);
 
   return (
     <canvas

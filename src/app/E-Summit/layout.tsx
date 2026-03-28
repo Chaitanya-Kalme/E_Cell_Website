@@ -44,10 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${calligraphy.variable} antialiased min-h-screen`}
-      >
+    <div
+      className={`${calligraphy.variable} antialiased min-h-screen`}
+    >
         <AuthProvider>
           <ThemeProvider
             attribute="class"
@@ -71,7 +70,6 @@ export default function RootLayout({
             <Toaster expand={true} richColors closeButton={true} />
           </ThemeProvider>
         </AuthProvider>
-      </body>
-    </html >
+    </div>
   );
 }
