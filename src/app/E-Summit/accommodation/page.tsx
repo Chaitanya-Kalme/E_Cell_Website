@@ -16,13 +16,10 @@ const viga = Viga({
   weight: "400",
 });
 
-// ✅ PASTE YOUR GOOGLE FORM EMBED URL HERE
-// To get the embed URL: open your Google Form → click ⋮ (more) → Embed → copy the src URL
-// It looks like: https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true
-const ACCOMMODATION_FORM_EMBED_URL = "YOUR_GOOGLE_FORM_EMBED_URL_HERE";
+const PARTICIPANTS_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScywXMr2OaXZSwYI6MzyYAS2k8pOgZ1Q-kRVFkQDmebH8MWFg/viewform?usp=publish-editor";
 
-// ✅ PASTE YOUR GOOGLE FORM DIRECT LINK HERE (for the "Open in new tab" button)
-const ACCOMMODATION_FORM_URL = "YOUR_GOOGLE_FORM_DIRECT_URL_HERE";
+const VISITORS_FORM_URL = "https://forms.gle/ArTQr2QwhFz4aUuk8";
 
 export default function AccommodationPage() {
   return (
@@ -68,7 +65,7 @@ export default function AccommodationPage() {
               </span>
             </h2>
             <p className={`${viga.className} text-gray-200 text-base md:text-lg leading-relaxed`}>
-              IIT Ropar&apos;s flagship entrepreneurship summit runs April 11-12, 2026 —
+              IIT Ropar&apos;s flagship entrepreneurship summit runs April 11–12, 2026 —
               and we&apos;ve got you covered with comfortable on-campus accommodation. No
               commutes, no hassle. Just show up, settle in, and focus on what matters:
               ideas, connections, and building the future.
@@ -131,33 +128,54 @@ export default function AccommodationPage() {
             </div>
             <div className="h-1 w-24 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4" />
             <p className={`${viga.className} text-gray-300 text-base md:text-lg`}>
-              Fill out the form below to request accommodation for E-Summit
+              Select the form that applies to you
             </p>
           </motion.div>
 
-         
-
-          {/* ── OPEN IN NEW TAB BUTTON ── */}
+          {/* ── TWO FORM BUTTONS ── */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="max-w-lg mx-auto text-center mb-16"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.36 }}
+            className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16"
           >
-            <a
-              href={ACCOMMODATION_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${ibmPlexMono.className} group inline-flex items-center justify-center gap-3 w-full sm:w-auto min-h-[52px] px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-lg shadow-cyan-500/25 border border-white/10 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]`}
-            >
-              <ExternalLink
-                className="shrink-0 opacity-90 group-hover:translate-x-0.5 transition-transform"
-                size={22}
-                aria-hidden
-              />
-               Form 
-            </a>
-            <p className="mt-3 text-sm text-gray-500">Opens in a new tab</p>
+            {/* Participants */}
+            <div className="rounded-3xl border border-cyan-500/30 bg-slate-950/60 backdrop-blur-xl p-8 text-center flex flex-col items-center gap-4">
+              <p className={`${ibmPlexMono.className} text-lg font-bold text-white`}>
+                Participants
+              </p>
+              <p className={`${viga.className} text-gray-400 text-sm`}>
+                Registered E-Summit participants
+              </p>
+              <a
+                href={PARTICIPANTS_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${ibmPlexMono.className} group inline-flex items-center justify-center gap-2 w-full min-h-[48px] px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-lg shadow-cyan-500/25 border border-white/10 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]`}
+              >
+                <ExternalLink className="shrink-0 opacity-90 group-hover:translate-x-0.5 transition-transform" size={18} aria-hidden />
+                Fill Form
+              </a>
+            </div>
+
+            {/* Visitors */}
+            <div className="rounded-3xl border border-purple-500/30 bg-slate-950/60 backdrop-blur-xl p-8 text-center flex flex-col items-center gap-4">
+              <p className={`${ibmPlexMono.className} text-lg font-bold text-white`}>
+                Visitors
+              </p>
+              <p className={`${viga.className} text-gray-400 text-sm`}>
+                General visitors attending E-Summit
+              </p>
+              <a
+                href={VISITORS_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${ibmPlexMono.className} group inline-flex items-center justify-center gap-2 w-full min-h-[48px] px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-lg shadow-purple-500/25 border border-white/10 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]`}
+              >
+                <ExternalLink className="shrink-0 opacity-90 group-hover:translate-x-0.5 transition-transform" size={18} aria-hidden />
+                Fill Form
+              </a>
+            </div>
           </motion.div>
 
           {/* ── IMPORTANT INFO ── */}
