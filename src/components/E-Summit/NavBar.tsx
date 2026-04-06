@@ -121,6 +121,20 @@ export default function NavBar() {
             </Link>
           </NavigationMenuItem>
 
+          {/* Accommodation - Desktop */}
+          <NavigationMenuItem>
+            <Link
+              href="/e-cell/E-Summit/accommodation"
+              className="relative px-3 py-1 transition-all duration-300
+              hover:text-yellow-300
+              after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+              after:w-0 after:bg-yellow-300 after:transition-all
+              after:duration-300 hover:after:w-full"
+            >
+              Accommodation
+            </Link>
+          </NavigationMenuItem>
+
           <NavigationMenuItem>
             <Link
               href="/e-cell/E-Summit/ca"
@@ -222,6 +236,18 @@ export default function NavBar() {
                rounded-md cursor-pointer"
             >
               Sponsors
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator className="bg-blue-200" />
+
+            {/* Accommodation - Mobile */}
+            <DropdownMenuItem
+              onClick={() => handleNavigate("/e-cell/E-Summit/accommodation")}
+              className="text-blue-950 font-semibold
+               hover:bg-blue-100 hover:text-blue-900
+               rounded-md cursor-pointer"
+            >
+              Accommodation
             </DropdownMenuItem>
 
             <DropdownMenuSeparator className="bg-blue-200" />

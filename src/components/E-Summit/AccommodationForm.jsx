@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Home, User, CheckCircle } from "lucide-react";
 
-const AccommodationForm = () => {
+const AccomdationForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -74,7 +74,7 @@ const AccommodationForm = () => {
             <CheckCircle className="mx-auto text-green-400 mb-6" size={60} />
           </motion.div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]">
-            Accommodation Request Submitted!
+            Accomdation Request Submitted!
           </h2>
           <p className="text-blue-200 text-base sm:text-lg">
             We'll get back to you shortly with confirmation details.
@@ -95,11 +95,11 @@ const AccommodationForm = () => {
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
             <Home className="text-cyan-400" size={32} />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)]">
-              Accommodation Request
+              Accomdation Request
             </h2>
           </div>
           <p className="text-blue-200 text-xs sm:text-sm md:text-base">
-            Fill out the form below to request accommodation for E-Summit
+            Fill out the form below to request accomdation for E-Summit
           </p>
         </div>
 
@@ -192,11 +192,11 @@ const AccommodationForm = () => {
             </div>
           </div>
 
-          {/* Accommodation Details */}
+          {/* Accomdation Details */}
           <div className="bg-black/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-purple-400/20">
             <h3 className="text-purple-300 font-semibold text-base sm:text-lg mb-3 sm:mb-4 flex items-center gap-2">
               <Home size={18} />
-              Accommodation Details
+              Accomdation Details
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
@@ -313,7 +313,7 @@ const AccommodationForm = () => {
                 Submitting...
               </span>
             ) : (
-              "Submit Accommodation Request"
+              "Submit Accomdation Request"
             )}
           </motion.button>
 
@@ -326,4 +326,4 @@ const AccommodationForm = () => {
   );
 };
 
-export default AccommodationForm;
+export default AccomdationForm;
