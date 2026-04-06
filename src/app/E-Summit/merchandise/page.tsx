@@ -88,23 +88,19 @@ export default function MerchandisePage() {
             className="grid md:grid-cols-2 gap-6 lg:gap-10 mb-16 md:mb-20"
           >
             <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-xl">
-              <Image
+              <img
                 src="/esummit_tshirt0.jpg"
                 alt="E-SUMMIT'26 merchandise T-shirt — front design"
-                fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                priority
               />
             </figure>
             <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-xl">
-              <Image
+              <img
                 src="/esummit_tshirt.jpg"
                 alt="E-SUMMIT'26 merchandise T-shirt — back design"
-                fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                priority
               />
             </figure>
           </motion.div>
