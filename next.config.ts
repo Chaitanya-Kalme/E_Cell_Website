@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   outputFileTracingRoot: path.join(__dirname),
-  // assetPrefix: '/e-cell/',
+  assetPrefix: '/e-cell/',
 };
 
 export default nextConfig;
