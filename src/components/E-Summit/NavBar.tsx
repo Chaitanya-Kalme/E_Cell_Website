@@ -124,7 +124,7 @@ export default function NavBar() {
           {/* Accommodation - Desktop */}
           <NavigationMenuItem>
             <Link
-              href="/e-cell/E-Summit/accommodation"
+              href="/E-Summit/accommodation"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
