@@ -94,7 +94,7 @@ export const InfiniteMovingCards = ({
               <img
                 src={item.src}
                 alt={item.alt || item.name || "Image"}
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-contain rounded-2xl p-4"
               />
               {item.name && (
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-4 py-3">

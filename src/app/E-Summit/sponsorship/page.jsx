@@ -96,7 +96,7 @@ const Sponsorship = () => {
       </section>
 
       {/* Sponsor Category Sections */}
-      {/* <div className="pb-20 space-y-20 px-4 md:px-8 lg:px-12">
+      <div className="pb-20 space-y-20 px-4 md:px-8 lg:px-12">
         {sponsorCategories.map((category, catIdx) => {
           const colors =
             categoryColors[category.title] || categoryColors["Event Sponsors"];
@@ -136,11 +136,11 @@ const Sponsorship = () => {
             </motion.section>
           );
         })}
-      </div> */}
-
-      <div className="pb-20 space-y-20 px-4 md:px-8 lg:px-12 text-white text-center text-5xl">
-        Coming Soon...
       </div>
+
+      {/* <div className="pb-20 space-y-20 px-4 md:px-8 lg:px-12 text-white text-center text-5xl">
+        Coming Soon...
+      </div> */}
 
       {/* Become a Sponsor CTA */}
       <section className="relative py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-[#0a0e27] via-[#1a1f3f] to-[#0a0e27]">
