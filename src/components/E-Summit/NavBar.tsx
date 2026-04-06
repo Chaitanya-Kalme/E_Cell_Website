@@ -84,7 +84,7 @@ export default function NavBar() {
 
           <NavigationMenuItem>
             <Link
-              href="/E-Summit/merchandise"
+              href="/e-cell/E-Summit/merchandise"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -124,7 +124,7 @@ export default function NavBar() {
           {/* Accommodation - Desktop */}
           <NavigationMenuItem>
             <Link
-              href="/E-Summit/accommodation"
+              href="/e-cell/E-Summit/accommodation"
               className="relative px-3 py-1 transition-all duration-300
               hover:text-yellow-300
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -208,7 +208,7 @@ export default function NavBar() {
             <DropdownMenuSeparator className="bg-blue-200" />
 
             <DropdownMenuItem
-              onClick={() => handleNavigate("/E-Summit/merchandise")}
+              onClick={() => handleNavigate("/e-cell/E-Summit/merchandise")}
               className="text-blue-950 font-semibold
                hover:bg-blue-100 hover:text-blue-900
                rounded-md cursor-pointer"
