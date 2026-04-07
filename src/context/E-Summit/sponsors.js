@@ -27,13 +27,13 @@ export const sponsorCategories = [
   {
     title: "Media Partners",
     sponsors: [
-      { name: "StartupNews.fyi", src: "/media_partner/startupnewfyi.jpeg" },
-      { name: "Dainik Jagran", src: "/media_partner/dainik jagran.png" },
-      { name: "Entrepreneurs of India", src: "/media_partner/entrepreneurs of india.jpeg" },
-      { name: "fest.info", src: "/media_partner/festsinfo.jpeg" },
-      { name: "Jagran Josh", src: "/media_partner/jagran_josh.jpeg" },
-      { name: "Silicon India", src: "/media_partner/silicon india.png" },
-      { name: "Summarise", src: "/media_partner/summarise.jpeg" },
+      { name: "StartupNews.fyi", src: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583014/startupnewfyi_hesfzt.jpg" },
+      { name: "Dainik Jagran", src: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583013/dainik_jagran_dh3cwi.png" },
+      { name: "Entrepreneurs of India", src: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583013/entrepreneurs_of_india_s9bezo.jpg" },
+      { name: "fest.info", src: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583013/festsinfo_vn59rw.png" },
+      { name: "Jagran Josh", src: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583013/jagran_josh_rorjio.jpg" },
+      { name: "Silicon India", src: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583013/silicon_india_eeqhyh.png" },
+      { name: "Summarise", src: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583013/summarise_i3nb2w.jpg" },
     ],
   },
   // {

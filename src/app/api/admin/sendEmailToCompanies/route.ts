@@ -35,60 +35,98 @@ export async function POST(req: NextRequest) {
 
       const template = `<!DOCTYPE html>
 <html>
+<head>
+    <title>E-Summit '26 Invitation</title>
+</head>
 <body>
 
-<p><strong>Dear ${companiesData.companyName} Team,</strong></p>
+<p>Dear ${companiesData.companyName},</p>
 
-<p><strong>Greetings from IIT Ropar!</strong><br>
-I hope this message finds you well.</p>
+<p><strong>Greetings from E-Cell IIT Ropar!</strong></p>
 
-<p>We are pleased to invite <strong>${companiesData.companyName}</strong> to collaborate with <strong>E-Summit 2026</strong>, the flagship entrepreneurial event of IIT Ropar and Punjab’s largest entrepreneurship festival, organized by the Entrepreneurship Cell, scheduled for <strong>11-12 April 2026</strong>. IIT Ropar, an Institute of National Importance, is known for its strong academic foundation, growing startup ecosystem, and focus on innovation.</p>
+<p>
+We are delighted to invite your institution to participate in 
+<strong>E-Summit ’26</strong>, our flagship entrepreneurial event that brings together 
+<strong>innovators, founders, investors, and students from across the country</strong>.
+</p>
 
-<p>E-Summit serves as a dynamic platform bringing together startups, innovators, investors, industry leaders, and over <strong>3,000+ students</strong> from premier institutions across the country. Over the years, the summit has hosted eminent personalities and industry leaders such as Ashneer Grover, Suresh Prabhu, Praveer Sinha, and Shankar Venugopal, among other distinguished speakers.</p>
+<p>
+The summit offers a wide range of opportunities for students to 
+<strong>learn, compete, and network</strong>. Key highlights of the event include the 
+<strong>Startup Expo</strong>, where budding startups can showcase their ideas and receive 
+support like <strong>AWS and PayU credits</strong>, and the 
+<strong>Investors Arena</strong>, featuring an impressive investment pool of 
+<strong>over ₹20 Crores</strong> for aspiring founders.
+</p>
 
-<p>As a leading organization in your industry, your association with E-Summit presents an excellent opportunity to engage with a young, innovation-driven audience.</p>
+<p>
+To enrich learning, <strong>E-Summit ’26</strong> will host 
+<strong>Leaders Talk sessions</strong> with renowned personalities like 
+<strong>Anubhav Dubey</strong>, along with the 
+<strong>Creators Conclave</strong>, focusing on the rapidly growing 
+<strong>creator economy</strong>. Participants can also engage in 
+<strong>hands-on workshops in Finance and Entrepreneurship</strong> to gain practical insights.
+</p>
 
-<p><strong>Key Events to Highlight:</strong></p>
+<p>
+The summit also provides excellent career opportunities through the 
+<strong>Intern Fair</strong>, enabling students to connect directly with 
+<strong>recruiters for internship roles</strong>.
+</p>
 
-<ul>
-  <li><strong>Startup Expo</strong> – A dynamic exhibition space featuring promising startups, product demos, and emerging technologies.</li>
-  <li><strong>Intern Fair</strong> – A curated recruitment platform connecting companies with skilled students seeking internships and project opportunities.</li>
-  <li><strong>Hackathons</strong> – High-intensity innovation challenges where participants build scalable solutions to real-world problems.</li>
-  <li><strong>Leadership Talk</strong> – A featured address by senior leadership on innovation, industry trends, and future opportunities.</li>
-</ul>
+<p>
+Adding to the excitement, <strong>E-Summit ’26</strong> will feature a vibrant lineup of 
+<strong>cultural and entertainment events</strong>, including a 
+<strong>Bike Stunt Show</strong>, 
+<strong>Comedy Show</strong>, 
+<strong>live singing performances</strong>, 
+<strong>Fashion Show</strong>, and an 
+<strong>electrifying Light Dance Show</strong>, ensuring a perfect blend of 
+<strong>learning and entertainment</strong>.
+</p>
 
-<p><strong>Proposed Collaboration Deliverables:</strong></p>
+<p>
+Students can also participate in <strong>11–12 dynamic competitions</strong> such as 
+<strong>Pitch120, GTM Case, Brand Remix, Startup Sprint, Trade League, Sigma Sprint, 
+Case Study, IPL Auction House, and AI Hackathon</strong>, with 
+<strong>cash prizes ranging from ₹15,000 to ₹20,000</strong>.
+</p>
 
-<ul>
-  <li>On-Ground Branded Kiosk for product display, demonstrations, or interactive engagement</li>
-  <li>High-Visibility Branding through banners, backdrops, and stage integration</li>
-  <li>Product Integration Opportunities during competitions or delegate kits</li>
-  <li>Title/Associate Partnership with relevant event segment</li>
-  <li>Social Media Amplification across pre-event promotions and live coverage</li>
-  <li>Speaking Opportunity for leadership engagement</li>
-</ul>
+<p>
+Additionally, immersive simulations like 
+<strong>Lok Sabha and Corporation Crisis Board</strong> will offer participants a chance to experience 
+<strong>real-time decision-making and problem-solving</strong> in high-pressure environments.
+</p>
 
-<p>This partnership would enable <strong>${companiesData.companyName}</strong> to strengthen its brand presence among students and emerging entrepreneurs while contributing to a thriving innovation ecosystem.</p>
+<p>
+We encourage you to share this opportunity with your students and motivate them to be a part of this 
+<strong>enriching experience</strong>.
+</p>
 
-<p>We would be delighted to explore a meaningful collaboration with your organization and engage with a highly ambitious and academically driven student community. Please find attached the event brochure and a brief pitch deck outlining E-Summit 2026 and potential avenues for collaboration.</p>
+<p>
+For further details and registration, please visit:<br>
+<a href="https://unstop.com/college-fests/e-summit-2026-indian-institute-of-technology-iit-ropar-446778">
+https://unstop.com/college-fests/e-summit-2026-indian-institute-of-technology-iit-ropar-446778
+</a>
+</p>
 
-<p>We would be happy to connect at your convenience to discuss this further.</p>
+<p>
+<strong>We look forward to your institution’s enthusiastic participation.</strong>
+</p>
 
-<p><strong>We look forward to your positive response.</strong></p>
-<p>Regards,</p>
-<p>Sponsorship Team Head</p>
-<p> Dev Jain</p>
-<p> Aditi Garg</p>
+<p>
+Warm regards,<br>
+<strong>Team E-Cell IIT Ropar</strong>
+</p>
 
 </body>
-</html>
-`
+</html>`
 
 
       await transporter.sendMail({
         from: `"E-Cell IIT Ropar" <${process.env.GMAIL_USER}>`,
         bcc: companiesData.emailList,
-        subject: "Invitation to Collaborate with E-Summit | IIT Ropar",
+        subject: "Invitation to Participate in E-Summit ’26 | IIT Ropar",
         html: template,
         attachments: [
           {
