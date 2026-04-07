@@ -89,7 +89,7 @@ export default function MerchandisePage() {
           >
             <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-xl">
               <img
-                src="/esummit_tshirt0.jpg"
+                src="https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583393/esummit_tshirt_wl9ygm.jpg"
                 alt="E-SUMMIT'26 merchandise T-shirt — front design"
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -97,7 +97,7 @@ export default function MerchandisePage() {
             </figure>
             <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-xl">
               <img
-                src="/esummit_tshirt.jpg"
+                src="https://res.cloudinary.com/doxe1rjaj/image/upload/v1775583392/esummit_tshirt0_oxhwf5.jpg"
                 alt="E-SUMMIT'26 merchandise T-shirt — back design"
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
