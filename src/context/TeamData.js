@@ -170,7 +170,7 @@ export const coordinatorMembers = [
     email: "2024eeb1213@iitrpr.ac.in",
   },
   {
-    name: "Keshav verma ",
+    name: "Kesha verma ",
     position: "Web Development Coordinator",
     image: "https://res.cloudinary.com/doxe1rjaj/image/upload/v1762323048/Screenshot_2025-10-15-10-44-59-993_com.miui.gallery-edit_-_Keshav_Verma_dfmxvw.jpg",
     linkedin: "https://www.linkedin.com/in/keshav-verma-2ba48331b",
