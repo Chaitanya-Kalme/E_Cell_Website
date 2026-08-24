@@ -9,7 +9,7 @@ import { Mail, User, MessageSquare, Send } from "lucide-react";
 import axios from "axios";
 
 const contact = () => {
-  const { coreTeam, teamMembers } = useContext(dataContext);
+  const { coreTeam, teamMembers, selectedYear, setSelectedYear } = useContext(dataContext);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
@@ -170,7 +170,27 @@ const contact = () => {
       </div>
 
       {/* Team Section */}
-      <h2 className="text-4xl font-bold text-center mb-12 text-[#3D0066] dark:text-orange-300">MEET OUR TEAM</h2>
+      <h2 className="text-4xl font-bold text-center mb-6 text-[#3D0066] dark:text-orange-300">MEET OUR TEAM</h2>
+
+      {/* Year Switch */}
+      <div className="flex justify-center mb-12">
+        <div className="inline-flex rounded-lg border-2 border-blue-700 dark:border-orange-200 overflow-hidden">
+          {[2026, 2025].map((year) => (
+            <button
+              key={year}
+              onClick={() => setSelectedYear(year)}
+              className={`px-6 py-2 font-bold transition-colors duration-200 ${
+                selectedYear === year
+                  ? "bg-blue-700 dark:bg-orange-200 text-white dark:text-gray-900"
+                  : "bg-white dark:bg-gray-800 text-blue-700 dark:text-orange-200"
+              }`}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className="flex justify-around">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-1 justify-items-center items-center">
           {coreTeam.map((member, index) => (
