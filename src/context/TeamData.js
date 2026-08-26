@@ -55,7 +55,7 @@ export const headMembers2026 = [
   linkedin: "https://www.linkedin.com/in/maloth-anil-675414338",
   email: "",
 },
-{
+
  {
   name: "Abhishek Aggarwal",
   position: "Outreach Head",
