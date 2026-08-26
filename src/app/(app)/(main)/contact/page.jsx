@@ -191,13 +191,13 @@ const contact = () => {
         </div>
       </div>
 
-      <div className="flex justify-around">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-1 justify-items-center items-center">
-          {coreTeam.map((member, index) => (
-            <ContactCard key={index} member={member} />
-          ))}
-        </div>
-      </div>
+    <div className="flex justify-around">
+  <div className="flex flex-wrap justify-center gap-4">
+    {coreTeam.map((member, index) => (
+      <ContactCard key={index} member={member} />
+    ))}
+  </div>
+</div>
       <div className="flex justify-around">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 items-center justify-center auto-rows-max">
           {teamMembers.map((member, index) => (
