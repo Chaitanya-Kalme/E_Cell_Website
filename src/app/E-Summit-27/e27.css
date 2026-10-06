@@ -1,0 +1,403 @@
+/* E-Summit'27 scoped styles. Every class is prefixed e27-; variables live on .e27-root.
+   Animations use transform/opacity only (the grid-floor uses translateY on a pre-tiled layer). */
+
+.e27-root {
+  --e27-bg: #050008;
+  --e27-deep: #6211bf;
+  --e27-violet: #9030f0;
+  --e27-bright: #c537f8;
+  --e27-magenta: #d070f0;
+  --e27-lavender: #f5d4fe;
+  --e27-text: #ffffff;
+  --e27-muted: rgba(255, 255, 255, 0.72);
+  --e27-line: rgba(197, 55, 248, 0.22);
+  --e27-tile: 80px; /* grid-floor tile size = loop distance */
+  --px: 0; /* pointer parallax, -1…1, written by Hero */
+  --py: 0;
+
+  background: var(--e27-bg);
+  color: var(--e27-text);
+  font-family: var(--e27-font-body), system-ui, sans-serif;
+  color-scheme: dark;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+.e27-root ::selection {
+  background: var(--e27-deep);
+  color: #fff;
+}
+
+/* Visible focus rings for keyboard users */
+.e27-root :focus-visible {
+  outline: 2px solid var(--e27-lavender);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.e27-heading {
+  font-family: var(--e27-font-heading), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--e27-lavender);
+  line-height: 1.05;
+}
+
+.e27-label {
+  font-family: var(--e27-font-body), system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--e27-muted);
+}
+
+.e27-accent {
+  color: var(--e27-bright);
+}
+
+/* ---------- Below-the-fold sections: skip work until near viewport ---------- */
+.e27-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+  contain: layout paint;
+  position: relative;
+}
+
+.e27-section-bg {
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgba(98, 17, 191, 0.22), transparent 70%),
+    var(--e27-bg);
+}
+
+.e27-swirl-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Buttons (hover = transform/opacity only) ---------- */
+.e27-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  position: relative;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.e27-btn:hover {
+  transform: translateY(-2px);
+}
+.e27-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+.e27-btn-primary {
+  background: linear-gradient(135deg, var(--e27-deep), var(--e27-bright));
+  color: #fff;
+  box-shadow: 0 8px 30px -8px rgba(197, 55, 248, 0.6); /* static, never animated */
+}
+.e27-btn-primary::after {
+  /* brighter overlay faded in on hover (opacity only) */
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--e27-violet), var(--e27-magenta));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+.e27-btn-primary {
+  isolation: isolate;
+}
+.e27-btn-primary:hover::after {
+  opacity: 1;
+}
+.e27-btn-ghost {
+  border: 1px solid rgba(245, 212, 254, 0.45);
+  color: var(--e27-lavender);
+  background: rgba(98, 17, 191, 0.12);
+}
+.e27-btn-ghost:hover {
+  opacity: 0.85;
+}
+
+/* ---------- Cards ---------- */
+.e27-card {
+  background: linear-gradient(160deg, rgba(98, 17, 191, 0.18), rgba(5, 0, 8, 0.85) 60%);
+  border: 1px solid var(--e27-line);
+  border-radius: 1.25rem;
+}
+.e27-tilt-card {
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: perspective(900px) rotateX(0) rotateY(0);
+}
+@media (hover: hover) {
+  .e27-tilt-card:hover {
+    transform: perspective(900px) rotateX(4deg) rotateY(-5deg) translateY(-4px);
+  }
+}
+
+/* ---------- Navbar ---------- */
+.e27-nav {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+.e27-nav--scrolled {
+  background-color: rgba(5, 0, 8, 0.78);
+  border-bottom-color: var(--e27-line);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); /* backdrop element 1 of max 4 */
+}
+.e27-mobile-panel {
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.e27-mobile-panel[data-open="true"] {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =====================================================================
+   HERO
+   ===================================================================== */
+.e27-hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--e27-bg);
+  isolation: isolate;
+}
+
+.e27-stage {
+  position: absolute;
+  inset: 0;
+  perspective: 1200px;
+  perspective-origin: 50% 45%;
+}
+
+/* One tilt transform for the whole layer group, driven by --px/--py */
+.e27-tilt {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(var(--py) * -2deg)) rotateY(calc(var(--px) * 3deg));
+  will-change: transform; /* moving layer 1 */
+}
+
+.e27-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(45% 38% at 50% 58%, rgba(144, 48, 240, 0.35), transparent 70%),
+    radial-gradient(70% 50% at 50% 100%, rgba(98, 17, 191, 0.45), transparent 75%),
+    radial-gradient(30% 25% at 50% 38%, rgba(197, 55, 248, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+/* Static "fake bloom" over the canvas — never animated */
+.e27-bloom {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(28% 30% at 50% 45%, rgba(208, 112, 240, 0.28), transparent 70%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* ---- Synthwave floor: bottom ~45%, rotated plane, pre-tiled track moved by translateY ---- */
+.e27-floor-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  perspective: 600px;
+  perspective-origin: 50% 0%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.e27-floor {
+  position: absolute;
+  left: -60%;
+  width: 220%;
+  top: 0;
+  height: 260%;
+  transform-origin: 50% 0%;
+  transform: rotateX(65deg);
+  overflow: hidden;
+}
+.e27-floor-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--e27-tile) * -1);
+  bottom: 0;
+  background-image:
+    linear-gradient(to right, rgba(197, 55, 248, 0.55) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(197, 55, 248, 0.55) 1.5px, transparent 1.5px);
+  background-size: var(--e27-tile) var(--e27-tile);
+  animation: e27-floor-move 1.6s linear infinite;
+  will-change: transform; /* moving layer 2 */
+}
+@keyframes e27-floor-move {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, var(--e27-tile), 0); } /* exactly one tile → seamless loop */
+}
+/* fade the floor into black at the horizon */
+.e27-floor-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--e27-bg) 0%, rgba(5, 0, 8, 0.6) 30%, transparent 65%);
+}
+.e27-horizon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 45%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--e27-magenta), transparent);
+  opacity: 0.7;
+}
+
+/* ---- WebGL canvas layer ---- */
+.e27-canvas-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.e27-canvas-layer[data-ready="true"] {
+  opacity: 1;
+}
+.e27-canvas-layer canvas {
+  width: 100% !important;
+  height: 100% !important; /* CSS upscales the reduced render-scale buffer */
+  display: block;
+}
+
+/* ---- Parallax depth helper: --d = pixels at full pointer deflection ---- */
+.e27-depth {
+  transform: translate3d(calc(var(--px) * var(--d, 10) * 1px), calc(var(--py) * var(--d, 10) * 1px), 0);
+}
+
+/* Static glow parent (filter is NOT animated; child floats inside) */
+.e27-flame-glow {
+  filter: drop-shadow(0 0 28px rgba(197, 55, 248, 0.55)) drop-shadow(0 0 60px rgba(98, 17, 191, 0.5));
+}
+.e27-flame-float {
+  animation: e27-float 6s ease-in-out infinite;
+  will-change: transform; /* moving layer 3 */
+}
+@keyframes e27-float {
+  0%, 100% { transform: translate3d(0, -8px, 0); }
+  50% { transform: translate3d(0, 8px, 0); }
+}
+
+/* ---- CSS-only "ignite" intro (does not delay content/interaction) ---- */
+.e27-ignite {
+  animation: e27-ignite 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes e27-ignite {
+  from { opacity: 0; transform: scale(0.6) translateY(30px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.e27-rise {
+  animation: e27-rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes e27-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.e27-delay-1 { animation-delay: 0.35s; }
+.e27-delay-2 { animation-delay: 0.6s; }
+.e27-delay-3 { animation-delay: 0.8s; }
+.e27-delay-4 { animation-delay: 1s; }
+
+/* Wordmark light sweep: a band translated across once */
+.e27-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.e27-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(245, 212, 254, 0.55), transparent);
+  transform: translateX(-120%) skewX(-15deg);
+  animation: e27-sweep 1.4s 0.5s ease-out both;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+@keyframes e27-sweep {
+  from { transform: translateX(-120%) skewX(-15deg); opacity: 1; }
+  to { transform: translateX(320%) skewX(-15deg); opacity: 0; }
+}
+
+/* =====================================================================
+   MARQUEES (pure CSS; duplicated track, translate -50%)
+   ===================================================================== */
+.e27-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.e27-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: e27-marquee var(--e27-marquee-dur, 40s) linear infinite;
+  will-change: transform; /* moving layer 4 (per visible marquee) */
+}
+.e27-marquee--reverse .e27-marquee-track {
+  animation-direction: reverse;
+}
+.e27-marquee:hover .e27-marquee-track,
+.e27-marquee:focus-within .e27-marquee-track,
+.e27-marquee[data-paused="true"] .e27-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes e27-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+/* =====================================================================
+   Reduced motion: stop everything decorative
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .e27-root {
+    --px: 0 !important;
+    --py: 0 !important;
+  }
+  .e27-floor-track,
+  .e27-flame-float,
+  .e27-ignite,
+  .e27-rise,
+  .e27-sweep::after,
+  .e27-marquee-track {
+    animation: none !important;
+  }
+  .e27-sweep::after {
+    display: none;
+  }
+  .e27-marquee {
+    overflow-x: auto;
+  }
+  .e27-tilt-card,
+  .e27-btn,
+  .e27-mobile-panel,
+  .e27-canvas-layer {
+    transition: none !important;
+  }
+}

@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   outputFileTracingRoot: path.join(__dirname),
-  assetPrefix: '/e-cell/',
+ assetPrefix: process.env.NODE_ENV === 'production' ? '/e-cell/' : undefined,
 };
 
 export default nextConfig;
